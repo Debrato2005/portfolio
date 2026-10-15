@@ -1,0 +1,43 @@
+{
+  "capturedAt": "2026-10-15T01:26:10.123Z",
+  "phase": "before",
+  "cases": [
+    {
+      "theme": "light",
+      "width": 1760,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "theme": "light",
+      "width": 1024,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "theme": "dark",
+      "width": 768,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "theme": "dark",
+      "width": 320,
+      "overflow": false,
+      "violations": []
+    }
+  ],
+  "errors": []
+}

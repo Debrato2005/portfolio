@@ -1,0 +1,53 @@
+{
+  "status": "REFERENCE_ONLY",
+  "retrievedDate": "2026-10-14",
+  "repository": "https://github.com/nodeanurag/my-portfolio",
+  "rootTreeSha": "4951388c547b8a4c3d4fbcef43d2d851e40bd6e4",
+  "treeIsDeployedRevision": false,
+  "files": [
+    {
+      "path": "src/App.tsx",
+      "blobSha": "552d765ed22d0963df651c5690959f54229c758a",
+      "url": "https://github.com/nodeanurag/my-portfolio/blob/main/src/App.tsx"
+    },
+    {
+      "path": "src/components/Layout.tsx",
+      "blobSha": "8fa30e8b211c2f2e0c241ee3356174a082c7bb41",
+      "url": "https://github.com/nodeanurag/my-portfolio/blob/main/src/components/Layout.tsx"
+    },
+    {
+      "path": "src/components/SideIndex.tsx",
+      "blobSha": "4a1163763d264bc83f0667bd5b7169ef3e785c03",
+      "url": "https://github.com/nodeanurag/my-portfolio/blob/main/src/components/SideIndex.tsx"
+    },
+    {
+      "path": "src/index.css",
+      "blobSha": "811bb4f0b8f206f0fbffa04c6bf4ab1e7a4e3dde",
+      "url": "https://github.com/nodeanurag/my-portfolio/blob/main/src/index.css"
+    },
+    {
+      "path": "src/sections/Hero.tsx",
+      "blobSha": "8b975f9adf64693b162d83cf3eadf8cc14cb91a5",
+      "url": "https://github.com/nodeanurag/my-portfolio/blob/main/src/sections/Hero.tsx"
+    },
+    {
+      "path": "src/sections/GithubActivity.tsx",
+      "blobSha": "e570a3254732bf4455c71f50e75b48b02a41a9ca",
+      "url": "https://github.com/nodeanurag/my-portfolio/blob/main/src/sections/GithubActivity.tsx"
+    },
+    {
+      "path": "src/hooks/useGithubHeatmap.ts",
+      "blobSha": "f3a3e53a68801709effb9c8720f998abc31f9250",
+      "url": "https://github.com/nodeanurag/my-portfolio/blob/main/src/hooks/useGithubHeatmap.ts"
+    },
+    {
+      "path": "src/sections/Projects.tsx",
+      "blobSha": "af968aff6da63fa02880ff635df440330c623356",
+      "url": "https://github.com/nodeanurag/my-portfolio/blob/main/src/sections/Projects.tsx"
+    }
+  ],
+  "activeComposition": "src/App.tsx imports src/sections/*",
+  "codeCopied": false,
+  "assetsCopied": false,
+  "licenseEstablished": false
+}

@@ -1,0 +1,978 @@
+{
+  "capturedAt": "2026-10-14T23:29:36.738Z",
+  "sites": [
+    {
+      "name": "anurag",
+      "url": "https://anuragdotdev.vercel.app/",
+      "metrics": {
+        "width": 1440,
+        "height": 6066,
+        "overflow": false,
+        "headings": [
+          {
+            "text": "INDEX",
+            "size": "10px"
+          },
+          {
+            "text": "Anurag Jha",
+            "size": "38px"
+          },
+          {
+            "text": "About",
+            "size": "24px"
+          },
+          {
+            "text": "Contact",
+            "size": "24px"
+          },
+          {
+            "text": "Projects",
+            "size": "24px"
+          },
+          {
+            "text": "FrameLabs",
+            "size": "16px"
+          },
+          {
+            "text": "DoodleDash",
+            "size": "16px"
+          },
+          {
+            "text": "CodeForge",
+            "size": "16px"
+          },
+          {
+            "text": "SwiftPoll",
+            "size": "16px"
+          },
+          {
+            "text": "Nexus",
+            "size": "16px"
+          },
+          {
+            "text": "Experience",
+            "size": "24px"
+          },
+          {
+            "text": "Backend & Full-Stack Developer · Independent Developer",
+            "size": "15.5px"
+          },
+          {
+            "text": "Selected Freelance Work",
+            "size": "22px"
+          },
+          {
+            "text": "Open Source",
+            "size": "24px"
+          },
+          {
+            "text": "UI: Restyle hero buttons to custom Neo-Brutalist spec",
+            "size": "16.5px"
+          },
+          {
+            "text": "UI: Restyle navbar login buttons to custom Neo-Brutalist spec",
+            "size": "16.5px"
+          },
+          {
+            "text": "Bug fix: speaker image blue overlay",
+            "size": "16.5px"
+          },
+          {
+            "text": "UI: Restyle navbar logout button to match Brutalist outline style",
+            "size": "16.5px"
+          },
+          {
+            "text": "Refactor(activity): Remove redundant Touch.enable call",
+            "size": "16.5px"
+          },
+          {
+            "text": "Tech Stack",
+            "size": "24px"
+          },
+          {
+            "text": "Writing",
+            "size": "24px"
+          },
+          {
+            "text": "Authentication & Authorization for Backend Engineers: A Complete Guide",
+            "size": "18px"
+          },
+          {
+            "text": "Serialization and Deserialization: The Universal Language of Backend Engineering",
+            "size": "18px"
+          },
+          {
+            "text": "The Ultimate Guide to Routing: From Network Packets to Backend Handlers",
+            "size": "18px"
+          },
+          {
+            "text": "Understanding HTTP: The Backbone of the Web",
+            "size": "18px"
+          },
+          {
+            "text": "GitHub Activity",
+            "size": "24px"
+          },
+          {
+            "text": "Scrolled Too Far",
+            "size": "24px"
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Search Command Palette",
+            "height": 28
+          },
+          {
+            "text": "Toggle theme",
+            "height": 28
+          },
+          {
+            "text": "Switch profile image",
+            "height": 20
+          },
+          {
+            "text": "⌘K",
+            "height": 30.5
+          },
+          {
+            "text": "All",
+            "height": 24.5
+          },
+          {
+            "text": "Frontend",
+            "height": 24.5
+          },
+          {
+            "text": "Backend",
+            "height": 24.5
+          },
+          {
+            "text": "Fullstack",
+            "height": 24.5
+          },
+          {
+            "text": "Show engineering details",
+            "height": 15
+          },
+          {
+            "text": "Show engineering details",
+            "height": 15
+          },
+          {
+            "text": "Show engineering details",
+            "height": 15
+          },
+          {
+            "text": "Show engineering details",
+            "height": 15
+          },
+          {
+            "text": "Show engineering details",
+            "height": 15
+          },
+          {
+            "text": "All",
+            "height": 30
+          },
+          {
+            "text": "Languages",
+            "height": 30
+          },
+          {
+            "text": "Frontend",
+            "height": 30
+          },
+          {
+            "text": "Backend",
+            "height": 30
+          },
+          {
+            "text": "Databases",
+            "height": 30
+          },
+          {
+            "text": "DevOps & Tools",
+            "height": 30
+          }
+        ],
+        "paragraphs": [
+          {
+            "text": "Backend Engineer",
+            "size": "13px"
+          },
+          {
+            "text": "Delhi, India·18,411 views",
+            "size": "11px"
+          },
+          {
+            "text": "Hey, I'm Anurag, a full stack developer who loves building clean, modern website",
+            "size": "14.5px"
+          },
+          {
+            "text": "I spend most of my time in the terminal, the browser, or scribbling on a whitebo",
+            "size": "14.5px"
+          },
+          {
+            "text": "I don't ship junk. Maintainability isn't optional. And I build best when I'm cur",
+            "size": "14.5px"
+          },
+          {
+            "text": "Developer Snapshot",
+            "size": "11px"
+          },
+          {
+            "text": "A creative tool that turns static card generation into a reactive, real-time des",
+            "size": "13px"
+          },
+          {
+            "text": "A real-time multiplayer drawing and guessing game (Skribbl.io clone) built as a ",
+            "size": "13px"
+          },
+          {
+            "text": "A local-first browser-based IDE offering full Monaco editing, in-browser code ex",
+            "size": "13px"
+          },
+          {
+            "text": "A real-time anonymous polling application built for maximum creation and voting ",
+            "size": "13px"
+          },
+          {
+            "text": "A workspace-based project management app featuring kanban boards, real-time acti",
+            "size": "13px"
+          },
+          {
+            "text": "Building and shipping full-stack applications, SaaS products, and backend system",
+            "size": "13.5px"
+          }
+        ]
+      },
+      "mobileOverflow": false,
+      "errors": []
+    },
+    {
+      "name": "sakthi",
+      "url": "https://sakthi-portfolio-mauve.vercel.app/",
+      "metrics": {
+        "width": 1440,
+        "height": 1000,
+        "overflow": false,
+        "headings": [
+          {
+            "text": "AI Frontend Developer",
+            "size": "30px"
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Let's Talk",
+            "height": 44
+          },
+          {
+            "text": "Toggle theme",
+            "height": 40
+          }
+        ],
+        "paragraphs": [
+          {
+            "text": "Hey, I'm Sakthivel. I design and build interfaces where creativity meets serious",
+            "size": "16px"
+          }
+        ]
+      },
+      "mobileOverflow": false,
+      "errors": []
+    },
+    {
+      "name": "parth",
+      "url": "https://mittalparth.dev/",
+      "metrics": {
+        "width": 1440,
+        "height": 3247,
+        "overflow": false,
+        "headings": [
+          {
+            "text": "Parth Mittal",
+            "size": "30px"
+          },
+          {
+            "text": "Hackathons",
+            "size": "24px"
+          },
+          {
+            "text": "Anthropic Push to Prod Hackathon",
+            "size": "12px"
+          },
+          {
+            "text": "Google DeepMind Hackathon",
+            "size": "12px"
+          },
+          {
+            "text": "Sarvam Epoch Buildathon",
+            "size": "12px"
+          },
+          {
+            "text": "ETHIndia'24",
+            "size": "12px"
+          },
+          {
+            "text": "Warpspeed'23",
+            "size": "12px"
+          },
+          {
+            "text": "Experience & education",
+            "size": "24px"
+          },
+          {
+            "text": "Education",
+            "size": "14px"
+          },
+          {
+            "text": "Projects pinned up",
+            "size": "24px"
+          },
+          {
+            "text": "Claude City",
+            "size": "16px"
+          },
+          {
+            "text": "Sadak",
+            "size": "16px"
+          },
+          {
+            "text": "Kahani",
+            "size": "16px"
+          },
+          {
+            "text": "Khoj",
+            "size": "16px"
+          },
+          {
+            "text": "Echo",
+            "size": "16px"
+          },
+          {
+            "text": "Hackathon Curation Agent",
+            "size": "16px"
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Mute sound effects",
+            "height": 32
+          },
+          {
+            "text": "Show top repositories",
+            "height": 20.13916015625
+          },
+          {
+            "text": "Show earlier hackathons",
+            "height": 36
+          },
+          {
+            "text": "Show more hackathons",
+            "height": 36
+          },
+          {
+            "text": "Show more",
+            "height": 16
+          },
+          {
+            "text": "Show more",
+            "height": 16
+          },
+          {
+            "text": "Show more",
+            "height": 16
+          },
+          {
+            "text": "Reset stickers",
+            "height": 32
+          }
+        ],
+        "paragraphs": [
+          {
+            "text": "MTS @ Oracle · 15x Hackathon Winner · NITK'24 · PBA-5",
+            "size": "18px"
+          },
+          {
+            "text": "MTS @ Oracle · 15x Hackathon WinnerNITK'24 · PBA-5",
+            "size": "16px"
+          },
+          {
+            "text": "1162 contributions in the last year",
+            "size": "12px"
+          },
+          {
+            "text": "2nd among 5K+ applications for building Claude Code as a game.",
+            "size": "10px"
+          },
+          {
+            "text": "1st place among 4K applications. Built an infinite RPG game generator using Nano",
+            "size": "10px"
+          },
+          {
+            "text": "2nd runner up among 3K applications. Built a voice-first, interactive language l",
+            "size": "10px"
+          },
+          {
+            "text": "Top 10 Winners at India's largest Ethereum hackathon",
+            "size": "10px"
+          },
+          {
+            "text": "1st runner up at Lightspeed's flagship AI hackathon, among 107 hackers.",
+            "size": "10px"
+          },
+          {
+            "text": "Member of Technical Staff",
+            "size": "12px"
+          },
+          {
+            "text": "Oct 2025 - Present · 1 yr",
+            "size": "11px"
+          },
+          {
+            "text": "Software Developer Intern",
+            "size": "12px"
+          },
+          {
+            "text": "Sept 2023 - Feb 2024 · 5 mos",
+            "size": "11px"
+          }
+        ]
+      },
+      "mobileOverflow": false,
+      "errors": []
+    },
+    {
+      "name": "garvit",
+      "url": "https://www.garvitsingla.in/",
+      "metrics": {
+        "width": 1440,
+        "height": 4668,
+        "overflow": false,
+        "headings": [
+          {
+            "text": "hey i am garvit singla",
+            "size": "30px"
+          },
+          {
+            "text": "hey i am garvit singla",
+            "size": "30px"
+          },
+          {
+            "text": "the work & the learning",
+            "size": "30px"
+          },
+          {
+            "text": "wins & hackathons",
+            "size": "30px"
+          },
+          {
+            "text": "Pinnacle Performer Award",
+            "size": "19px"
+          },
+          {
+            "text": "2nd Place",
+            "size": "19px"
+          },
+          {
+            "text": "3rd Place · Technovision 4.0",
+            "size": "19px"
+          },
+          {
+            "text": "Pinnacle Performer Award",
+            "size": "19px"
+          },
+          {
+            "text": "2nd Place",
+            "size": "19px"
+          },
+          {
+            "text": "3rd Place · Technovision 4.0",
+            "size": "19px"
+          },
+          {
+            "text": "1,308 contributions in the last year",
+            "size": "17px"
+          },
+          {
+            "text": "leetcode problem-solving log",
+            "size": "24px"
+          },
+          {
+            "text": "submission history",
+            "size": "16px"
+          },
+          {
+            "text": "contest rating",
+            "size": "16px"
+          },
+          {
+            "text": "field notes, articles & blogs",
+            "size": "30px"
+          },
+          {
+            "text": "Your Title Goes Here (e.g. Writing a Custom Markdown Parser in TypeScript)",
+            "size": "18px"
+          },
+          {
+            "text": "implementing nslookup",
+            "size": "18px"
+          },
+          {
+            "text": "Building a Custom HTTP Server from Scratch in C++",
+            "size": "18px"
+          },
+          {
+            "text": "let's build something great.",
+            "size": "30px"
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Interactive brain doodle sticker",
+            "height": 138.4494171142578
+          },
+          {
+            "text": "Interactive chess piece doodle sticker",
+            "height": 161.097900390625
+          },
+          {
+            "text": "Switch to dark mode",
+            "height": 32
+          },
+          {
+            "text": "Replay handwriting and pencil sound",
+            "height": 20
+          },
+          {
+            "text": "Mute pencil sound",
+            "height": 20
+          },
+          {
+            "text": "Open Source ChandigarhexperienceOpen source executiveOct 2025 — PresentChitkara University",
+            "height": 88
+          },
+          {
+            "text": "Turbin3apprenticeshipAsync Builder Cohort · ApprenticeshipJan 2026 — Mar 2026Online",
+            "height": 88
+          },
+          {
+            "text": "GFGGFG_CUIETexperienceTechnical ExecutiveFeb 2025 — Sep 2025Chitkara University",
+            "height": 88
+          },
+          {
+            "text": "",
+            "height": 16.097412109375
+          },
+          {
+            "text": "",
+            "height": 16.097412109375
+          },
+          {
+            "text": "",
+            "height": 16.097412109375
+          },
+          {
+            "text": "",
+            "height": 16.097412109375
+          },
+          {
+            "text": "",
+            "height": 16.097412109375
+          },
+          {
+            "text": "Expand OSS details",
+            "height": 28.1705322265625
+          },
+          {
+            "text": "",
+            "height": 16.069580078125
+          },
+          {
+            "text": "",
+            "height": 16.06982421875
+          },
+          {
+            "text": "",
+            "height": 16.069580078125
+          },
+          {
+            "text": "",
+            "height": 16.06982421875
+          },
+          {
+            "text": "",
+            "height": 16.069580078125
+          },
+          {
+            "text": "Scroll back to top of page",
+            "height": 24.65625
+          }
+        ],
+        "paragraphs": [
+          {
+            "text": "engineer",
+            "size": "14px"
+          },
+          {
+            "text": "Software engineer obsessed with low-level systems, C/C++, Rust, and graphics.",
+            "size": "13px"
+          },
+          {
+            "text": "Exploring foundational computing from network protocols to memory management.",
+            "size": "13px"
+          },
+          {
+            "text": "Building performant tools and understanding computers from the metal up.",
+            "size": "13px"
+          },
+          {
+            "text": "places i’ve grown · experience",
+            "size": "10px"
+          },
+          {
+            "text": "Oct 2025 — Present · Chitkara University",
+            "size": "10px"
+          },
+          {
+            "text": "Maintaining a project under Hacktoberfest and contributing to open source projec",
+            "size": "14px"
+          },
+          {
+            "text": "Jan 2026 — Mar 2026 · Online",
+            "size": "10px"
+          },
+          {
+            "text": "Explored Solana, AMMs, NFTs, and tokens; built on-chain programs including an AM",
+            "size": "14px"
+          },
+          {
+            "text": "Feb 2025 — Sep 2025 · Chitkara University",
+            "size": "10px"
+          },
+          {
+            "text": "Served as a Technical Executive with the campus GeeksforGeeks community at Chitk",
+            "size": "14px"
+          },
+          {
+            "text": "Avinya 3.0 · ZenithLabs",
+            "size": "10px"
+          }
+        ]
+      },
+      "mobileOverflow": false,
+      "errors": []
+    },
+    {
+      "name": "portfolio",
+      "url": "http://127.0.0.1:5187/",
+      "metrics": {
+        "width": 1440,
+        "height": 4562,
+        "overflow": false,
+        "headings": [
+          {
+            "text": "DEBRATO GHOSHDEBRATO GHOSH",
+            "size": "84px"
+          },
+          {
+            "text": "01. About",
+            "size": "14px"
+          },
+          {
+            "text": "Developer snapshot",
+            "size": "12px"
+          },
+          {
+            "text": "02. Projects",
+            "size": "14px"
+          },
+          {
+            "text": "OncoSyn",
+            "size": "28px"
+          },
+          {
+            "text": "Cryptalis",
+            "size": "28px"
+          },
+          {
+            "text": "Smolink",
+            "size": "28px"
+          },
+          {
+            "text": "03. Experience",
+            "size": "14px"
+          },
+          {
+            "text": "Research Intern",
+            "size": "18px"
+          },
+          {
+            "text": "Machine Learning & Backend Intern",
+            "size": "18px"
+          },
+          {
+            "text": "B.Tech, Information Technology",
+            "size": "18px"
+          },
+          {
+            "text": "04. Hackathons",
+            "size": "14px"
+          },
+          {
+            "text": "SVASTH",
+            "size": "76px"
+          },
+          {
+            "text": "05. In Code / GitHub",
+            "size": "14px"
+          },
+          {
+            "text": "OncoSyn",
+            "size": "24px"
+          },
+          {
+            "text": "Smolink",
+            "size": "24px"
+          },
+          {
+            "text": "UniSpace",
+            "size": "24px"
+          },
+          {
+            "text": "06. Skills",
+            "size": "14px"
+          },
+          {
+            "text": "Languages",
+            "size": "20px"
+          },
+          {
+            "text": "Frontend",
+            "size": "20px"
+          },
+          {
+            "text": "Backend",
+            "size": "20px"
+          },
+          {
+            "text": "AI / ML",
+            "size": "20px"
+          },
+          {
+            "text": "Research / Tools",
+            "size": "20px"
+          },
+          {
+            "text": "07. Train of Thought",
+            "size": "14px"
+          },
+          {
+            "text": "The next breakthrough is in another field",
+            "size": "28px"
+          },
+          {
+            "text": "08. Photography",
+            "size": "14px"
+          },
+          {
+            "text": "09. Contact",
+            "size": "14px"
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Search portfolio",
+            "height": 44
+          },
+          {
+            "text": "Theme: System",
+            "height": 44
+          },
+          {
+            "text": "All work",
+            "height": 44
+          },
+          {
+            "text": "Research",
+            "height": 44
+          },
+          {
+            "text": "Systems",
+            "height": 44
+          },
+          {
+            "text": "Retry contribution data",
+            "height": 40
+          },
+          {
+            "text": "Retry profile",
+            "height": 44
+          },
+          {
+            "text": "Previous collection",
+            "height": 40
+          },
+          {
+            "text": "Next collection",
+            "height": 40
+          },
+          {
+            "text": "Previous quote",
+            "height": 44
+          },
+          {
+            "text": "Next quote",
+            "height": 44
+          },
+          {
+            "text": "Pause quotes",
+            "height": 44
+          },
+          {
+            "text": "Retry page views",
+            "height": 26.390625
+          },
+          {
+            "text": "Hide cat",
+            "height": 44
+          }
+        ],
+        "paragraphs": [
+          {
+            "text": "Software engineer · Researcher · Builder",
+            "size": "12px"
+          },
+          {
+            "text": "I build at the intersection of software, research and real-world problems. Explo",
+            "size": "18px"
+          },
+          {
+            "text": "Better products.Brightertomorrows.",
+            "size": "28px"
+          },
+          {
+            "text": "Index",
+            "size": "12px"
+          },
+          {
+            "text": "Curious builder.Lifelong learner.",
+            "size": "22px"
+          },
+          {
+            "text": "Hey, I'm Debrato Ghosh — a developer, researcher and builder who enjoys turning ",
+            "size": "16px"
+          },
+          {
+            "text": "I study Information Technology at Manipal Institute of Technology. My interests ",
+            "size": "16px"
+          },
+          {
+            "text": "In development",
+            "size": "12px"
+          },
+          {
+            "text": "Computational oncology and precision immunotherapy research infrastructure.",
+            "size": "16px"
+          },
+          {
+            "text": "Research prototype",
+            "size": "12px"
+          },
+          {
+            "text": "Application-side protection of selected PostgreSQL text fields.",
+            "size": "16px"
+          },
+          {
+            "text": "In progress",
+            "size": "12px"
+          }
+        ]
+      },
+      "mobileOverflow": false,
+      "errors": []
+    }
+  ],
+  "sources": [
+    {
+      "repository": "nodeanurag/my-portfolio",
+      "status": 200,
+      "revision": "4951388c547b8a4c3d4fbcef43d2d851e40bd6e4",
+      "defaultBranch": "main",
+      "pushedAt": "2026-09-16T14:25:51Z",
+      "url": "https://github.com/nodeanurag/my-portfolio"
+    },
+    {
+      "repository": "sakthii05/portfolio",
+      "status": 200,
+      "revision": "f65dfaa95b24c88345626bd189fefd257e4f7741",
+      "defaultBranch": "main",
+      "pushedAt": "2026-09-30T10:12:00Z",
+      "url": "https://github.com/sakthii05/portfolio"
+    },
+    {
+      "repository": "garvittsingla/portfolio",
+      "status": 200,
+      "revision": "b44decb295f3d9883844064015e58f865ead51e7",
+      "defaultBranch": "main",
+      "pushedAt": "2026-10-05T11:15:04Z",
+      "url": "https://github.com/garvittsingla/portfolio"
+    },
+    {
+      "repository": "dip/cmdk",
+      "status": 200,
+      "revision": "dd2250ed608443e8f32bafc5fa2d1d07a3746aa3",
+      "defaultBranch": "main",
+      "pushedAt": "2025-10-29T04:13:58Z",
+      "license": "MIT",
+      "url": "https://github.com/dip/cmdk"
+    },
+    {
+      "repository": "grubersjoe/react-activity-calendar",
+      "status": 200,
+      "revision": "4931c8f7d85c98de10358f6f5a841c50bd4ff228",
+      "defaultBranch": "main",
+      "pushedAt": "2026-10-13T10:43:21Z",
+      "license": "MIT",
+      "url": "https://github.com/grubersjoe/react-activity-calendar"
+    },
+    {
+      "repository": "tb962/heatmap-ui",
+      "status": 200,
+      "revision": "744478fd72798d2e1441743bb6f617455070d1cb",
+      "defaultBranch": "main",
+      "pushedAt": "2026-09-25T11:07:08Z",
+      "license": "MIT",
+      "url": "https://github.com/tb962/heatmap-ui"
+    },
+    {
+      "repository": "DavidHDev/react-bits",
+      "status": 200,
+      "revision": "496968c4117e21278f13917201b7d615bc5e7450",
+      "defaultBranch": "main",
+      "pushedAt": "2026-10-12T13:48:00Z",
+      "license": "NOASSERTION",
+      "url": "https://github.com/DavidHDev/react-bits"
+    },
+    {
+      "repository": "igordanchenko/yet-another-react-lightbox",
+      "status": 200,
+      "revision": "dd26692337adf5680298afb81dad0f99aee65f04",
+      "defaultBranch": "main",
+      "pushedAt": "2026-10-12T15:28:11Z",
+      "license": "MIT",
+      "url": "https://github.com/igordanchenko/yet-another-react-lightbox"
+    },
+    {
+      "repository": "davidjerleke/embla-carousel",
+      "status": 200,
+      "revision": "0423b61463dd6f095d7aca810a49bbf194d6c291",
+      "defaultBranch": "master",
+      "pushedAt": "2026-10-12T18:15:02Z",
+      "license": "MIT",
+      "url": "https://github.com/davidjerleke/embla-carousel"
+    }
+  ]
+}

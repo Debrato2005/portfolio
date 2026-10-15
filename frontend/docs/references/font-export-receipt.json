@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-15",
+  "source": "https://fonts.googleapis.com/css2?family=Caveat:wght@400&family=Instrument+Serif&display=swap",
+  "subset": "Latin",
+  "fonts": [
+    {
+      "family": "Caveat",
+      "url": "https://fonts.gstatic.com/s/caveat/v23/WnznHAc5bAfYB2QRah7pcpNvOx-pjfJ9eIWpYQ.woff2",
+      "path": "public/fonts/caveat-regular.woff2",
+      "bytes": 48836,
+      "sha256": "d0b7b931b8980049327e8f8f9ac264617c8200b8422d62e886473d3d9527bad3"
+    },
+    {
+      "family": "Instrument Serif",
+      "url": "https://fonts.gstatic.com/s/instrumentserif/v5/jizBRFtNs2ka5fXjeivQ4LroWlx-6zUTjg.woff2",
+      "path": "public/fonts/instrument-serif-regular.woff2",
+      "bytes": 21032,
+      "sha256": "5eb09b5ac0e28b67c2f041c8ba6d244604ca0c0980d65912ab2d47fed84ddc31"
+    }
+  ]
+}

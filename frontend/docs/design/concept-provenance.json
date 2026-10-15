@@ -1,0 +1,21 @@
+{
+  "status": "SUPERSEDED_STATIC_CONCEPT",
+  "date": "2026-10-14",
+  "tool": "image_gen__imagegen",
+  "requested_dimensions": [1440, 1100],
+  "actual_dimensions": [1435, 1096],
+  "review_limits": [
+    "Static art direction only",
+    "No implemented interactions",
+    "Mobile composition requires implementation and browser review"
+  ],
+  "light": {
+    "file": "concept-light.png",
+    "prompt": "Use case ui-mockup. Create the LIGHT THEME counterpart of the attached original Debrato Ghosh design proposal. Current date October 14, 2026. Match the exact layout, crop, proportions, entire text, type hierarchy, controls and section sequence. Single 1440x1100 desktop viewport, no browser chrome. Change ONLY theme colors and theme label: background warm paper #F5F1E8; foreground ink #20201E; muted #56534E; rules #D3CEC4; accent vermilion #B83C23, with warm-white text on the primary button. Theme control label exact 'Theme: Light'. Background original astronomical observation field becomes subtle fine graphite drafting contours and small dark observation marks on paper with one vermilion focus point. Preserve the abstract orbit/contour structure from attached image. Do NOT add mountains, hills, landscapes, clouds, figures, photographs, company logos, charts, fake metrics, awards, extra sections, glowing gradients or other decoration. Company entries remain TEXT ONLY. Preserve exact actual experience dates and project statuses. This is a static review mockup, not a functioning site."
+  },
+  "dark": {
+    "file": "concept-dark.png",
+    "prompt": "Use case ui-mockup. Create the DARK THEME counterpart of this original static design proposal for Debrato Ghosh, current date October 14, 2026. Reference image is a layout and typography reference, keep its exact text, spacing, section sequence, proportions and hierarchy. Target 1440x1100, one desktop view, no browser chrome. Background charcoal #17191B, ink warm #F4F1E8, muted #B8B4AB, thin rules #454A50, vermilion accent #FF8A66. Exact hero DEBRATO GHOSH. The creative background in the right hero region is a precise original CELESTIAL OBSERVATION FIELD: faint astronomical contour curves and orbit paths on dark paper, a sparse restrained set of small observation stars, ONE coral focus point. No mountain, no hills, no landscape, no figure, no photograph, no generic connected particle network, no scientific data claims. Make the field subordinate to the text, readability first. Remove the invented company logos in the reference. The two experience entries should be TEXT ONLY with company names aiRender Technology and Madtales.ai, actual roles and dates as shown. Do not create or imply real company marks. Top theme UI should be a single labeled control 'Theme: Dark', not two independent competing icons. Keep Search accessible as visible text. Avoid any oversized rounded card, dashboard panel, neon glow, gradient, number metrics, fake contribution chart, stock photography, invented outcomes, links or awards. Project statuses remain IN DEVELOPMENT / RESEARCH PROTOTYPE / IN DEVELOPMENT. Main call to action rectilinear minimal button with small radius. This is the same design direction in its dark state, not a second design option."
+  },
+  "supersededBy": "anurag-concept-provenance.json"
+}

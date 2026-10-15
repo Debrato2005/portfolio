@@ -1,0 +1,23 @@
+{
+  "source": "/mnt/c/Users/Debrato/Videos/Captures/Anurag Jha \u2014 Full Stack Developer - Brave 2026-10-14 12-56-53.mp4",
+  "sha256": "1a4c39063a3d5cd5c18af8af621b6bf93e4b3a0ea55bbcfc066a0852d8c3e2c9",
+  "durationSeconds": 49.052167,
+  "dimensions": [2320, 1440],
+  "decodedFrames": 1343,
+  "nominalFps": 55,
+  "averageFps": 27.41118408967519,
+  "frameIntervalsMs": {
+    "median": 36.366999999998484,
+    "p95": 36.36700000000559,
+    "max": 60.600000000000875
+  },
+  "review": {
+    "overview": "98 extracted frames at 2 fps, all five contact sheets inspected",
+    "detail": "14 full-resolution stills and two eight-fps sequences inspected",
+    "sequenceWindows": {
+      "quote": [15.25, 17.25],
+      "theme": [23.25, 24.5]
+    }
+  },
+  "limits": "Recorded video timing cannot establish page FPS, input latency, easing functions or runtime implementation. Browser zoom/DPR and wheel input are unknown."
+}

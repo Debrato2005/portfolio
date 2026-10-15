@@ -1,0 +1,44 @@
+{
+  "capturedAt": "2026-10-15T01:48:08.419Z",
+  "source": "public-calendar",
+  "statuses": [
+    {
+      "url": "https://api.github.com/users/Debrato2005",
+      "status": 200
+    },
+    {
+      "url": "https://github-contributions-api.jogruber.de/v4/Debrato2005?y=2026",
+      "status": 200
+    }
+  ],
+  "counters": [
+    {
+      "requested": "https://countapi.mileshilliard.com/api/v1/hit/debrato2005-portfolio-page-views",
+      "readOnly": "https://countapi.mileshilliard.com/api/v1/get/debrato2005-portfolio-page-views"
+    }
+  ],
+  "incrementRequestsForwarded": false,
+  "profile": "Public profile · GitHub API",
+  "images": [
+    {
+      "src": "http://127.0.0.1:5187/images/project-oncosyn-large.webp",
+      "naturalWidth": 508,
+      "displayWidth": 506
+    },
+    {
+      "src": "http://127.0.0.1:5187/images/project-cryptalis-large.webp",
+      "naturalWidth": 508,
+      "displayWidth": 506
+    },
+    {
+      "src": "http://127.0.0.1:5187/images/project-smolink-large.webp",
+      "naturalWidth": 508,
+      "displayWidth": 506
+    },
+    {
+      "src": "http://127.0.0.1:5187/images/project-unispace-small.webp",
+      "naturalWidth": 508,
+      "displayWidth": 506
+    }
+  ]
+}

@@ -1,0 +1,192 @@
+{
+  "date": "2026-10-15",
+  "fonts": [
+    {
+      "name": "Instrument Serif",
+      "source": "https://github.com/google/fonts/tree/main/ofl/instrumentserif",
+      "license": "SIL OFL 1.1"
+    },
+    {
+      "name": "Caveat",
+      "source": "https://github.com/google/fonts/tree/main/ofl/caveat",
+      "license": "SIL OFL 1.1"
+    }
+  ],
+  "icons": {
+    "source": "https://github.com/phosphor-icons/core",
+    "license": "MIT",
+    "style": "regular"
+  },
+  "projectArt": {
+    "method": "Original generated conceptual illustrations, exported to 320 by 400 WebP. Not application screenshots, scientific results, landscapes for the hero, or personal photographs.",
+    "prompts": {
+      "oncosyn": "Portrait 4:5 teal/cyan cellular network, dense etched hatching on midnight blue; abstract concept, no diagnostic claim, text, people or UI.",
+      "cryptalis": "Portrait near-black mountain with amber/rust illuminated ridges and warm amber sky, engraved ink; no text, people, logo or security claim.",
+      "smolink": "Portrait black/ivory winding river through layered mountains, etched contours and stippling, cream paper; no text, people or UI.",
+      "unispace": "Original imaginary university arcade and study courtyard. Wide engraved navy/steel-blue and ivory architecture, repeating arches and tall windows, small amber light accent. No people, text, logos, UI, real campus claim or personal-photography claim."
+    },
+    "originals": "docs/design/project-art-source/",
+    "responsiveExport": "The original PNG artwork is also encoded without resizing as 1122 by 1402 WebP. Responsive project-card sources keep the original 320 by 400 export for smaller displays and choose the larger file when needed."
+  },
+  "files": [
+    {
+      "path": "public/icons/map-pin.svg",
+      "bytes": 459,
+      "sha256": "523f024fa467fc285d95c1db4ed6c32b640513c79780d14310bebf342b6f94fb"
+    },
+    {
+      "path": "public/icons/laptop.svg",
+      "bytes": 392,
+      "sha256": "761f9e8d8a9db3e28adf8a6287016a47302f8fb629dfa355372d3835681b506f"
+    },
+    {
+      "path": "public/icons/desktop.svg",
+      "bytes": 349,
+      "sha256": "875a31fd2dc493c6ba9aa5187a91e0364de6704876704e1bf81ef4b7e785ad79"
+    },
+    {
+      "path": "public/icons/sun.svg",
+      "bytes": 685,
+      "sha256": "8df1c7b747774f8b2c1fe353b1b785c74aac35bfa50f2ed7d8d9a85a4191b2ac"
+    },
+    {
+      "path": "public/icons/envelope-simple.svg",
+      "bytes": 282,
+      "sha256": "f114441afbd3c3da8aee24ba4cddea1576cf55aa304eb507410fca494c8ee169"
+    },
+    {
+      "path": "public/icons/linkedin-logo.svg",
+      "bytes": 415,
+      "sha256": "e8f573d6b822de2befad63e797e06cd2676b13674052bba2f95c81b748ee0ad0"
+    },
+    {
+      "path": "public/icons/moon.svg",
+      "bytes": 467,
+      "sha256": "5c91f82aea4e7b53305bf29628caebc22a1198ba9fa46c62eef13fb8b3c3f21d"
+    },
+    {
+      "path": "public/icons/arrow-up.svg",
+      "bytes": 257,
+      "sha256": "361aa9f9c52a759bf598faf6ed38ccd426f949f541d662c65b5b5d868fa76980"
+    },
+    {
+      "path": "public/icons/camera.svg",
+      "bytes": 499,
+      "sha256": "e1fb071d5326bc4de193746b38457a6f73c89df90d65d33eaa8386eb22b219f5"
+    },
+    {
+      "path": "public/icons/user-plus.svg",
+      "bytes": 477,
+      "sha256": "02197487a2b9ba649efc90baa79e2868bed55c1050a7f7130d348f1a4e2c8678"
+    },
+    {
+      "path": "public/icons/coffee.svg",
+      "bytes": 576,
+      "sha256": "4ef8c4f0643ee992bf05f10c51c06d695f5ef924e0a1c85394b7626b548338fd"
+    },
+    {
+      "path": "public/icons/users.svg",
+      "bytes": 506,
+      "sha256": "b3385e4c6aa03f7e16d1b03887c2cdff9900f5a7edbd5ea5176055938ccfb908"
+    },
+    {
+      "path": "public/icons/graduation-cap.svg",
+      "bytes": 654,
+      "sha256": "855b9f61c75900768c0265f671456554215e37b5bf15af9afa7acef36ec31c48"
+    },
+    {
+      "path": "public/icons/magnifying-glass.svg",
+      "bytes": 243,
+      "sha256": "f9fa2561978a9a3291e8ae0ebfcb651104f5069fade8f84871627bca68889cde"
+    },
+    {
+      "path": "public/icons/git-branch.svg",
+      "bytes": 411,
+      "sha256": "3aaa3ec833418cdce445f8e1f901ab4021a9de02264610563e51e7109511b816"
+    },
+    {
+      "path": "public/icons/arrow-up-right.svg",
+      "bytes": 217,
+      "sha256": "44db5257b360ec04863eb6daaa41f220c8b714d23fb81403517d0a30acfda9f4"
+    },
+    {
+      "path": "public/icons/github-logo.svg",
+      "bytes": 890,
+      "sha256": "eec5e2120017580de1e12f638488a0231478c02f1f404cfee8b4ff9e6bcce7ac"
+    },
+    {
+      "path": "public/icons/caret-right.svg",
+      "bytes": 219,
+      "sha256": "e6dec01e074807965b7f3146b976a9b5e82c31d9c2c88aeb52e77cc2ab16c1d7"
+    },
+    {
+      "path": "public/icons/caret-left.svg",
+      "bytes": 200,
+      "sha256": "623bf248fe21a8170344e168aaac2e174119cea5d7c5d0fb0dc84f581009475f"
+    },
+    {
+      "path": "public/icons/arrow-right.svg",
+      "bytes": 245,
+      "sha256": "e45bc4a12592b8723110db42c6deffdf177e4fe7704cf50324963fa0a59b2d74"
+    },
+    {
+      "path": "public/images/project-cryptalis.webp",
+      "bytes": 21142,
+      "sha256": "660e1419360bbc3125dba37aaa48ee6691e8fff3c56a8af45fca1bb31d5f12bb"
+    },
+    {
+      "path": "public/images/project-oncosyn.webp",
+      "bytes": 43126,
+      "sha256": "54ccd372dcd3521f2af67f4c0a162e8b178f4233e6657a8be0c27df0caf353b2"
+    },
+    {
+      "path": "public/images/project-smolink.webp",
+      "bytes": 27390,
+      "sha256": "48fb65ef0aea357940ca063b268665612eec0cb29c080d5471fa7b664cfb1ea5"
+    },
+    {
+      "family": "Caveat",
+      "url": "https://fonts.gstatic.com/s/caveat/v23/WnznHAc5bAfYB2QRah7pcpNvOx-pjfJ9eIWpYQ.woff2",
+      "path": "public/fonts/caveat-regular.woff2",
+      "bytes": 48836,
+      "sha256": "d0b7b931b8980049327e8f8f9ac264617c8200b8422d62e886473d3d9527bad3"
+    },
+    {
+      "family": "Instrument Serif",
+      "url": "https://fonts.gstatic.com/s/instrumentserif/v5/jizBRFtNs2ka5fXjeivQ4LroWlx-6zUTjg.woff2",
+      "path": "public/fonts/instrument-serif-regular.woff2",
+      "bytes": 21032,
+      "sha256": "5eb09b5ac0e28b67c2f041c8ba6d244604ca0c0980d65912ab2d47fed84ddc31"
+    },
+    {
+      "path": "public/images/project-oncosyn-large.webp",
+      "bytes": 552166,
+      "sha256": "ba7eef8ddae4161824921c9f3b01bd8433fa903370c8402494d7e2e7c8288cac"
+    },
+    {
+      "path": "public/images/project-cryptalis-large.webp",
+      "bytes": 417120,
+      "sha256": "f057a90786d1dccfad1576bb4fd9efa1d3295ad2ffe1d0d0b6048a89b8baef7f"
+    },
+    {
+      "path": "public/images/project-smolink-large.webp",
+      "bytes": 500048,
+      "sha256": "be4faa35df7ecfaffc468768b0da89e02e975ead7feaaaa93ac870efc10d188d"
+    },
+    {
+      "path": "public/images/project-unispace.webp",
+      "bytes": 578254,
+      "sha256": "0978a2a5e3f356e48759a397fff481506e87e927e4a805d14ced2704243306c8"
+    },
+    {
+      "path": "public/images/project-unispace-small.webp",
+      "bytes": 76680,
+      "sha256": "628eee00af6c38ae1ca63b79028bb0ed8145011558c54b157e64863898d33090"
+    },
+    {
+      "path": "docs/design/project-art-source/project-unispace.png",
+      "bytes": 4257782,
+      "sha256": "328591045cb43cccd3a64170ed014712c781da6624b0184349ca5bba56f96760"
+    }
+  ]
+}

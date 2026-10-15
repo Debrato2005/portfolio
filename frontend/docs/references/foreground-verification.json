@@ -1,0 +1,124 @@
+{
+  "date": "2026-10-15",
+  "developmentSuite": {
+    "passed": 90,
+    "engines": ["Chromium", "Firefox", "WebKit"],
+    "limit": "Full suite before final event source-label and collection-selection fixes."
+  },
+  "finalTargeted": {
+    "galleryAndNavigation": 24,
+    "eventSource": 3,
+    "production": 6,
+    "unit": 15
+  },
+  "visual": "Both themes: 941x1672 source viewport and 1440,1366,768,390,320 widths. No document overflow or page errors. Desktop Axe reports zero violations.",
+  "performance": {
+    "date": "2026-10-14T19:25:18.138Z",
+    "method": "Three cold Chromium contexts, local production preview, 1440x900, reduced motion, public profile request aborted. No throttling or field data.",
+    "samples": [
+      {
+        "lcpMs": 220,
+        "cls": 0.05831708605940286,
+        "resourceTransferBytes": 365818,
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        }
+      },
+      {
+        "lcpMs": 200,
+        "cls": 0.05831708605940286,
+        "resourceTransferBytes": 365818,
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        }
+      },
+      {
+        "lcpMs": 196,
+        "cls": 0.062831344843107,
+        "resourceTransferBytes": 365818,
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        }
+      }
+    ],
+    "manifest": {
+      "index.html": {
+        "file": "assets/index-BRqyODe3.js",
+        "name": "index",
+        "src": "index.html",
+        "isEntry": true,
+        "css": ["assets/index-CHp2n4rd.css"],
+        "assets": [
+          "assets/inter-latin-400-normal-C38fXH4l.woff2",
+          "assets/inter-latin-400-normal-CyCys3Eg.woff",
+          "assets/inter-latin-500-normal-Cerq10X2.woff2",
+          "assets/inter-latin-500-normal-BL9OpVg8.woff",
+          "assets/space-grotesk-latin-600-normal-DjKNqYRj.woff2",
+          "assets/space-grotesk-latin-600-normal-BflQw4A9.woff",
+          "assets/space-mono-latin-400-normal-Rg4St2Dn.woff2",
+          "assets/space-mono-latin-400-normal-_3DlpgIW.woff"
+        ]
+      },
+      "node_modules/@fontsource/inter/files/inter-latin-400-normal.woff": {
+        "file": "assets/inter-latin-400-normal-CyCys3Eg.woff",
+        "src": "node_modules/@fontsource/inter/files/inter-latin-400-normal.woff"
+      },
+      "node_modules/@fontsource/inter/files/inter-latin-400-normal.woff2": {
+        "file": "assets/inter-latin-400-normal-C38fXH4l.woff2",
+        "src": "node_modules/@fontsource/inter/files/inter-latin-400-normal.woff2"
+      },
+      "node_modules/@fontsource/inter/files/inter-latin-500-normal.woff": {
+        "file": "assets/inter-latin-500-normal-BL9OpVg8.woff",
+        "src": "node_modules/@fontsource/inter/files/inter-latin-500-normal.woff"
+      },
+      "node_modules/@fontsource/inter/files/inter-latin-500-normal.woff2": {
+        "file": "assets/inter-latin-500-normal-Cerq10X2.woff2",
+        "src": "node_modules/@fontsource/inter/files/inter-latin-500-normal.woff2"
+      },
+      "node_modules/@fontsource/space-grotesk/files/space-grotesk-latin-600-normal.woff": {
+        "file": "assets/space-grotesk-latin-600-normal-BflQw4A9.woff",
+        "src": "node_modules/@fontsource/space-grotesk/files/space-grotesk-latin-600-normal.woff"
+      },
+      "node_modules/@fontsource/space-grotesk/files/space-grotesk-latin-600-normal.woff2": {
+        "file": "assets/space-grotesk-latin-600-normal-DjKNqYRj.woff2",
+        "src": "node_modules/@fontsource/space-grotesk/files/space-grotesk-latin-600-normal.woff2"
+      },
+      "node_modules/@fontsource/space-mono/files/space-mono-latin-400-normal.woff": {
+        "file": "assets/space-mono-latin-400-normal-_3DlpgIW.woff",
+        "src": "node_modules/@fontsource/space-mono/files/space-mono-latin-400-normal.woff"
+      },
+      "node_modules/@fontsource/space-mono/files/space-mono-latin-400-normal.woff2": {
+        "file": "assets/space-mono-latin-400-normal-Rg4St2Dn.woff2",
+        "src": "node_modules/@fontsource/space-mono/files/space-mono-latin-400-normal.woff2"
+      }
+    }
+  },
+  "limits": [
+    "No authenticated live calendar result",
+    "No populated personal gallery",
+    "No real view-counter service",
+    "No final background artwork",
+    "No full WCAG or field performance claim"
+  ],
+  "screenshots": [
+    {
+      "path": "docs/design/evidence/foreground-light-mobile.png",
+      "sha256": "f99be19b6a874b5a369619c8208767031e8d003ae160aab8bd5f9f284da7a421"
+    },
+    {
+      "path": "docs/design/evidence/foreground-dark-desktop.png",
+      "sha256": "32269c63052934e5dd7d2e715ee7fda51288ff2e0391b8ffc619dd20dfe28712"
+    },
+    {
+      "path": "docs/design/evidence/foreground-light-desktop.png",
+      "sha256": "f52ca5b24562c02af1e557b251edaadafbb3e45ecf50bccac592c8e78413590c"
+    },
+    {
+      "path": "docs/design/evidence/foreground-dark-mobile.png",
+      "sha256": "014eb0e9540bae7c1c61d21fe122ed23029527d559beddbb324230bcad28b939"
+    }
+  ]
+}

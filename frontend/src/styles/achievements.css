@@ -1,0 +1,215 @@
+.achievement-wall {
+  display: grid;
+  grid-template-columns: 7rem minmax(0, 22rem) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(1.25rem, 3vw, 3rem);
+  padding-block: 0.5rem 1.5rem;
+}
+
+.achievement-margin-note,
+.achievement-context-note,
+.achievement-context-signoff {
+  margin: 0;
+  font: 1.75rem/1.15 var(--font-note);
+  color: var(--color-accent);
+}
+
+.achievement-margin-note {
+  transform: rotate(-5deg);
+}
+
+.achievement-records {
+  min-width: 0;
+}
+
+.achievement-hanging {
+  position: relative;
+  padding-top: 4.5rem;
+}
+
+.achievement-cord {
+  position: absolute;
+  inset: 0 0 auto;
+  width: 100%;
+  height: 5.5rem;
+  overflow: visible;
+  color: var(--color-muted);
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+}
+
+.achievement-cord circle {
+  fill: var(--color-accent);
+  stroke: var(--color-paper);
+  stroke-width: 2;
+}
+
+.achievement-paper {
+  position: relative;
+  padding: 2rem 1.5rem 1.5rem;
+  background: #f1ead9;
+  color: #29362c;
+  box-shadow: 0 7px 18px #00000014;
+  transform: rotate(-1.5deg);
+  transform-origin: 50% 0;
+  transition:
+    transform var(--motion-base) var(--ease-out),
+    box-shadow var(--motion-base) var(--ease-out);
+}
+
+.achievement-fastener {
+  position: absolute;
+  top: 0.65rem;
+  width: 0.45rem;
+  height: 0.45rem;
+  border: 1px solid #82775e;
+  border-radius: 50%;
+  background: #d8c8a9;
+}
+
+.achievement-fastener-left {
+  left: 27%;
+}
+
+.achievement-fastener-right {
+  right: 27%;
+}
+
+.achievement-paper h3 {
+  margin: 1.5rem 0 1rem;
+  font: 3.5rem / 1 var(--font-serif);
+  letter-spacing: -0.03em;
+}
+
+.achievement-event-type {
+  margin: 0;
+  font: var(--text-label)/1.5 var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.achievement-result {
+  margin: 0;
+  font-size: var(--text-body);
+  line-height: 1.6;
+  font-weight: 600;
+}
+
+.achievement-record-footer {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px dashed #a69d89;
+}
+
+.achievement-record-footer p {
+  margin: 0 0 0.5rem;
+  font-size: var(--text-small);
+  line-height: 1.5;
+  color: #535c4e;
+}
+
+.achievement-record-footer a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  padding-block: 0.5rem;
+  color: #953e11;
+  font-size: var(--text-body);
+  font-weight: 600;
+  text-underline-offset: 0.25em;
+  text-decoration-thickness: 1px;
+}
+
+.achievement-record-footer a:focus-visible {
+  outline: 2px solid #953e11;
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+.achievement-context {
+  min-width: 0;
+  padding-top: 2rem;
+}
+
+.achievement-context-note {
+  font-size: 2.15rem;
+  transform: rotate(3deg);
+}
+
+.achievement-context > p:not(.achievement-context-note) {
+  margin-top: 1.25rem;
+}
+
+.achievement-context > p:not([class]) {
+  max-width: 25ch;
+  color: var(--color-muted);
+  font-size: var(--text-body);
+  line-height: 1.7;
+}
+
+.achievement-context-signoff {
+  font-size: 1.5rem;
+}
+
+@media (hover: hover) and (pointer: fine) and (min-width: 641px) {
+  .achievement-paper:hover,
+  .achievement-paper:focus-within {
+    transform: rotate(0.5deg) translateY(-3px);
+    box-shadow: 0 10px 22px #0000001c;
+  }
+}
+
+@media (max-width: 850px) {
+  .achievement-wall {
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  }
+
+  .achievement-margin-note {
+    grid-column: 1 / -1;
+    transform: none;
+    font-size: 1.5rem;
+  }
+
+  .achievement-margin-note br {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .achievement-wall {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+  }
+
+  .achievement-hanging {
+    width: min(100% - 1rem, 25rem);
+    margin-inline: auto;
+  }
+
+  .achievement-paper {
+    transform: none;
+  }
+
+  .achievement-context {
+    padding-top: 1.25rem;
+  }
+
+  .achievement-context-note {
+    transform: none;
+  }
+
+  .achievement-context > p:not([class]) {
+    max-width: 40ch;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .achievement-paper,
+  .achievement-paper:hover,
+  .achievement-paper:focus-within {
+    transform: none;
+    transition: none;
+  }
+}

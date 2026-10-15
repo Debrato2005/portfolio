@@ -1,0 +1,230 @@
+{
+  "date": "2026-10-15",
+  "scope": "Recording study, public source audit, readability and bounded foreground motion. Final landscape remains deferred.",
+  "environment": {
+    "runtime": "Node 22.23.2",
+    "host": "Linux/WSL",
+    "browserAccess": "Reviewed loopback execution",
+    "preview": "http://127.0.0.1:5187/",
+    "previewHttpStatus": 200,
+    "calendarHttpStatus": 503
+  },
+  "recordingReceipt": "video-component-audit/receipt.json",
+  "sourceSnapshots": {
+    "nodeanurag/my-portfolio": "4951388c547b8a4c3d4fbcef43d2d851e40bd6e4",
+    "sakthii05/portfolio": "f65dfaa95b24c88345626bd189fefd257e4f7741",
+    "garvittsingla/portfolio": "b44decb295f3d9883844064015e58f865ead51e7",
+    "mittal-parth/personal-portfolio": "50f8aa9590752072632069449d08f8c48991418e"
+  },
+  "sourceLimits": [
+    "Parth current deployment source unverified; public template points to older Netlify site",
+    "Repository commits do not establish the deployed code during recording",
+    "Sakthi secondary project/playground reads limited by public GitHub API quota",
+    "No LICENSE file found in inspected trees; no external source or artwork copied"
+  ],
+  "checks": {
+    "developmentBrowser": {
+      "passed": 108,
+      "engines": ["Chromium", "Firefox", "WebKit"],
+      "command": "PORTFOLIO_E2E_PORT=5199 npm run test:e2e"
+    },
+    "productionBrowser": {
+      "passed": 6,
+      "command": "npm run test:e2e:production"
+    },
+    "unitContract": {
+      "passed": 15
+    },
+    "nonBrowser": "npm run check: TypeScript, ESLint, formatting, unit/HTTP contract, production boundary, documents and skills",
+    "routeReflow": {
+      "combinations": 96,
+      "routes": 8,
+      "themes": ["light", "dark"],
+      "widths": [1440, 390, 320],
+      "textScales": [100, 200],
+      "documentOverflow": false
+    },
+    "routeAxe": {
+      "routes": 8,
+      "themes": 2,
+      "viewport": "desktop at current route entry",
+      "violations": 0
+    },
+    "homeWidths": [1440, 941, 768, 390, 320],
+    "homeDoubleText": {
+      "width": 320,
+      "themes": 2,
+      "documentOverflow": false
+    },
+    "paletteAxe": {
+      "themes": 2,
+      "violations": 0
+    }
+  },
+  "intermediateCorrections": [
+    "Long words, header controls and card dimensions reflow at doubled text",
+    "Month labels retain a single line and sparse compact labels on phones",
+    "Event facts stack and their containing grid can shrink at narrow widths",
+    "Section return journey waits for destination scroll before invoking Home",
+    "Collection route journey uses reduced motion; separate check covers animated track and vertical page stability"
+  ],
+  "limits": [
+    "No current page FPS, field Core Web Vitals, Lighthouse score or full WCAG conformance claim",
+    "Generic browser checks abort public profile REST; calendar checks use explicit test payloads",
+    "Test-only photographs enter development module data only",
+    "Live calendar acceptance needs a server GitHub token; endpoint currently returns503",
+    "Counter service and original personal photographs remain external inputs"
+  ],
+  "build": {
+    "file": "assets/index-SBqR1SvT.js",
+    "name": "index",
+    "src": "index.html",
+    "isEntry": true,
+    "css": ["assets/index-FzYUZaoA.css"],
+    "assets": [
+      "assets/inter-latin-400-normal-C38fXH4l.woff2",
+      "assets/inter-latin-400-normal-CyCys3Eg.woff",
+      "assets/inter-latin-500-normal-Cerq10X2.woff2",
+      "assets/inter-latin-500-normal-BL9OpVg8.woff",
+      "assets/space-grotesk-latin-600-normal-DjKNqYRj.woff2",
+      "assets/space-grotesk-latin-600-normal-BflQw4A9.woff",
+      "assets/space-mono-latin-400-normal-Rg4St2Dn.woff2",
+      "assets/space-mono-latin-400-normal-_3DlpgIW.woff"
+    ]
+  },
+  "implementationFiles": [
+    {
+      "path": "src/features/portfolio/Photography.tsx",
+      "sha256": "2671a2e325b72f2429a0d6c4bcf95f8b4a41013a5b937f22644b740a07b9701d",
+      "bytes": 8518
+    },
+    {
+      "path": "src/features/portfolio/CommandPalette.tsx",
+      "sha256": "633a3aad7784fb856751da7281aed888b3e08b67206f16ae43834b2ede18806a",
+      "bytes": 7090
+    },
+    {
+      "path": "src/features/portfolio/Quotes.tsx",
+      "sha256": "2d09167263d8a7c17900b982bf2b67a76bc86c4ccbab0ade13f1f06a5150f77b",
+      "bytes": 3784
+    },
+    {
+      "path": "src/features/portfolio/Name.tsx",
+      "sha256": "0f7bfe9cbee0563fdb0933d441c8a522782fcab9d2d04c7e04965de49c6ffb55",
+      "bytes": 1658
+    },
+    {
+      "path": "src/styles/portfolio.css",
+      "sha256": "d15b08c20ef5a57326a390a3939795f7eeda3b96cf853031beb638e04d209e20",
+      "bytes": 35306
+    },
+    {
+      "path": "src/styles/contributions.css",
+      "sha256": "7ea001217620604ae00524b21a98410fa1e94469595d3c5f1991fda21fa080c6",
+      "bytes": 3294
+    },
+    {
+      "path": "src/styles/photography.css",
+      "sha256": "28277ece026155d66ae82a17d87ad05394d5a69a037e3a50f7ff2179c62b346c",
+      "bytes": 4621
+    },
+    {
+      "path": "src/styles/tokens.css",
+      "sha256": "a43c63741212f2e035ac1719deb33a08d5dfcd63edf8ccff1c6acfd5220d1def",
+      "bytes": 1144
+    },
+    {
+      "path": "src/styles/content-pages.css",
+      "sha256": "0288f97b834cc5731c4ba05ab1fb0d7df232ac839f6d2923eef3154d2622ef47",
+      "bytes": 6604
+    },
+    {
+      "path": "tests/e2e/photography.spec.ts",
+      "sha256": "ecc3126d93ee6fd350fd4d7c8e3a751eb62af1988178834fa66e117d54baeec3",
+      "bytes": 7913
+    },
+    {
+      "path": "tests/e2e/portfolio.spec.ts",
+      "sha256": "22b21b7bd3557cedfd017ed751084022046ac96976b0519e916c129e2b0cfa3e",
+      "bytes": 6746
+    },
+    {
+      "path": "tests/e2e/readability.spec.ts",
+      "sha256": "085382ce1f73b5737541365cbe72bce3b784fcdeac6ea47c992a6994cc072f03",
+      "bytes": 6242
+    },
+    {
+      "path": "index.html",
+      "sha256": "db431a8554fa74f486d2dacc8bd0d98a174ac32cd7b28ad2510f05c3225a9f64",
+      "bytes": 1187
+    }
+  ],
+  "scopeReview": {
+    "baselineEntries": 49,
+    "changed": [
+      "src/features/portfolio/Photography.tsx",
+      "src/features/portfolio/CommandPalette.tsx",
+      "src/features/portfolio/Quotes.tsx",
+      "src/features/portfolio/Name.tsx",
+      "src/styles/portfolio.css",
+      "src/styles/contributions.css",
+      "src/styles/photography.css",
+      "src/styles/tokens.css",
+      "src/styles/content-pages.css",
+      "tests/e2e/photography.spec.ts",
+      "tests/e2e/portfolio.spec.ts"
+    ],
+    "missing": [],
+    "uncommitted": true,
+    "dependencyInstalls": false
+  },
+  "screenshots": [
+    {
+      "path": "docs/design/evidence/readability-dark-941.png",
+      "sha256": "ebadb56ca72c9d60861747dac46e246d0008c3dcc508396801f3926ed3a9b468",
+      "bytes": 422505,
+      "dimensions": [941, 4216]
+    },
+    {
+      "path": "docs/design/evidence/readability-dark-desktop.png",
+      "sha256": "89cae1b37702e70330c959e253f7674b4c2d7bed3556a57e61cf82191877b6d8",
+      "bytes": 522378,
+      "dimensions": [1440, 3530]
+    },
+    {
+      "path": "docs/design/evidence/readability-dark-mobile.png",
+      "sha256": "a05fa8220ddcd401169a7ecd74097c67a002862105d09dd9a77418930daa229d",
+      "bytes": 400130,
+      "dimensions": [390, 5602]
+    },
+    {
+      "path": "docs/design/evidence/readability-light-941.png",
+      "sha256": "172ebdedd2b3f8d053d948edba84ac6b79ab4bea49d6ee6be89ea7158a117586",
+      "bytes": 419449,
+      "dimensions": [941, 4216]
+    },
+    {
+      "path": "docs/design/evidence/readability-light-desktop.png",
+      "sha256": "234ef750b343cff2b53cf5328010d583c85420c5d64cef2e8e809a1cd48509e4",
+      "bytes": 517532,
+      "dimensions": [1440, 3530]
+    },
+    {
+      "path": "docs/design/evidence/readability-light-mobile.png",
+      "sha256": "cc93cf3e368a46c84693e1eb03178f189bdd234496404244a714b9dc940d304a",
+      "bytes": 397202,
+      "dimensions": [390, 5602]
+    }
+  ],
+  "supplementalEvidence": [
+    "output/playwright/video-audit/after-review.json",
+    "output/playwright/video-audit/routes-review.json",
+    "output/playwright/video-audit/"
+  ],
+  "proseLint": {
+    "recordingAnalysisPer100Words": 0.72,
+    "githubReviewPer100Words": 0.81,
+    "canonicalDraftPer100Words": 1.46,
+    "handoffPer100Words": 1.58
+  }
+}

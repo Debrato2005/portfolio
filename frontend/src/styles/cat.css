@@ -1,0 +1,36 @@
+.cat-sprite {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 32px;
+  height: 32px;
+  z-index: 30;
+  pointer-events: none;
+  background-image: url('/images/oneko.gif');
+  background-position: -96px -96px;
+  image-rendering: pixelated;
+  contain: layout paint;
+}
+.cat-toggle {
+  color: var(--color-muted);
+  background: transparent;
+  border: 0;
+  padding: 0.4rem 0.25rem;
+  min-height: 44px;
+  font: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  cursor: pointer;
+}
+.cat-toggle:hover {
+  color: var(--color-accent);
+}
+.cat-toggle:disabled {
+  cursor: default;
+  text-decoration: none;
+}
+@media (prefers-reduced-motion: reduce), (hover: none), (pointer: coarse) {
+  .cat-sprite {
+    display: none;
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "status": "RESEARCH_ONLY",
+  "retrievedDate": "2026-10-14",
+  "installed": false,
+  "runtimeQualified": false,
+  "liveDemoBrowserAudited": false,
+  "recordingEvidence": "evidence/reference-45-6s.png",
+  "references": [
+    {
+      "url": "https://github.com/garvittsingla/portfolio/blob/main/components/GithubContributionsSticky.tsx",
+      "evidence": "Source retrieved through GitHub connector; Rough.js cross-hatch cells match recorded style",
+      "inspectedBlob": "fdc2676f4b8ffee9567397343fbee0df634f37c9",
+      "deployedRevisionVerified": false
+    },
+    {
+      "url": "https://github.com/tb962/heatmap-ui",
+      "manifestVersion": "0.3.0",
+      "license": "MIT",
+      "peerDependencies": {
+        "react": ">=18.2.0",
+        "react-dom": ">=18.2.0"
+      },
+      "examples": "https://heatmapui.dev/github-contributions",
+      "limits": [
+        "Public cached contribution endpoint rather than our proposed GitHub server boundary",
+        "Fitted layout can drop older weeks; adaptation must preserve access to the full selected period"
+      ]
+    },
+    {
+      "url": "https://design.helpmarq.com/components/heatmap-year-stipple",
+      "sourceInspected": true,
+      "licenseVerified": false,
+      "limits": [
+        "Missing values map to zero",
+        "Rolling date window needs calendar-year adaptation",
+        "No browser audit"
+      ]
+    },
+    {
+      "url": "https://github.com/wa0x6e/cal-heatmap",
+      "readmeInspected": true,
+      "role": "General JavaScript calendar visual reference"
+    },
+    {
+      "url": "https://gitcalendarui.vercel.app/",
+      "role": "Palette and shape explorer",
+      "renderedInteractionAudited": false
+    }
+  ],
+  "recommendation": {
+    "visualShortlist": ["Sketch ledger", "Ink stipple"],
+    "rendererDecision": "Not adopted; prior React Activity Calendar recommendation remains a baseline candidate"
+  }
+}

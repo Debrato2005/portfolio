@@ -1,0 +1,117 @@
+[
+  {
+    "name": "anurag",
+    "url": "https://anuragdotdev.vercel.app/",
+    "date": "2026-10-15",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "errors": [],
+    "title": "Anurag Jha — Full Stack Developer",
+    "styles": {
+      "fonts": [
+        "Amiamie, Inter, system-ui, sans-serif, system-ui, sans-serif",
+        "\"Instrument Serif\", Georgia, serif",
+        "\"JetBrains Mono\", monospace"
+      ],
+      "h1": {
+        "x": 473,
+        "y": 265,
+        "width": 223,
+        "height": 38,
+        "top": 265,
+        "right": 696,
+        "bottom": 303,
+        "left": 473
+      },
+      "height": 6066
+    },
+    "themeControl": "Toggle theme",
+    "palette": 0,
+    "mobileOverflow": false
+  },
+  {
+    "name": "sakthi",
+    "url": "https://sakthi-portfolio-mauve.vercel.app/",
+    "date": "2026-10-15",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "errors": [],
+    "title": "Sakthivel | Frontend developer",
+    "styles": {
+      "fonts": [
+        "\"Instrument Serif\", \"Instrument Serif Fallback\", ui-monospace, monospace",
+        "Sora, \"Sora Fallback\", ui-sans-serif, system-ui, sans-serif"
+      ],
+      "height": 900
+    },
+    "themeControl": null,
+    "palette": 0,
+    "mobileOverflow": false
+  },
+  {
+    "name": "parth",
+    "url": "https://mittalparth.dev/",
+    "date": "2026-10-15",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "errors": [],
+    "title": "Parth Mittal | Software Developer",
+    "styles": {
+      "fonts": [
+        "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "\"Indie Flower\", \"Indie Flower Fallback\", cursive"
+      ],
+      "h1": {
+        "x": 368,
+        "y": 105,
+        "width": 720,
+        "height": 30,
+        "top": 105,
+        "right": 1088,
+        "bottom": 135,
+        "left": 368
+      },
+      "height": 3247
+    },
+    "palette": 0,
+    "mobileOverflow": false
+  },
+  {
+    "name": "garvit",
+    "url": "https://www.garvitsingla.in/",
+    "date": "2026-10-15",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "errors": [],
+    "title": "Garvit Singla — Software Engineer & Builder",
+    "styles": {
+      "fonts": [
+        "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace",
+        "\"Gloria Hallelujah\", \"Gloria Hallelujah Fallback\", \"Gloria Hallelujah\", cursive, sans-serif",
+        "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\""
+      ],
+      "h1": {
+        "x": 547.6082763671875,
+        "y": 122.89276123046875,
+        "width": 357.073974609375,
+        "height": 42.21630859375,
+        "top": 122.89276123046875,
+        "right": 904.6822509765625,
+        "bottom": 165.10906982421875,
+        "left": 547.6082763671875
+      },
+      "height": 4654
+    },
+    "themeControl": null,
+    "palette": 1,
+    "mobileOverflow": false
+  }
+]

@@ -1,0 +1,51 @@
+{
+  "capturedAt": "2026-10-15T00:07:06.384Z",
+  "cases": [
+    {
+      "theme": "dark",
+      "width": 1515,
+      "rootTextScale": 1,
+      "deviceScaleFactor": 1.5,
+      "actualTheme": "dark",
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "theme": "light",
+      "width": 1760,
+      "rootTextScale": 1,
+      "deviceScaleFactor": 1.5,
+      "actualTheme": "light",
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "rootTextScale": 1,
+      "deviceScaleFactor": 1.5,
+      "actualTheme": "light",
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "theme": "dark",
+      "width": 320,
+      "rootTextScale": 1,
+      "deviceScaleFactor": 1.5,
+      "actualTheme": "dark",
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "theme": "dark",
+      "width": 1980,
+      "rootTextScale": 1.5,
+      "deviceScaleFactor": 1.5,
+      "actualTheme": "dark",
+      "overflow": false,
+      "violations": []
+    }
+  ],
+  "errors": []
+}

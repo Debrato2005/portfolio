@@ -1,0 +1,23 @@
+{
+  "scope": "Four reproduced layout defects after the owner rejected the foreground",
+  "sourceSha256": {
+    "src/styles/tokens.css": "873f92364d099df89e4543190dc8e972085db512355fc98ce4ed3ae3a8a4900f",
+    "src/styles/reference-refinement.css": "ebded0da1c5f49b2ab2698ebb2de4ffc85bb2e339c0cc071bb824141f55c5df1",
+    "src/styles/portfolio.css": "49ebb116c81e8068a7ad21016ec3f88dd95a8347f9dcffe1f408f05e5ce2bb25",
+    "src/styles/photography.css": "c3228e8716e735399b47115361b8c7cec596d833ae29752359d438f9228c3910",
+    "tests/e2e/readability.spec.ts": "ccdff04d48ce1160cfeea7811cffeb906ad2d2dc5213a21f91b78fcde8236c42",
+    "tests/e2e/photography.spec.ts": "f5dc9183e82a1c22d491b8f3deed9494fbc3b5ed1e471ea77c1433f61e5088d9"
+  },
+  "checks": {
+    "affectedBrowserJourneys": "54 passed across Chromium, Firefox, WebKit",
+    "npmRunCheck": "exit 0; 23 unit/contract checks and production build passed",
+    "fullBrowserSuite": "not rerun for this bounded CSS correction",
+    "productionBrowserSuite": "not rerun for this bounded CSS correction"
+  },
+  "limits": [
+    "Overall visual acceptance remains reopened",
+    "Photographs remain missing",
+    "Provider states controlled; no live calendar or counter acceptance claimed",
+    "Screenshots do not establish frame pacing or full accessibility conformance"
+  ]
+}

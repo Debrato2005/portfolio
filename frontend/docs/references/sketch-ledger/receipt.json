@@ -1,0 +1,139 @@
+{
+  "capturedAt": "2026-10-14T23:47:53.529Z",
+  "source": "public-calendar",
+  "cases": [
+    {
+      "theme": "light",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "height": 5296,
+      "body": "18px",
+      "label": "14px",
+      "heading": "34px",
+      "smallTargets": [],
+      "violations": []
+    },
+    {
+      "theme": "light",
+      "width": 941,
+      "scrollWidth": 941,
+      "height": 6028,
+      "body": "18px",
+      "label": "14px",
+      "heading": "28px",
+      "smallTargets": [],
+      "violations": []
+    },
+    {
+      "theme": "light",
+      "width": 768,
+      "scrollWidth": 768,
+      "height": 6199,
+      "body": "18px",
+      "label": "14px",
+      "heading": "28px",
+      "smallTargets": [],
+      "violations": []
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "height": 7874,
+      "body": "18px",
+      "label": "14px",
+      "heading": "28px",
+      "smallTargets": [],
+      "violations": []
+    },
+    {
+      "theme": "light",
+      "width": 320,
+      "scrollWidth": 320,
+      "height": 9237,
+      "body": "18px",
+      "label": "14px",
+      "heading": "28px",
+      "smallTargets": [],
+      "violations": []
+    },
+    {
+      "path": "/",
+      "width": 320,
+      "textScale": "200%",
+      "overflow": false
+    },
+    {
+      "path": "/projects",
+      "width": 320,
+      "textScale": "200%",
+      "overflow": false
+    },
+    {
+      "path": "/projects/cryptalis",
+      "width": 320,
+      "textScale": "200%",
+      "overflow": false
+    },
+    {
+      "path": "/hackathons/svasth",
+      "width": 320,
+      "textScale": "200%",
+      "overflow": false
+    },
+    {
+      "path": "/thoughts/the-next-breakthrough-is-in-another-field",
+      "width": 320,
+      "textScale": "200%",
+      "overflow": false
+    },
+    {
+      "path": "/photography",
+      "width": 320,
+      "textScale": "200%",
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "failureViolations": [],
+  "limits": {
+    "calendar": "Live public relay read; default public profile requests blocked for failure review.",
+    "views": "Counter calls blocked. No views added.",
+    "photography": "Personal collections remain empty. Populated rotation uses browser-only test images.",
+    "accessibility": "Automated tested states only. No full conformance or physical-device claim."
+  },
+  "screenshots": {
+    "light-1440-top.png": "7bc817af26c88e265c1de27c7044047a80f0e38b247b4d6c5c436191238d10d9",
+    "dark-390-top.png": "2b2711cab0eb5fe6d9ad32ad3d0579be591a5d32ef7f96e9940dfc9646f3849c",
+    "github.png": "52e91a15345e6e63aa8da39d53cf257a3412484df736ad3e2dfa51d585876c80",
+    "unavailable-320.png": "a132460f07ef85c7fa0f427325c852d9973344230ccbfe009ea1e0636f28666a",
+    "palette.png": "a3f571a8c67807b819258bb8a8bad44e94a64d531062e6e16b338378b7b9f1ab"
+  },
+  "verification": {
+    "nonBrowserGate": "npm run check: exit 0, 23 unit/contract tests",
+    "developmentBrowsers": "138 passed across Chromium, Firefox, WebKit",
+    "productionBrowsers": "6 passed across Chromium, Firefox, WebKit",
+    "review": "Read-only bounded review found no blocking issues. Reviewer did not rerun tests.",
+    "scopedBaselineFilesChanged": [
+      "README.md",
+      "design-qa.md",
+      "docs/BUILD_CHECKLIST.md",
+      "docs/DESIGN_SYSTEM.md",
+      "docs/HANDOFF.md",
+      "docs/component-motion-review.md",
+      "docs/reference-analysis.md",
+      "src/features/portfolio/ContributionSection.tsx",
+      "src/features/portfolio/Photography.tsx",
+      "src/styles/achievements.css",
+      "src/styles/contributions.css",
+      "src/styles/photography.css",
+      "src/styles/reference-refinement.css",
+      "src/styles/tokens.css",
+      "tests/e2e/contributions.spec.ts",
+      "tests/e2e/photography.spec.ts",
+      "tests/e2e/portfolio.spec.ts",
+      "tests/e2e/readability.spec.ts"
+    ],
+    "additionalChangedTest": "tests/e2e/page-views.spec.ts"
+  }
+}

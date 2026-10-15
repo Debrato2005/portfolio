@@ -1,0 +1,56 @@
+{
+  "verifiedAt": "2026-10-15T01:52:39.098217+00:00",
+  "sourceSha256": {
+    "src/styles/tokens.css": "9da3c6ee2065363ff5206418ffee35140a995292b1c477ac8c7c3115e2c241ce",
+    "src/styles/portfolio.css": "bf96c7bed9daa6204a7e5945b388aeb4b23374e481d70bcc6e480a94a5f19783",
+    "src/styles/reference-refinement.css": "f6d2bd2064d01da4265176c15bab15dedd5d46b30e0db88dd9f168332ec5cd3f",
+    "src/styles/photography.css": "10e7e6e6b21b7da931da7f99fa04176494cfeb88088ab57c23061049de5ac365",
+    "src/styles/achievements.css": "27ef9324fa1be64841a1a4fe0e1ff3a2044b8f0d4252fb0de88fef5f9cad50a7",
+    "src/routes/HomePage.tsx": "a4a2e359abfc912e8ebf4ae36b58786c5c0e8d4d4fa089341ebd9111362a709d",
+    "src/features/portfolio/Projects.tsx": "5aeb31acf3008e1aa9212911ba2db81c0360fe8109c51bbc9252cf2c8cc81603",
+    "src/features/portfolio/Photography.tsx": "37c7461290cd9c4eaa82fc3cc1dd00a64ba40aae107551e1691ec7386a7e358d",
+    "src/features/portfolio/Achievements.tsx": "ec86396b1e1ca1fb9eb063bc1ee11c757949e3b445750ad03ffa7838bae72ff7",
+    "src/features/portfolio/content.ts": "2719fc35cdc72b224396d9b5907d93d1976810ddc20a316884cd5f404ba690bd",
+    "tests/e2e/portfolio.spec.ts": "1d996a40ec27cfd540f68285bbbdc6dd098f3fa9eb091dbc64582ff2b637f400"
+  },
+  "projectAssetSha256": {
+    "public/images/project-cryptalis.webp": "660e1419360bbc3125dba37aaa48ee6691e8fff3c56a8af45fca1bb31d5f12bb",
+    "public/images/project-unispace.webp": "0978a2a5e3f356e48759a397fff481506e87e927e4a805d14ced2704243306c8",
+    "public/images/project-oncosyn.webp": "54ccd372dcd3521f2af67f4c0a162e8b178f4233e6657a8be0c27df0caf353b2",
+    "public/images/project-smolink.webp": "48fb65ef0aea357940ca063b268665612eec0cb29c080d5471fa7b664cfb1ea5",
+    "public/images/project-oncosyn-large.webp": "ba7eef8ddae4161824921c9f3b01bd8433fa903370c8402494d7e2e7c8288cac",
+    "public/images/project-cryptalis-large.webp": "f057a90786d1dccfad1576bb4fd9efa1d3295ad2ffe1d0d0b6048a89b8baef7f",
+    "public/images/project-smolink-large.webp": "be4faa35df7ecfaffc468768b0da89e02e975ead7feaaaa93ac870efc10d188d",
+    "public/images/project-unispace-small.webp": "628eee00af6c38ae1ca63b79028bb0ed8145011558c54b157e64863898d33090"
+  },
+  "checks": {
+    "npmRunCheck": "exit 0; typecheck, lint, formatting, 23 unit/contract checks, build, documents and 19 skill bundles",
+    "developmentBrowsers": "150 passed across Chromium, Firefox and WebKit on the final source and responsive artwork",
+    "productionBrowsers": "6 passed across the same engines on the final build",
+    "renderedConfirmation": "Both themes, six viewport cases from 320 through 1760px; no document overflow, page errors or listed automated Axe violations in those captures",
+    "liveRead": "GitHub profile and public calendar relay both returned HTTP 200 in the separate public-state capture; counter hit was replaced with get",
+    "sourceReview": "Read-only independent review found no blocking or important issues; reviewer did not run tests",
+    "detector": "One generic font warning on the existing Instrument Serif declaration; selected typography retained to match the approved identity"
+  },
+  "limits": [
+    "No claim of perfect visual acceptance, full accessibility conformance or field performance",
+    "Personal photography and official event media remain missing",
+    "Final background and paired-image reveal remain deferred",
+    "No dependency installation, commit, push or publication"
+  ],
+  "screenshots": {
+    "before-photography-1760.png": "b88ccc841349a3bff61c0c2cce43f3e86aba701fdcea8c2012e8b7ab9face101",
+    "before-github-1760.png": "260120b5440466018c8eaabd61dc0c38a2b9c3b416046538cf08da4009088ccc",
+    "light-1760-top.png": "ba56e60bbb0476717e84e41c18bb6a595f3a1c9aa394cbe08ea5ed29fb29f5e1",
+    "before-projects-1760.png": "14458e8f5fc442e91c4ec4392b36ffd4c89bc4e9a5569b4b350fc70e0475b8ac",
+    "public-light-full.png": "a812928a8c0175f6f93b85b02529f7b4f95ef5692dfe34822f61713f92f85a74",
+    "confirmed-github-1760.png": "a015e1c46a11e17d3f25363b42a88e6975952f8dd0484e7a4e131a9213917b65",
+    "confirmed-projects-1760.png": "86463e1f9eeb4f9b3d45a176506d32e13669bb2a21b63d8ccfacc6e3993ed453",
+    "confirmed-photography-1760.png": "f019aa812131b525365c6f893a56fb4d1ab1ab9a60328644743bf9496af6c49d",
+    "public-light-photography.png": "d921edcc89be819a07bf9614d4ee42701e9967d2e7095a8cad14e95cabb9e3f3",
+    "light-390-full.png": "ca3026d269edbfb70edf2073c787c73f38c0651da519a4883eb831a610641ad6",
+    "public-palette.png": "85334159c32022a27b4fef04f0b0f1d4389b20099b579c1e0a15133696a938e1",
+    "public-dark-github.png": "5402bdee55362b46e48dc68d06c66b44449c95b3a09bf7099260ab958c38f69b",
+    "public-dark-projects.png": "5551fd50c1bbd8a3bc2c418a55a4a381e4203df50e3a92d35f4f4bfba99f7b39"
+  }
+}

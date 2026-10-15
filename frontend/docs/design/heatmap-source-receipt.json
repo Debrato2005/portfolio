@@ -1,0 +1,52 @@
+{
+  "status": "RESEARCH_ONLY",
+  "retrievedDate": "2026-10-14",
+  "recommendation": "grubersjoe/react-activity-calendar",
+  "installed": false,
+  "runtimeQualified": false,
+  "liveDemoBrowserAudited": false,
+  "repositories": [
+    {
+      "repository": "https://github.com/grubersjoe/react-activity-calendar",
+      "defaultBranch": "main",
+      "license": "MIT",
+      "lastPush": "2026-10-13T10:43:21Z",
+      "archived": false,
+      "demo": "https://grubersjoe.github.io/react-activity-calendar/"
+    },
+    {
+      "repository": "https://github.com/uiwjs/react-heat-map",
+      "defaultBranch": "main",
+      "license": "MIT",
+      "lastPush": "2026-05-28T17:11:50Z",
+      "archived": false,
+      "demo": "https://uiwjs.github.io/react-heat-map"
+    },
+    {
+      "repository": "https://github.com/rutopio/shadcn-heatmap",
+      "defaultBranch": "master",
+      "license": "MIT",
+      "lastPush": "2026-07-13T18:11:38Z",
+      "archived": false,
+      "demo": "https://heatmap.chingru.com"
+    },
+    {
+      "repository": "https://github.com/kevinsqi/react-calendar-heatmap",
+      "defaultBranch": "master",
+      "license": "MIT",
+      "lastPush": "2025-02-23T23:28:34Z",
+      "archived": false,
+      "demo": "http://www.kevinqi.com/react-calendar-heatmap/"
+    }
+  ],
+  "observedSourceVersions": {
+    "react-activity-calendar": "3.2.2",
+    "@uiw/react-heat-map": "2.3.4",
+    "react-calendar-heatmap": "1.10.0"
+  },
+  "inspectedSource": [
+    "grubersjoe/react-activity-calendar: src/components/ActivityCalendar.tsx",
+    "grubersjoe/react-activity-calendar: src/components/Tooltip.tsx",
+    "rutopio/shadcn-heatmap: src/components/heatmap/calendar-heatmap.tsx"
+  ]
+}

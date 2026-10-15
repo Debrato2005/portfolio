@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-15",
+  "method": "Unauthenticated public GitHub API and raw README retrieval. No private repositories accessed.",
+  "repositories": [
+    {
+      "repository": "https://github.com/Debrato2005/smolink",
+      "public": true,
+      "readmeSha256": "cc5a078a46f7a03a53ebd141909fd9697e1822f292e43585f0d247b4ba3594b4"
+    },
+    {
+      "repository": "https://github.com/Debrato2005/UniSpace",
+      "public": true,
+      "readmeSha256": "f76deaadd32d241e34234a1852c4e395261ae98621b883c10f82c20c1917d1b7"
+    },
+    {
+      "repository": "https://github.com/Debrato2005/OrbitOps",
+      "public": true,
+      "readmeSha256": "15153f1f0f4974e6e6c969ff57d19b19c4b7c9733942a14143ec697ceeebcc57"
+    },
+    {
+      "repository": "https://github.com/Debrato2005/StaySync",
+      "public": true,
+      "readmeSha256": "97f1d8dc40d45463df2bf1572c817690033758bff6d180e95c8d073103557ce9"
+    },
+    {
+      "repository": "https://github.com/Debrato2005/cryptalis",
+      "public": true,
+      "evidence": "Public API metadata and README inspected; qualification gates remain UNKNOWN."
+    }
+  ],
+  "article": "Owner-supplied URL retained. Retrieval unavailable; date, category and full text not invented."
+}

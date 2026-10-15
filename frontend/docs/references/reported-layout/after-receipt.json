@@ -1,0 +1,962 @@
+[
+  {
+    "width": 1760,
+    "overflow": false,
+    "skills": [
+      {
+        "text": "LanguagesPythonJavaTypeScriptSQL",
+        "box": {
+          "x": 368,
+          "y": 3648.71875,
+          "width": 194.5625,
+          "height": 90.78125,
+          "top": 3648.71875,
+          "right": 562.5625,
+          "bottom": 3739.5,
+          "left": 368
+        },
+        "overflow": []
+      },
+      {
+        "text": "FrontendReactJavaScriptHTML / CSS",
+        "box": {
+          "x": 575.359375,
+          "y": 3648.71875,
+          "width": 194.5625,
+          "height": 90.78125,
+          "top": 3648.71875,
+          "right": 769.921875,
+          "bottom": 3739.5,
+          "left": 575.359375
+        },
+        "overflow": []
+      },
+      {
+        "text": "BackendFastAPISQLAlchemyPostgreSQLRedis",
+        "box": {
+          "x": 782.71875,
+          "y": 3648.71875,
+          "width": 194.5625,
+          "height": 90.78125,
+          "top": 3648.71875,
+          "right": 977.28125,
+          "bottom": 3739.5,
+          "left": 782.71875
+        },
+        "overflow": []
+      },
+      {
+        "text": "AI / MLComputer visionPyTorchTensorFlow",
+        "box": {
+          "x": 990.078125,
+          "y": 3648.71875,
+          "width": 194.5625,
+          "height": 90.78125,
+          "top": 3648.71875,
+          "right": 1184.640625,
+          "bottom": 3739.5,
+          "left": 990.078125
+        },
+        "overflow": []
+      },
+      {
+        "text": "Research / ToolspVACtoolsMHCflurryDockerLinux",
+        "box": {
+          "x": 1197.4375,
+          "y": 3648.71875,
+          "width": 194.5625,
+          "height": 90.78125,
+          "top": 3648.71875,
+          "right": 1392,
+          "bottom": 3739.5,
+          "left": 1197.4375
+        },
+        "overflow": []
+      }
+    ],
+    "index": {
+      "x": 1424,
+      "y": 78.390625,
+      "width": 224,
+      "height": 508.890625,
+      "top": 78.390625,
+      "right": 1648,
+      "bottom": 587.28125,
+      "left": 1424
+    },
+    "content": {
+      "x": 368,
+      "y": 88,
+      "width": 1024,
+      "height": 4976.375,
+      "top": 88,
+      "right": 1392,
+      "bottom": 5064.375,
+      "left": 368
+    }
+  },
+  {
+    "width": 1600,
+    "overflow": false,
+    "skills": [
+      {
+        "text": "LanguagesPythonJavaTypeScriptSQL",
+        "box": {
+          "x": 288,
+          "y": -233.109375,
+          "width": 194.5625,
+          "height": 90.78125,
+          "top": -233.109375,
+          "right": 482.5625,
+          "bottom": -142.328125,
+          "left": 288
+        },
+        "overflow": []
+      },
+      {
+        "text": "FrontendReactJavaScriptHTML / CSS",
+        "box": {
+          "x": 495.359375,
+          "y": -233.109375,
+          "width": 194.5625,
+          "height": 90.78125,
+          "top": -233.109375,
+          "right": 689.921875,
+          "bottom": -142.328125,
+          "left": 495.359375
+        },
+        "overflow": []
+      },
+      {
+        "text": "BackendFastAPISQLAlchemyPostgreSQLRedis",
+        "box": {
+          "x": 702.71875,
+          "y": -233.109375,
+          "width": 194.5625,
+          "height": 90.78125,
+          "top": -233.109375,
+          "right": 897.28125,
+          "bottom": -142.328125,
+          "left": 702.71875
+        },
+        "overflow": []
+      },
+      {
+        "text": "AI / MLComputer visionPyTorchTensorFlow",
+        "box": {
+          "x": 910.078125,
+          "y": -233.109375,
+          "width": 194.5625,
+          "height": 90.78125,
+          "top": -233.109375,
+          "right": 1104.640625,
+          "bottom": -142.328125,
+          "left": 910.078125
+        },
+        "overflow": []
+      },
+      {
+        "text": "Research / ToolspVACtoolsMHCflurryDockerLinux",
+        "box": {
+          "x": 1117.4375,
+          "y": -233.109375,
+          "width": 194.5625,
+          "height": 90.78125,
+          "top": -233.109375,
+          "right": 1312,
+          "bottom": -142.328125,
+          "left": 1117.4375
+        },
+        "overflow": []
+      }
+    ],
+    "index": {
+      "x": 1344,
+      "y": 78.390625,
+      "width": 224,
+      "height": 508.890625,
+      "top": 78.390625,
+      "right": 1568,
+      "bottom": 587.28125,
+      "left": 1344
+    },
+    "content": {
+      "x": 288,
+      "y": -3807,
+      "width": 1024,
+      "height": 4989.546875,
+      "top": -3807,
+      "right": 1312,
+      "bottom": 1182.546875,
+      "left": 288
+    }
+  },
+  {
+    "width": 1440,
+    "overflow": false,
+    "skills": [
+      {
+        "text": "LanguagesPythonJavaTypeScriptSQL",
+        "box": {
+          "x": 208,
+          "y": -153.109375,
+          "width": 194.5625,
+          "height": 90.78125,
+          "top": -153.109375,
+          "right": 402.5625,
+          "bottom": -62.328125,
+          "left": 208
+        },
+        "overflow": []
+      },
+      {
+        "text": "FrontendReactJavaScriptHTML / CSS",
+        "box": {
+          "x": 415.359375,
+          "y": -153.109375,
+          "width": 194.5625,
+          "height": 90.78125,
+          "top": -153.109375,
+          "right": 609.921875,
+          "bottom": -62.328125,
+          "left": 415.359375
+        },
+        "overflow": []
+      },
+      {
+        "text": "BackendFastAPISQLAlchemyPostgreSQLRedis",
+        "box": {
+          "x": 622.71875,
+          "y": -153.109375,
+          "width": 194.5625,
+          "height": 90.78125,
+          "top": -153.109375,
+          "right": 817.28125,
+          "bottom": -62.328125,
+          "left": 622.71875
+        },
+        "overflow": []
+      },
+      {
+        "text": "AI / MLComputer visionPyTorchTensorFlow",
+        "box": {
+          "x": 830.078125,
+          "y": -153.109375,
+          "width": 194.5625,
+          "height": 90.78125,
+          "top": -153.109375,
+          "right": 1024.640625,
+          "bottom": -62.328125,
+          "left": 830.078125
+        },
+        "overflow": []
+      },
+      {
+        "text": "Research / ToolspVACtoolsMHCflurryDockerLinux",
+        "box": {
+          "x": 1037.4375,
+          "y": -153.109375,
+          "width": 194.5625,
+          "height": 90.78125,
+          "top": -153.109375,
+          "right": 1232,
+          "bottom": -62.328125,
+          "left": 1037.4375
+        },
+        "overflow": []
+      }
+    ],
+    "index": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0,
+      "top": 0,
+      "right": 0,
+      "bottom": 0,
+      "left": 0
+    },
+    "content": {
+      "x": 208,
+      "y": -3807,
+      "width": 1024,
+      "height": 5069.546875,
+      "top": -3807,
+      "right": 1232,
+      "bottom": 1262.546875,
+      "left": 208
+    }
+  },
+  {
+    "width": 1280,
+    "overflow": false,
+    "skills": [
+      {
+        "text": "LanguagesPythonJavaTypeScriptSQL",
+        "box": {
+          "x": 128,
+          "y": -243.328125,
+          "width": 194.5625,
+          "height": 90.78125,
+          "top": -243.328125,
+          "right": 322.5625,
+          "bottom": -152.546875,
+          "left": 128
+        },
+        "overflow": []
+      },
+      {
+        "text": "FrontendReactJavaScriptHTML / CSS",
+        "box": {
+          "x": 335.359375,
+          "y": -243.328125,
+          "width": 194.5625,
+          "height": 90.78125,
+          "top": -243.328125,
+          "right": 529.921875,
+          "bottom": -152.546875,
+          "left": 335.359375
+        },
+        "overflow": []
+      },
+      {
+        "text": "BackendFastAPISQLAlchemyPostgreSQLRedis",
+        "box": {
+          "x": 542.71875,
+          "y": -243.328125,
+          "width": 194.5625,
+          "height": 90.78125,
+          "top": -243.328125,
+          "right": 737.28125,
+          "bottom": -152.546875,
+          "left": 542.71875
+        },
+        "overflow": []
+      },
+      {
+        "text": "AI / MLComputer visionPyTorchTensorFlow",
+        "box": {
+          "x": 750.078125,
+          "y": -243.328125,
+          "width": 194.5625,
+          "height": 90.78125,
+          "top": -243.328125,
+          "right": 944.640625,
+          "bottom": -152.546875,
+          "left": 750.078125
+        },
+        "overflow": []
+      },
+      {
+        "text": "Research / ToolspVACtoolsMHCflurryDockerLinux",
+        "box": {
+          "x": 957.4375,
+          "y": -243.328125,
+          "width": 194.5625,
+          "height": 90.78125,
+          "top": -243.328125,
+          "right": 1152,
+          "bottom": -152.546875,
+          "left": 957.4375
+        },
+        "overflow": []
+      }
+    ],
+    "index": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0,
+      "top": 0,
+      "right": 0,
+      "bottom": 0,
+      "left": 0
+    },
+    "content": {
+      "x": 128,
+      "y": -3887,
+      "width": 1024,
+      "height": 5054.921875,
+      "top": -3887,
+      "right": 1152,
+      "bottom": 1167.921875,
+      "left": 128
+    }
+  },
+  {
+    "width": 1120,
+    "overflow": false,
+    "skills": [
+      {
+        "text": "LanguagesPythonJavaTypeScriptSQL",
+        "box": {
+          "x": 48,
+          "y": -283.984375,
+          "width": 332.796875,
+          "height": 60.796875,
+          "top": -283.984375,
+          "right": 380.796875,
+          "bottom": -223.1875,
+          "left": 48
+        },
+        "overflow": []
+      },
+      {
+        "text": "FrontendReactJavaScriptHTML / CSS",
+        "box": {
+          "x": 393.59375,
+          "y": -283.984375,
+          "width": 332.796875,
+          "height": 60.796875,
+          "top": -283.984375,
+          "right": 726.390625,
+          "bottom": -223.1875,
+          "left": 393.59375
+        },
+        "overflow": []
+      },
+      {
+        "text": "BackendFastAPISQLAlchemyPostgreSQLRedis",
+        "box": {
+          "x": 739.1875,
+          "y": -283.984375,
+          "width": 332.8125,
+          "height": 60.796875,
+          "top": -283.984375,
+          "right": 1072,
+          "bottom": -223.1875,
+          "left": 739.1875
+        },
+        "overflow": []
+      },
+      {
+        "text": "AI / MLComputer visionPyTorchTensorFlow",
+        "box": {
+          "x": 48,
+          "y": -210.390625,
+          "width": 332.796875,
+          "height": 60.796875,
+          "top": -210.390625,
+          "right": 380.796875,
+          "bottom": -149.59375,
+          "left": 48
+        },
+        "overflow": []
+      },
+      {
+        "text": "Research / ToolspVACtoolsMHCflurryDockerLinux",
+        "box": {
+          "x": 393.59375,
+          "y": -210.390625,
+          "width": 332.796875,
+          "height": 60.796875,
+          "top": -210.390625,
+          "right": 726.390625,
+          "bottom": -149.59375,
+          "left": 393.59375
+        },
+        "overflow": []
+      }
+    ],
+    "index": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0,
+      "top": 0,
+      "right": 0,
+      "bottom": 0,
+      "left": 0
+    },
+    "content": {
+      "x": 48,
+      "y": -4295,
+      "width": 1024,
+      "height": 5455.578125,
+      "top": -4295,
+      "right": 1072,
+      "bottom": 1160.578125,
+      "left": 48
+    }
+  },
+  {
+    "width": 960,
+    "overflow": false,
+    "skills": [
+      {
+        "text": "LanguagesPythonJavaTypeScriptSQL",
+        "box": {
+          "x": 24,
+          "y": -344.25,
+          "width": 295.46875,
+          "height": 90.78125,
+          "top": -344.25,
+          "right": 319.46875,
+          "bottom": -253.46875,
+          "left": 24
+        },
+        "overflow": []
+      },
+      {
+        "text": "FrontendReactJavaScriptHTML / CSS",
+        "box": {
+          "x": 332.265625,
+          "y": -344.25,
+          "width": 295.46875,
+          "height": 90.78125,
+          "top": -344.25,
+          "right": 627.734375,
+          "bottom": -253.46875,
+          "left": 332.265625
+        },
+        "overflow": []
+      },
+      {
+        "text": "BackendFastAPISQLAlchemyPostgreSQLRedis",
+        "box": {
+          "x": 640.53125,
+          "y": -344.25,
+          "width": 295.46875,
+          "height": 90.78125,
+          "top": -344.25,
+          "right": 936,
+          "bottom": -253.46875,
+          "left": 640.53125
+        },
+        "overflow": []
+      },
+      {
+        "text": "AI / MLComputer visionPyTorchTensorFlow",
+        "box": {
+          "x": 24,
+          "y": -240.671875,
+          "width": 295.46875,
+          "height": 90.78125,
+          "top": -240.671875,
+          "right": 319.46875,
+          "bottom": -149.890625,
+          "left": 24
+        },
+        "overflow": []
+      },
+      {
+        "text": "Research / ToolspVACtoolsMHCflurryDockerLinux",
+        "box": {
+          "x": 332.265625,
+          "y": -240.671875,
+          "width": 295.46875,
+          "height": 90.78125,
+          "top": -240.671875,
+          "right": 627.734375,
+          "bottom": -149.890625,
+          "left": 332.265625
+        },
+        "overflow": []
+      }
+    ],
+    "index": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0,
+      "top": 0,
+      "right": 0,
+      "bottom": 0,
+      "left": 0
+    },
+    "content": {
+      "x": 24,
+      "y": -4530,
+      "width": 912,
+      "height": 5754.5625,
+      "top": -4530,
+      "right": 936,
+      "bottom": 1224.5625,
+      "left": 24
+    }
+  },
+  {
+    "width": 768,
+    "overflow": false,
+    "skills": [
+      {
+        "text": "LanguagesPythonJavaTypeScriptSQL",
+        "box": {
+          "x": 24,
+          "y": -344.578125,
+          "width": 231.46875,
+          "height": 90.78125,
+          "top": -344.578125,
+          "right": 255.46875,
+          "bottom": -253.796875,
+          "left": 24
+        },
+        "overflow": []
+      },
+      {
+        "text": "FrontendReactJavaScriptHTML / CSS",
+        "box": {
+          "x": 268.265625,
+          "y": -344.578125,
+          "width": 231.46875,
+          "height": 90.78125,
+          "top": -344.578125,
+          "right": 499.734375,
+          "bottom": -253.796875,
+          "left": 268.265625
+        },
+        "overflow": []
+      },
+      {
+        "text": "BackendFastAPISQLAlchemyPostgreSQLRedis",
+        "box": {
+          "x": 512.53125,
+          "y": -344.578125,
+          "width": 231.46875,
+          "height": 90.78125,
+          "top": -344.578125,
+          "right": 744,
+          "bottom": -253.796875,
+          "left": 512.53125
+        },
+        "overflow": []
+      },
+      {
+        "text": "AI / MLComputer visionPyTorchTensorFlow",
+        "box": {
+          "x": 24,
+          "y": -241,
+          "width": 231.46875,
+          "height": 90.78125,
+          "top": -241,
+          "right": 255.46875,
+          "bottom": -150.21875,
+          "left": 24
+        },
+        "overflow": []
+      },
+      {
+        "text": "Research / ToolspVACtoolsMHCflurryDockerLinux",
+        "box": {
+          "x": 268.265625,
+          "y": -241,
+          "width": 231.46875,
+          "height": 90.78125,
+          "top": -241,
+          "right": 499.734375,
+          "bottom": -150.21875,
+          "left": 268.265625
+        },
+        "overflow": []
+      }
+    ],
+    "index": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0,
+      "top": 0,
+      "right": 0,
+      "bottom": 0,
+      "left": 0
+    },
+    "content": {
+      "x": 24,
+      "y": -4631,
+      "width": 720,
+      "height": 5876.015625,
+      "top": -4631,
+      "right": 744,
+      "bottom": 1245.015625,
+      "left": 24
+    }
+  },
+  {
+    "width": 640,
+    "overflow": false,
+    "skills": [
+      {
+        "text": "LanguagesPythonJavaTypeScriptSQL",
+        "box": {
+          "x": 16,
+          "y": 405.203125,
+          "width": 297.59375,
+          "height": 65.796875,
+          "top": 405.203125,
+          "right": 313.59375,
+          "bottom": 471,
+          "left": 16
+        },
+        "overflow": []
+      },
+      {
+        "text": "FrontendReactJavaScriptHTML / CSS",
+        "box": {
+          "x": 326.390625,
+          "y": 405.203125,
+          "width": 297.609375,
+          "height": 65.796875,
+          "top": 405.203125,
+          "right": 624,
+          "bottom": 471,
+          "left": 326.390625
+        },
+        "overflow": []
+      },
+      {
+        "text": "BackendFastAPISQLAlchemyPostgreSQLRedis",
+        "box": {
+          "x": 16,
+          "y": 483.796875,
+          "width": 297.59375,
+          "height": 95.78125,
+          "top": 483.796875,
+          "right": 313.59375,
+          "bottom": 579.578125,
+          "left": 16
+        },
+        "overflow": []
+      },
+      {
+        "text": "AI / MLComputer visionPyTorchTensorFlow",
+        "box": {
+          "x": 326.390625,
+          "y": 483.796875,
+          "width": 297.609375,
+          "height": 95.78125,
+          "top": 483.796875,
+          "right": 624,
+          "bottom": 579.578125,
+          "left": 326.390625
+        },
+        "overflow": []
+      },
+      {
+        "text": "Research / ToolspVACtoolsMHCflurryDockerLinux",
+        "box": {
+          "x": 16,
+          "y": 592.375,
+          "width": 297.59375,
+          "height": 65.796875,
+          "top": 592.375,
+          "right": 313.59375,
+          "bottom": 658.171875,
+          "left": 16
+        },
+        "overflow": []
+      }
+    ],
+    "index": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0,
+      "top": 0,
+      "right": 0,
+      "bottom": 0,
+      "left": 0
+    },
+    "content": {
+      "x": 16,
+      "y": -4581,
+      "width": 608,
+      "height": 6871.1875,
+      "top": -4581,
+      "right": 624,
+      "bottom": 2290.1875,
+      "left": 16
+    }
+  },
+  {
+    "width": 390,
+    "overflow": false,
+    "skills": [
+      {
+        "text": "LanguagesPythonJavaTypeScriptSQL",
+        "box": {
+          "x": 16,
+          "y": 425.84375,
+          "width": 172.59375,
+          "height": 95.78125,
+          "top": 425.84375,
+          "right": 188.59375,
+          "bottom": 521.625,
+          "left": 16
+        },
+        "overflow": []
+      },
+      {
+        "text": "FrontendReactJavaScriptHTML / CSS",
+        "box": {
+          "x": 201.390625,
+          "y": 425.84375,
+          "width": 172.609375,
+          "height": 95.78125,
+          "top": 425.84375,
+          "right": 374,
+          "bottom": 521.625,
+          "left": 201.390625
+        },
+        "overflow": []
+      },
+      {
+        "text": "BackendFastAPISQLAlchemyPostgreSQLRedis",
+        "box": {
+          "x": 16,
+          "y": 534.421875,
+          "width": 172.59375,
+          "height": 95.78125,
+          "top": 534.421875,
+          "right": 188.59375,
+          "bottom": 630.203125,
+          "left": 16
+        },
+        "overflow": []
+      },
+      {
+        "text": "AI / MLComputer visionPyTorchTensorFlow",
+        "box": {
+          "x": 201.390625,
+          "y": 534.421875,
+          "width": 172.609375,
+          "height": 95.78125,
+          "top": 534.421875,
+          "right": 374,
+          "bottom": 630.203125,
+          "left": 201.390625
+        },
+        "overflow": []
+      },
+      {
+        "text": "Research / ToolspVACtoolsMHCflurryDockerLinux",
+        "box": {
+          "x": 16,
+          "y": 643,
+          "width": 172.59375,
+          "height": 95.78125,
+          "top": 643,
+          "right": 188.59375,
+          "bottom": 738.78125,
+          "left": 16
+        },
+        "overflow": []
+      }
+    ],
+    "index": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0,
+      "top": 0,
+      "right": 0,
+      "bottom": 0,
+      "left": 0
+    },
+    "content": {
+      "x": 16,
+      "y": -4954,
+      "width": 358,
+      "height": 7405.765625,
+      "top": -4954,
+      "right": 374,
+      "bottom": 2451.765625,
+      "left": 16
+    }
+  },
+  {
+    "width": 320,
+    "overflow": false,
+    "skills": [
+      {
+        "text": "LanguagesPythonJavaTypeScriptSQL",
+        "box": {
+          "x": 16,
+          "y": -668.796875,
+          "width": 137.59375,
+          "height": 125.765625,
+          "top": -668.796875,
+          "right": 153.59375,
+          "bottom": -543.03125,
+          "left": 16
+        },
+        "overflow": []
+      },
+      {
+        "text": "FrontendReactJavaScriptHTML / CSS",
+        "box": {
+          "x": 166.390625,
+          "y": -668.796875,
+          "width": 137.609375,
+          "height": 125.765625,
+          "top": -668.796875,
+          "right": 304,
+          "bottom": -543.03125,
+          "left": 166.390625
+        },
+        "overflow": []
+      },
+      {
+        "text": "BackendFastAPISQLAlchemyPostgreSQLRedis",
+        "box": {
+          "x": 16,
+          "y": -530.234375,
+          "width": 137.59375,
+          "height": 155.75,
+          "top": -530.234375,
+          "right": 153.59375,
+          "bottom": -374.484375,
+          "left": 16
+        },
+        "overflow": []
+      },
+      {
+        "text": "AI / MLComputer visionPyTorchTensorFlow",
+        "box": {
+          "x": 166.390625,
+          "y": -530.234375,
+          "width": 137.609375,
+          "height": 155.75,
+          "top": -530.234375,
+          "right": 304,
+          "bottom": -374.484375,
+          "left": 166.390625
+        },
+        "overflow": []
+      },
+      {
+        "text": "Research / ToolspVACtoolsMHCflurryDockerLinux",
+        "box": {
+          "x": 16,
+          "y": -361.6875,
+          "width": 137.59375,
+          "height": 125.765625,
+          "top": -361.6875,
+          "right": 153.59375,
+          "bottom": -235.921875,
+          "left": 16
+        },
+        "overflow": []
+      }
+    ],
+    "index": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0,
+      "top": 0,
+      "right": 0,
+      "bottom": 0,
+      "left": 0
+    },
+    "content": {
+      "x": 16,
+      "y": -6922,
+      "width": 288,
+      "height": 8673.109375,
+      "top": -6922,
+      "right": 304,
+      "bottom": 1751.109375,
+      "left": 16
+    }
+  }
+]

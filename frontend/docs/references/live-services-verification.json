@@ -1,0 +1,35 @@
+{
+  "checkedAt": "2026-10-14T20:26:29.145Z",
+  "localDate": "2026-10-15",
+  "browser": "Chromium through the pinned Playwright runtime",
+  "networkInterception": false,
+  "githubCalendar": {
+    "provider": "https://github-contributions-api.jogruber.de/v4/Debrato2005?y=2026",
+    "httpStatus": 200,
+    "source": "public-calendar",
+    "total": 285,
+    "coloredDays": 95,
+    "lastDisplayedDay": "2026-10-14",
+    "lastDisplayedCount": 1,
+    "cacheLimit": "The public relay can lag GitHub by up to one hour."
+  },
+  "pageViews": {
+    "provider": "https://countapi.mileshilliard.com/api/v1",
+    "incrementStatus": 200,
+    "displayedAfterIncrement": 2,
+    "readBackStatus": 200,
+    "readBackValue": 2,
+    "meaning": "Page loads, including repeat visits."
+  },
+  "otherState": {
+    "catPresent": true,
+    "githubProfileRestStatus": 403,
+    "githubProfileDisplay": "Profile statistics unavailable"
+  },
+  "limits": [
+    "The live browser added one real page view as authorized verification.",
+    "The contribution relay returns public profile data and is not the official GitHub GraphQL API.",
+    "The page-view service is public and does not establish unique visitors or analytics accuracy.",
+    "GitHub REST profile statistics were rate-limited during this check and stayed explicitly unavailable."
+  ]
+}
