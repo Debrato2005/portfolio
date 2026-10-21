@@ -7,7 +7,8 @@
 Write failing checks for observable behaviors before behavioral implementation.
 Use the highest practical boundary. Do not write tests that repeat source structure.
 Vitest covers runtime configuration and a real loopback HTTP boundary.
-Playwright covers routes, focus, keyboard dialog recovery, calendar state, page-view deduplication, the running cat, reflow, and Axe.
+Playwright covers the three-route contract, anchor focus, inline project disclosure, keyboard dialog recovery, calendar state, page-view deduplication, the running cat, reflow, and Axe.
+The background browser suite reads GPU pixels against the supplied assets, exercises both themes, trail settling/idle draws, passive touch, reduced motion, WebGL failure, context loss, pending-decode races and texture disposal. It runs against both development and production builds.
 Test Chromium, Firefox, and WebKit with the pinned package runtimes.
 Linux loopback journeys use GIO’s direct proxy resolver through test-process configuration.
 A substitute browser pass must name the substitute. Do not call it a pinned-engine pass.
@@ -30,7 +31,7 @@ Network and loopback restrictions are environment limits. Do not silently replac
 ## Production and performance gate
 
 Production rejects fixture configuration. The build manifest and emitted JavaScript must exclude the toolkit and fixture marker.
-Production browser checks confirm that the development route is absent.
+Production browser checks confirm that only `/`, `/blogs`, and `/photography` render portfolio content and that legacy/detail paths recover as not found.
 Maintain declared image sizes and stable loading space. Lazy-load heavy controls.
 PLANNED: measured performance budgets after real portfolio content exists.
 

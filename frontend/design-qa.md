@@ -4,8 +4,18 @@
 
 ## Scope
 
-CURRENT: the latest [reference-composition review](docs/reference-composition-review.md) supersedes the narrow correction below. All seven newly supplied images were inspected as target references.
-The current foreground has a wider reading column, four existing projects in two columns, native project disclosures, responsive cover assets, grouped skills and a unified photography footer.
+CURRENT: the [section rhythm review](docs/section-rhythm-2026-10-19.md) supersedes the preceding foreground checkpoint. Each section now uses one rule attached to its title. Row sections use short rules in the label gutter. Page-height rails and duplicate top borders are removed. Skills and writing use the same quiet card framing as the other content groups. All six desktop projects remain together, and the background is unchanged.
+
+Four original generated illustrations now serve the photography collections, existing article and existing event. They are disclosed as covers, while the personal photograph arrays remain empty. The review retains same-width comparisons, responsive captures, source fingerprints and observed checks. FE-012 remains PARTIAL for owner visual acceptance.
+
+HISTORICAL: the [October 17 review](docs/visual-review-2026-10-17.md) adds fresh reads of the four reference sites, their component source and the supplied recording.
+The foreground uses a larger shared reading scale, all six projects together in a compact desktop overview, native briefs, thumbnail covers, grouped skills and one photography action.
+The [current evidence](docs/references/refinement-2026-10-17/confirmation.json) records both themes at desktop and phone widths with providers blocked.
+The [independent layout confirmation](docs/references/refinement-2026-10-17/layout-confirmation.json) checks enlarged-text index fit, hero-note separation and complete phone status labels.
+The [interaction metrics](docs/references/refinement-2026-10-17/metrics.json) record stable quotes and a compact phone palette.
+The [component reuse review](docs/component-reuse-review.md) connects the recording to active GitHub files and the retained local components.
+The [final project receipt](docs/references/refinement-2026-10-17/final-validation.json) records the current-source screenshots and separate aggregate/isolated browser outcomes.
+The handoff records final checks and limits. Owner visual acceptance remains open.
 
 ## Prior reported-layout correction
 

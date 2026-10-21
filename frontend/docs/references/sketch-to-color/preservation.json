@@ -1,0 +1,30 @@
+{
+  "baselineFiles": 618,
+  "scopeAllowlist": [
+    "frontend/PRODUCT.md",
+    "frontend/README.md",
+    "frontend/docs/BUILD_CHECKLIST.md",
+    "frontend/docs/DESIGN_SYSTEM.md",
+    "frontend/docs/FRONTEND_ARCHITECTURE.md",
+    "frontend/docs/HANDOFF.md",
+    "frontend/docs/README.md",
+    "frontend/docs/SOURCE_LEDGER.md",
+    "frontend/docs/TESTING_AND_QUALITY.md",
+    "frontend/docs/artwork-contract.md",
+    "frontend/docs/interaction-spec.md",
+    "frontend/docs/requirements.md",
+    "frontend/playwright.production.config.ts",
+    "frontend/src/features/portfolio/BackgroundScene.tsx",
+    "frontend/src/routes/HomePage.tsx",
+    "frontend/tests/e2e/command-palette.spec.ts"
+  ],
+  "unchangedOutsideScope": 602,
+  "unexpectedChanges": [],
+  "originalArtworkHashes": {
+    "frontend/bg/Watercolor Valley Vista with Laptop Traveler.png": "37ae2bbb959aec7094f57d5bc963f67fd68d6e33c41efdb4f4189e6d99193a28",
+    "frontend/bg/Graphite Mountain Lake Overlook.png": "d045487383becab2611fefd9b05dd55c5319d534fb21e15809fbe6e72e16c8f7",
+    "frontend/bg/Moonlit Mountain Lake Stargazer.png": "e35ca1ffc2f070aca65195d0bb305918f85cfd1fb8a6351b199487ea7c796fdc",
+    "frontend/bg/Moonlit Mountain Solitude.png": "65fcc5b73cdbd1c9a8fc1360ba8493296633fc2efa17d60a2715378cda01c76a"
+  },
+  "limits": "Covers baseline tracked files plus the four supplied images. Handoff is explicitly allowed and written after this receipt. No deletion or Git publication was performed."
+}

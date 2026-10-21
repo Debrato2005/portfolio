@@ -1,0 +1,34 @@
+{
+  "night-sky": {
+    "original": "assets/editorial/night-sky.png",
+    "web": "public/images/editorial/night-sky.webp",
+    "sourceSha256": "b7cecdc2d55e9ff81f8c9153549d5d149fd11a1227e6c221ba78cf1976466532",
+    "webSha256": "8cf3f690fa459cbeb2ba3e9093fab8cc238a92c23fb62ee9066e7209797a1254",
+    "webBytes": 89412,
+    "generatedSource": "/home/debrato/codex-desktop-troubleshooting-20261002/wsl-codex-home/generated_images/01a14b0f-ce85-7840-9312-3e5dbee19a0b/exec-9fdf54e5-0649-4c93-94db-c7190528f81c.png"
+  },
+  "landscapes": {
+    "original": "assets/editorial/landscapes.png",
+    "web": "public/images/editorial/landscapes.webp",
+    "sourceSha256": "87e58bdcab88661bbf0c24ca2788507230ada62a3e706fa842da0381e0409757",
+    "webSha256": "ec47c9c5c1dd3158ce4b32d53e3a30f0a55af2fde31dd1b258daabf8a8ed7ea2",
+    "webBytes": 122594,
+    "generatedSource": "/home/debrato/codex-desktop-troubleshooting-20261002/wsl-codex-home/generated_images/01a14b0f-ce85-7840-9312-3e5dbee19a0b/exec-6197ed68-43e2-46a8-917f-3b8b2c249c60.png"
+  },
+  "everyday-light": {
+    "original": "assets/editorial/everyday-light.png",
+    "web": "public/images/editorial/everyday-light.webp",
+    "sourceSha256": "c07d8a88fe8adccfa1537dd5d6aeec6191f5cd11c37d66c2ac9fb4db9ed3a632",
+    "webSha256": "23c52c507a48e0030141ce81bce70c20f1768a5641344160013541629085ae0c",
+    "webBytes": 111520,
+    "generatedSource": "/home/debrato/codex-desktop-troubleshooting-20261002/wsl-codex-home/generated_images/01a14b0f-ce85-7840-9312-3e5dbee19a0b/exec-058a1274-7b98-4594-aa1f-fc4d4bcf4962.png"
+  },
+  "hackathon": {
+    "original": "assets/editorial/hackathon.png",
+    "web": "public/images/editorial/hackathon.webp",
+    "sourceSha256": "d339609166c7da146c902cc97e5d29758cd03e07b2a7c5e846d749dff7e7eeb5",
+    "webSha256": "1007f7e083c51119c1e69ef59256f8f1e0e9a8846318007eec97228d3bda4cd6",
+    "webBytes": 107032,
+    "generatedSource": "/home/debrato/codex-desktop-troubleshooting-20261002/wsl-codex-home/generated_images/01a14b0f-ce85-7840-9312-3e5dbee19a0b/exec-bc949f04-d2ec-4d90-b2a8-3c46752c853a.png"
+  }
+}

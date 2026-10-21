@@ -64,6 +64,83 @@ test('independent provider failures do not claim a live calendar or a known rate
   );
   await expect(profileStatus).toContainText(/unavailable/i);
 });
+test('profile metric labels stay readable at phone width', async ({ page }) => {
+  await page.route('https://api.github.com/users/Debrato2005', (route) =>
+    route.fulfill({
+      json: {
+        login: 'Debrato2005',
+        public_repos: 26,
+        followers: 10,
+        following: 8,
+      },
+    }),
+  );
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto('/');
+  for (const label of ['Repositories', 'Followers', 'Following']) {
+    const metric = page.getByText(label, { exact: true });
+    await expect(metric).toBeVisible();
+    expect(
+      await metric.evaluate((element) => {
+        const range = document.createRange();
+        range.selectNodeContents(element.lastChild!);
+        return range.getClientRects().length;
+      }),
+    ).toBe(1);
+  }
+});
+test('compact activity keeps the calendar and profile together at the reference width', async ({
+  page,
+}) => {
+  await page.route('https://api.github.com/users/Debrato2005', (route) =>
+    route.fulfill({
+      json: {
+        login: 'Debrato2005',
+        public_repos: 26,
+        followers: 10,
+        following: 8,
+      },
+    }),
+  );
+  await page.route(
+    'https://github-contributions-api.jogruber.de/v4/Debrato2005?*',
+    (route) =>
+      route.fulfill({
+        json: payload(
+          Number(new URL(route.request().url()).searchParams.get('y')),
+        ),
+      }),
+  );
+  await page.setViewportSize({ width: 941, height: 900 });
+  await page.goto('/');
+  await expect(
+    page.getByRole('button', { name: 'Explore daily contributions' }),
+  ).toBeVisible();
+  await page.evaluate(() => document.fonts.ready);
+  const calendar = await page.locator('.calendar-panel').boundingBox();
+  const profile = await page.locator('.github-side').boundingBox();
+  expect(profile!.x).toBeGreaterThanOrEqual(calendar!.x + calendar!.width);
+  expect(Math.max(calendar!.height, profile!.height)).toBeLessThanOrEqual(230);
+  for (const label of ['Repositories', 'Followers', 'Following']) {
+    expect(
+      await page.getByText(label, { exact: true }).evaluate((element) => {
+        const range = document.createRange();
+        range.selectNodeContents(element.lastChild!);
+        return range.getClientRects().length;
+      }),
+      `${label} remains on one line at the reference width`,
+    ).toBe(1);
+  }
+  await expect(
+    page.getByRole('link', {
+      name: 'Contribution source: public GitHub calendar via jogruber; updates hourly',
+    }),
+  ).toBeVisible();
+  await page.locator('.calendar-grid .calendar-day').first().hover();
+  await expect(page.locator('.calendar-top')).toContainText(
+    `3 · Jan 1, ${new Date().getUTCFullYear()}`,
+  );
+});
 test('validated relay payload supports seven rows, keyboard, hover, touch and year navigation', async ({
   page,
 }) => {
@@ -113,6 +190,41 @@ test('validated relay payload supports seven rows, keyboard, hover, touch and ye
       name: `3 contributions on January 1, ${year - 1}`,
     }),
   ).toBeVisible();
+});
+test('daily exploration moves focus into the calendar and Escape restores the compact control', async ({
+  page,
+}) => {
+  await page.route(
+    'https://github-contributions-api.jogruber.de/v4/Debrato2005?*',
+    (route) =>
+      route.fulfill({
+        json: payload(
+          Number(new URL(route.request().url()).searchParams.get('y')),
+        ),
+      }),
+  );
+  await page.goto('/');
+  const explore = page.getByRole('button', {
+    name: 'Explore daily contributions',
+  });
+  await explore.focus();
+  await explore.press('Enter');
+  const first = page.getByRole('button', {
+    name: /^3 contributions on January 1/,
+  });
+  await expect(first).toBeFocused();
+  await first.press('ArrowRight');
+  const selected = page.getByRole('button', {
+    name: new RegExp(
+      `^0 contributions on January 8, ${new Date().getUTCFullYear()}`,
+    ),
+  });
+  await expect(selected).toBeFocused();
+  await selected.press('Escape');
+  await expect(explore).toBeFocused();
+  await expect(explore).toHaveAttribute('aria-expanded', 'false');
+  await explore.press('Enter');
+  await expect(selected).toBeFocused();
 });
 test('unavailable data remains unknown and retry can recover', async ({
   page,

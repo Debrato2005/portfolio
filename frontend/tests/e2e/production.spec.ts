@@ -29,20 +29,30 @@ test('production serves direct routes and excludes development controls', async 
   ).toBeVisible();
 });
 
-test('production reloads archive and detail routes and serves the public PDF', async ({
+test('production reloads the three approved routes and serves the public PDF', async ({
   page,
 }) => {
   for (const [path, heading] of [
-    ['/projects', 'Project archive'],
-    ['/projects/smolink', 'Smolink'],
-    ['/hackathons/svasth', 'SVASTH Hackathon'],
-    ['/thoughts', 'Train of Thought'],
-    ['/photography/night-sky', 'Night sky'],
+    ['/', 'DEBRATO GHOSH'],
+    ['/blogs', 'Writing archive'],
+    ['/photography', 'Through my lens'],
   ]) {
     await page.goto(path!);
     await page.reload();
     await expect(
       page.getByRole('heading', { name: heading!, exact: true }),
+    ).toBeVisible();
+  }
+  for (const path of [
+    '/projects',
+    '/projects/smolink',
+    '/hackathons/svasth',
+    '/thoughts',
+    '/photography/night-sky',
+  ]) {
+    await page.goto(path);
+    await expect(
+      page.getByRole('heading', { name: 'Page not found', exact: true }),
     ).toBeVisible();
   }
   const pdf = await page.request.get('/Debrato-Ghosh-Resume.pdf');

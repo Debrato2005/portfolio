@@ -1,0 +1,33 @@
+# Compact convergence review, October 19
+
+**Owner:** Compact layout evidence
+
+## Request
+
+The owner asked for the homepage to converge on the supplied compact mockup: All six projects visible together, the centered column with section borders from the Anurag reference, handwritten margin notes, a Parth-style hackathon clothesline, a smaller ink brush, and the sleeping-by-default cat. Readability had to stay intact.
+
+## Change
+
+The content cap narrows from 1520px to 1152px, so the column stays centered with visible side gutters on wide screens. Every section now opens with a full-width rule and a small uppercase tracked label; the numbered title sits on the rule line, and the note text sits in a 15 percent left rail as Caveat handwriting with an orange scribble under the hero note.
+
+The header compacts to 52px. Project cards use an 86 by 95 pixel cover, a level heading with the repository arrow, and two-line summaries with inline accent tag text. Contact becomes one segmented five-cell bar with divider borders. GitHub, Skills, Thoughts, Photography, and the footer keep their functionality with tighter paddings, and the photography filmstrip uses a 76 pixel cover.
+
+Hackathons leave the single-carousel pattern. Five polaroids now hang from a drawn rope with clips, fan tilts, and rope-sag offsets, using inline doodle glyphs instead of photos. Four records (NASA Space Apps, HackCBS, Smart India Hackathon 2023, Build with GenAI) come from the owner's mockup; only SVASTH keeps the resume-reported qualifier. No official evidence was found for the other four in the repository, and the records are presented as owner-supplied.
+
+Owner review of a 1697px capture showed the INDEX panel detached into the right page margin, which read as asymmetric against the centered column. The rail placement is removed. On desktop the index is now a hero grid column whose right edge sits flush with the section rules at every width, and text enlarged beyond 128 percent falls back to the compact jump selector instead of a floating rail.
+
+## Follow-up
+
+Owner follow-up the same day asked for the opposite wide-screen behavior, plus three smaller changes. The INDEX panel now detaches from the hero once a side gutter of at least 15rem exists beside the 1152px column (from 1632px at the default root size): at those widths it is `position: fixed` at 26vh from the top, in the right gutter and 96px clear of the content edge at 1920px, matching the reference so it sits beside the hero and stays visible while scrolling. Between 880 and 1632px it stays the hero grid column; below 880px, or with text enlarged beyond 128 percent, it stays the jump selector. The hero handwriting note and its orange scribble underline were removed entirely, markup and styles. The theme control became a two-state light/dark switch; the system option was removed from the header control and the command palette, which now lists 24 commands. Expanded project briefs were rebuilt with an uppercase tracked meta row, an ink overview, tiny uppercase group labels, dash list markers, and hairline group dividers.
+
+## Narrow column follow-up
+
+The owner then supplied the Anurag structure again and chose the narrow-column option. The 1152px cap is replaced by a 760px column with 1px dashed side rails; the header and footer share the width, and the hero artwork stays full-bleed. Every section heading sits on a 58px hatched band that spans the viewport and crosses both gutters behind its 1px border top and bottom. The INDEX becomes a borderless list, still at 26vh, fixed in the gutter from a 1240px viewport at the default root and otherwise a hero column or the jump selector. Project cards are two 375px columns at desktop and one column at 639px and below. At 941px the content is 760px at x=90.5 and the page is 2650px tall; at 1440/1697/1920 it is 2654px. The [1697px viewport](references/narrow-column-2026-10-20/narrow-1697-dark.png) supersedes the earlier 1697×500 capture, and the [receipt](references/narrow-column-2026-10-20/verification.json) records nine 58px bands, dashed rails, index placement, no horizontal overflow, and no page error. `npm run check` passed and the journey suite passed 273 of 273 (91 on each engine); the production journeys passed 36 of 36.
+
+## Evidence
+
+The [light capture](references/compact-convergence-2026-10-19/light-941.png), [dark capture](references/compact-convergence-2026-10-19/dark-941.png), [wide capture](references/compact-convergence-2026-10-19/light-1440.png), [wide index capture](references/compact-convergence-2026-10-19/wide-1697-dark.png), and [phone capture](references/compact-convergence-2026-10-19/phone-390-hackathons.png) show the final states. The follow-up set adds the [1920px fixed index](references/compact-convergence-2026-10-19/followup-1920-fixed-index-top-dark.png), the [same state after scrolling](references/compact-convergence-2026-10-19/followup-1920-fixed-index-scrolled-dark.png), [1440px light](references/compact-convergence-2026-10-19/followup-1440-light.png), [1440px dark](references/compact-convergence-2026-10-19/followup-1440-dark.png), [941px light](references/compact-convergence-2026-10-19/followup-941-light.png), and expanded briefs at [1440px light](references/compact-convergence-2026-10-19/followup-brief-light-1440.png), [1440px dark](references/compact-convergence-2026-10-19/followup-brief-dark-1440.png), and [390px](references/compact-convergence-2026-10-19/followup-brief-light-390.png). The [capture receipt](references/compact-convergence-2026-10-19/verification.json) and [follow-up receipt](references/compact-convergence-2026-10-19/followup-verification.json) record document height, section heights, project-card geometry, index placement and centering, horizontal overflow, and page errors for each state.
+
+At 941px the page is 2208px in both themes with no horizontal overflow and no page error; at 1440px it is 2154px; at 1920px it is 2132px with the index fixed at 26vh (96px from the content edge, still visible after scrolling to Skills, beside the hero at the top). The compact mockup boards are shorter, and the remaining difference sits mainly in GitHub and Photography, which keep the live heatmap, legend, controls, and cover-note band. `npm run check` passed strict TypeScript, ESLint, formatting, 23 unit and contract tests, the production build, document checks, and 19 skill bundles after the changes; the full journey suite passed 91 of 91 checks on each of Chromium, Firefox, and WebKit (273 of 273).
+
+The captures ran against the loopback preview with reduced motion. They prove the rendered layout only, not live-provider behavior, full accessibility conformance, or owner visual acceptance.

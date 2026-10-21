@@ -1,6 +1,7 @@
 # Public GitHub source review
 
 Reviewed on October 15, 2026. This review supplements the [recording audit](video-component-analysis.md).
+The [October 18 component reuse review](component-reuse-review.md) records the later source refresh and current local decisions. The revisions below remain historical evidence.
 Source files establish implementation details at the listed commits. They do not establish the exact code deployed during the recording.
 Only public, unauthenticated source reads ran. No source or artwork from the reviewed portfolio repositories entered this portfolio.
 

@@ -1,0 +1,153 @@
+{
+  "viewport": "http://127.0.0.1:5173",
+  "pass": "compact-convergence-2026-10-19",
+  "states": [
+    {
+      "name": "light-941",
+      "width": 941,
+      "height": 1200,
+      "theme": "light",
+      "full": true,
+      "metrics": {
+        "docHeight": 2208,
+        "scrollWidth": 941,
+        "innerWidth": 941,
+        "sections": {
+          "about": 179,
+          "projects": 333,
+          "experience": 178,
+          "hackathons": 175,
+          "github": 244,
+          "skills": 119,
+          "thoughts": 139,
+          "photography": 193,
+          "contact": 88
+        },
+        "projectCard": {
+          "h": 133,
+          "w": 273
+        }
+      },
+      "pageErrors": [],
+      "overflowX": false
+    },
+    {
+      "name": "dark-941",
+      "width": 941,
+      "height": 1200,
+      "theme": "dark",
+      "full": true,
+      "metrics": {
+        "docHeight": 2208,
+        "scrollWidth": 941,
+        "innerWidth": 941,
+        "sections": {
+          "about": 179,
+          "projects": 333,
+          "experience": 178,
+          "hackathons": 175,
+          "github": 244,
+          "skills": 119,
+          "thoughts": 139,
+          "photography": 193,
+          "contact": 88
+        },
+        "projectCard": {
+          "h": 133,
+          "w": 273
+        }
+      },
+      "pageErrors": [],
+      "overflowX": false
+    },
+    {
+      "name": "light-1440",
+      "width": 1440,
+      "height": 900,
+      "theme": "light",
+      "full": false,
+      "scroll": 620,
+      "metrics": {
+        "docHeight": 2154,
+        "scrollWidth": 1440,
+        "innerWidth": 1440,
+        "sections": {
+          "about": 152,
+          "projects": 299,
+          "experience": 145,
+          "hackathons": 174,
+          "github": 275,
+          "skills": 119,
+          "thoughts": 139,
+          "photography": 193,
+          "contact": 88
+        },
+        "projectCard": {
+          "h": 116,
+          "w": 379
+        }
+      },
+      "pageErrors": [],
+      "overflowX": false
+    },
+    {
+      "name": "wide-1697-dark",
+      "width": 1697,
+      "height": 500,
+      "theme": "dark",
+      "full": false,
+      "metrics": {
+        "docHeight": 2154,
+        "scrollWidth": 1697,
+        "innerWidth": 1697,
+        "sections": {
+          "about": 152,
+          "projects": 299,
+          "experience": 145,
+          "hackathons": 174,
+          "github": 275,
+          "skills": 119,
+          "thoughts": 139,
+          "photography": 193,
+          "contact": 88
+        },
+        "projectCard": {
+          "h": 116,
+          "w": 379
+        }
+      },
+      "pageErrors": [],
+      "overflowX": false
+    },
+    {
+      "name": "phone-390-hackathons",
+      "width": 390,
+      "height": 900,
+      "theme": "light",
+      "full": false,
+      "anchor": "#hackathons",
+      "metrics": {
+        "docHeight": 5427,
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "sections": {
+          "about": 451,
+          "projects": 1412,
+          "experience": 426,
+          "hackathons": 444,
+          "github": 655,
+          "skills": 400,
+          "thoughts": 243,
+          "photography": 269,
+          "contact": 171
+        },
+        "projectCard": {
+          "h": 197,
+          "w": 358
+        }
+      },
+      "pageErrors": [],
+      "overflowX": false
+    }
+  ]
+}

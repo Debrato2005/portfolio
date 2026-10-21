@@ -149,3 +149,4 @@ frontend/playwright-report/
 **/__pycache__/
 *.pyc
 frontend/output/playwright/
+.gstack/

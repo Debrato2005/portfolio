@@ -1,0 +1,80 @@
+.prose {
+  font-family: var(--font-prose);
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 1.6;
+}
+
+code,
+kbd,
+samp,
+pre {
+  font-family: var(--font-ui);
+}
+
+.quiet-button,
+.primary-link,
+.outline-link,
+.contact-links a,
+.search-trigger,
+.theme-control,
+.calendar-explore,
+.mobile-section-menu select,
+.content-page .back-link {
+  min-height: var(--control-height);
+  font-family: var(--font-ui);
+  font-size: var(--type-control);
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: normal;
+  border-radius: var(--radius-control);
+}
+
+.primary-link,
+.outline-link {
+  padding: 0.4rem 0.85rem;
+}
+
+.primary-link .icon,
+.outline-link .icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.tag-list li,
+.tag {
+  font: 400 var(--text-label)/1.4 var(--font-ui);
+  padding: 0.15rem 0.3rem;
+  border: 1px solid var(--portfolio-border);
+  border-radius: 3px;
+  background: transparent;
+}
+
+.margin-note {
+  font: 400 var(--text-small)/1.55 var(--font-ui);
+  letter-spacing: normal;
+  color: var(--color-muted);
+  transform: none;
+  border: 0;
+}
+
+.site-header nav a,
+.section-heading > a,
+.collection-card strong,
+.github-profile-heading,
+.snapshot h3 {
+  font-family: var(--font-ui);
+  font-weight: 500;
+}
+
+.eyebrow {
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.content-page p:not(.eyebrow):not(.content-status):not(.publication-status),
+.project-notes p,
+.project-disclosure-group li,
+.project-sources li {
+  font-family: var(--font-prose);
+}

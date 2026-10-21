@@ -1,0 +1,393 @@
+{
+  "capturedAt": "2026-10-18T19:41:22.430Z",
+  "source": {
+    "src/styles/reference-refinement.css": "1387a31ed965e06e6b38cbc27ef04c1f9248d233203f6dc061da3b1a258618d6"
+  },
+  "providerBoundary": "External requests were aborted. Captures sent no page-view increment.",
+  "cases": [
+    {
+      "width": 941,
+      "theme": "light",
+      "text": 100,
+      "errors": [],
+      "documentWidth": 941,
+      "documentHeight": 2264,
+      "sectionRules": [
+        {
+          "id": "about",
+          "borderTop": "0px",
+          "ruleWidth": 49.046875,
+          "ruleGap": 12
+        },
+        {
+          "id": "projects",
+          "borderTop": "0px",
+          "ruleWidth": 736.71875,
+          "ruleGap": 12
+        },
+        {
+          "id": "experience",
+          "borderTop": "0px",
+          "ruleWidth": 24,
+          "ruleGap": 12
+        },
+        {
+          "id": "hackathons",
+          "borderTop": "0px",
+          "ruleWidth": 722.71875,
+          "ruleGap": 12
+        },
+        {
+          "id": "github",
+          "borderTop": "0px",
+          "ruleWidth": 591.71875,
+          "ruleGap": 12
+        },
+        {
+          "id": "skills",
+          "borderTop": "0px",
+          "ruleWidth": 42.046875,
+          "ruleGap": 12
+        },
+        {
+          "id": "thoughts",
+          "borderTop": "0px",
+          "ruleWidth": 563.9375,
+          "ruleGap": 12
+        },
+        {
+          "id": "photography",
+          "borderTop": "0px",
+          "ruleWidth": 598.9375,
+          "ruleGap": 12
+        },
+        {
+          "id": "contact",
+          "borderTop": "0px",
+          "ruleWidth": 118.421875,
+          "ruleGap": 12
+        }
+      ]
+    },
+    {
+      "width": 941,
+      "theme": "dark",
+      "text": 100,
+      "errors": [],
+      "documentWidth": 941,
+      "documentHeight": 2264,
+      "sectionRules": [
+        {
+          "id": "about",
+          "borderTop": "0px",
+          "ruleWidth": 49.046875,
+          "ruleGap": 12
+        },
+        {
+          "id": "projects",
+          "borderTop": "0px",
+          "ruleWidth": 736.71875,
+          "ruleGap": 12
+        },
+        {
+          "id": "experience",
+          "borderTop": "0px",
+          "ruleWidth": 24,
+          "ruleGap": 12
+        },
+        {
+          "id": "hackathons",
+          "borderTop": "0px",
+          "ruleWidth": 722.71875,
+          "ruleGap": 12
+        },
+        {
+          "id": "github",
+          "borderTop": "0px",
+          "ruleWidth": 591.71875,
+          "ruleGap": 12
+        },
+        {
+          "id": "skills",
+          "borderTop": "0px",
+          "ruleWidth": 42.046875,
+          "ruleGap": 12
+        },
+        {
+          "id": "thoughts",
+          "borderTop": "0px",
+          "ruleWidth": 563.9375,
+          "ruleGap": 12
+        },
+        {
+          "id": "photography",
+          "borderTop": "0px",
+          "ruleWidth": 598.9375,
+          "ruleGap": 12
+        },
+        {
+          "id": "contact",
+          "borderTop": "0px",
+          "ruleWidth": 118.421875,
+          "ruleGap": 12
+        }
+      ]
+    },
+    {
+      "width": 1705,
+      "theme": "light",
+      "text": 100,
+      "errors": [],
+      "documentWidth": 1705,
+      "documentHeight": 2170,
+      "sectionRules": [
+        {
+          "id": "about",
+          "borderTop": "0px",
+          "ruleWidth": 150.59375,
+          "ruleGap": 12
+        },
+        {
+          "id": "projects",
+          "borderTop": "0px",
+          "ruleWidth": 1413.625,
+          "ruleGap": 12
+        },
+        {
+          "id": "experience",
+          "borderTop": "0px",
+          "ruleWidth": 115.59375,
+          "ruleGap": 12
+        },
+        {
+          "id": "hackathons",
+          "borderTop": "0px",
+          "ruleWidth": 1399.625,
+          "ruleGap": 12
+        },
+        {
+          "id": "github",
+          "borderTop": "0px",
+          "ruleWidth": 1268.625,
+          "ruleGap": 12
+        },
+        {
+          "id": "skills",
+          "borderTop": "0px",
+          "ruleWidth": 143.59375,
+          "ruleGap": 12
+        },
+        {
+          "id": "thoughts",
+          "borderTop": "0px",
+          "ruleWidth": 1240.84375,
+          "ruleGap": 12
+        },
+        {
+          "id": "photography",
+          "borderTop": "0px",
+          "ruleWidth": 1275.84375,
+          "ruleGap": 12
+        },
+        {
+          "id": "contact",
+          "borderTop": "0px",
+          "ruleWidth": 287.65625,
+          "ruleGap": 12
+        }
+      ]
+    },
+    {
+      "width": 1705,
+      "theme": "dark",
+      "text": 100,
+      "errors": [],
+      "documentWidth": 1705,
+      "documentHeight": 2170,
+      "sectionRules": [
+        {
+          "id": "about",
+          "borderTop": "0px",
+          "ruleWidth": 150.59375,
+          "ruleGap": 12
+        },
+        {
+          "id": "projects",
+          "borderTop": "0px",
+          "ruleWidth": 1413.625,
+          "ruleGap": 12
+        },
+        {
+          "id": "experience",
+          "borderTop": "0px",
+          "ruleWidth": 115.59375,
+          "ruleGap": 12
+        },
+        {
+          "id": "hackathons",
+          "borderTop": "0px",
+          "ruleWidth": 1399.625,
+          "ruleGap": 12
+        },
+        {
+          "id": "github",
+          "borderTop": "0px",
+          "ruleWidth": 1268.625,
+          "ruleGap": 12
+        },
+        {
+          "id": "skills",
+          "borderTop": "0px",
+          "ruleWidth": 143.59375,
+          "ruleGap": 12
+        },
+        {
+          "id": "thoughts",
+          "borderTop": "0px",
+          "ruleWidth": 1240.84375,
+          "ruleGap": 12
+        },
+        {
+          "id": "photography",
+          "borderTop": "0px",
+          "ruleWidth": 1275.84375,
+          "ruleGap": 12
+        },
+        {
+          "id": "contact",
+          "borderTop": "0px",
+          "ruleWidth": 287.65625,
+          "ruleGap": 12
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "text": 100,
+      "errors": [],
+      "documentWidth": 390,
+      "documentHeight": 5361,
+      "sectionRules": [
+        {
+          "id": "about",
+          "borderTop": "0px",
+          "ruleWidth": 262,
+          "ruleGap": 12
+        },
+        {
+          "id": "projects",
+          "borderTop": "0px",
+          "ruleWidth": 250,
+          "ruleGap": 12
+        },
+        {
+          "id": "experience",
+          "borderTop": "0px",
+          "ruleWidth": 234,
+          "ruleGap": 12
+        },
+        {
+          "id": "hackathons",
+          "borderTop": "0px",
+          "ruleWidth": 234,
+          "ruleGap": 12
+        },
+        {
+          "id": "github",
+          "borderTop": "0px",
+          "ruleWidth": 97,
+          "ruleGap": 12
+        },
+        {
+          "id": "skills",
+          "borderTop": "0px",
+          "ruleWidth": 266,
+          "ruleGap": 12
+        },
+        {
+          "id": "thoughts",
+          "borderTop": "0px",
+          "ruleWidth": 69.21875,
+          "ruleGap": 12
+        },
+        {
+          "id": "photography",
+          "borderTop": "0px",
+          "ruleWidth": 109.21875,
+          "ruleGap": 12
+        },
+        {
+          "id": "contact",
+          "borderTop": "0px",
+          "ruleWidth": 258,
+          "ruleGap": 12
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "theme": "dark",
+      "text": 200,
+      "errors": [],
+      "documentWidth": 320,
+      "documentHeight": 18405,
+      "sectionRules": [
+        {
+          "id": "about",
+          "borderTop": "0px",
+          "ruleWidth": 96,
+          "ruleGap": 24
+        },
+        {
+          "id": "projects",
+          "borderTop": "0px",
+          "ruleWidth": 72,
+          "ruleGap": 24
+        },
+        {
+          "id": "experience",
+          "borderTop": "0px",
+          "ruleWidth": 288,
+          "ruleGap": -224
+        },
+        {
+          "id": "hackathons",
+          "borderTop": "0px",
+          "ruleWidth": 288,
+          "ruleGap": -224
+        },
+        {
+          "id": "github",
+          "borderTop": "0px",
+          "ruleWidth": 110,
+          "ruleGap": -288
+        },
+        {
+          "id": "skills",
+          "borderTop": "0px",
+          "ruleWidth": 104,
+          "ruleGap": 24
+        },
+        {
+          "id": "thoughts",
+          "borderTop": "0px",
+          "ruleWidth": 54.40625,
+          "ruleGap": -288
+        },
+        {
+          "id": "photography",
+          "borderTop": "0px",
+          "ruleWidth": 54.40625,
+          "ruleGap": -240
+        },
+        {
+          "id": "contact",
+          "borderTop": "0px",
+          "ruleWidth": 88,
+          "ruleGap": 24
+        }
+      ]
+    }
+  ]
+}

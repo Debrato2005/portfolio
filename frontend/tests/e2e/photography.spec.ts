@@ -12,7 +12,7 @@ test('populated collection rotation pauses after input and stays manual with red
   await page.emulateMedia({ reducedMotion: 'no-preference' });
   await page.setViewportSize({ width: 390, height: 844 });
   await page.clock.install();
-  await page.goto('/projects');
+  await page.goto('/blogs');
   await page.evaluate(async () => {
     const path = '/src/features/portfolio/content.ts';
     const content = (await import(/* @vite-ignore */ path)) as {
@@ -72,7 +72,7 @@ test('populated collection rotation pauses after input and stays manual with red
   );
 });
 
-test('collection filmstrip navigates real collection pages without invented photographs', async ({
+test('collection filmstrip jumps into the complete gallery without invented photographs', async ({
   page,
 }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' });
@@ -82,42 +82,43 @@ test('collection filmstrip navigates real collection pages without invented phot
   await strip.getByRole('button', { name: 'Next collection' }).click();
   await expect(strip.getByRole('status')).toContainText('Landscapes');
   await strip.getByRole('link', { name: /Landscapes/ }).click();
-  await expect(page).toHaveURL(/\/photography\/landscapes$/);
+  await expect(page).toHaveURL(/\/photography#collection-landscapes$/);
   await expect(
     page.getByRole('heading', { name: 'Landscapes', exact: true }),
   ).toBeFocused();
-  await expect(page.getByText('No photographs published yet.')).toBeVisible();
-  await expect(page.locator('main img')).toHaveCount(0);
+  await expect(
+    page
+      .getByRole('region', { name: 'Landscapes' })
+      .getByText('No photographs published yet.'),
+  ).toBeVisible();
+  await expect(page.locator('.empty-collection-cover')).toHaveCount(3);
+  await expect(page.getByRole('button', { name: /^View / })).toHaveCount(0);
   await page.reload();
   await expect(
     page.getByRole('heading', { name: 'Landscapes', exact: true }),
   ).toBeVisible();
-  await page.getByRole('link', { name: 'All collections' }).click();
   await expect(
-    page.getByRole('heading', { name: 'Through my lens' }),
-  ).toBeFocused();
-  await expect(
-    page.getByRole('link', { name: /Everyday light/ }),
+    page.getByRole('heading', { name: 'Everyday light', exact: true }),
   ).toBeVisible();
 });
 
-test('unknown collections have recovery and keyboard filmstrip controls work', async ({
+test('legacy collection routes recover and homepage filmstrip controls work', async ({
   page,
 }) => {
   await page.goto('/photography/missing');
   await expect(
-    page.getByRole('heading', { name: 'Collection not found' }),
+    page.getByRole('heading', { name: 'Page not found' }),
   ).toBeVisible();
-  await page.getByRole('link', { name: 'All collections' }).click();
+  await page.getByRole('link', { name: 'Return home' }).click();
   const strip = page.getByRole('region', { name: 'Photography collections' });
   await strip.focus();
-  await page.keyboard.press('ArrowRight');
+  await strip.press('ArrowRight');
   await expect(strip.getByRole('status')).toContainText('Landscapes');
-  await page.keyboard.press('ArrowLeft');
+  await strip.press('ArrowLeft');
   await expect(strip.getByRole('status')).toContainText('Night sky');
 });
 
-test('public resume downloads a PDF and command search opens an archive', async ({
+test('public resume downloads a PDF and command search opens writing', async ({
   page,
 }) => {
   await page.goto('/');
@@ -129,21 +130,55 @@ test('public resume downloads a PDF and command search opens an archive', async 
   await page.keyboard.press('Control+k');
   await page
     .getByRole('combobox', { name: 'Search commands' })
-    .fill('Projects archive');
+    .fill('Writing archive');
   await page.keyboard.press('Enter');
-  await expect(page).toHaveURL(/\/projects$/);
+  await expect(page).toHaveURL(/\/blogs$/);
   await expect(
-    page.getByRole('heading', { name: 'Project archive', exact: true }),
+    page.getByRole('heading', { name: 'Writing archive', exact: true }),
   ).toBeFocused();
   await page.goBack();
   await expect(page).toHaveURL(/\/$/);
+});
+
+test('illustrated covers load and lead to collections without fabricated personal photographs', async ({
+  page,
+}) => {
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.goto('/');
+  for (const selector of [
+    '.achievement-illustration img',
+    '.thought-cover img',
+    '.collection-card[data-illustrated="true"] img',
+  ]) {
+    for (const cover of await page.locator(selector).all()) {
+      await cover.scrollIntoViewIfNeeded();
+      await expect
+        .poll(() =>
+          cover.evaluate(
+            (img) =>
+              (img as HTMLImageElement).complete &&
+              (img as HTMLImageElement).naturalWidth > 0,
+          ),
+        )
+        .toBe(true);
+    }
+  }
+  await expect(
+    page.getByText('Illustrated covers · Original photographs coming'),
+  ).toBeVisible();
+  await page.getByRole('link', { name: 'Explore photography' }).click();
+  await expect(
+    page.getByRole('heading', { name: 'No photographs published yet.' }),
+  ).toHaveCount(3);
+  await expect(page.locator('.empty-collection-cover')).toHaveCount(3);
+  await expect(page.getByRole('button', { name: /^View / })).toHaveCount(0);
 });
 
 test('populated gallery supports focus recovery, next photo and reduced-motion controls', async ({
   page,
 }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' });
-  await page.goto('/photography/night-sky');
+  await page.goto('/');
   // Development-only module data injection: test images never enter production content.
   await page.evaluate(async () => {
     const modulePath = '/src/features/portfolio/content.ts';
@@ -174,8 +209,11 @@ test('populated gallery supports focus recovery, next photo and reduced-motion c
       },
     ];
   });
-  await page.getByRole('link', { name: 'All collections' }).click();
-  await page.getByRole('link', { name: /Night sky/ }).click();
+  await page
+    .getByRole('navigation', { name: 'Main' })
+    .getByRole('link', { name: 'Home', exact: true })
+    .click();
+  await page.getByRole('link', { name: 'Explore photography' }).click();
   const invoker = page.getByRole('button', { name: 'View Test frame one' });
   await invoker.click();
   await expect(page.getByRole('dialog')).toBeVisible();
@@ -183,6 +221,13 @@ test('populated gallery supports focus recovery, next photo and reduced-motion c
     'alt',
     'Test frame one',
   );
+  await expect
+    .poll(() =>
+      page
+        .getByRole('dialog')
+        .evaluate((dialog) => dialog.contains(document.activeElement)),
+    )
+    .toBe(true);
   await page.keyboard.press('ArrowRight');
   await expect(page.getByRole('dialog').getByRole('img')).toHaveAttribute(
     'alt',
@@ -217,35 +262,38 @@ test('mobile section menu navigates and current section updates', async ({
 test('enlarged desktop text keeps the section index clear and accurate', async ({
   page,
 }) => {
-  await page.setViewportSize({ width: 1980, height: 1087 });
+  await page.setViewportSize({ width: 2240, height: 1087 });
   await page.goto('/');
   await page.addStyleTag({ content: 'html { font-size: 150%; }' });
-  await page.locator('#photography').evaluate((section) =>
+  await page.evaluate(() => document.fonts.ready);
+  await page.locator('#projects').evaluate((section) =>
     window.scrollTo({
-      top: section.getBoundingClientRect().top + scrollY - 350,
+      top: section.getBoundingClientRect().top + scrollY - 80,
       behavior: 'instant',
     }),
   );
+  const menu = page.getByLabel('Jump to section');
+  await expect(menu).toBeHidden();
   const index = page.getByRole('navigation', { name: 'Section index' });
+  await expect(index).toBeVisible();
   await expect(
-    index.getByRole('link', { name: 'Photography', exact: true }),
+    index.getByRole('link', { name: 'Projects', exact: true }),
   ).toHaveAttribute('aria-current', 'location');
   const geometry = await page.evaluate(() => {
-    const content = document
-      .querySelector('.portfolio-content')!
-      .getBoundingClientRect();
-    const sectionIndex = document
-      .querySelector('.section-index')!
-      .getBoundingClientRect();
+    const nav = document.querySelector('.section-index')!;
+    const content = document.querySelector('.portfolio-content')!;
     const track = document.querySelector('.photo-strip-track')!;
+    const box = nav.getBoundingClientRect();
+    const contentBox = content.getBoundingClientRect();
     return {
-      contentRight: content.right,
-      indexLeft: sectionIndex.left,
+      gap: box.left - contentBox.right,
+      topDelta: Math.abs(box.top - innerHeight * 0.26),
       scrollbarWidth: getComputedStyle(track).scrollbarWidth,
       overflow: document.documentElement.scrollWidth > innerWidth,
     };
   });
-  expect(geometry.indexLeft - geometry.contentRight).toBeGreaterThanOrEqual(12);
+  expect(geometry.gap).toBeGreaterThanOrEqual(24);
+  expect(geometry.topDelta).toBeLessThanOrEqual(2);
   expect(geometry.scrollbarWidth).toBe('none');
   expect(geometry.overflow).toBe(false);
 });
@@ -275,7 +323,9 @@ test('home link restores the hero after a section jump and shortcut close restor
     page.getByRole('heading', { name: 'DEBRATO GHOSH', exact: true }),
   ).toBeFocused();
   expect(await page.evaluate(() => scrollY)).toBeLessThan(80);
-  const invoker = page.getByRole('button', { name: 'Theme: System' });
+  const invoker = page.getByRole('button', {
+    name: /^Theme: (Light|Dark)$/,
+  });
   await invoker.focus();
   await page.keyboard.press('Control+k');
   await expect(page.getByRole('dialog')).toBeVisible();
@@ -289,14 +339,15 @@ test('collection swipe and arrow navigation share the visible selection', async 
 }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await page.setViewportSize({ width: 390, height: 844 });
-  await page.goto('/photography');
-  const track = page.locator('.photo-strip-track');
+  await page.goto('/');
+  const strip = page.getByRole('region', { name: 'Photography collections' });
+  const track = strip.locator('.photo-strip-track');
   await track.evaluate((element) => {
     element.scrollLeft = element.scrollWidth;
   });
-  await expect(page.getByRole('status')).toContainText('Everyday light');
-  await page.getByRole('button', { name: 'Next collection' }).click();
-  await expect(page.getByRole('status')).toContainText('Night sky');
+  await expect(strip.getByRole('status')).toContainText('Everyday light');
+  await strip.getByRole('button', { name: 'Next collection' }).click();
+  await expect(strip.getByRole('status')).toContainText('Night sky');
 });
 
 test('desktop strip preserves the selected final collection when two cards fit', async ({

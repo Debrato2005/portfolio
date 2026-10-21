@@ -7,11 +7,14 @@
   --color-action: #ff781e;
   --color-action-ink: #24180e;
   --color-focus: #b94508;
-  --font-body: 'Inter', sans-serif;
-  --font-display: 'Space Grotesk', sans-serif;
-  --font-mono: 'Space Mono', monospace;
-  --font-serif: 'Instrument Serif', Georgia, serif;
-  --font-note: 'Caveat', cursive;
+  --font-ui:
+    'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, Consolas,
+    'Liberation Mono', monospace;
+  --font-prose: 'Inter', system-ui, sans-serif;
+  --font-body: var(--font-ui);
+  --font-display: var(--font-ui);
+  --font-mono: var(--font-ui);
+  --font-hand: 'Caveat', 'Segoe Script', 'Comic Sans MS', cursive;
   --space-1: 0.5rem;
   --space-2: 1rem;
   --space-3: 1.5rem;
@@ -19,19 +22,41 @@
   --space-5: 3rem;
   --border-width: 2px;
   --shadow-hard: 5px 5px 0 var(--color-ink);
-  --content-width: min(70rem, 1120px);
-  --section-index-width: 15rem;
-  --text-body: 1.25rem;
-  --text-small: 1rem;
-  --text-label: 0.9375rem;
-  --text-lead: 1.375rem;
-  --control-height: 3.25rem;
+  --content-width: 1480px;
+  --reading-width: min(72rem, 1120px);
+  --hero-inset: clamp(1.25rem, 4.5vw, 4.75rem);
+  --section-index-width: 13rem;
+  --text-body: 1rem;
+  --text-small: 0.875rem;
+  --text-label: 0.75rem;
+  --text-lead: 1.0625rem;
+  --type-title: 1.125rem;
+  --type-section: 0.875rem;
+  --type-control: 0.8125rem;
+  --type-name: clamp(3rem, 5.2vw, 5.5rem);
+  --surface-panel: transparent;
+  --radius-panel: 12px;
+  --radius-control: 8px;
+  --section-space: clamp(3.5rem, 7vw, 7rem);
+  --control-height: 2.75rem;
   --motion-fast: 160ms;
   --motion-base: 240ms;
   --motion-slow: 420ms;
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   --portfolio-border: #d7d7ca;
   --portfolio-tint: #efebe1;
+}
+@media (min-width: 55rem) {
+  :root {
+    --text-body: 1rem;
+    --text-small: 0.875rem;
+    --text-label: 0.75rem;
+    --text-lead: 1.0625rem;
+    --type-title: 1.125rem;
+    --type-section: 0.875rem;
+    --type-control: 0.8125rem;
+    --control-height: 2.75rem;
+  }
 }
 html[data-theme='dark'] {
   color-scheme: dark;

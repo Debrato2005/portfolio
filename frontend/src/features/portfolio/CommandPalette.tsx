@@ -19,13 +19,15 @@ type Command = {
   group: (typeof groups)[number];
   icon: ComponentProps<typeof Icon>['name'];
   keywords?: string;
+  href?: string;
+  download?: string;
   action: () => void;
 };
 
 export function CommandPalette({
   chooseTheme,
 }: {
-  chooseTheme: (theme: 'system' | 'light' | 'dark') => void;
+  chooseTheme: (theme: 'light' | 'dark') => void;
 }) {
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState('');
@@ -39,32 +41,36 @@ export function CommandPalette({
   const shortcut = /Mac|iPhone|iPad/.test(navigator.platform)
     ? '⌘ K'
     : 'Ctrl K';
+  const jumpTo = (id: string) => {
+    navigate(`/#${id}`);
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        const target = document.getElementById(id);
+        if (target?.classList.contains('project-card')) {
+          const details = target.querySelector<HTMLDetailsElement>('details');
+          if (details) details.open = true;
+        }
+        target?.scrollIntoView({
+          behavior: window.matchMedia('(prefers-reduced-motion: reduce)')
+            .matches
+            ? 'instant'
+            : 'smooth',
+        });
+        target
+          ?.querySelector<HTMLElement>('h2, h3')
+          ?.focus({ preventScroll: true });
+      });
+    });
+  };
   const commands: Command[] = [
     ...sections.map(([id, title]) => ({
       title,
       group: 'On this page' as const,
       icon: 'arrow-right' as const,
-      action: () => {
-        navigate(`/#${id}`);
-        // Re-selecting the current hash must still move focus after the dialog closes.
-        requestAnimationFrame(() => {
-          document.getElementById(id)?.scrollIntoView({
-            behavior: window.matchMedia('(prefers-reduced-motion: reduce)')
-              .matches
-              ? 'instant'
-              : 'smooth',
-          });
-          document
-            .getElementById(id)
-            ?.querySelector<HTMLElement>('h2')
-            ?.focus({ preventScroll: true });
-        });
-      },
+      action: () => jumpTo(id),
     })),
     ...[
-      ['Projects archive', '/projects'],
-      ['Hackathons archive', '/hackathons'],
-      ['Thoughts archive', '/thoughts'],
+      ['Writing archive', '/blogs'],
       ['Photography gallery', '/photography'],
     ].map(([title, path]) => ({
       title: title!,
@@ -77,20 +83,22 @@ export function CommandPalette({
       group: 'Projects' as const,
       icon: 'laptop' as const,
       keywords: `${project.category} ${project.tags.join(' ')}`,
-      action: () => navigate(`/projects/${project.slug}`),
+      action: () => jumpTo(`project-${project.slug}`),
     })),
     ...articles.map((article) => ({
       title: `Article: ${article.title}`,
       group: 'Writing' as const,
       icon: 'arrow-right' as const,
       keywords: 'blog thoughts',
-      action: () => navigate(`/thoughts/${article.slug}`),
+      action: () => navigate('/blogs'),
     })),
     {
       title: 'Download resume',
       group: 'Connect',
       icon: 'arrow-up-right',
       keywords: 'cv experience',
+      href: links.resume,
+      download: 'Debrato-Ghosh-Resume.pdf',
       action: () => {
         const link = document.createElement('a');
         link.href = links.resume;
@@ -102,12 +110,14 @@ export function CommandPalette({
       title: 'GitHub profile',
       group: 'Connect',
       icon: 'github-logo',
+      href: links.github,
       action: () => window.location.assign(links.github),
     },
     {
       title: 'LinkedIn profile',
       group: 'Connect',
       icon: 'linkedin-logo',
+      href: links.linkedin,
       action: () => window.location.assign(links.linkedin),
     },
     {
@@ -115,16 +125,15 @@ export function CommandPalette({
       group: 'Connect',
       icon: 'envelope-simple',
       keywords: 'mail contact',
+      href: links.email,
       action: () => window.location.assign(links.email),
     },
-    ...(['light', 'dark', 'system'] as const).map((theme) => ({
+    ...(['light', 'dark'] as const).map((theme) => ({
       title: `Theme: ${theme}`,
       group: 'Appearance' as const,
-      icon: (theme === 'light'
-        ? 'sun'
-        : theme === 'dark'
-          ? 'moon'
-          : 'desktop') as ComponentProps<typeof Icon>['name'],
+      icon: (theme === 'light' ? 'sun' : 'moon') as ComponentProps<
+        typeof Icon
+      >['name'],
       keywords: 'mode color scheme',
       action: () => chooseTheme(theme),
     })),
@@ -138,17 +147,29 @@ export function CommandPalette({
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
       if (
+        event.defaultPrevented ||
         event.isComposing ||
+        event.altKey ||
         !(event.ctrlKey || event.metaKey) ||
         event.key.toLowerCase() !== 'k'
       )
         return;
+      const target = event.target;
+      if (
+        !open &&
+        target !== search.current &&
+        target instanceof HTMLElement &&
+        (target.isContentEditable || target.closest('input, textarea, select'))
+      )
+        return;
       event.preventDefault();
-      if (!open)
+      if (!open) {
+        pendingAction.current = null;
         invoker.current =
           document.activeElement instanceof HTMLElement
             ? document.activeElement
             : null;
+      }
       setQuery('');
       setActive(0);
       setOpen((value) => !value);
@@ -157,10 +178,16 @@ export function CommandPalette({
     return () => window.removeEventListener('keydown', onKey);
   }, [open]);
   useLayoutEffect(() => {
-    if (open)
-      document
-        .getElementById(`${listId}-${active}`)
-        ?.scrollIntoView({ block: 'nearest', behavior: 'instant' });
+    if (!open) return;
+    const option = document.getElementById(`${listId}-${active}`);
+    const list = document.getElementById(listId);
+    if (!option || !list) return;
+    const optionBounds = option.getBoundingClientRect();
+    const listBounds = list.getBoundingClientRect();
+    if (optionBounds.bottom > listBounds.bottom)
+      list.scrollTop += optionBounds.bottom - listBounds.bottom + 4;
+    else if (optionBounds.top < listBounds.top)
+      list.scrollTop -= listBounds.top - optionBounds.top + 4;
   }, [active, query, open, listId]);
   function run(index: number) {
     const command = results[index];
@@ -180,6 +207,7 @@ export function CommandPalette({
       onOpenChange={(value) => {
         setOpen(value);
         if (value) {
+          pendingAction.current = null;
           setQuery('');
           setActive(0);
         }
@@ -277,30 +305,45 @@ export function CommandPalette({
                   <div className="command-group-label" id={groupId}>
                     {group}
                   </div>
-                  {items.map(({ command, index }) => (
-                    <div
-                      role="option"
-                      aria-label={command.title}
-                      aria-selected={active === index}
-                      id={`${listId}-${index}`}
-                      key={command.title}
-                      onPointerMove={(event) => {
-                        if (event.pointerType !== 'touch') setActive(index);
-                      }}
-                      onMouseDown={(event) => event.preventDefault()}
-                      onClick={() => run(index)}
-                    >
-                      <Icon name={command.icon} />
-                      <span>{command.title}</span>
-                      <Icon
-                        name={
-                          command.group === 'Connect'
-                            ? 'arrow-up-right'
-                            : 'arrow-right'
+                  {items.map(({ command, index }) => {
+                    const Item = command.href ? 'a' : 'div';
+                    return (
+                      <Item
+                        role="option"
+                        aria-label={command.title}
+                        aria-description={
+                          command.href?.startsWith('https:')
+                            ? 'External website'
+                            : undefined
                         }
-                      />
-                    </div>
-                  ))}
+                        aria-selected={active === index}
+                        href={command.href}
+                        download={command.download}
+                        tabIndex={-1}
+                        id={`${listId}-${index}`}
+                        key={command.title}
+                        onPointerMove={(event) => {
+                          if (event.pointerType !== 'touch') setActive(index);
+                        }}
+                        onMouseDown={(event) => {
+                          if (!command.href) event.preventDefault();
+                        }}
+                        onClick={() => {
+                          if (!command.href) run(index);
+                        }}
+                      >
+                        <Icon name={command.icon} />
+                        <span>{command.title}</span>
+                        <Icon
+                          name={
+                            command.group === 'Connect'
+                              ? 'arrow-up-right'
+                              : 'arrow-right'
+                          }
+                        />
+                      </Item>
+                    );
+                  })}
                 </div>
               );
             })}

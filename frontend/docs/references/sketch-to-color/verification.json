@@ -1,0 +1,342 @@
+{
+  "browser": "153.0.8010.12",
+  "node": "v22.23.2",
+  "baseURL": "http://127.0.0.1:5187",
+  "providerMode": "Counter intercepted at 42; profile/calendar requests deliberately unavailable. No public mutations.",
+  "cases": [
+    {
+      "name": "light-sketch",
+      "viewport": [1440, 1000],
+      "scrollWidth": 1440,
+      "hero": {
+        "x": 160,
+        "y": 64,
+        "width": 1120,
+        "height": 368,
+        "top": 64,
+        "right": 1280,
+        "bottom": 432,
+        "left": 160
+      },
+      "canvas": [1440, 368],
+      "renderer": "webgl"
+    },
+    {
+      "name": "light-reveal",
+      "viewport": [1440, 1000],
+      "scrollWidth": 1440,
+      "hero": {
+        "x": 160,
+        "y": 64,
+        "width": 1120,
+        "height": 368,
+        "top": 64,
+        "right": 1280,
+        "bottom": 432,
+        "left": 160
+      },
+      "canvas": [1440, 368],
+      "renderer": "webgl"
+    },
+    {
+      "name": "light-trail",
+      "viewport": [1440, 1000],
+      "scrollWidth": 1440,
+      "hero": {
+        "x": 160,
+        "y": 64,
+        "width": 1120,
+        "height": 368,
+        "top": 64,
+        "right": 1280,
+        "bottom": 432,
+        "left": 160
+      },
+      "canvas": [1440, 368],
+      "renderer": "webgl"
+    },
+    {
+      "name": "light-faded",
+      "viewport": [1440, 1000],
+      "scrollWidth": 1440,
+      "hero": {
+        "x": 160,
+        "y": 64,
+        "width": 1120,
+        "height": 368,
+        "top": 64,
+        "right": 1280,
+        "bottom": 432,
+        "left": 160
+      },
+      "canvas": [1440, 368],
+      "renderer": "webgl"
+    },
+    {
+      "name": "dark-sketch",
+      "viewport": [1440, 1000],
+      "scrollWidth": 1440,
+      "hero": {
+        "x": 160,
+        "y": 64,
+        "width": 1120,
+        "height": 368,
+        "top": 64,
+        "right": 1280,
+        "bottom": 432,
+        "left": 160
+      },
+      "canvas": [1440, 368],
+      "renderer": "webgl"
+    },
+    {
+      "name": "dark-reveal",
+      "viewport": [1440, 1000],
+      "scrollWidth": 1440,
+      "hero": {
+        "x": 160,
+        "y": 64,
+        "width": 1120,
+        "height": 368,
+        "top": 64,
+        "right": 1280,
+        "bottom": 432,
+        "left": 160
+      },
+      "canvas": [1440, 368],
+      "renderer": "webgl"
+    },
+    {
+      "name": "dark-trail",
+      "viewport": [1440, 1000],
+      "scrollWidth": 1440,
+      "hero": {
+        "x": 160,
+        "y": 64,
+        "width": 1120,
+        "height": 368,
+        "top": 64,
+        "right": 1280,
+        "bottom": 432,
+        "left": 160
+      },
+      "canvas": [1440, 368],
+      "renderer": "webgl"
+    },
+    {
+      "name": "dark-faded",
+      "viewport": [1440, 1000],
+      "scrollWidth": 1440,
+      "hero": {
+        "x": 160,
+        "y": 64,
+        "width": 1120,
+        "height": 368,
+        "top": 64,
+        "right": 1280,
+        "bottom": 432,
+        "left": 160
+      },
+      "canvas": [1440, 368],
+      "renderer": "webgl"
+    },
+    {
+      "name": "light-941",
+      "viewport": [941, 1000],
+      "scrollWidth": 941,
+      "hero": {
+        "x": 53.640625,
+        "y": 64,
+        "width": 833.71875,
+        "height": 320,
+        "top": 64,
+        "right": 887.359375,
+        "bottom": 384,
+        "left": 53.640625
+      },
+      "canvas": [941, 320],
+      "renderer": "webgl"
+    },
+    {
+      "name": "dark-1920",
+      "viewport": [1920, 1080],
+      "scrollWidth": 1920,
+      "hero": {
+        "x": 400,
+        "y": 64,
+        "width": 1120,
+        "height": 368,
+        "top": 64,
+        "right": 1520,
+        "bottom": 432,
+        "left": 400
+      },
+      "canvas": [1920, 368],
+      "renderer": "webgl"
+    },
+    {
+      "name": "light-768",
+      "viewport": [768, 1024],
+      "scrollWidth": 768,
+      "hero": {
+        "x": 43.78125,
+        "y": 113.203125,
+        "width": 680.4375,
+        "height": 387.203125,
+        "top": 113.203125,
+        "right": 724.21875,
+        "bottom": 500.40625,
+        "left": 43.78125
+      },
+      "canvas": [768, 387],
+      "renderer": "webgl"
+    },
+    {
+      "name": "light-390",
+      "viewport": [390, 844],
+      "scrollWidth": 390,
+      "hero": {
+        "x": 16,
+        "y": 120,
+        "width": 358,
+        "height": 409.703125,
+        "top": 120,
+        "right": 374,
+        "bottom": 529.703125,
+        "left": 16
+      },
+      "canvas": [390, 410],
+      "renderer": "webgl"
+    },
+    {
+      "name": "dark-390",
+      "viewport": [390, 844],
+      "scrollWidth": 390,
+      "hero": {
+        "x": 16,
+        "y": 120,
+        "width": 358,
+        "height": 409.703125,
+        "top": 120,
+        "right": 374,
+        "bottom": 529.703125,
+        "left": 16
+      },
+      "canvas": [390, 410],
+      "renderer": "webgl"
+    },
+    {
+      "name": "dark-320",
+      "viewport": [320, 844],
+      "scrollWidth": 320,
+      "hero": {
+        "x": 16,
+        "y": 120,
+        "width": 288,
+        "height": 509.796875,
+        "top": 120,
+        "right": 304,
+        "bottom": 629.796875,
+        "left": 16
+      },
+      "canvas": [320, 510],
+      "renderer": "webgl"
+    },
+    {
+      "name": "reduced-motion",
+      "viewport": [1440, 1000],
+      "scrollWidth": 1440,
+      "hero": {
+        "x": 160,
+        "y": 64,
+        "width": 1120,
+        "height": 393.921875,
+        "top": 64,
+        "right": 1280,
+        "bottom": 457.921875,
+        "left": 160
+      },
+      "canvas": [null, null],
+      "renderer": "static"
+    },
+    {
+      "name": "context-loss",
+      "viewport": [1440, 1000],
+      "scrollWidth": 1440,
+      "hero": {
+        "x": 160,
+        "y": 64,
+        "width": 1120,
+        "height": 368,
+        "top": 64,
+        "right": 1280,
+        "bottom": 432,
+        "left": 160
+      },
+      "canvas": [1440, 368],
+      "renderer": "static"
+    }
+  ],
+  "timing": [
+    {
+      "theme": "light",
+      "draws": 137,
+      "medianFrameIntervalMs": 16.699999999254942,
+      "p95FrameIntervalMs": 17.299999998882413,
+      "idleExtraDraws": 0,
+      "limit": "Local headless software/GPU scheduling, not a field or physical-device frame rate"
+    },
+    {
+      "theme": "dark",
+      "draws": 137,
+      "medianFrameIntervalMs": 16.699999999254942,
+      "p95FrameIntervalMs": 17.09999999962747,
+      "idleExtraDraws": 0,
+      "limit": "Local headless software/GPU scheduling, not a field or physical-device frame rate"
+    }
+  ],
+  "errors": [],
+  "networkErrors": [
+    "Failed to load resource: net::ERR_FAILED",
+    "Failed to load resource: net::ERR_FAILED"
+  ],
+  "sourceHashes": {
+    "src/features/portfolio/BackgroundScene.tsx": "991e2f31345169a674392771976233cfb99c5a7a8c197eef0d0fbb4624955c05",
+    "src/features/portfolio/sceneArtwork.ts": "190b23d40fc2484211c82a16cf9f595316b79dcf6896fe7a82cda46183c68b70",
+    "src/features/portfolio/sceneRenderer.ts": "ae28266b63ca868eccc9cc591f2f63453ec340276f72ebc517f21525ae445811",
+    "src/features/portfolio/sceneShaders.ts": "fdd06f2e3d8bc494a800989f3664fe08209355a2d23631933bcf4e9273e8fadb",
+    "src/styles/background-scene.css": "6dd037bd813cc4273a7de5be78eed719afb1cbe134a572edf2ee2eb467ad76bc",
+    "src/routes/HomePage.tsx": "f57446780c59464d57081a7dd65b5be67605e50f56800741e26eebd684f1b484",
+    "bg/Graphite Mountain Lake Overlook.png": "d045487383becab2611fefd9b05dd55c5319d534fb21e15809fbe6e72e16c8f7",
+    "bg/Watercolor Valley Vista with Laptop Traveler.png": "37ae2bbb959aec7094f57d5bc963f67fd68d6e33c41efdb4f4189e6d99193a28",
+    "bg/Moonlit Mountain Solitude.png": "65fcc5b73cdbd1c9a8fc1360ba8493296633fc2efa17d60a2715378cda01c76a",
+    "bg/Moonlit Mountain Lake Stargazer.png": "e35ca1ffc2f070aca65195d0bb305918f85cfd1fb8a6351b199487ea7c796fdc",
+    "tests/e2e/background-scene.spec.ts": "c300658fd698fe89dbe8b69f07a5a505a617b0d35806189e584ffcf5f62093dd",
+    "playwright.production.config.ts": "afaee5cb395f9026bb841339b38f13ab14d290e31092ccb7ac59cea45a35e797",
+    "tests/e2e/command-palette.spec.ts": "d8f1932518b4fd23339a87e258575b7fd8df4ff0c3a01f1f42f98354bc3d4377"
+  },
+  "checks": {
+    "developmentScene": {
+      "passed": 30,
+      "failed": 0
+    },
+    "production": {
+      "passed": 36,
+      "failed": 0
+    },
+    "contextLossRegression": {
+      "passed": 6,
+      "failed": 0
+    },
+    "mechanicalDesignScan": [],
+    "fullDevelopment": {
+      "passed": 255,
+      "failed": 6,
+      "limits": "Four Vite URL-wrapper image test errors, one WebKit touch timeout, one WebKit synthetic-editor focus race. Recovered in final 30-case scene and 3-case keyboard runs. No single aggregate development invocation was fully green."
+    },
+    "keyboardRecovery": {
+      "passed": 3,
+      "failed": 0
+    }
+  }
+}

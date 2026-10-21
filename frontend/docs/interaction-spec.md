@@ -19,25 +19,11 @@ Cancel its scheduler on unmount and recover the final name after interrupted ani
 
 ## Chosen background mechanism
 
-Hover must change the background's visible color and detail, as the owner requested.
-Use two aligned versions per theme: a monochrome sketch and its colored counterpart. The owner will supply all four images.
-A soft pointer-centered mask reveals the second layer on fine-pointer devices.
-Light mode reveals daylight color/atmosphere. Dark mode reveals celestial color/depth.
-Keep foreground text and controls outside the reveal's contrast changes.
+CURRENT: the later supplied-artwork brief supersedes the original scene proposal. The hero reveals the corresponding color illustration through accumulated cursor/touch strokes, animated fBm domain warping, soft pigment edges and temporal fading. This is a single WebGL renderer with a static monochrome fallback for reduced motion or renderer failure.
 
-| Approach                          | Fit                                                             | Cost and limits                                                                     |
-| --------------------------------- | --------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| WebGL image-pair shader, selected | Mix registered sketch/color layers under a soft pointer mask    | Needs owner artwork, shared image mapping, context-loss recovery and device testing |
-| Static image fallback             | Readable composition for reduced motion, touch or WebGL failure | No pointer reveal                                                                   |
+Artwork pairs share cover coordinates and reset together on theme changes. The scene never intercepts foreground controls or native scroll. Rendering stops after trails settle, and resets while hidden or offscreen. Existing theme persistence and its transition remain in the theme owner.
 
-Use a soft reveal radius around 120–180px as an initial desktop target.
-Fade the reveal on scene entry/exit over approximately 180–240ms. Avoid drawing when the pointer and scene are idle.
-Coalesce pointer updates with requestAnimationFrame. Pause scheduling offscreen and while the document is hidden.
-Reduced motion and coarse pointers receive a stable scene with a readable composed color treatment.
-The scene does not intercept content clicks, keyboard focus, or page scrolling.
-Theme switching fades coordinated scene layers without a large circular wipe over the text.
-See the [artwork contract](artwork-contract.md). Implement the shader after the owner supplies the images.
-The scene choice belongs to the owner. The current layout does not implement the shader.
+See [artwork contract](artwork-contract.md) and [background review](sketch-to-color-background.md) for verified assets, alignment findings, current defaults and lifecycle details.
 
 ## Command palette and projects
 
@@ -95,7 +81,7 @@ Provide persistent Pause/Play controls. Pause on hover, focus, drag, swipe, manu
 Require explicit Play to resume after interaction. Reduced motion uses manual navigation only.
 Do not duplicate focusable image clones or force the entire page sideways.
 
-Activate an image to open its detail route or labeled full-size dialog.
+Activate an image in `/photography` to open its labeled full-size dialog. Collection cards target anchors in that same gallery rather than collection routes.
 The dialog supports Escape, previous/next, a close control and focus restoration to the originating thumbnail.
 Load thumbnails first, nearby full-size images on demand, with dimensions and responsive sizes.
 Captions, equipment and locations appear only when supplied and approved.

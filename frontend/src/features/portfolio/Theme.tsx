@@ -1,11 +1,6 @@
-import { useLayoutEffect, useRef, useState, useSyncExternalStore } from 'react';
+import { useLayoutEffect, useRef, useState } from 'react';
 import { flushSync } from 'react-dom';
-type Theme = 'system' | 'light' | 'dark';
-function subscribe(callback: () => void) {
-  const media = window.matchMedia('(prefers-color-scheme: dark)');
-  media.addEventListener('change', callback);
-  return () => media.removeEventListener('change', callback);
-}
+type Theme = 'light' | 'dark';
 function readPreference(): Theme {
   try {
     const saved = localStorage.getItem('portfolio-theme');
@@ -13,19 +8,16 @@ function readPreference(): Theme {
   } catch {
     /* Keep theme controls usable without storage. */
   }
-  return 'system';
+  return window.matchMedia('(prefers-color-scheme: dark)').matches
+    ? 'dark'
+    : 'light';
 }
 export function useTheme() {
   const [theme, setTheme] = useState<Theme>(readPreference);
   const transition = useRef<ViewTransition | null>(null);
-  const systemDark = useSyncExternalStore(
-    subscribe,
-    () => window.matchMedia('(prefers-color-scheme: dark)').matches,
-  );
   useLayoutEffect(() => {
-    document.documentElement.dataset.theme =
-      theme === 'system' ? (systemDark ? 'dark' : 'light') : theme;
-  }, [theme, systemDark]);
+    document.documentElement.dataset.theme = theme;
+  }, [theme]);
   function chooseTheme(value: Theme, origin?: { x: number; y: number }) {
     try {
       localStorage.setItem('portfolio-theme', value);

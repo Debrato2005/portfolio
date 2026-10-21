@@ -36,13 +36,15 @@ The shell has an error boundary with reload recovery. API errors stay visible to
 ## Loading and replacement boundaries
 
 CURRENT: `features/portfolio/` owns supplied content, theme state, command search, name animation, project filters and quotes.
-Archive/detail routes and the homepage compose those features. Typed content owns projects, experience, articles and photo collections; `src/lib/links.ts` owns contact and repository destinations. Base UI owns dialog focus trapping and dismissal.
+The route tree contains `/`, `/blogs` and `/photography` plus unmatched-path recovery. The homepage composes projects, experience, hackathons, GitHub activity, skills and contact; project and event depth uses inline disclosure. Typed content owns projects, experience, articles and photo collections; `src/lib/links.ts` owns contact and repository destinations. Base UI owns dialog focus trapping and dismissal.
 The palette waits for dialog close completion before navigation. Contribution requests cancel stale work and allow retry.
 The page-view request is shared across StrictMode and route remounts. It increments once per document load. After an uncertain failure, retries only read the persistent total.
 The running cat is decorative, ignores pointer input, stops when hidden and does not render for coarse pointers or reduced motion.
-The [artwork contract](artwork-contract.md) is the pending image/shader boundary.
+The [artwork contract](artwork-contract.md) owns the hero scene boundary. `BackgroundScene` keeps decorative sketch fallbacks independent of a lazily imported WebGL renderer. Artwork/defaults, GPU lifecycle, shaders and CSS contrast/crop have separate owners. [Background review](sketch-to-color-background.md) records the implementation and acceptance limits.
 
-The development toolkit loads lazily. Its calendar, dialogs, and QR fixture never enter the production route tree.
+`styles/reference-refinement.css` owns the shared screenshot composition and responsive reading geometry. `styles/project-cards.css` owns the complete compact project overview and native brief presentation. Feature styles retain the activity and photography behavior. The app imports these after the base portfolio styles.
+
+The development toolkit is not part of the application route tree. Its fixtures never enter the production bundle.
 Self-hosted font CSS emits local WOFF2 assets. No external font service is required.
 Wrap Base UI in shared controls. Keep the DayPicker consumer in its calendar feature.
 Use [source rules](SOURCE_LEDGER.md) for consumers, licenses, and replacement choices.

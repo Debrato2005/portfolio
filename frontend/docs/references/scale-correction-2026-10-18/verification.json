@@ -1,0 +1,1278 @@
+{
+  "capturedAt": "2026-10-17T20:33:47.748Z",
+  "sources": {
+    "src/main.tsx": "ac6d5088a5b2a9a5f781f14c18b29b4e55b4a497cf8b4906b2c12eddf7f3f97b",
+    "src/app/App.tsx": "0f590f3929a2625dbee5e6dabffaeae3c5d32a85c37180bcce2be2fe6a8d8b62",
+    "src/routes/HomePage.tsx": "0fe0d674001c23292e3c870e18d429d157565ffc39ba8fc8324ed7b9e8b36f0c",
+    "src/features/portfolio/Name.tsx": "a75b3fc99adccf85b367b003bfbe4fed45b120bd2f61669314c8b28894852f86",
+    "src/features/portfolio/Projects.tsx": "d037f4c51a8efe07144d1774a5725722dc5ad6a1aa378fe0b6b3ce982c5443bb",
+    "src/features/portfolio/Photography.tsx": "e87a62157b5280097a28ac8f20c8ce3fc9a153533a36e5eec56539f2bd6c503e",
+    "src/features/portfolio/SectionIndex.tsx": "c846eb43f4ea2c8f7b97c3e8ab683fd4b4e5a33291d0c51c115461d6b2a2dfd4",
+    "src/features/portfolio/ContributionSection.tsx": "41f71154be2d89a3bf3c4e94cfd300852b8136106dfac591628d627c2735df85",
+    "src/styles/reference-refinement.css": "afa66f95bdd55c93d322f91e265750d4ba1c429fe4f25e47be6246cc33f800e8",
+    "src/styles/project-cards.css": "4e6f84a511847b144f7d55fb57b241371747b16862576d837346bea5900c9610",
+    "src/styles/tokens.css": "87bc661c7712ed21f48f618e926d93f36faa16aa4bd39deb41a6beb135a39d23",
+    "src/styles/contributions.css": "b179f39761e2e236d10849f3683c0d10a7717d9279ae1700d707de3a394ceccb",
+    "src/styles/achievements.css": "dd199f3a5ff52ce7b29c0814f6eeefffcb8e933a4eaabfe401f7ffffb5c79d2e"
+  },
+  "providerBoundary": "Desktop reads public profile/calendar and rewrites every counter hit to get. Phone/enlarged captures abort external providers. No fixture counts or personal media and no counter increment are forwarded.",
+  "cases": [
+    {
+      "width": 941,
+      "theme": "light",
+      "text": 100,
+      "errors": [],
+      "documentHeight": 2840,
+      "documentWidth": 941,
+      "content": {
+        "x": 53.640625,
+        "y": 64,
+        "width": 833.71875,
+        "height": 2707.328125
+      },
+      "hero": {
+        "x": 53.640625,
+        "y": 64,
+        "width": 833.71875,
+        "height": 320
+      },
+      "index": {
+        "x": 797,
+        "y": 96,
+        "width": 144,
+        "height": 281.578125
+      },
+      "indexPlacement": "hero",
+      "scale": {
+        "body": "16px",
+        "project": "14px",
+        "hero": "44px",
+        "control": 36,
+        "root": "16px",
+        "zoom": "1"
+      },
+      "sections": [
+        {
+          "id": "about",
+          "x": 53.640625,
+          "y": 384,
+          "width": 833.71875,
+          "height": 216.171875
+        },
+        {
+          "id": "projects",
+          "x": 53.640625,
+          "y": 600.171875,
+          "width": 833.71875,
+          "height": 497.328125
+        },
+        {
+          "id": "experience",
+          "x": 53.640625,
+          "y": 1097.5,
+          "width": 833.71875,
+          "height": 212.046875
+        },
+        {
+          "id": "hackathons",
+          "x": 53.640625,
+          "y": 1309.546875,
+          "width": 833.71875,
+          "height": 263.4375
+        },
+        {
+          "id": "github",
+          "x": 53.640625,
+          "y": 1572.984375,
+          "width": 833.71875,
+          "height": 301.53125
+        },
+        {
+          "id": "skills",
+          "x": 53.640625,
+          "y": 1874.515625,
+          "width": 833.71875,
+          "height": 188.484375
+        },
+        {
+          "id": "thoughts",
+          "x": 53.640625,
+          "y": 2063,
+          "width": 833.71875,
+          "height": 208.765625
+        },
+        {
+          "id": "photography",
+          "x": 53.640625,
+          "y": 2271.765625,
+          "width": 833.71875,
+          "height": 205.9375
+        },
+        {
+          "id": "contact",
+          "x": 53.640625,
+          "y": 2477.703125,
+          "width": 833.71875,
+          "height": 102.375
+        }
+      ],
+      "projects": [
+        {
+          "name": "OncoSyn",
+          "x": 53.640625,
+          "y": 661.171875,
+          "width": 269.90625,
+          "height": 214.3125
+        },
+        {
+          "name": "Cryptalis",
+          "x": 335.546875,
+          "y": 661.171875,
+          "width": 269.90625,
+          "height": 214.3125
+        },
+        {
+          "name": "Smolink",
+          "x": 617.453125,
+          "y": 661.171875,
+          "width": 269.90625,
+          "height": 214.3125
+        },
+        {
+          "name": "UniSpace",
+          "x": 53.640625,
+          "y": 887.484375,
+          "width": 269.90625,
+          "height": 194.015625
+        },
+        {
+          "name": "OrbitOps",
+          "x": 335.546875,
+          "y": 887.484375,
+          "width": 269.90625,
+          "height": 194.015625
+        },
+        {
+          "name": "StaySync",
+          "x": 617.453125,
+          "y": 887.484375,
+          "width": 269.90625,
+          "height": 194.015625
+        }
+      ],
+      "profile": "Public profile \u00b7 GitHub API",
+      "calendar": "public-calendar",
+      "counter": "connected"
+    },
+    {
+      "width": 941,
+      "theme": "dark",
+      "text": 100,
+      "errors": [],
+      "documentHeight": 2840,
+      "documentWidth": 941,
+      "content": {
+        "x": 53.640625,
+        "y": 64,
+        "width": 833.71875,
+        "height": 2707.328125
+      },
+      "hero": {
+        "x": 53.640625,
+        "y": 64,
+        "width": 833.71875,
+        "height": 320
+      },
+      "index": {
+        "x": 797,
+        "y": 96,
+        "width": 144,
+        "height": 281.578125
+      },
+      "indexPlacement": "hero",
+      "scale": {
+        "body": "16px",
+        "project": "14px",
+        "hero": "44px",
+        "control": 36,
+        "root": "16px",
+        "zoom": "1"
+      },
+      "sections": [
+        {
+          "id": "about",
+          "x": 53.640625,
+          "y": 384,
+          "width": 833.71875,
+          "height": 216.171875
+        },
+        {
+          "id": "projects",
+          "x": 53.640625,
+          "y": 600.171875,
+          "width": 833.71875,
+          "height": 497.328125
+        },
+        {
+          "id": "experience",
+          "x": 53.640625,
+          "y": 1097.5,
+          "width": 833.71875,
+          "height": 212.046875
+        },
+        {
+          "id": "hackathons",
+          "x": 53.640625,
+          "y": 1309.546875,
+          "width": 833.71875,
+          "height": 263.4375
+        },
+        {
+          "id": "github",
+          "x": 53.640625,
+          "y": 1572.984375,
+          "width": 833.71875,
+          "height": 301.53125
+        },
+        {
+          "id": "skills",
+          "x": 53.640625,
+          "y": 1874.515625,
+          "width": 833.71875,
+          "height": 188.484375
+        },
+        {
+          "id": "thoughts",
+          "x": 53.640625,
+          "y": 2063,
+          "width": 833.71875,
+          "height": 208.765625
+        },
+        {
+          "id": "photography",
+          "x": 53.640625,
+          "y": 2271.765625,
+          "width": 833.71875,
+          "height": 205.9375
+        },
+        {
+          "id": "contact",
+          "x": 53.640625,
+          "y": 2477.703125,
+          "width": 833.71875,
+          "height": 102.375
+        }
+      ],
+      "projects": [
+        {
+          "name": "OncoSyn",
+          "x": 53.640625,
+          "y": 661.171875,
+          "width": 269.90625,
+          "height": 214.3125
+        },
+        {
+          "name": "Cryptalis",
+          "x": 335.546875,
+          "y": 661.171875,
+          "width": 269.90625,
+          "height": 214.3125
+        },
+        {
+          "name": "Smolink",
+          "x": 617.453125,
+          "y": 661.171875,
+          "width": 269.90625,
+          "height": 214.3125
+        },
+        {
+          "name": "UniSpace",
+          "x": 53.640625,
+          "y": 887.484375,
+          "width": 269.90625,
+          "height": 194.015625
+        },
+        {
+          "name": "OrbitOps",
+          "x": 335.546875,
+          "y": 887.484375,
+          "width": 269.90625,
+          "height": 194.015625
+        },
+        {
+          "name": "StaySync",
+          "x": 617.453125,
+          "y": 887.484375,
+          "width": 269.90625,
+          "height": 194.015625
+        }
+      ],
+      "profile": "Public profile \u00b7 GitHub API",
+      "calendar": "public-calendar",
+      "counter": "connected"
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "text": 100,
+      "errors": [],
+      "documentHeight": 2670,
+      "documentWidth": 1440,
+      "content": {
+        "x": 160,
+        "y": 64,
+        "width": 1120,
+        "height": 2536.734375
+      },
+      "hero": {
+        "x": 160,
+        "y": 64,
+        "width": 1120,
+        "height": 368
+      },
+      "index": {
+        "x": 1252.8125,
+        "y": 96,
+        "width": 187.1875,
+        "height": 281.578125
+      },
+      "indexPlacement": "hero",
+      "scale": {
+        "body": "16px",
+        "project": "14px",
+        "hero": "64px",
+        "control": 36,
+        "root": "16px",
+        "zoom": "1"
+      },
+      "sections": [
+        {
+          "id": "about",
+          "x": 160,
+          "y": 432,
+          "width": 1120,
+          "height": 199.125
+        },
+        {
+          "id": "projects",
+          "x": 160,
+          "y": 631.125,
+          "width": 1120,
+          "height": 429.171875
+        },
+        {
+          "id": "experience",
+          "x": 160,
+          "y": 1060.296875,
+          "width": 1120,
+          "height": 150.65625
+        },
+        {
+          "id": "hackathons",
+          "x": 160,
+          "y": 1210.953125,
+          "width": 1120,
+          "height": 259.4375
+        },
+        {
+          "id": "github",
+          "x": 160,
+          "y": 1470.390625,
+          "width": 1120,
+          "height": 324.65625
+        },
+        {
+          "id": "skills",
+          "x": 160,
+          "y": 1795.046875,
+          "width": 1120,
+          "height": 135.328125
+        },
+        {
+          "id": "thoughts",
+          "x": 160,
+          "y": 1930.375,
+          "width": 1120,
+          "height": 208.765625
+        },
+        {
+          "id": "photography",
+          "x": 160,
+          "y": 2139.140625,
+          "width": 1120,
+          "height": 214.5625
+        },
+        {
+          "id": "contact",
+          "x": 160,
+          "y": 2353.703125,
+          "width": 1120,
+          "height": 82.78125
+        }
+      ],
+      "projects": [
+        {
+          "name": "OncoSyn",
+          "x": 160,
+          "y": 692.125,
+          "width": 365.328125,
+          "height": 173.71875
+        },
+        {
+          "name": "Cryptalis",
+          "x": 537.328125,
+          "y": 692.125,
+          "width": 365.328125,
+          "height": 173.71875
+        },
+        {
+          "name": "Smolink",
+          "x": 914.65625,
+          "y": 692.125,
+          "width": 365.34375,
+          "height": 173.71875
+        },
+        {
+          "name": "UniSpace",
+          "x": 160,
+          "y": 877.84375,
+          "width": 365.328125,
+          "height": 166.453125
+        },
+        {
+          "name": "OrbitOps",
+          "x": 537.328125,
+          "y": 877.84375,
+          "width": 365.328125,
+          "height": 166.453125
+        },
+        {
+          "name": "StaySync",
+          "x": 914.65625,
+          "y": 877.84375,
+          "width": 365.34375,
+          "height": 166.453125
+        }
+      ],
+      "profile": "Public profile \u00b7 GitHub API",
+      "calendar": "public-calendar",
+      "counter": "connected"
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "text": 100,
+      "errors": [],
+      "documentHeight": 2670,
+      "documentWidth": 1440,
+      "content": {
+        "x": 160,
+        "y": 64,
+        "width": 1120,
+        "height": 2536.734375
+      },
+      "hero": {
+        "x": 160,
+        "y": 64,
+        "width": 1120,
+        "height": 368
+      },
+      "index": {
+        "x": 1252.8125,
+        "y": 96,
+        "width": 187.1875,
+        "height": 281.578125
+      },
+      "indexPlacement": "hero",
+      "scale": {
+        "body": "16px",
+        "project": "14px",
+        "hero": "64px",
+        "control": 36,
+        "root": "16px",
+        "zoom": "1"
+      },
+      "sections": [
+        {
+          "id": "about",
+          "x": 160,
+          "y": 432,
+          "width": 1120,
+          "height": 199.125
+        },
+        {
+          "id": "projects",
+          "x": 160,
+          "y": 631.125,
+          "width": 1120,
+          "height": 429.171875
+        },
+        {
+          "id": "experience",
+          "x": 160,
+          "y": 1060.296875,
+          "width": 1120,
+          "height": 150.65625
+        },
+        {
+          "id": "hackathons",
+          "x": 160,
+          "y": 1210.953125,
+          "width": 1120,
+          "height": 259.4375
+        },
+        {
+          "id": "github",
+          "x": 160,
+          "y": 1470.390625,
+          "width": 1120,
+          "height": 324.65625
+        },
+        {
+          "id": "skills",
+          "x": 160,
+          "y": 1795.046875,
+          "width": 1120,
+          "height": 135.328125
+        },
+        {
+          "id": "thoughts",
+          "x": 160,
+          "y": 1930.375,
+          "width": 1120,
+          "height": 208.765625
+        },
+        {
+          "id": "photography",
+          "x": 160,
+          "y": 2139.140625,
+          "width": 1120,
+          "height": 214.5625
+        },
+        {
+          "id": "contact",
+          "x": 160,
+          "y": 2353.703125,
+          "width": 1120,
+          "height": 82.78125
+        }
+      ],
+      "projects": [
+        {
+          "name": "OncoSyn",
+          "x": 160,
+          "y": 692.125,
+          "width": 365.328125,
+          "height": 173.71875
+        },
+        {
+          "name": "Cryptalis",
+          "x": 537.328125,
+          "y": 692.125,
+          "width": 365.328125,
+          "height": 173.71875
+        },
+        {
+          "name": "Smolink",
+          "x": 914.65625,
+          "y": 692.125,
+          "width": 365.34375,
+          "height": 173.71875
+        },
+        {
+          "name": "UniSpace",
+          "x": 160,
+          "y": 877.84375,
+          "width": 365.328125,
+          "height": 166.453125
+        },
+        {
+          "name": "OrbitOps",
+          "x": 537.328125,
+          "y": 877.84375,
+          "width": 365.328125,
+          "height": 166.453125
+        },
+        {
+          "name": "StaySync",
+          "x": 914.65625,
+          "y": 877.84375,
+          "width": 365.34375,
+          "height": 166.453125
+        }
+      ],
+      "profile": "Public profile \u00b7 GitHub API",
+      "calendar": "public-calendar",
+      "counter": "connected"
+    },
+    {
+      "width": 1920,
+      "theme": "light",
+      "text": 100,
+      "errors": [],
+      "documentHeight": 2674,
+      "documentWidth": 1920,
+      "content": {
+        "x": 400,
+        "y": 64,
+        "width": 1120,
+        "height": 2541.375
+      },
+      "hero": {
+        "x": 400,
+        "y": 64,
+        "width": 1120,
+        "height": 368
+      },
+      "index": {
+        "x": 1552,
+        "y": 48,
+        "width": 192,
+        "height": 281.578125
+      },
+      "indexPlacement": "rail",
+      "scale": {
+        "body": "16px",
+        "project": "14px",
+        "hero": "64px",
+        "control": 36,
+        "root": "16px",
+        "zoom": "1"
+      },
+      "sections": [
+        {
+          "id": "about",
+          "x": 400,
+          "y": 432,
+          "width": 1120,
+          "height": 201.1875
+        },
+        {
+          "id": "projects",
+          "x": 400,
+          "y": 633.1875,
+          "width": 1120,
+          "height": 429.171875
+        },
+        {
+          "id": "experience",
+          "x": 400,
+          "y": 1062.359375,
+          "width": 1120,
+          "height": 150.65625
+        },
+        {
+          "id": "hackathons",
+          "x": 400,
+          "y": 1213.015625,
+          "width": 1120,
+          "height": 261.046875
+        },
+        {
+          "id": "github",
+          "x": 400,
+          "y": 1474.0625,
+          "width": 1120,
+          "height": 324.65625
+        },
+        {
+          "id": "skills",
+          "x": 400,
+          "y": 1798.71875,
+          "width": 1120,
+          "height": 135.328125
+        },
+        {
+          "id": "thoughts",
+          "x": 400,
+          "y": 1934.046875,
+          "width": 1120,
+          "height": 208.765625
+        },
+        {
+          "id": "photography",
+          "x": 400,
+          "y": 2142.8125,
+          "width": 1120,
+          "height": 215.53125
+        },
+        {
+          "id": "contact",
+          "x": 400,
+          "y": 2358.34375,
+          "width": 1120,
+          "height": 82.78125
+        }
+      ],
+      "projects": [
+        {
+          "name": "OncoSyn",
+          "x": 400,
+          "y": 694.1875,
+          "width": 365.328125,
+          "height": 173.71875
+        },
+        {
+          "name": "Cryptalis",
+          "x": 777.328125,
+          "y": 694.1875,
+          "width": 365.328125,
+          "height": 173.71875
+        },
+        {
+          "name": "Smolink",
+          "x": 1154.65625,
+          "y": 694.1875,
+          "width": 365.34375,
+          "height": 173.71875
+        },
+        {
+          "name": "UniSpace",
+          "x": 400,
+          "y": 879.90625,
+          "width": 365.328125,
+          "height": 166.453125
+        },
+        {
+          "name": "OrbitOps",
+          "x": 777.328125,
+          "y": 879.90625,
+          "width": 365.328125,
+          "height": 166.453125
+        },
+        {
+          "name": "StaySync",
+          "x": 1154.65625,
+          "y": 879.90625,
+          "width": 365.34375,
+          "height": 166.453125
+        }
+      ],
+      "profile": "Public profile \u00b7 GitHub API",
+      "calendar": "public-calendar",
+      "counter": "connected"
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "text": 100,
+      "errors": [],
+      "documentHeight": 5268,
+      "documentWidth": 390,
+      "content": {
+        "x": 16,
+        "y": 120,
+        "width": 358,
+        "height": 5043.640625
+      },
+      "hero": {
+        "x": 16,
+        "y": 120,
+        "width": 358,
+        "height": 409.703125
+      },
+      "index": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "indexPlacement": "selector",
+      "scale": {
+        "body": "16px",
+        "project": "14px",
+        "hero": "42.9px",
+        "control": 44,
+        "root": "16px",
+        "zoom": "1"
+      },
+      "sections": [
+        {
+          "id": "about",
+          "x": 16,
+          "y": 529.703125,
+          "width": 358,
+          "height": 417.125
+        },
+        {
+          "id": "projects",
+          "x": 16,
+          "y": 946.828125,
+          "width": 358,
+          "height": 1433.15625
+        },
+        {
+          "id": "experience",
+          "x": 16,
+          "y": 2379.984375,
+          "width": 358,
+          "height": 456.15625
+        },
+        {
+          "id": "hackathons",
+          "x": 16,
+          "y": 2836.140625,
+          "width": 358,
+          "height": 255.84375
+        },
+        {
+          "id": "github",
+          "x": 16,
+          "y": 3091.984375,
+          "width": 358,
+          "height": 585.84375
+        },
+        {
+          "id": "skills",
+          "x": 16,
+          "y": 3677.828125,
+          "width": 358,
+          "height": 394.171875
+        },
+        {
+          "id": "thoughts",
+          "x": 16,
+          "y": 4072,
+          "width": 358,
+          "height": 273.5625
+        },
+        {
+          "id": "photography",
+          "x": 16,
+          "y": 4345.5625,
+          "width": 358,
+          "height": 254.765625
+        },
+        {
+          "id": "contact",
+          "x": 16,
+          "y": 4600.328125,
+          "width": 358,
+          "height": 217.375
+        }
+      ],
+      "projects": [
+        {
+          "name": "OncoSyn",
+          "x": 16,
+          "y": 1119.828125,
+          "width": 358,
+          "height": 197.359375
+        },
+        {
+          "name": "Cryptalis",
+          "x": 16,
+          "y": 1329.1875,
+          "width": 358,
+          "height": 197.359375
+        },
+        {
+          "name": "Smolink",
+          "x": 16,
+          "y": 1538.546875,
+          "width": 358,
+          "height": 197.359375
+        },
+        {
+          "name": "UniSpace",
+          "x": 16,
+          "y": 1747.90625,
+          "width": 358,
+          "height": 197.359375
+        },
+        {
+          "name": "OrbitOps",
+          "x": 16,
+          "y": 1957.265625,
+          "width": 358,
+          "height": 197.359375
+        },
+        {
+          "name": "StaySync",
+          "x": 16,
+          "y": 2166.625,
+          "width": 358,
+          "height": 197.359375
+        }
+      ],
+      "counter": "unavailable"
+    },
+    {
+      "width": 320,
+      "theme": "dark",
+      "text": 200,
+      "errors": [],
+      "documentHeight": 17043,
+      "documentWidth": 320,
+      "content": {
+        "x": 16,
+        "y": 336.78125,
+        "width": 288,
+        "height": 16332.28125
+      },
+      "hero": {
+        "x": 16,
+        "y": 336.78125,
+        "width": 288,
+        "height": 1591.71875
+      },
+      "index": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "indexPlacement": "selector",
+      "scale": {
+        "body": "32px",
+        "project": "28px",
+        "hero": "80px",
+        "control": 88,
+        "root": "32px",
+        "zoom": "1"
+      },
+      "sections": [
+        {
+          "id": "about",
+          "x": 16,
+          "y": 1928.5,
+          "width": 288,
+          "height": 1779.890625
+        },
+        {
+          "id": "projects",
+          "x": 16,
+          "y": 3708.390625,
+          "width": 288,
+          "height": 4086.921875
+        },
+        {
+          "id": "experience",
+          "x": 16,
+          "y": 7795.3125,
+          "width": 288,
+          "height": 1623.515625
+        },
+        {
+          "id": "hackathons",
+          "x": 16,
+          "y": 9418.828125,
+          "width": 288,
+          "height": 664.09375
+        },
+        {
+          "id": "github",
+          "x": 16,
+          "y": 10082.921875,
+          "width": 288,
+          "height": 1745.25
+        },
+        {
+          "id": "skills",
+          "x": 16,
+          "y": 11828.171875,
+          "width": 288,
+          "height": 1432.484375
+        },
+        {
+          "id": "thoughts",
+          "x": 16,
+          "y": 13260.65625,
+          "width": 288,
+          "height": 921.5
+        },
+        {
+          "id": "photography",
+          "x": 16,
+          "y": 14182.15625,
+          "width": 288,
+          "height": 647.03125
+        },
+        {
+          "id": "contact",
+          "x": 16,
+          "y": 14829.1875,
+          "width": 288,
+          "height": 750.953125
+        }
+      ],
+      "projects": [
+        {
+          "name": "OncoSyn",
+          "x": 16,
+          "y": 4245.390625,
+          "width": 288,
+          "height": 640.265625
+        },
+        {
+          "name": "Cryptalis",
+          "x": 16,
+          "y": 4909.65625,
+          "width": 288,
+          "height": 599.671875
+        },
+        {
+          "name": "Smolink",
+          "x": 16,
+          "y": 5533.328125,
+          "width": 288,
+          "height": 505.90625
+        },
+        {
+          "name": "UniSpace",
+          "x": 16,
+          "y": 6063.234375,
+          "width": 288,
+          "height": 546.5
+        },
+        {
+          "name": "OrbitOps",
+          "x": 16,
+          "y": 6633.734375,
+          "width": 288,
+          "height": 599.671875
+        },
+        {
+          "name": "StaySync",
+          "x": 16,
+          "y": 7257.40625,
+          "width": 288,
+          "height": 505.90625
+        }
+      ],
+      "counter": "unavailable"
+    },
+    {
+      "width": 941,
+      "theme": "light",
+      "text": 150,
+      "errors": [],
+      "documentHeight": 5421,
+      "documentWidth": 941,
+      "content": {
+        "x": 53.640625,
+        "y": 111.59375,
+        "width": 833.71875,
+        "height": 5223.9375
+      },
+      "hero": {
+        "x": 53.640625,
+        "y": 111.59375,
+        "width": 833.71875,
+        "height": 745.75
+      },
+      "index": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "indexPlacement": "selector",
+      "scale": {
+        "body": "24px",
+        "project": "21px",
+        "hero": "66px",
+        "control": 54,
+        "root": "24px",
+        "zoom": "1"
+      },
+      "sections": [
+        {
+          "id": "about",
+          "x": 53.640625,
+          "y": 857.34375,
+          "width": 833.71875,
+          "height": 509.640625
+        },
+        {
+          "id": "projects",
+          "x": 53.640625,
+          "y": 1366.984375,
+          "width": 833.71875,
+          "height": 901.9375
+        },
+        {
+          "id": "experience",
+          "x": 53.640625,
+          "y": 2268.921875,
+          "width": 833.71875,
+          "height": 416.34375
+        },
+        {
+          "id": "hackathons",
+          "x": 53.640625,
+          "y": 2685.265625,
+          "width": 833.71875,
+          "height": 393.15625
+        },
+        {
+          "id": "github",
+          "x": 53.640625,
+          "y": 3078.421875,
+          "width": 833.71875,
+          "height": 540.9375
+        },
+        {
+          "id": "skills",
+          "x": 53.640625,
+          "y": 3619.359375,
+          "width": 833.71875,
+          "height": 354.71875
+        },
+        {
+          "id": "thoughts",
+          "x": 53.640625,
+          "y": 3974.078125,
+          "width": 833.71875,
+          "height": 289.640625
+        },
+        {
+          "id": "photography",
+          "x": 53.640625,
+          "y": 4263.71875,
+          "width": 833.71875,
+          "height": 401.171875
+        },
+        {
+          "id": "contact",
+          "x": 53.640625,
+          "y": 4664.890625,
+          "width": 833.71875,
+          "height": 202.78125
+        }
+      ],
+      "projects": [
+        {
+          "name": "OncoSyn",
+          "x": 53.640625,
+          "y": 1457.984375,
+          "width": 265.90625,
+          "height": 399.6875
+        },
+        {
+          "name": "Cryptalis",
+          "x": 337.546875,
+          "y": 1457.984375,
+          "width": 265.90625,
+          "height": 399.6875
+        },
+        {
+          "name": "Smolink",
+          "x": 621.453125,
+          "y": 1457.984375,
+          "width": 265.90625,
+          "height": 399.6875
+        },
+        {
+          "name": "UniSpace",
+          "x": 53.640625,
+          "y": 1875.671875,
+          "width": 265.90625,
+          "height": 369.25
+        },
+        {
+          "name": "OrbitOps",
+          "x": 337.546875,
+          "y": 1875.671875,
+          "width": 265.90625,
+          "height": 369.25
+        },
+        {
+          "name": "StaySync",
+          "x": 621.453125,
+          "y": 1875.671875,
+          "width": 265.90625,
+          "height": 369.25
+        }
+      ],
+      "counter": "unavailable"
+    }
+  ],
+  "artifacts": {
+    "site-941-light-100.png": "f85c02bdd65615d42fc2b5f5ade982b86e992752079f5c618ace058f9719f29a",
+    "site-390-light-100.png": "3da9f4c4d08e5a5f5cc206fabb841f5d07ff1aaa9a0f7e8c47325236c0d6c252",
+    "site-320-dark-200.png": "40ef5512d70e46a4cd2401f6ac7f08af6576f1c19364ed89ced56e4d7889074a",
+    "site-941-light-150.png": "cc00d401ef767e99ce5cbc698dc53801679e95396a0067d723174a7f32ccfa08",
+    "site-941-dark-100.png": "46ab1ae20a0a7404d0e81a40e4bc1c6cacd850c0bc0b58f0adf58e481cc479c5",
+    "site-1920-light-100.png": "66f4824dd54ef08561dd6b216d027c7ebfe4fd9ab6734df06bc53821a25ce03e",
+    "site-1440-light-100.png": "a7585906804dc0e5d6aecd8c2e434fda1cd029fc8864abd4c80c4e48aba638db",
+    "site-1440-dark-100.png": "937d73eab52e899038dd70f57e214cd20152a30e919210dc89b859691b38b887",
+    "before-after-light.png": "afb6a3f2d57ccfb044c65279a71ba7a423e1b5c8708d1f7627cfb2aa262bcb03",
+    "before-after-dark.png": "55e6c28210943c29d2c757745c8299239f196dcef79c63c2540ced322fd8b81d",
+    "projects-941-light-100.png": "c1e051a7ed0c13d010869dac71191676536fb1f585eba244f61dcca43e155df4",
+    "projects-941-dark-100.png": "2d9ee63b9870d35ba3eb771646a579a576693170983eb81982021e537cd2708c",
+    "projects-1440-light-100.png": "7fea6d1d6b4efd9a02bf011576ad54bfd5cbe88e4f315995b06000a9fb1047da",
+    "projects-1440-dark-100.png": "5a8bd4b6e54e5c2a3a520bf8dd8f53cf35e38254eb5d573988a134196c01df54",
+    "browser-run.log": "41fc257cff74392570d68fb568fa99568b55d46045f49e5c0ffe963910cdc893",
+    "focused-run.log": "b940f704aaf489f765b8e4e493eb2fe32177da1248059a3736414ccbab4df17f",
+    "production-run.log": "f04cae2875afd9ff6a745d7531c84aad479dd05dbcf17f03f9bc119443c9580e",
+    "design-scan.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "quality-run.log": "83a196414e385eec81dd141705cd34c6ea87149704be9285e1990e58274d3f02"
+  },
+  "baseline": {
+    "receipt": "../screenshot-comparison-2026-10-18/verification.json",
+    "sources": {
+      "src/main.tsx": "ac6d5088a5b2a9a5f781f14c18b29b4e55b4a497cf8b4906b2c12eddf7f3f97b",
+      "src/app/App.tsx": "0f590f3929a2625dbee5e6dabffaeae3c5d32a85c37180bcce2be2fe6a8d8b62",
+      "src/routes/HomePage.tsx": "0fe0d674001c23292e3c870e18d429d157565ffc39ba8fc8324ed7b9e8b36f0c",
+      "src/features/portfolio/Name.tsx": "a75b3fc99adccf85b367b003bfbe4fed45b120bd2f61669314c8b28894852f86",
+      "src/features/portfolio/Projects.tsx": "d037f4c51a8efe07144d1774a5725722dc5ad6a1aa378fe0b6b3ce982c5443bb",
+      "src/features/portfolio/Photography.tsx": "e87a62157b5280097a28ac8f20c8ce3fc9a153533a36e5eec56539f2bd6c503e",
+      "src/features/portfolio/SectionIndex.tsx": "c846eb43f4ea2c8f7b97c3e8ab683fd4b4e5a33291d0c51c115461d6b2a2dfd4",
+      "src/features/portfolio/ContributionSection.tsx": "41f71154be2d89a3bf3c4e94cfd300852b8136106dfac591628d627c2735df85",
+      "src/styles/reference-refinement.css": "7be8d579534e9c18518885a37d239b7d26ebef243efacc3bcffd85d32c3538fe",
+      "src/styles/project-cards.css": "2ca601630be063f8c1a8d5ff64d597b08d0bf9eedf7b8afaabc262116b1e9856",
+      "src/styles/tokens.css": "fd255e1ecc1c67955b94bf4266f5b3358638760912c1607975077cdd50786707",
+      "src/styles/contributions.css": "288b232719e191044819f8efe6445c797e28857c2a89dfb9c1d1a7c384c62a0c",
+      "src/styles/achievements.css": "e6f1841f697f80b5a8c22a0abdcf34f56f0bd958c6298d39079484f7b57ba080"
+    },
+    "width": 1440,
+    "pageHeight": 3275,
+    "projectSectionHeight": 612.09375,
+    "scale": {
+      "body": "20px",
+      "lead": "22px",
+      "hero": "80px",
+      "control": "52px",
+      "content": "1280px"
+    }
+  },
+  "review": "Final independent review confirmed balanced scale, complete six-card overview, corrected941px index clearance and readable320px doubled-text snapshot without decorative collision. Eight captures have no document overflow or page errors. Owner visual acceptance remains open.",
+  "checks": {
+    "development": {
+      "command": "npx playwright test tests/e2e/readability.spec.ts tests/e2e/contributions.spec.ts tests/e2e/page-views.spec.ts tests/e2e/photography.spec.ts tests/e2e/foundation.spec.ts --workers=1",
+      "passed": 116,
+      "total": 120,
+      "duration": "4.3m",
+      "boundary": "Three stale enlarged-text rail expectations and one missed transient quote-fade assertion failed. All scale, overview, labels, reflow, provider behavior and automated Axe checks passed."
+    },
+    "focusedRecovery": {
+      "command": "npx playwright test tests/e2e/readability.spec.ts --grep 'name scramble preserves|enlarged text keeps navigation' --workers=1",
+      "passed": 6,
+      "total": 6,
+      "duration": "28.9s",
+      "boundary": "Updated wider rail expectation for narrower canvas. Controlled animation clock verifies fade-in-progress, changed quote and unchanged footer geometry. No application animation changed."
+    },
+    "production": {
+      "command": "npm run test:e2e:production -- --workers=1",
+      "passed": 6,
+      "total": 6,
+      "duration": "19.7s"
+    },
+    "proseDraftLint": {
+      "per100Words": 0.53,
+      "boundary": "Review draft before adding links. Does not establish product design quality."
+    },
+    "quality": {
+      "command": "npm run check",
+      "exitCode": 0,
+      "unitAndContractTests": 23,
+      "skillBundles": 19,
+      "log": "quality-run.log"
+    },
+    "mechanicalScan": {
+      "findings": 0,
+      "artifact": "design-scan.json"
+    }
+  }
+}

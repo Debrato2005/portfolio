@@ -1,15 +1,35 @@
 import { useNavigate } from 'react-router';
-import { useEffect, useState } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { sections } from './content';
 export function SectionIndex() {
   const [active, setActive] = useState('about');
+  const [placement, setPlacement] = useState<'selector' | 'hero'>('selector');
+  const index = useRef<HTMLElement>(null);
   const navigate = useNavigate();
+  useLayoutEffect(() => {
+    const nav = index.current;
+    if (!nav) return;
+    const measure = () => {
+      const rootSize = parseFloat(
+        getComputedStyle(document.documentElement).fontSize,
+      );
+      setPlacement(innerWidth >= 960 && rootSize <= 18 ? 'hero' : 'selector');
+    };
+    measure();
+    const observer = new ResizeObserver(measure);
+    observer.observe(document.documentElement);
+    window.addEventListener('resize', measure);
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('resize', measure);
+    };
+  }, []);
   useEffect(() => {
     let frame = 0;
     const update = () => {
       frame = 0;
       let current: string = sections[0][0];
-      const activationLine = window.innerHeight * 0.4;
+      const activationLine = Math.min(120, window.innerHeight * 0.2);
       for (const [id] of sections) {
         const element = document.getElementById(id);
         if (element && element.getBoundingClientRect().top <= activationLine)
@@ -37,7 +57,7 @@ export function SectionIndex() {
   }, []);
   return (
     <>
-      <label className="mobile-section-menu">
+      <label className="mobile-section-menu" hidden={placement !== 'selector'}>
         On this page
         <select
           aria-label="Jump to section"
@@ -51,7 +71,13 @@ export function SectionIndex() {
           ))}
         </select>
       </label>
-      <nav className="section-index" aria-label="Section index">
+      <nav
+        ref={index}
+        className="section-index"
+        data-placement={placement}
+        aria-label="Section index"
+        hidden={placement === 'selector'}
+      >
         <p>Index</p>
         {sections.map(([id, title]) => (
           <a

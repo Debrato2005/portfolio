@@ -1,0 +1,169 @@
+{
+  "capturedAt": "2026-10-19T19:50:09.636Z",
+  "states": [
+    {
+      "width": 1920,
+      "height": 1080,
+      "theme": "dark",
+      "placement": "fixed",
+      "hidden": false,
+      "index": {
+        "left": 1632,
+        "top": 280.8,
+        "width": 192,
+        "height": 262.17
+      },
+      "topDelta": 0,
+      "gutterGap": 96,
+      "contentRight": 1536,
+      "heroNoteCount": 0,
+      "documentHeight": 2132,
+      "overflowX": false,
+      "cardHeight": 116,
+      "briefOpen": false,
+      "scrolled": {
+        "scrollY": 908,
+        "indexTop": 280.8,
+        "indexVisible": true
+      },
+      "pageErrors": []
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "theme": "light",
+      "placement": "hero",
+      "hidden": false,
+      "index": {
+        "left": 1108.81,
+        "top": 96.19,
+        "width": 187.19,
+        "height": 262.17
+      },
+      "topDelta": 137.81,
+      "gutterGap": -187.19,
+      "contentRight": 1296,
+      "heroNoteCount": 0,
+      "documentHeight": 2154,
+      "overflowX": false,
+      "cardHeight": 116,
+      "briefOpen": false,
+      "pageErrors": []
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "theme": "dark",
+      "placement": "hero",
+      "hidden": false,
+      "index": {
+        "left": 1108.81,
+        "top": 96.19,
+        "width": 187.19,
+        "height": 262.17
+      },
+      "topDelta": 137.81,
+      "gutterGap": -187.19,
+      "contentRight": 1296,
+      "heroNoteCount": 0,
+      "documentHeight": 2154,
+      "overflowX": false,
+      "cardHeight": 116,
+      "briefOpen": false,
+      "pageErrors": []
+    },
+    {
+      "width": 941,
+      "height": 900,
+      "theme": "light",
+      "placement": "hero",
+      "hidden": false,
+      "index": {
+        "left": 727.36,
+        "top": 86.3,
+        "width": 160,
+        "height": 262.17
+      },
+      "topDelta": 147.7,
+      "gutterGap": -160,
+      "contentRight": 887.36,
+      "heroNoteCount": 0,
+      "documentHeight": 2208,
+      "overflowX": false,
+      "cardHeight": 132.9,
+      "briefOpen": false,
+      "pageErrors": []
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "theme": "light",
+      "expandedBrief": {
+        "cardHeight": 575.4,
+        "briefDisplay": "block",
+        "briefText": "ResearchAug 2026 – PresentAn ongoing computational oncology research project exploring how tumour heterogeneity, evolution and spatial evidence can inform preci"
+      },
+      "pageErrors": []
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "theme": "dark",
+      "expandedBrief": {
+        "cardHeight": 575.4,
+        "briefDisplay": "block",
+        "briefText": "ResearchAug 2026 – PresentAn ongoing computational oncology research project exploring how tumour heterogeneity, evolution and spatial evidence can inform preci"
+      },
+      "pageErrors": []
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "theme": "light",
+      "expandedBrief": {
+        "cardHeight": 725.6,
+        "briefDisplay": "block",
+        "briefText": "ResearchAug 2026 – PresentAn ongoing computational oncology research project exploring how tumour heterogeneity, evolution and spatial evidence can inform preci"
+      },
+      "pageErrors": []
+    },
+    {
+      "width": 1920,
+      "heroNoteCount": 0,
+      "noteCount": 0,
+      "themeButton": "Theme: Light",
+      "theme": "light",
+      "pageErrors": []
+    },
+    {
+      "width": 1440,
+      "heroNoteCount": 0,
+      "noteCount": 0,
+      "themeButton": "Theme: Light",
+      "theme": "light",
+      "pageErrors": []
+    },
+    {
+      "width": 941,
+      "heroNoteCount": 0,
+      "noteCount": 0,
+      "themeButton": "Theme: Light",
+      "theme": "light",
+      "pageErrors": []
+    },
+    {
+      "width": 390,
+      "heroNoteCount": 0,
+      "noteCount": 0,
+      "themeButton": "Theme: Light",
+      "theme": "light",
+      "pageErrors": []
+    }
+  ],
+  "testRuns": {
+    "chromium": "91/91 passed",
+    "firefox": "91/91 passed",
+    "webkit": "91/91 passed",
+    "command": "npx playwright test --project=<engine>"
+  }
+}

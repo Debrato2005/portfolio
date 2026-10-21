@@ -6,9 +6,7 @@ test.beforeEach(async ({ page }) => {
   );
 });
 
-test('larger project cards keep a coherent responsive grid', async ({
-  page,
-}) => {
+test('project overview keeps a coherent responsive grid', async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await page.setViewportSize({ width: 1440, height: 1000 });
   await page.goto('/');
@@ -17,17 +15,31 @@ test('larger project cards keep a coherent responsive grid', async ({
     .evaluateAll((cards) =>
       cards.map((card) => card.getBoundingClientRect().top),
     );
-  expect(tops).toHaveLength(4);
+  expect(tops).toHaveLength(6);
   expect(Math.abs(tops[0]! - tops[1]!)).toBeLessThan(1);
   expect(Math.abs(tops[2]! - tops[3]!)).toBeLessThan(1);
+  expect(Math.abs(tops[4]! - tops[5]!)).toBeLessThan(1);
   expect(tops[2]!).toBeGreaterThan(tops[0]!);
+  expect(tops[4]!).toBeGreaterThan(tops[2]!);
+  await page.setViewportSize({ width: 768, height: 1000 });
+  const tablet = await page
+    .locator('.project-card')
+    .evaluateAll((cards) =>
+      cards.map((card) => card.getBoundingClientRect().top),
+    );
+  expect(Math.abs(tablet[0]! - tablet[1]!)).toBeLessThan(1);
+  expect(Math.abs(tablet[2]! - tablet[3]!)).toBeLessThan(1);
+  expect(Math.abs(tablet[4]! - tablet[5]!)).toBeLessThan(1);
+  expect(tablet[2]!).toBeGreaterThan(tablet[0]!);
+  expect(tablet[4]!).toBeGreaterThan(tablet[2]!);
   await page.setViewportSize({ width: 390, height: 844 });
   const narrow = await page
     .locator('.project-card')
     .evaluateAll((cards) =>
       cards.map((card) => card.getBoundingClientRect().top),
     );
-  expect(narrow[1]! > narrow[0]!).toBe(true);
+  for (let index = 1; index < narrow.length; index++)
+    expect(narrow[index]!).toBeGreaterThan(narrow[index - 1]!);
 });
 
 test('project engineering notes reveal sourced detail with the keyboard', async ({
@@ -35,7 +47,7 @@ test('project engineering notes reveal sourced detail with the keyboard', async 
 }) => {
   await page.goto('/');
   const card = page.locator('.project-card').filter({ hasText: 'Cryptalis' });
-  const notes = card.getByLabel('Engineering notes for Cryptalis');
+  const notes = card.getByLabel('Open project brief for Cryptalis');
   await notes.focus();
   await page.keyboard.press('Enter');
   await expect(card.getByText('Architecture', { exact: true })).toBeVisible();
@@ -127,11 +139,9 @@ test('GitHub profile retry recovers after a limited request', async ({
 
 test('theme choice persists after reload', async ({ page }) => {
   await page.goto('/');
-  await page.getByRole('button', { name: 'Theme: System' }).click();
-  await expect(
-    page.getByRole('button', { name: 'Theme: Light' }),
-  ).toBeVisible();
+  await expect(page.locator('html')).toHaveAttribute('data-theme', 'light');
   await page.getByRole('button', { name: 'Theme: Light' }).click();
+  await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
   await page.reload();
   await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
   await expect(page.getByRole('button', { name: 'Theme: Dark' })).toBeVisible();
@@ -160,12 +170,12 @@ test('project filters show matching work and restore all projects', async ({
 }) => {
   await page.goto('/');
   await page.getByRole('button', { name: 'Research', exact: true }).click();
-  await expect(page.locator('.project-card')).toHaveCount(2);
+  await expect(page.locator('.project-card')).toHaveCount(3);
   await expect(
     page.locator('.project-card').filter({ hasText: 'Smolink' }),
   ).toHaveCount(0);
   await page.getByRole('button', { name: 'All work' }).click();
-  await expect(page.locator('.project-card')).toHaveCount(4);
+  await expect(page.locator('.project-card')).toHaveCount(6);
 });
 
 test('photography opens a detail page and supports return navigation', async ({
@@ -176,7 +186,10 @@ test('photography opens a detail page and supports return navigation', async ({
   await expect(
     page.getByRole('heading', { name: 'Through my lens', exact: true }),
   ).toBeFocused();
-  await expect(page.locator('main img')).toHaveCount(0);
+  await expect(page.locator('main img.empty-collection-cover')).toHaveCount(3);
+  await expect(
+    page.locator('main img:not(.empty-collection-cover)'),
+  ).toHaveCount(0);
   await page.getByRole('link', { name: 'Back to portfolio' }).click();
   await expect(
     page.getByRole('heading', { name: 'DEBRATO GHOSH', exact: true }),
@@ -206,7 +219,7 @@ test('keyboard search returns focus to its invoker and keeps selected commands v
   page,
 }) => {
   await page.goto('/');
-  const theme = page.getByRole('button', { name: 'Theme: System' });
+  const theme = page.getByRole('button', { name: /^Theme: (Light|Dark)$/ });
   await theme.focus();
   await page.keyboard.press('Control+k');
   for (let index = 0; index < 12; index++)

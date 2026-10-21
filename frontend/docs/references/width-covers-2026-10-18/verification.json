@@ -1,0 +1,1245 @@
+{
+  "capturedAt": "2026-10-18T08:59:25.197Z",
+  "sources": {
+    "src/styles/tokens.css": "eb190e8344630f72673509dcee33392f89eff32b38bc2351adbd232a8bca3629",
+    "src/styles/reference-refinement.css": "9f44e3ff8ae58cd61b2e01e9cee44db3cf406ba616f992fde6db695072e491cc",
+    "src/styles/photography.css": "73dfd40d4a28d65ba4a5d7bb0b087fc8bf3492eb93a4ff31effc5c8d2a9fa12d",
+    "src/styles/achievements.css": "0cfa4a4d639ac87690680d1767bb74d7b46ae2906fad13cbb3fec5f475800635",
+    "src/features/portfolio/Photography.tsx": "2c23add1955c10cd6f5e6e5296e73804d494ab3cfbe3eb9616ba6634c5f8252c",
+    "src/features/portfolio/Achievements.tsx": "610c92f1c79caadb65f0b8b731e41b8838d4ca659582fdf941ec317cf7c84597",
+    "src/features/portfolio/illustrations.ts": "18e3caa085fd3a2bdbce173b1278674ff1510cf897f5687b0a1749d4c93ed459",
+    "src/features/portfolio/content.ts": "e1a80f36e51862dd3b30eef862d0dc98c460463d87c98467ccf4ff73dcba8c2e",
+    "src/routes/HomePage.tsx": "fdcc742c9366d8ccf2c20492c5d5702b072a698416d62da15ac669fb7e294a37",
+    "src/routes/BlogsPage.tsx": "51610db42bf3f12c4976c5a2d33b37e5571104ff67e1575698f23dab71671fa1",
+    "src/routes/PhotographyPage.tsx": "8173ea6d80d7a4310c4a8b8162dff4e59fcaa1b657f61be8fedf32748b78dbaf",
+    "public/images/editorial/night-sky.webp": "8cf3f690fa459cbeb2ba3e9093fab8cc238a92c23fb62ee9066e7209797a1254",
+    "public/images/editorial/landscapes.webp": "ec47c9c5c1dd3158ce4b32d53e3a30f0a55af2fde31dd1b258daabf8a8ed7ea2",
+    "public/images/editorial/everyday-light.webp": "23c52c507a48e0030141ce81bce70c20f1768a5641344160013541629085ae0c",
+    "public/images/editorial/hackathon.webp": "1007f7e083c51119c1e69ef59256f8f1e0e9a8846318007eec97228d3bda4cd6"
+  },
+  "providerBoundary": "External providers aborted; no real counter increments.",
+  "cases": [
+    {
+      "width": 941,
+      "theme": "light",
+      "text": 100,
+      "errors": [],
+      "documentWidth": 941,
+      "documentHeight": 2255,
+      "content": {
+        "x": 53.640625,
+        "y": 64,
+        "width": 833.71875,
+        "height": 2122.4375
+      },
+      "heroCopy": {
+        "x": 84.6875,
+        "y": 119.015625,
+        "width": 370.375,
+        "height": 43.28125
+      },
+      "aboutBody": {
+        "x": 199.515625,
+        "y": 375,
+        "width": 687.84375,
+        "height": 138.296875
+      },
+      "index": {
+        "x": 727.359375,
+        "y": 96,
+        "width": 160,
+        "height": 262.171875
+      },
+      "indexPlacement": "hero",
+      "projects": {
+        "x": 53.640625,
+        "y": 523.296875,
+        "width": 833.71875,
+        "height": 338.5625
+      },
+      "sections": [
+        {
+          "id": "about",
+          "x": 53.640625,
+          "y": 364,
+          "height": 159.296875
+        },
+        {
+          "id": "projects",
+          "x": 53.640625,
+          "y": 523.296875,
+          "height": 338.5625
+        },
+        {
+          "id": "experience",
+          "x": 53.640625,
+          "y": 861.859375,
+          "height": 153.21875
+        },
+        {
+          "id": "hackathons",
+          "x": 53.640625,
+          "y": 1015.078125,
+          "height": 223.640625
+        },
+        {
+          "id": "github",
+          "x": 53.640625,
+          "y": 1238.71875,
+          "height": 256.703125
+        },
+        {
+          "id": "skills",
+          "x": 53.640625,
+          "y": 1495.421875,
+          "height": 120.359375
+        },
+        {
+          "id": "thoughts",
+          "x": 53.640625,
+          "y": 1615.78125,
+          "height": 154.75
+        },
+        {
+          "id": "photography",
+          "x": 53.640625,
+          "y": 1770.53125,
+          "height": 207.984375
+        },
+        {
+          "id": "contact",
+          "x": 53.640625,
+          "y": 1978.515625,
+          "height": 77.390625
+        }
+      ],
+      "art": [
+        {
+          "src": "/images/editorial/hackathon.webp",
+          "loaded": true
+        },
+        {
+          "src": "/images/editorial/everyday-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "/images/editorial/night-sky.webp",
+          "loaded": true
+        },
+        {
+          "src": "/images/editorial/landscapes.webp",
+          "loaded": true
+        },
+        {
+          "src": "/images/editorial/everyday-light.webp",
+          "loaded": true
+        }
+      ],
+      "zoom": "1"
+    },
+    {
+      "width": 941,
+      "theme": "dark",
+      "text": 100,
+      "errors": [],
+      "documentWidth": 941,
+      "documentHeight": 2255,
+      "content": {
+        "x": 53.640625,
+        "y": 64,
+        "width": 833.71875,
+        "height": 2122.4375
+      },
+      "heroCopy": {
+        "x": 84.6875,
+        "y": 119.015625,
+        "width": 370.375,
+        "height": 43.28125
+      },
+      "aboutBody": {
+        "x": 199.515625,
+        "y": 375,
+        "width": 687.84375,
+        "height": 138.296875
+      },
+      "index": {
+        "x": 727.359375,
+        "y": 96,
+        "width": 160,
+        "height": 262.171875
+      },
+      "indexPlacement": "hero",
+      "projects": {
+        "x": 53.640625,
+        "y": 523.296875,
+        "width": 833.71875,
+        "height": 338.5625
+      },
+      "sections": [
+        {
+          "id": "about",
+          "x": 53.640625,
+          "y": 364,
+          "height": 159.296875
+        },
+        {
+          "id": "projects",
+          "x": 53.640625,
+          "y": 523.296875,
+          "height": 338.5625
+        },
+        {
+          "id": "experience",
+          "x": 53.640625,
+          "y": 861.859375,
+          "height": 153.21875
+        },
+        {
+          "id": "hackathons",
+          "x": 53.640625,
+          "y": 1015.078125,
+          "height": 223.640625
+        },
+        {
+          "id": "github",
+          "x": 53.640625,
+          "y": 1238.71875,
+          "height": 256.703125
+        },
+        {
+          "id": "skills",
+          "x": 53.640625,
+          "y": 1495.421875,
+          "height": 120.359375
+        },
+        {
+          "id": "thoughts",
+          "x": 53.640625,
+          "y": 1615.78125,
+          "height": 154.75
+        },
+        {
+          "id": "photography",
+          "x": 53.640625,
+          "y": 1770.53125,
+          "height": 207.984375
+        },
+        {
+          "id": "contact",
+          "x": 53.640625,
+          "y": 1978.515625,
+          "height": 77.390625
+        }
+      ],
+      "art": [
+        {
+          "src": "/images/editorial/hackathon.webp",
+          "loaded": true
+        },
+        {
+          "src": "/images/editorial/everyday-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "/images/editorial/night-sky.webp",
+          "loaded": true
+        },
+        {
+          "src": "/images/editorial/landscapes.webp",
+          "loaded": true
+        },
+        {
+          "src": "/images/editorial/everyday-light.webp",
+          "loaded": true
+        }
+      ],
+      "zoom": "1"
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "text": 100,
+      "errors": [],
+      "documentWidth": 1440,
+      "documentHeight": 2161,
+      "content": {
+        "x": 82.078125,
+        "y": 64,
+        "width": 1275.828125,
+        "height": 2027.859375
+      },
+      "heroCopy": {
+        "x": 129.59375,
+        "y": 134.09375,
+        "width": 566.78125,
+        "height": 55.1875
+      },
+      "aboutBody": {
+        "x": 305.328125,
+        "y": 375,
+        "width": 1052.578125,
+        "height": 108.984375
+      },
+      "index": {
+        "x": 1170.71875,
+        "y": 96,
+        "width": 187.1875,
+        "height": 262.171875
+      },
+      "indexPlacement": "hero",
+      "projects": {
+        "x": 82.078125,
+        "y": 493.984375,
+        "width": 1275.828125,
+        "height": 327
+      },
+      "sections": [
+        {
+          "id": "about",
+          "x": 82.078125,
+          "y": 364,
+          "height": 129.984375
+        },
+        {
+          "id": "projects",
+          "x": 82.078125,
+          "y": 493.984375,
+          "height": 327
+        },
+        {
+          "id": "experience",
+          "x": 82.078125,
+          "y": 820.984375,
+          "height": 119.53125
+        },
+        {
+          "id": "hackathons",
+          "x": 82.078125,
+          "y": 940.515625,
+          "height": 223.640625
+        },
+        {
+          "id": "github",
+          "x": 82.078125,
+          "y": 1164.15625,
+          "height": 278.171875
+        },
+        {
+          "id": "skills",
+          "x": 82.078125,
+          "y": 1442.328125,
+          "height": 95.671875
+        },
+        {
+          "id": "thoughts",
+          "x": 82.078125,
+          "y": 1538,
+          "height": 154.75
+        },
+        {
+          "id": "photography",
+          "x": 82.078125,
+          "y": 1692.75,
+          "height": 207.984375
+        },
+        {
+          "id": "contact",
+          "x": 82.078125,
+          "y": 1900.734375,
+          "height": 60.59375
+        }
+      ],
+      "art": [
+        {
+          "src": "/images/editorial/hackathon.webp",
+          "loaded": true
+        },
+        {
+          "src": "/images/editorial/everyday-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "/images/editorial/night-sky.webp",
+          "loaded": true
+        },
+        {
+          "src": "/images/editorial/landscapes.webp",
+          "loaded": true
+        },
+        {
+          "src": "/images/editorial/everyday-light.webp",
+          "loaded": true
+        }
+      ],
+      "zoom": "1"
+    },
+    {
+      "width": 1705,
+      "theme": "light",
+      "text": 100,
+      "errors": [],
+      "documentWidth": 1705,
+      "documentHeight": 2161,
+      "content": {
+        "x": 97.1875,
+        "y": 64,
+        "width": 1510.625,
+        "height": 2027.859375
+      },
+      "heroCopy": {
+        "x": 145.1875,
+        "y": 134.09375,
+        "width": 679.015625,
+        "height": 55.1875
+      },
+      "aboutBody": {
+        "x": 361.546875,
+        "y": 375,
+        "width": 1246.265625,
+        "height": 108.984375
+      },
+      "index": {
+        "x": 1415.8125,
+        "y": 96,
+        "width": 192,
+        "height": 262.171875
+      },
+      "indexPlacement": "hero",
+      "projects": {
+        "x": 97.1875,
+        "y": 493.984375,
+        "width": 1510.625,
+        "height": 327
+      },
+      "sections": [
+        {
+          "id": "about",
+          "x": 97.1875,
+          "y": 364,
+          "height": 129.984375
+        },
+        {
+          "id": "projects",
+          "x": 97.1875,
+          "y": 493.984375,
+          "height": 327
+        },
+        {
+          "id": "experience",
+          "x": 97.1875,
+          "y": 820.984375,
+          "height": 119.53125
+        },
+        {
+          "id": "hackathons",
+          "x": 97.1875,
+          "y": 940.515625,
+          "height": 223.640625
+        },
+        {
+          "id": "github",
+          "x": 97.1875,
+          "y": 1164.15625,
+          "height": 278.171875
+        },
+        {
+          "id": "skills",
+          "x": 97.1875,
+          "y": 1442.328125,
+          "height": 95.671875
+        },
+        {
+          "id": "thoughts",
+          "x": 97.1875,
+          "y": 1538,
+          "height": 154.75
+        },
+        {
+          "id": "photography",
+          "x": 97.1875,
+          "y": 1692.75,
+          "height": 207.984375
+        },
+        {
+          "id": "contact",
+          "x": 97.1875,
+          "y": 1900.734375,
+          "height": 60.59375
+        }
+      ],
+      "art": [
+        {
+          "src": "/images/editorial/hackathon.webp",
+          "loaded": true
+        },
+        {
+          "src": "/images/editorial/everyday-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "/images/editorial/night-sky.webp",
+          "loaded": true
+        },
+        {
+          "src": "/images/editorial/landscapes.webp",
+          "loaded": true
+        },
+        {
+          "src": "/images/editorial/everyday-light.webp",
+          "loaded": true
+        }
+      ],
+      "zoom": "1"
+    },
+    {
+      "width": 1705,
+      "theme": "dark",
+      "text": 100,
+      "errors": [],
+      "documentWidth": 1705,
+      "documentHeight": 2161,
+      "content": {
+        "x": 97.1875,
+        "y": 64,
+        "width": 1510.625,
+        "height": 2027.859375
+      },
+      "heroCopy": {
+        "x": 145.1875,
+        "y": 134.09375,
+        "width": 679.015625,
+        "height": 55.1875
+      },
+      "aboutBody": {
+        "x": 361.546875,
+        "y": 375,
+        "width": 1246.265625,
+        "height": 108.984375
+      },
+      "index": {
+        "x": 1415.8125,
+        "y": 96,
+        "width": 192,
+        "height": 262.171875
+      },
+      "indexPlacement": "hero",
+      "projects": {
+        "x": 97.1875,
+        "y": 493.984375,
+        "width": 1510.625,
+        "height": 327
+      },
+      "sections": [
+        {
+          "id": "about",
+          "x": 97.1875,
+          "y": 364,
+          "height": 129.984375
+        },
+        {
+          "id": "projects",
+          "x": 97.1875,
+          "y": 493.984375,
+          "height": 327
+        },
+        {
+          "id": "experience",
+          "x": 97.1875,
+          "y": 820.984375,
+          "height": 119.53125
+        },
+        {
+          "id": "hackathons",
+          "x": 97.1875,
+          "y": 940.515625,
+          "height": 223.640625
+        },
+        {
+          "id": "github",
+          "x": 97.1875,
+          "y": 1164.15625,
+          "height": 278.171875
+        },
+        {
+          "id": "skills",
+          "x": 97.1875,
+          "y": 1442.328125,
+          "height": 95.671875
+        },
+        {
+          "id": "thoughts",
+          "x": 97.1875,
+          "y": 1538,
+          "height": 154.75
+        },
+        {
+          "id": "photography",
+          "x": 97.1875,
+          "y": 1692.75,
+          "height": 207.984375
+        },
+        {
+          "id": "contact",
+          "x": 97.1875,
+          "y": 1900.734375,
+          "height": 60.59375
+        }
+      ],
+      "art": [
+        {
+          "src": "/images/editorial/hackathon.webp",
+          "loaded": true
+        },
+        {
+          "src": "/images/editorial/everyday-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "/images/editorial/night-sky.webp",
+          "loaded": true
+        },
+        {
+          "src": "/images/editorial/landscapes.webp",
+          "loaded": true
+        },
+        {
+          "src": "/images/editorial/everyday-light.webp",
+          "loaded": true
+        }
+      ],
+      "zoom": "1"
+    },
+    {
+      "width": 1920,
+      "theme": "dark",
+      "text": 100,
+      "errors": [],
+      "documentWidth": 1920,
+      "documentHeight": 2161,
+      "content": {
+        "x": 200,
+        "y": 64,
+        "width": 1520,
+        "height": 2027.859375
+      },
+      "heroCopy": {
+        "x": 248,
+        "y": 134.09375,
+        "width": 683.515625,
+        "height": 55.1875
+      },
+      "aboutBody": {
+        "x": 466,
+        "y": 375,
+        "width": 1254,
+        "height": 108.984375
+      },
+      "index": {
+        "x": 1528,
+        "y": 96,
+        "width": 192,
+        "height": 262.171875
+      },
+      "indexPlacement": "hero",
+      "projects": {
+        "x": 200,
+        "y": 493.984375,
+        "width": 1520,
+        "height": 327
+      },
+      "sections": [
+        {
+          "id": "about",
+          "x": 200,
+          "y": 364,
+          "height": 129.984375
+        },
+        {
+          "id": "projects",
+          "x": 200,
+          "y": 493.984375,
+          "height": 327
+        },
+        {
+          "id": "experience",
+          "x": 200,
+          "y": 820.984375,
+          "height": 119.53125
+        },
+        {
+          "id": "hackathons",
+          "x": 200,
+          "y": 940.515625,
+          "height": 223.640625
+        },
+        {
+          "id": "github",
+          "x": 200,
+          "y": 1164.15625,
+          "height": 278.171875
+        },
+        {
+          "id": "skills",
+          "x": 200,
+          "y": 1442.328125,
+          "height": 95.671875
+        },
+        {
+          "id": "thoughts",
+          "x": 200,
+          "y": 1538,
+          "height": 154.75
+        },
+        {
+          "id": "photography",
+          "x": 200,
+          "y": 1692.75,
+          "height": 207.984375
+        },
+        {
+          "id": "contact",
+          "x": 200,
+          "y": 1900.734375,
+          "height": 60.59375
+        }
+      ],
+      "art": [
+        {
+          "src": "/images/editorial/hackathon.webp",
+          "loaded": true
+        },
+        {
+          "src": "/images/editorial/everyday-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "/images/editorial/night-sky.webp",
+          "loaded": true
+        },
+        {
+          "src": "/images/editorial/landscapes.webp",
+          "loaded": true
+        },
+        {
+          "src": "/images/editorial/everyday-light.webp",
+          "loaded": true
+        }
+      ],
+      "zoom": "1"
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "text": 100,
+      "errors": [],
+      "documentWidth": 390,
+      "documentHeight": 5378,
+      "content": {
+        "x": 16,
+        "y": 120,
+        "width": 358,
+        "height": 5154.203125
+      },
+      "heroCopy": {
+        "x": 16,
+        "y": 183.59375,
+        "width": 358,
+        "height": 34.53125
+      },
+      "aboutBody": {
+        "x": 16,
+        "y": 561.28125,
+        "width": 358,
+        "height": 347.3125
+      },
+      "index": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "indexPlacement": "selector",
+      "projects": {
+        "x": 16,
+        "y": 922.59375,
+        "width": 358,
+        "height": 1428.90625
+      },
+      "sections": [
+        {
+          "id": "about",
+          "x": 16,
+          "y": 516.09375,
+          "height": 406.5
+        },
+        {
+          "id": "projects",
+          "x": 16,
+          "y": 922.59375,
+          "height": 1428.90625
+        },
+        {
+          "id": "experience",
+          "x": 16,
+          "y": 2351.5,
+          "height": 439.078125
+        },
+        {
+          "id": "hackathons",
+          "x": 16,
+          "y": 2790.578125,
+          "height": 280.875
+        },
+        {
+          "id": "github",
+          "x": 16,
+          "y": 3071.453125,
+          "height": 574.203125
+        },
+        {
+          "id": "skills",
+          "x": 16,
+          "y": 3645.65625,
+          "height": 407.484375
+        },
+        {
+          "id": "thoughts",
+          "x": 16,
+          "y": 4053.140625,
+          "height": 292.859375
+        },
+        {
+          "id": "photography",
+          "x": 16,
+          "y": 4346,
+          "height": 298.703125
+        },
+        {
+          "id": "contact",
+          "x": 16,
+          "y": 4644.703125,
+          "height": 242.15625
+        }
+      ],
+      "art": [
+        {
+          "src": "/images/editorial/hackathon.webp",
+          "loaded": true
+        },
+        {
+          "src": "/images/editorial/everyday-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "/images/editorial/night-sky.webp",
+          "loaded": true
+        },
+        {
+          "src": "/images/editorial/landscapes.webp",
+          "loaded": true
+        },
+        {
+          "src": "/images/editorial/everyday-light.webp",
+          "loaded": true
+        }
+      ],
+      "zoom": "1"
+    },
+    {
+      "width": 320,
+      "theme": "dark",
+      "text": 200,
+      "errors": [],
+      "documentWidth": 320,
+      "documentHeight": 18507,
+      "content": {
+        "x": 16,
+        "y": 300,
+        "width": 288,
+        "height": 17795.28125
+      },
+      "heroCopy": {
+        "x": 16,
+        "y": 463.1875,
+        "width": 288,
+        "height": 128.78125
+      },
+      "aboutBody": {
+        "x": 16,
+        "y": 1877.859375,
+        "width": 288,
+        "height": 1700.71875
+      },
+      "index": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "indexPlacement": "selector",
+      "projects": {
+        "x": 16,
+        "y": 3606.578125,
+        "width": 288,
+        "height": 4223.875
+      },
+      "sections": [
+        {
+          "id": "about",
+          "x": 16,
+          "y": 1788.46875,
+          "height": 1818.109375
+        },
+        {
+          "id": "projects",
+          "x": 16,
+          "y": 3606.578125,
+          "height": 4223.875
+        },
+        {
+          "id": "experience",
+          "x": 16,
+          "y": 7830.453125,
+          "height": 1590.984375
+        },
+        {
+          "id": "hackathons",
+          "x": 16,
+          "y": 9421.4375,
+          "height": 620.296875
+        },
+        {
+          "id": "github",
+          "x": 16,
+          "y": 10041.734375,
+          "height": 1942.5625
+        },
+        {
+          "id": "skills",
+          "x": 16,
+          "y": 11984.296875,
+          "height": 1493.015625
+        },
+        {
+          "id": "thoughts",
+          "x": 16,
+          "y": 13477.3125,
+          "height": 1652.4375
+        },
+        {
+          "id": "photography",
+          "x": 16,
+          "y": 15129.75,
+          "height": 746.484375
+        },
+        {
+          "id": "contact",
+          "x": 16,
+          "y": 15876.234375,
+          "height": 773.75
+        }
+      ],
+      "art": [
+        {
+          "src": "/images/editorial/hackathon.webp",
+          "loaded": true
+        },
+        {
+          "src": "/images/editorial/everyday-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "/images/editorial/night-sky.webp",
+          "loaded": true
+        },
+        {
+          "src": "/images/editorial/landscapes.webp",
+          "loaded": true
+        },
+        {
+          "src": "/images/editorial/everyday-light.webp",
+          "loaded": true
+        }
+      ],
+      "zoom": "1"
+    },
+    {
+      "width": 941,
+      "theme": "light",
+      "text": 150,
+      "errors": [],
+      "documentWidth": 941,
+      "documentHeight": 3966,
+      "content": {
+        "x": 53.640625,
+        "y": 93.59375,
+        "width": 833.71875,
+        "height": 3789.875
+      },
+      "heroCopy": {
+        "x": 89.640625,
+        "y": 199.484375,
+        "width": 365.625,
+        "height": 55.1875
+      },
+      "aboutBody": {
+        "x": 199.515625,
+        "y": 734.359375,
+        "width": 687.84375,
+        "height": 263.984375
+      },
+      "index": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "indexPlacement": "selector",
+      "projects": {
+        "x": 53.640625,
+        "y": 1013.34375,
+        "width": 833.71875,
+        "height": 662.8125
+      },
+      "sections": [
+        {
+          "id": "about",
+          "x": 53.640625,
+          "y": 718.359375,
+          "height": 294.984375
+        },
+        {
+          "id": "projects",
+          "x": 53.640625,
+          "y": 1013.34375,
+          "height": 662.8125
+        },
+        {
+          "id": "experience",
+          "x": 53.640625,
+          "y": 1676.15625,
+          "height": 312.453125
+        },
+        {
+          "id": "hackathons",
+          "x": 53.640625,
+          "y": 1988.609375,
+          "height": 291.46875
+        },
+        {
+          "id": "github",
+          "x": 53.640625,
+          "y": 2280.078125,
+          "height": 408.109375
+        },
+        {
+          "id": "skills",
+          "x": 53.640625,
+          "y": 2688.1875,
+          "height": 237.875
+        },
+        {
+          "id": "thoughts",
+          "x": 53.640625,
+          "y": 2926.0625,
+          "height": 235.5625
+        },
+        {
+          "id": "photography",
+          "x": 53.640625,
+          "y": 3161.625,
+          "height": 330.203125
+        },
+        {
+          "id": "contact",
+          "x": 53.640625,
+          "y": 3491.828125,
+          "height": 140.75
+        }
+      ],
+      "art": [
+        {
+          "src": "/images/editorial/hackathon.webp",
+          "loaded": true
+        },
+        {
+          "src": "/images/editorial/everyday-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "/images/editorial/night-sky.webp",
+          "loaded": true
+        },
+        {
+          "src": "/images/editorial/landscapes.webp",
+          "loaded": true
+        },
+        {
+          "src": "/images/editorial/everyday-light.webp",
+          "loaded": true
+        }
+      ],
+      "zoom": "1"
+    },
+    {
+      "width": 2240,
+      "theme": "light",
+      "text": 150,
+      "errors": [],
+      "documentWidth": 2240,
+      "documentHeight": 2991,
+      "content": {
+        "x": 360,
+        "y": 76.390625,
+        "width": 1520,
+        "height": 2832
+      },
+      "heroCopy": {
+        "x": 432,
+        "y": 181.53125,
+        "width": 660.46875,
+        "height": 82.796875
+      },
+      "aboutBody": {
+        "x": 626,
+        "y": 524.765625,
+        "width": 1254,
+        "height": 162.484375
+      },
+      "index": {
+        "x": 1928,
+        "y": 72,
+        "width": 288,
+        "height": 362.46875
+      },
+      "indexPlacement": "rail",
+      "projects": {
+        "x": 360,
+        "y": 702.25,
+        "width": 1520,
+        "height": 441.6875
+      },
+      "sections": [
+        {
+          "id": "about",
+          "x": 360,
+          "y": 508.765625,
+          "height": 193.484375
+        },
+        {
+          "id": "projects",
+          "x": 360,
+          "y": 702.25,
+          "height": 441.6875
+        },
+        {
+          "id": "experience",
+          "x": 360,
+          "y": 1143.9375,
+          "height": 204.1875
+        },
+        {
+          "id": "hackathons",
+          "x": 360,
+          "y": 1348.125,
+          "height": 291.46875
+        },
+        {
+          "id": "github",
+          "x": 360,
+          "y": 1639.59375,
+          "height": 353.828125
+        },
+        {
+          "id": "skills",
+          "x": 360,
+          "y": 1993.421875,
+          "height": 141.03125
+        },
+        {
+          "id": "thoughts",
+          "x": 360,
+          "y": 2134.453125,
+          "height": 205.1875
+        },
+        {
+          "id": "photography",
+          "x": 360,
+          "y": 2339.640625,
+          "height": 284.015625
+        },
+        {
+          "id": "contact",
+          "x": 360,
+          "y": 2623.65625,
+          "height": 90.375
+        }
+      ],
+      "art": [
+        {
+          "src": "/images/editorial/hackathon.webp",
+          "loaded": true
+        },
+        {
+          "src": "/images/editorial/everyday-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "/images/editorial/night-sky.webp",
+          "loaded": true
+        },
+        {
+          "src": "/images/editorial/landscapes.webp",
+          "loaded": true
+        },
+        {
+          "src": "/images/editorial/everyday-light.webp",
+          "loaded": true
+        }
+      ],
+      "zoom": "1"
+    },
+    {
+      "route": "blogs",
+      "width": 1440,
+      "text": 100,
+      "errors": [],
+      "documentWidth": 1440
+    },
+    {
+      "route": "blogs",
+      "width": 390,
+      "text": 100,
+      "errors": [],
+      "documentWidth": 390
+    },
+    {
+      "route": "blogs",
+      "width": 320,
+      "text": 200,
+      "errors": [],
+      "documentWidth": 320
+    },
+    {
+      "route": "photography",
+      "width": 1440,
+      "text": 100,
+      "errors": [],
+      "documentWidth": 1440
+    },
+    {
+      "route": "photography",
+      "width": 390,
+      "text": 100,
+      "errors": [],
+      "documentWidth": 390
+    },
+    {
+      "route": "photography",
+      "width": 320,
+      "text": 200,
+      "errors": [],
+      "documentWidth": 320
+    }
+  ]
+}

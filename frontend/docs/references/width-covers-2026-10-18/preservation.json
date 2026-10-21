@@ -1,0 +1,55 @@
+{
+  "baseline": "/tmp/portfolio-width-covers-20261018-baseline",
+  "captureSourceMatches": {
+    "src/styles/tokens.css": true,
+    "src/styles/reference-refinement.css": true,
+    "src/styles/photography.css": true,
+    "src/styles/achievements.css": true,
+    "src/features/portfolio/Photography.tsx": true,
+    "src/features/portfolio/Achievements.tsx": true,
+    "src/features/portfolio/illustrations.ts": true,
+    "src/features/portfolio/content.ts": true,
+    "src/routes/HomePage.tsx": true,
+    "src/routes/BlogsPage.tsx": true,
+    "src/routes/PhotographyPage.tsx": true,
+    "public/images/editorial/night-sky.webp": true,
+    "public/images/editorial/landscapes.webp": true,
+    "public/images/editorial/everyday-light.webp": true,
+    "public/images/editorial/hackathon.webp": true
+  },
+  "backgroundSourceMatchesBaseline": {
+    "src/features/portfolio/BackgroundScene.tsx": true,
+    "src/features/portfolio/sceneRenderer.ts": true,
+    "src/features/portfolio/sceneArtwork.ts": true,
+    "src/features/portfolio/sceneShaders.ts": true,
+    "src/styles/background-scene.css": true
+  },
+  "generatedOriginalMatches": {
+    "night-sky": true,
+    "landscapes": true,
+    "everyday-light": true,
+    "hackathon": true
+  },
+  "generatedWebMatches": {
+    "night-sky": true,
+    "landscapes": true,
+    "everyday-light": true,
+    "hackathon": true
+  },
+  "changedApplicationAndTestFiles": [
+    "src/features/portfolio/Achievements.tsx",
+    "src/features/portfolio/Photography.tsx",
+    "src/features/portfolio/content.ts",
+    "src/features/portfolio/illustrations.ts",
+    "src/routes/BlogsPage.tsx",
+    "src/routes/HomePage.tsx",
+    "src/routes/PhotographyPage.tsx",
+    "src/styles/achievements.css",
+    "src/styles/photography.css",
+    "src/styles/reference-refinement.css",
+    "src/styles/tokens.css",
+    "tests/e2e/photography.spec.ts",
+    "tests/e2e/readability.spec.ts"
+  ],
+  "historicalCaptureHelperMaintenance": "Removed unreachable code and constant true wrapper from docs/references/mono-2026-10-18/capture.mjs; provider-blocking behavior unchanged. Earlier image and receipt files unchanged. Original helper saved under output/playwright/width-covers-2026-10-18/legacy-capture-before.mjs."
+}

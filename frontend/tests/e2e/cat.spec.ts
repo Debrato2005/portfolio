@@ -1,21 +1,28 @@
 import { test, expect } from './fixtures';
 
-test('cat follows the mouse, stays out of clicks and keeps its visibility preference', async ({
+test('cat sleeps until poked, then chases the pointer and keeps its visibility preference', async ({
   page,
 }) => {
   await page.emulateMedia({ reducedMotion: 'no-preference' });
   await page.goto('/');
   const cat = page.locator('.cat-sprite');
   await expect(cat).toHaveCount(1);
+  await expect(cat).toHaveAttribute('data-cat-state', 'sleeping');
   const before = await cat.boundingBox();
-  await page.mouse.move(700, 250);
+  await page.mouse.move(1000, 250);
+  await expect(cat).toHaveAttribute('data-cat-state', 'sleeping');
+  const style = await cat.evaluate((element) => {
+    const computed = getComputedStyle(element);
+    return { pointerEvents: computed.pointerEvents, cursor: computed.cursor };
+  });
+  expect(style.pointerEvents).toBe('auto');
+  expect(style.cursor).toBe('pointer');
+  await cat.click();
   await expect(cat).toHaveAttribute('data-cat-state', 'running');
+  await page.mouse.move(1000, 250);
   await expect
     .poll(async () => (await cat.boundingBox())!.x)
     .toBeGreaterThan(before!.x + 30);
-  expect(
-    await cat.evaluate((element) => getComputedStyle(element).pointerEvents),
-  ).toBe('none');
   await page.getByRole('button', { name: 'Hide cat' }).click();
   await expect(cat).toHaveCount(0);
   await page.reload();

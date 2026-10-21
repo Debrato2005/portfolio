@@ -1,4 +1,3 @@
-import { Link } from 'react-router';
 import { projects } from './content';
 export function EngineeringTimeline() {
   return (
@@ -14,7 +13,7 @@ export function EngineeringTimeline() {
             <li key={project.slug}>
               <p className="eyebrow">{project.period}</p>
               <h3>
-                <Link to={`/projects/${project.slug}`}>{project.name}</Link>
+                <a href={`#project-${project.slug}`}>{project.name}</a>
               </h3>
               <p>{project.summary}</p>
               <small>{project.status}</small>

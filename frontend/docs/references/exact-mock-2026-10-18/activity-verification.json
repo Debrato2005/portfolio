@@ -1,0 +1,237 @@
+{
+  "capturedAt": "2026-10-17T19:20:27.713Z",
+  "sources": {
+    "src/features/portfolio/ContributionSection.tsx": "17f8b2c1405e3c3825dec548c937a6ea70a3ee285b30aed3862ed755c68ed621",
+    "src/styles/contributions.css": "4e7e3beb2d1089c577732e5a678884212e5030c38229fd97b6e46f608754dd19",
+    "src/styles/reference-refinement.css": "8072eb19597a29ea4450e2c87c4d34b46541b098cf732488117f972ac38b9325",
+    "src/styles/tokens.css": "cdd5b91ce38b2e64362d5b5c3b73a6cfc291f85da92a16b01ae79e93ff9e53bc",
+    "src/routes/HomePage.tsx": "1dad9fbc479243e59c6ba9ef075902d06e89a4e2f208cde9f8810cb77ed93b88"
+  },
+  "providerBoundary": "All external providers intercepted. Populated counts are controlled test data, not Debrato live activity.",
+  "cases": [
+    {
+      "width": 1440,
+      "theme": "light",
+      "ready": true,
+      "scale": 1,
+      "file": "github-1440-light-ready-1x.png",
+      "overflow": false,
+      "section": {
+        "left": 112,
+        "right": 1328,
+        "top": 65.328125,
+        "bottom": 640.703125,
+        "width": 1216,
+        "height": 575.375
+      },
+      "calendar": {
+        "left": 112,
+        "right": 841.40625,
+        "top": 150.328125,
+        "bottom": 555.703125,
+        "width": 729.40625,
+        "height": 405.375
+      },
+      "profile": {
+        "left": 857.40625,
+        "right": 1328,
+        "top": 150.328125,
+        "bottom": 555.703125,
+        "width": 470.59375,
+        "height": 405.375
+      },
+      "totalLabelFits": true,
+      "legend": [
+        {
+          "size": {
+            "left": 713.40625,
+            "right": 725.40625,
+            "top": 487.109375,
+            "bottom": 499.109375,
+            "width": 12,
+            "height": 12
+          },
+          "color": "rgb(239, 235, 225)",
+          "hatch": "none"
+        },
+        {
+          "size": {
+            "left": 728.40625,
+            "right": 740.40625,
+            "top": 487.109375,
+            "bottom": 499.109375,
+            "width": 12,
+            "height": 12
+          },
+          "color": "rgb(183, 220, 176)",
+          "hatch": "repeating-linear-gradient(135deg, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 2px, rgba(0, 0, 0, 0.14) 2px, rgba(0, 0, 0, 0.14) 3px)"
+        },
+        {
+          "size": {
+            "left": 743.40625,
+            "right": 755.40625,
+            "top": 487.109375,
+            "bottom": 499.109375,
+            "width": 12,
+            "height": 12
+          },
+          "color": "rgb(123, 187, 114)",
+          "hatch": "repeating-linear-gradient(135deg, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 2px, rgba(0, 0, 0, 0.14) 2px, rgba(0, 0, 0, 0.14) 3px)"
+        },
+        {
+          "size": {
+            "left": 758.40625,
+            "right": 770.40625,
+            "top": 487.109375,
+            "bottom": 499.109375,
+            "width": 12,
+            "height": 12
+          },
+          "color": "rgb(67, 138, 73)",
+          "hatch": "repeating-linear-gradient(135deg, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 2px, rgba(0, 0, 0, 0.14) 2px, rgba(0, 0, 0, 0.14) 3px)"
+        },
+        {
+          "size": {
+            "left": 773.40625,
+            "right": 785.40625,
+            "top": 487.109375,
+            "bottom": 499.109375,
+            "width": 12,
+            "height": 12
+          },
+          "color": "rgb(35, 94, 52)",
+          "hatch": "repeating-linear-gradient(135deg, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 2px, rgba(0, 0, 0, 0.14) 2px, rgba(0, 0, 0, 0.14) 3px)"
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "ready": true,
+      "scale": 1,
+      "file": "github-1440-dark-ready-1x.png",
+      "overflow": false,
+      "section": {
+        "left": 112,
+        "right": 1328,
+        "top": 65.328125,
+        "bottom": 640.703125,
+        "width": 1216,
+        "height": 575.375
+      },
+      "calendar": {
+        "left": 112,
+        "right": 841.40625,
+        "top": 150.328125,
+        "bottom": 555.703125,
+        "width": 729.40625,
+        "height": 405.375
+      },
+      "profile": {
+        "left": 857.40625,
+        "right": 1328,
+        "top": 150.328125,
+        "bottom": 555.703125,
+        "width": 470.59375,
+        "height": 405.375
+      },
+      "totalLabelFits": true,
+      "legend": [
+        {
+          "size": {
+            "left": 713.40625,
+            "right": 725.40625,
+            "top": 487.109375,
+            "bottom": 499.109375,
+            "width": 12,
+            "height": 12
+          },
+          "color": "rgb(25, 35, 33)",
+          "hatch": "none"
+        },
+        {
+          "size": {
+            "left": 728.40625,
+            "right": 740.40625,
+            "top": 487.109375,
+            "bottom": 499.109375,
+            "width": 12,
+            "height": 12
+          },
+          "color": "rgb(20, 91, 56)",
+          "hatch": "repeating-linear-gradient(135deg, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 2px, rgba(0, 0, 0, 0.14) 2px, rgba(0, 0, 0, 0.14) 3px)"
+        },
+        {
+          "size": {
+            "left": 743.40625,
+            "right": 755.40625,
+            "top": 487.109375,
+            "bottom": 499.109375,
+            "width": 12,
+            "height": 12
+          },
+          "color": "rgb(35, 132, 66)",
+          "hatch": "repeating-linear-gradient(135deg, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 2px, rgba(0, 0, 0, 0.14) 2px, rgba(0, 0, 0, 0.14) 3px)"
+        },
+        {
+          "size": {
+            "left": 758.40625,
+            "right": 770.40625,
+            "top": 487.109375,
+            "bottom": 499.109375,
+            "width": 12,
+            "height": 12
+          },
+          "color": "rgb(67, 180, 93)",
+          "hatch": "repeating-linear-gradient(135deg, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 2px, rgba(0, 0, 0, 0.14) 2px, rgba(0, 0, 0, 0.14) 3px)"
+        },
+        {
+          "size": {
+            "left": 773.40625,
+            "right": 785.40625,
+            "top": 487.109375,
+            "bottom": 499.109375,
+            "width": 12,
+            "height": 12
+          },
+          "color": "rgb(149, 220, 128)",
+          "hatch": "repeating-linear-gradient(135deg, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 2px, rgba(0, 0, 0, 0.14) 2px, rgba(0, 0, 0, 0.14) 3px)"
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "theme": "light",
+      "ready": false,
+      "scale": 2,
+      "file": "github-320-light-unavailable-2x.png",
+      "overflow": false,
+      "section": {
+        "left": 16,
+        "right": 304,
+        "top": -8617.421875,
+        "bottom": -6197.96875,
+        "width": 288,
+        "height": 2419.453125
+      },
+      "calendar": {
+        "left": 16,
+        "right": 304,
+        "top": -8334.84375,
+        "bottom": -7421.25,
+        "width": 288,
+        "height": 913.59375
+      },
+      "profile": {
+        "left": 16,
+        "right": 304,
+        "top": -7389.25,
+        "bottom": -6601.34375,
+        "width": 288,
+        "height": 787.90625
+      },
+      "totalLabelFits": true,
+      "legend": []
+    }
+  ]
+}

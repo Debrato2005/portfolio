@@ -1,0 +1,30 @@
+{
+  "capturedAt": "2026-10-17T19:14:54.496Z",
+  "providerBoundary": "Counter, GitHub profile and calendar aborted. Controlled browser evidence only.",
+  "sources": {
+    "src/features/portfolio/CommandPalette.tsx": "18dd1b05e4555c58c605b8bc59d737961c58496da5aec84b3f48e7ea28bfca76",
+    "src/features/portfolio/Quotes.tsx": "9d2e800755965114dfd426cd3a8341a634c928ecb0cf47c7d4a1dd04fb841bf2",
+    "tests/e2e/command-palette.spec.ts": "df810f8a8db19d144d27460a757e50b32587ae98dc4a9ae80c186cb6d8e6b56f",
+    "tests/e2e/interaction-motion.spec.ts": "8681bfdd4d02f62355b52bfb6d1afaff5eaa16bf665242b5fb29bd0cb05d38c7"
+  },
+  "cases": [
+    {
+      "name": "quote pause during fade",
+      "before": "“What I cannot create, I do not understand.”Richard Feynman",
+      "after": "“What I cannot create, I do not understand.”Richard Feynman",
+      "focused": true,
+      "fading": "false"
+    },
+    {
+      "name": "phone filtered palette",
+      "popup": {
+        "x": 12,
+        "y": 36,
+        "width": 296,
+        "height": 264.46875
+      },
+      "options": 1,
+      "overflow": false
+    }
+  ]
+}

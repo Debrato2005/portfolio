@@ -1,0 +1,100 @@
+{
+  "capturedAt": "2026-10-17T18:54:35.197Z",
+  "url": "http://127.0.0.1:5187/",
+  "browser": "Chromium",
+  "browserVersion": "153.0.8010.12",
+  "reducedMotion": true,
+  "providerBoundary": "Contribution relay, GitHub profile and page-view counter calls were aborted. These captures verify rendered unavailable states. They do not verify live providers or add page views.",
+  "sources": {
+    "src/features/portfolio/Projects.tsx": "0e19643100f963e528a0c87e76a4a0276676a5fb450486874f19d45b85416744",
+    "src/styles/reference-refinement.css": "ec84d1de6b29252a11609c638dcbd4219482b72bcc261e0ad5badd745cdc1cc5",
+    "src/styles/tokens.css": "f1f7c49a1ea40a5e8be2e59eada6abc4b6a74a75b2d19f5e7cc888057fb7883d",
+    "src/styles/content-pages.css": "a63df3907470a1cd7e41e20f8908f66477f055f9c36628d7bbe39f677196a417",
+    "src/features/portfolio/ContributionSection.tsx": "88987aece78478272279e20b8a83f3bbe0ccc0b5b4211cca722ea558b0645c7c",
+    "src/routes/HomePage.tsx": "585cebf35f74c80d186f21c936f5811a06c6b1bb431d31493e094f1c2361ff19",
+    "src/features/portfolio/Achievements.tsx": "a20f136fe5b54c20fbb583c8d30c9e79897cd0f81a4ea79e853538f12d69b557",
+    "src/styles/achievements.css": "f92e3c6b680332efbe19be2e160eeb395b516acc903ba1d3cae4bd125a888916"
+  },
+  "images": {
+    "home-1440-light.png": "bc719f4ea37b37db5d5cdaec3d6bb766322652067a509e36101b83775a019f5b",
+    "home-1440-dark.png": "a15ff11ffc50e8a399d0204f2f4f594c2dc880b4c7ec426de78edb4242a88317",
+    "home-390-light.png": "9f45530e90c3ba6ebbe3838131596669a9fb4842928076891773c35d827824cd",
+    "home-320-dark.png": "13bc2b99695298bdc70c80da0f974f176c0a34cd8b824e644e03a8b82df82a03",
+    "hackathons-1440-light.png": "ec470785e5edadda0994713fd8164e4121e7db0f8042645795f275278d46f9dc",
+    "hackathons-320-dark.png": "63d051d1000af2297fd1b6058e6dc89a1e6b08668025cc2e9ad65863537558c7"
+  },
+  "cases": [
+    {
+      "width": 1440,
+      "height": 900,
+      "theme": "light",
+      "filename": "home-1440-light.png",
+      "scrollWidth": 1440,
+      "viewportWidth": 1440,
+      "pageHeight": 5453,
+      "horizontalOverflow": false,
+      "indexVisible": false,
+      "indexOverlap": false,
+      "projectCount": 6,
+      "allProjectBriefsClosed": true
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "theme": "dark",
+      "filename": "home-1440-dark.png",
+      "scrollWidth": 1440,
+      "viewportWidth": 1440,
+      "pageHeight": 5453,
+      "horizontalOverflow": false,
+      "indexVisible": false,
+      "indexOverlap": false,
+      "projectCount": 6,
+      "allProjectBriefsClosed": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "theme": "light",
+      "filename": "home-390-light.png",
+      "scrollWidth": 390,
+      "viewportWidth": 390,
+      "pageHeight": 8304,
+      "horizontalOverflow": false,
+      "indexVisible": false,
+      "indexOverlap": false,
+      "projectCount": 6,
+      "allProjectBriefsClosed": true
+    },
+    {
+      "width": 320,
+      "height": 720,
+      "theme": "dark",
+      "filename": "home-320-dark.png",
+      "scrollWidth": 320,
+      "viewportWidth": 320,
+      "pageHeight": 9692,
+      "horizontalOverflow": false,
+      "indexVisible": false,
+      "indexOverlap": false,
+      "projectCount": 6,
+      "allProjectBriefsClosed": true
+    }
+  ],
+  "hackathons": [
+    {
+      "filename": "hackathons-1440-light.png",
+      "height": 679.6875,
+      "recordCount": 1,
+      "carouselControlCount": 0,
+      "placeholderCount": 1
+    },
+    {
+      "filename": "hackathons-320-dark.png",
+      "height": 770.078125,
+      "recordCount": 1,
+      "carouselControlCount": 0,
+      "placeholderCount": 1
+    }
+  ]
+}

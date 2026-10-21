@@ -1,0 +1,1058 @@
+[
+  {
+    "port": 5173,
+    "width": 941,
+    "innerWidth": 941,
+    "clientWidth": 941,
+    "scrollWidth": 941,
+    "dpr": 1,
+    "visualWidth": 941,
+    "visualScale": 1,
+    "body": {
+      "x": 0,
+      "width": 941,
+      "margin": "0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "root": {
+      "x": 0,
+      "width": 941,
+      "margin": "0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "main": {
+      "x": 0,
+      "width": 941,
+      "margin": "0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "content": {
+      "x": 53.640625,
+      "width": 833.71875,
+      "margin": "0px 53.6406px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "hero": {
+      "x": 53.640625,
+      "width": 833.71875,
+      "margin": "0px",
+      "padding": "32.935px 31.053px 24px",
+      "zoom": "1"
+    },
+    "header": {
+      "x": 53.640625,
+      "width": 833.71875,
+      "margin": "0px 53.6406px",
+      "padding": "8px 31.053px",
+      "zoom": "1"
+    },
+    "footer": {
+      "x": 53.640625,
+      "width": 833.71875,
+      "margin": "0px 53.6406px",
+      "padding": "12px 0px",
+      "zoom": "1"
+    },
+    "scene": {
+      "x": 0,
+      "width": 941,
+      "margin": "0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "title": {
+      "x": 84.6875,
+      "width": 370.375,
+      "margin": "5.6px 0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "styleSheets": [
+      "/home/debrato/Projects/portfolio/frontend/src/styles/background-scene.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/content-pages.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/tokens.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/fonts.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/global.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/portfolio.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/achievements.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/photography.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/contributions.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/cat.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/primitives.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/reference-refinement.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/project-cards.css"
+    ]
+  },
+  {
+    "port": 5173,
+    "width": 1440,
+    "innerWidth": 1440,
+    "clientWidth": 1440,
+    "scrollWidth": 1440,
+    "dpr": 1,
+    "visualWidth": 1440,
+    "visualScale": 1,
+    "body": {
+      "x": 0,
+      "width": 1440,
+      "margin": "0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "root": {
+      "x": 0,
+      "width": 1440,
+      "margin": "0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "main": {
+      "x": 0,
+      "width": 1440,
+      "margin": "0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "content": {
+      "x": 160,
+      "width": 1120,
+      "margin": "0px 160px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "hero": {
+      "x": 160,
+      "width": 1120,
+      "margin": "0px",
+      "padding": "48px 47.52px 24px",
+      "zoom": "1"
+    },
+    "header": {
+      "x": 160,
+      "width": 1120,
+      "margin": "0px 160px",
+      "padding": "8px 47.52px",
+      "zoom": "1"
+    },
+    "footer": {
+      "x": 160,
+      "width": 1120,
+      "margin": "0px 160px",
+      "padding": "12px 0px",
+      "zoom": "1"
+    },
+    "scene": {
+      "x": 0,
+      "width": 1440,
+      "margin": "0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "title": {
+      "x": 207.515625,
+      "width": 491.984375,
+      "margin": "5.6px 0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "styleSheets": [
+      "/home/debrato/Projects/portfolio/frontend/src/styles/background-scene.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/content-pages.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/tokens.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/fonts.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/global.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/portfolio.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/achievements.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/photography.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/contributions.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/cat.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/primitives.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/reference-refinement.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/project-cards.css"
+    ]
+  },
+  {
+    "port": 5173,
+    "width": 1705,
+    "innerWidth": 1705,
+    "clientWidth": 1705,
+    "scrollWidth": 1705,
+    "dpr": 1,
+    "visualWidth": 1705,
+    "visualScale": 1,
+    "body": {
+      "x": 0,
+      "width": 1705,
+      "margin": "0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "root": {
+      "x": 0,
+      "width": 1705,
+      "margin": "0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "main": {
+      "x": 0,
+      "width": 1705,
+      "margin": "0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "content": {
+      "x": 292.5,
+      "width": 1120,
+      "margin": "0px 292.5px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "hero": {
+      "x": 292.5,
+      "width": 1120,
+      "margin": "0px",
+      "padding": "48px 56.265px 24px",
+      "zoom": "1"
+    },
+    "header": {
+      "x": 292.5,
+      "width": 1120,
+      "margin": "0px 292.5px",
+      "padding": "8px 56.265px",
+      "zoom": "1"
+    },
+    "footer": {
+      "x": 292.5,
+      "width": 1120,
+      "margin": "0px 292.5px",
+      "padding": "12px 0px",
+      "zoom": "1"
+    },
+    "scene": {
+      "x": 0,
+      "width": 1705,
+      "margin": "0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "title": {
+      "x": 348.75,
+      "width": 483.59375,
+      "margin": "5.6px 0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "styleSheets": [
+      "/home/debrato/Projects/portfolio/frontend/src/styles/background-scene.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/content-pages.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/tokens.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/fonts.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/global.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/portfolio.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/achievements.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/photography.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/contributions.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/cat.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/primitives.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/reference-refinement.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/project-cards.css"
+    ]
+  },
+  {
+    "port": 5173,
+    "width": 1920,
+    "innerWidth": 1920,
+    "clientWidth": 1920,
+    "scrollWidth": 1920,
+    "dpr": 1,
+    "visualWidth": 1920,
+    "visualScale": 1,
+    "body": {
+      "x": 0,
+      "width": 1920,
+      "margin": "0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "root": {
+      "x": 0,
+      "width": 1920,
+      "margin": "0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "main": {
+      "x": 0,
+      "width": 1920,
+      "margin": "0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "content": {
+      "x": 400,
+      "width": 1120,
+      "margin": "0px 400px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "hero": {
+      "x": 400,
+      "width": 1120,
+      "margin": "0px",
+      "padding": "48px 63.36px 24px",
+      "zoom": "1"
+    },
+    "header": {
+      "x": 400,
+      "width": 1120,
+      "margin": "0px 400px",
+      "padding": "8px 63.36px",
+      "zoom": "1"
+    },
+    "footer": {
+      "x": 400,
+      "width": 1120,
+      "margin": "0px 400px",
+      "padding": "12px 0px",
+      "zoom": "1"
+    },
+    "scene": {
+      "x": 0,
+      "width": 1920,
+      "margin": "0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "title": {
+      "x": 463.359375,
+      "width": 476.765625,
+      "margin": "5.6px 0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "styleSheets": [
+      "/home/debrato/Projects/portfolio/frontend/src/styles/background-scene.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/content-pages.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/tokens.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/fonts.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/global.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/portfolio.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/achievements.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/photography.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/contributions.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/cat.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/primitives.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/reference-refinement.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/project-cards.css"
+    ]
+  },
+  {
+    "port": 5173,
+    "width": 3840,
+    "innerWidth": 3840,
+    "clientWidth": 3840,
+    "scrollWidth": 3840,
+    "dpr": 1,
+    "visualWidth": 3840,
+    "visualScale": 1,
+    "body": {
+      "x": 0,
+      "width": 3840,
+      "margin": "0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "root": {
+      "x": 0,
+      "width": 3840,
+      "margin": "0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "main": {
+      "x": 0,
+      "width": 3840,
+      "margin": "0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "content": {
+      "x": 1360,
+      "width": 1120,
+      "margin": "0px 1360px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "hero": {
+      "x": 1360,
+      "width": 1120,
+      "margin": "0px",
+      "padding": "48px 126.72px 24px",
+      "zoom": "1"
+    },
+    "header": {
+      "x": 1360,
+      "width": 1120,
+      "margin": "0px 1360px",
+      "padding": "8px 126.72px",
+      "zoom": "1"
+    },
+    "footer": {
+      "x": 1360,
+      "width": 1120,
+      "margin": "0px 1360px",
+      "padding": "12px 0px",
+      "zoom": "1"
+    },
+    "scene": {
+      "x": 0,
+      "width": 3840,
+      "margin": "0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "title": {
+      "x": 1486.71875,
+      "width": 415.9375,
+      "margin": "5.6px 0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "styleSheets": [
+      "/home/debrato/Projects/portfolio/frontend/src/styles/background-scene.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/content-pages.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/tokens.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/fonts.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/global.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/portfolio.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/achievements.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/photography.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/contributions.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/cat.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/primitives.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/reference-refinement.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/project-cards.css"
+    ]
+  },
+  {
+    "port": 5173,
+    "width": 4272,
+    "innerWidth": 4272,
+    "clientWidth": 4272,
+    "scrollWidth": 4272,
+    "dpr": 1,
+    "visualWidth": 4272,
+    "visualScale": 1,
+    "body": {
+      "x": 0,
+      "width": 4272,
+      "margin": "0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "root": {
+      "x": 0,
+      "width": 4272,
+      "margin": "0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "main": {
+      "x": 0,
+      "width": 4272,
+      "margin": "0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "content": {
+      "x": 1576,
+      "width": 1120,
+      "margin": "0px 1576px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "hero": {
+      "x": 1576,
+      "width": 1120,
+      "margin": "0px",
+      "padding": "48px 140.976px 24px",
+      "zoom": "1"
+    },
+    "header": {
+      "x": 1576,
+      "width": 1120,
+      "margin": "0px 1576px",
+      "padding": "8px 140.976px",
+      "zoom": "1"
+    },
+    "footer": {
+      "x": 1576,
+      "width": 1120,
+      "margin": "0px 1576px",
+      "padding": "12px 0px",
+      "zoom": "1"
+    },
+    "scene": {
+      "x": 0,
+      "width": 4272,
+      "margin": "0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "title": {
+      "x": 1716.96875,
+      "width": 402.265625,
+      "margin": "5.6px 0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "styleSheets": [
+      "/home/debrato/Projects/portfolio/frontend/src/styles/background-scene.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/content-pages.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/tokens.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/fonts.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/global.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/portfolio.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/achievements.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/photography.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/contributions.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/cat.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/primitives.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/reference-refinement.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/project-cards.css"
+    ]
+  },
+  {
+    "port": 5187,
+    "width": 941,
+    "innerWidth": 941,
+    "clientWidth": 941,
+    "scrollWidth": 941,
+    "dpr": 1,
+    "visualWidth": 941,
+    "visualScale": 1,
+    "body": {
+      "x": 0,
+      "width": 941,
+      "margin": "0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "root": {
+      "x": 0,
+      "width": 941,
+      "margin": "0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "main": {
+      "x": 0,
+      "width": 941,
+      "margin": "0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "content": {
+      "x": 53.640625,
+      "width": 833.71875,
+      "margin": "0px 53.6406px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "hero": {
+      "x": 53.640625,
+      "width": 833.71875,
+      "margin": "0px",
+      "padding": "32.935px 31.053px 24px",
+      "zoom": "1"
+    },
+    "header": {
+      "x": 53.640625,
+      "width": 833.71875,
+      "margin": "0px 53.6406px",
+      "padding": "8px 31.053px",
+      "zoom": "1"
+    },
+    "footer": {
+      "x": 53.640625,
+      "width": 833.71875,
+      "margin": "0px 53.6406px",
+      "padding": "12px 0px",
+      "zoom": "1"
+    },
+    "scene": {
+      "x": 0,
+      "width": 941,
+      "margin": "0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "title": {
+      "x": 84.6875,
+      "width": 370.375,
+      "margin": "5.6px 0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "styleSheets": [
+      "/home/debrato/Projects/portfolio/frontend/src/styles/background-scene.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/content-pages.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/tokens.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/fonts.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/global.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/portfolio.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/achievements.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/photography.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/contributions.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/cat.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/primitives.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/reference-refinement.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/project-cards.css"
+    ]
+  },
+  {
+    "port": 5187,
+    "width": 1440,
+    "innerWidth": 1440,
+    "clientWidth": 1440,
+    "scrollWidth": 1440,
+    "dpr": 1,
+    "visualWidth": 1440,
+    "visualScale": 1,
+    "body": {
+      "x": 0,
+      "width": 1440,
+      "margin": "0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "root": {
+      "x": 0,
+      "width": 1440,
+      "margin": "0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "main": {
+      "x": 0,
+      "width": 1440,
+      "margin": "0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "content": {
+      "x": 160,
+      "width": 1120,
+      "margin": "0px 160px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "hero": {
+      "x": 160,
+      "width": 1120,
+      "margin": "0px",
+      "padding": "48px 47.52px 24px",
+      "zoom": "1"
+    },
+    "header": {
+      "x": 160,
+      "width": 1120,
+      "margin": "0px 160px",
+      "padding": "8px 47.52px",
+      "zoom": "1"
+    },
+    "footer": {
+      "x": 160,
+      "width": 1120,
+      "margin": "0px 160px",
+      "padding": "12px 0px",
+      "zoom": "1"
+    },
+    "scene": {
+      "x": 0,
+      "width": 1440,
+      "margin": "0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "title": {
+      "x": 207.515625,
+      "width": 491.984375,
+      "margin": "5.6px 0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "styleSheets": [
+      "/home/debrato/Projects/portfolio/frontend/src/styles/background-scene.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/content-pages.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/tokens.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/fonts.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/global.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/portfolio.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/achievements.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/photography.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/contributions.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/cat.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/primitives.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/reference-refinement.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/project-cards.css"
+    ]
+  },
+  {
+    "port": 5187,
+    "width": 1705,
+    "innerWidth": 1705,
+    "clientWidth": 1705,
+    "scrollWidth": 1705,
+    "dpr": 1,
+    "visualWidth": 1705,
+    "visualScale": 1,
+    "body": {
+      "x": 0,
+      "width": 1705,
+      "margin": "0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "root": {
+      "x": 0,
+      "width": 1705,
+      "margin": "0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "main": {
+      "x": 0,
+      "width": 1705,
+      "margin": "0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "content": {
+      "x": 292.5,
+      "width": 1120,
+      "margin": "0px 292.5px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "hero": {
+      "x": 292.5,
+      "width": 1120,
+      "margin": "0px",
+      "padding": "48px 56.265px 24px",
+      "zoom": "1"
+    },
+    "header": {
+      "x": 292.5,
+      "width": 1120,
+      "margin": "0px 292.5px",
+      "padding": "8px 56.265px",
+      "zoom": "1"
+    },
+    "footer": {
+      "x": 292.5,
+      "width": 1120,
+      "margin": "0px 292.5px",
+      "padding": "12px 0px",
+      "zoom": "1"
+    },
+    "scene": {
+      "x": 0,
+      "width": 1705,
+      "margin": "0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "title": {
+      "x": 348.75,
+      "width": 483.59375,
+      "margin": "5.6px 0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "styleSheets": [
+      "/home/debrato/Projects/portfolio/frontend/src/styles/background-scene.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/content-pages.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/tokens.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/fonts.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/global.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/portfolio.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/achievements.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/photography.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/contributions.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/cat.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/primitives.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/reference-refinement.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/project-cards.css"
+    ]
+  },
+  {
+    "port": 5187,
+    "width": 1920,
+    "innerWidth": 1920,
+    "clientWidth": 1920,
+    "scrollWidth": 1920,
+    "dpr": 1,
+    "visualWidth": 1920,
+    "visualScale": 1,
+    "body": {
+      "x": 0,
+      "width": 1920,
+      "margin": "0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "root": {
+      "x": 0,
+      "width": 1920,
+      "margin": "0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "main": {
+      "x": 0,
+      "width": 1920,
+      "margin": "0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "content": {
+      "x": 400,
+      "width": 1120,
+      "margin": "0px 400px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "hero": {
+      "x": 400,
+      "width": 1120,
+      "margin": "0px",
+      "padding": "48px 63.36px 24px",
+      "zoom": "1"
+    },
+    "header": {
+      "x": 400,
+      "width": 1120,
+      "margin": "0px 400px",
+      "padding": "8px 63.36px",
+      "zoom": "1"
+    },
+    "footer": {
+      "x": 400,
+      "width": 1120,
+      "margin": "0px 400px",
+      "padding": "12px 0px",
+      "zoom": "1"
+    },
+    "scene": {
+      "x": 0,
+      "width": 1920,
+      "margin": "0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "title": {
+      "x": 463.359375,
+      "width": 476.765625,
+      "margin": "5.6px 0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "styleSheets": [
+      "/home/debrato/Projects/portfolio/frontend/src/styles/background-scene.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/content-pages.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/tokens.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/fonts.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/global.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/portfolio.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/achievements.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/photography.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/contributions.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/cat.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/primitives.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/reference-refinement.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/project-cards.css"
+    ]
+  },
+  {
+    "port": 5187,
+    "width": 3840,
+    "innerWidth": 3840,
+    "clientWidth": 3840,
+    "scrollWidth": 3840,
+    "dpr": 1,
+    "visualWidth": 3840,
+    "visualScale": 1,
+    "body": {
+      "x": 0,
+      "width": 3840,
+      "margin": "0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "root": {
+      "x": 0,
+      "width": 3840,
+      "margin": "0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "main": {
+      "x": 0,
+      "width": 3840,
+      "margin": "0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "content": {
+      "x": 1360,
+      "width": 1120,
+      "margin": "0px 1360px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "hero": {
+      "x": 1360,
+      "width": 1120,
+      "margin": "0px",
+      "padding": "48px 126.72px 24px",
+      "zoom": "1"
+    },
+    "header": {
+      "x": 1360,
+      "width": 1120,
+      "margin": "0px 1360px",
+      "padding": "8px 126.72px",
+      "zoom": "1"
+    },
+    "footer": {
+      "x": 1360,
+      "width": 1120,
+      "margin": "0px 1360px",
+      "padding": "12px 0px",
+      "zoom": "1"
+    },
+    "scene": {
+      "x": 0,
+      "width": 3840,
+      "margin": "0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "title": {
+      "x": 1486.71875,
+      "width": 415.9375,
+      "margin": "5.6px 0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "styleSheets": [
+      "/home/debrato/Projects/portfolio/frontend/src/styles/background-scene.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/content-pages.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/tokens.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/fonts.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/global.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/portfolio.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/achievements.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/photography.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/contributions.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/cat.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/primitives.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/reference-refinement.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/project-cards.css"
+    ]
+  },
+  {
+    "port": 5187,
+    "width": 4272,
+    "innerWidth": 4272,
+    "clientWidth": 4272,
+    "scrollWidth": 4272,
+    "dpr": 1,
+    "visualWidth": 4272,
+    "visualScale": 1,
+    "body": {
+      "x": 0,
+      "width": 4272,
+      "margin": "0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "root": {
+      "x": 0,
+      "width": 4272,
+      "margin": "0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "main": {
+      "x": 0,
+      "width": 4272,
+      "margin": "0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "content": {
+      "x": 1576,
+      "width": 1120,
+      "margin": "0px 1576px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "hero": {
+      "x": 1576,
+      "width": 1120,
+      "margin": "0px",
+      "padding": "48px 140.976px 24px",
+      "zoom": "1"
+    },
+    "header": {
+      "x": 1576,
+      "width": 1120,
+      "margin": "0px 1576px",
+      "padding": "8px 140.976px",
+      "zoom": "1"
+    },
+    "footer": {
+      "x": 1576,
+      "width": 1120,
+      "margin": "0px 1576px",
+      "padding": "12px 0px",
+      "zoom": "1"
+    },
+    "scene": {
+      "x": 0,
+      "width": 4272,
+      "margin": "0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "title": {
+      "x": 1716.96875,
+      "width": 402.265625,
+      "margin": "5.6px 0px",
+      "padding": "0px",
+      "zoom": "1"
+    },
+    "styleSheets": [
+      "/home/debrato/Projects/portfolio/frontend/src/styles/background-scene.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/content-pages.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/tokens.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/fonts.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/global.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/portfolio.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/achievements.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/photography.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/contributions.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/cat.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/primitives.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/reference-refinement.css",
+      "/home/debrato/Projects/portfolio/frontend/src/styles/project-cards.css"
+    ]
+  }
+]

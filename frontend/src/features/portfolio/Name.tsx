@@ -5,17 +5,27 @@ export function Name() {
   const element = useRef<HTMLSpanElement>(null);
   useEffect(() => {
     const spans = element.current?.querySelectorAll('[data-word]');
-    if (
-      !spans ||
-      complete ||
-      window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    )
-      return;
+    if (!spans) return;
     const names = ['DEBRATO', 'GHOSH'];
+    const motionQuery = '(prefers-reduced-motion: reduce)';
+    const settle = () =>
+      spans.forEach((span, index) => {
+        span.textContent = names[index] ?? '';
+      });
+    if (complete || window.matchMedia(motionQuery).matches) {
+      settle();
+      complete = true;
+      return;
+    }
     const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     start ??= performance.now();
     let frame = 0;
     function draw(time: number) {
+      if (window.matchMedia(motionQuery).matches) {
+        settle();
+        complete = true;
+        return;
+      }
       const progress = Math.min(1, (time - (start ?? time)) / 1000);
       spans?.forEach((span, index) => {
         const name = names[index] ?? '';
@@ -32,7 +42,10 @@ export function Name() {
       else complete = true;
     }
     frame = requestAnimationFrame(draw);
-    return () => cancelAnimationFrame(frame);
+    return () => {
+      cancelAnimationFrame(frame);
+      settle();
+    };
   }, []);
   return (
     <h1 tabIndex={-1}>

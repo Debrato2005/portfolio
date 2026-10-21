@@ -1,0 +1,327 @@
+[
+  {
+    "width": 1664,
+    "scale": 1.5,
+    "scrollWidth": 1664,
+    "index": {
+      "hidden": true,
+      "display": "none",
+      "left": 0,
+      "right": 0,
+      "top": 0,
+      "bottom": 0,
+      "width": 0,
+      "height": 0
+    },
+    "menu": {
+      "hidden": false,
+      "display": "flex"
+    },
+    "content": {
+      "left": 320,
+      "right": 1344,
+      "top": -2795,
+      "bottom": 8229.40625,
+      "width": 1024,
+      "height": 11024.40625
+    },
+    "indexOverlaps": false,
+    "heroNoteOverlapsDescription": false,
+    "note": {
+      "left": 1021.5422973632812,
+      "right": 1292.051513671875,
+      "top": -2654.552490234375,
+      "bottom": -2387.447509765625,
+      "width": 270.50921630859375,
+      "height": 267.10498046875
+    },
+    "description": {
+      "left": 320,
+      "right": 985.59375,
+      "top": -2522.4375,
+      "bottom": -2304.6875,
+      "width": 665.59375,
+      "height": 217.75
+    },
+    "status": {
+      "media": {
+        "left": 351,
+        "right": 783,
+        "top": -685.328125,
+        "bottom": -442.328125,
+        "width": 432,
+        "height": 243
+      },
+      "badge": {
+        "left": 369,
+        "right": 593.375,
+        "top": -667.328125,
+        "bottom": -619.453125,
+        "width": 224.375,
+        "height": 47.875
+      },
+      "bottomClipped": false,
+      "position": "absolute"
+    }
+  },
+  {
+    "width": 1760,
+    "scale": 1.5,
+    "scrollWidth": 1760,
+    "index": {
+      "hidden": true,
+      "display": "none",
+      "left": 0,
+      "right": 0,
+      "top": 0,
+      "bottom": 0,
+      "width": 0,
+      "height": 0
+    },
+    "menu": {
+      "hidden": false,
+      "display": "flex"
+    },
+    "content": {
+      "left": 368,
+      "right": 1392,
+      "top": -2795,
+      "bottom": 8235.65625,
+      "width": 1024,
+      "height": 11030.65625
+    },
+    "indexOverlaps": false,
+    "heroNoteOverlapsDescription": false,
+    "note": {
+      "left": 1069.542236328125,
+      "right": 1340.051513671875,
+      "top": -2654.552490234375,
+      "bottom": -2387.447509765625,
+      "width": 270.50927734375,
+      "height": 267.10498046875
+    },
+    "description": {
+      "left": 368,
+      "right": 1033.59375,
+      "top": -2516.1875,
+      "bottom": -2298.4375,
+      "width": 665.59375,
+      "height": 217.75
+    },
+    "status": {
+      "media": {
+        "left": 399,
+        "right": 831,
+        "top": -679.078125,
+        "bottom": -436.078125,
+        "width": 432,
+        "height": 243
+      },
+      "badge": {
+        "left": 417,
+        "right": 641.375,
+        "top": -661.078125,
+        "bottom": -613.203125,
+        "width": 224.375,
+        "height": 47.875
+      },
+      "bottomClipped": false,
+      "position": "absolute"
+    }
+  },
+  {
+    "width": 1980,
+    "scale": 1.5,
+    "scrollWidth": 1980,
+    "index": {
+      "hidden": false,
+      "display": "grid",
+      "left": 1550,
+      "right": 1910,
+      "top": 80,
+      "bottom": 898.375,
+      "width": 360,
+      "height": 818.375
+    },
+    "menu": {
+      "hidden": true,
+      "display": "none"
+    },
+    "content": {
+      "left": 478,
+      "right": 1502,
+      "top": 228,
+      "bottom": 11284.65625,
+      "width": 1024,
+      "height": 11056.65625
+    },
+    "indexOverlaps": false,
+    "heroNoteOverlapsDescription": false,
+    "note": {
+      "left": 1179.542236328125,
+      "right": 1450.051513671875,
+      "top": 368.4476013183594,
+      "bottom": 635.5523681640625,
+      "width": 270.50927734375,
+      "height": 267.1047668457031
+    },
+    "description": {
+      "left": 478,
+      "right": 1143.59375,
+      "top": 644.234375,
+      "bottom": 861.984375,
+      "width": 665.59375,
+      "height": 217.75
+    },
+    "status": {
+      "media": {
+        "left": 509,
+        "right": 941,
+        "top": 2358.9375,
+        "bottom": 2601.9375,
+        "width": 432,
+        "height": 243
+      },
+      "badge": {
+        "left": 527,
+        "right": 751.375,
+        "top": 2376.9375,
+        "bottom": 2424.8125,
+        "width": 224.375,
+        "height": 47.875
+      },
+      "bottomClipped": false,
+      "position": "absolute"
+    }
+  },
+  {
+    "width": 1760,
+    "scale": 1,
+    "scrollWidth": 1760,
+    "index": {
+      "hidden": false,
+      "display": "grid",
+      "left": 1424,
+      "right": 1664,
+      "top": 80,
+      "bottom": 626.203125,
+      "width": 240,
+      "height": 546.203125
+    },
+    "menu": {
+      "hidden": true,
+      "display": "none"
+    },
+    "content": {
+      "left": 368,
+      "right": 1392,
+      "top": -865,
+      "bottom": 5850.515625,
+      "width": 1024,
+      "height": 6715.515625
+    },
+    "indexOverlaps": false,
+    "heroNoteOverlapsDescription": false,
+    "note": {
+      "left": 1074.580810546875,
+      "right": 1255.012939453125,
+      "top": -771.3650512695312,
+      "bottom": -592.635009765625,
+      "width": 180.43212890625,
+      "height": 178.73004150390625
+    },
+    "description": {
+      "left": 368,
+      "right": 984,
+      "top": -671.515625,
+      "bottom": -562.625,
+      "width": 616,
+      "height": 108.890625
+    },
+    "status": {
+      "media": {
+        "left": 389,
+        "right": 847,
+        "top": 236.71875,
+        "bottom": 494.34375,
+        "width": 458,
+        "height": 257.625
+      },
+      "badge": {
+        "left": 401,
+        "right": 546.59375,
+        "top": 248.71875,
+        "bottom": 281.3125,
+        "width": 145.59375,
+        "height": 32.59375
+      },
+      "bottomClipped": false,
+      "position": "absolute"
+    }
+  },
+  {
+    "width": 320,
+    "scale": 2,
+    "scrollWidth": 320,
+    "index": {
+      "hidden": true,
+      "display": "none",
+      "left": 0,
+      "right": 0,
+      "top": 0,
+      "bottom": 0,
+      "width": 0,
+      "height": 0
+    },
+    "menu": {
+      "hidden": false,
+      "display": "flex"
+    },
+    "content": {
+      "left": 16,
+      "right": 304,
+      "top": -6352.4375,
+      "bottom": 27226.15625,
+      "width": 288,
+      "height": 33578.59375
+    },
+    "indexOverlaps": false,
+    "heroNoteOverlapsDescription": false,
+    "note": {
+      "left": 0,
+      "right": 0,
+      "top": 0,
+      "bottom": 0,
+      "width": 0,
+      "height": 0
+    },
+    "description": {
+      "left": 16,
+      "right": 304,
+      "top": -5686.421875,
+      "bottom": -4960.421875,
+      "width": 288,
+      "height": 726
+    },
+    "status": {
+      "media": {
+        "left": 29,
+        "right": 291,
+        "top": -181.578125,
+        "bottom": 94.984375,
+        "width": 262,
+        "height": 276.5625
+      },
+      "badge": {
+        "left": 29,
+        "right": 291,
+        "top": -10.203125,
+        "bottom": 94.984375,
+        "width": 262,
+        "height": 105.1875
+      },
+      "bottomClipped": false,
+      "position": "static"
+    }
+  }
+]

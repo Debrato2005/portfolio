@@ -5,7 +5,8 @@
   width: 32px;
   height: 32px;
   z-index: 30;
-  pointer-events: none;
+  pointer-events: auto;
+  cursor: pointer;
   background-image: url('/images/oneko.gif');
   background-position: -96px -96px;
   image-rendering: pixelated;

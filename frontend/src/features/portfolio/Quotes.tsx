@@ -11,10 +11,17 @@ export function Quotes() {
   const panel = useRef<HTMLDivElement>(null);
   const transitionTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const [fading, setFading] = useState(false);
+  const pauseQuotes = useCallback(() => {
+    setPlaying(false);
+    if (transitionTimer.current) clearTimeout(transitionTimer.current);
+    transitionTimer.current = null;
+    setFading(false);
+  }, []);
   const changeQuote = useCallback(
     (step: number) => {
       if (transitionTimer.current) clearTimeout(transitionTimer.current);
       const update = () => {
+        transitionTimer.current = null;
         setIndex((value) => (value + step + quotes.length) % quotes.length);
         setHasChanged(true);
         setFading(false);
@@ -35,6 +42,14 @@ export function Quotes() {
     [],
   );
   useEffect(() => {
+    const media = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const stop = () => {
+      if (media.matches) pauseQuotes();
+    };
+    media.addEventListener('change', stop);
+    return () => media.removeEventListener('change', stop);
+  }, [pauseQuotes]);
+  useEffect(() => {
     if (!playing || reducedMotion) return;
     let visible = false;
     const observer = new IntersectionObserver((entries) => {
@@ -46,15 +61,9 @@ export function Quotes() {
         changeQuote(1);
       }
     }, 8000);
-    const media = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const stop = () => {
-      if (media.matches) setPlaying(false);
-    };
-    media.addEventListener('change', stop);
     return () => {
       observer.disconnect();
       clearInterval(timer);
-      media.removeEventListener('change', stop);
     };
   }, [playing, reducedMotion, changeQuote]);
   const quote = quotes[index] ?? quotes[0];
@@ -62,8 +71,8 @@ export function Quotes() {
     <div
       className="quotes"
       ref={panel}
-      onMouseEnter={() => setPlaying(false)}
-      onFocus={() => setPlaying(false)}
+      onMouseEnter={pauseQuotes}
+      onFocus={pauseQuotes}
     >
       <div className="quote-stack">
         {quotes.map((item) => (
@@ -93,7 +102,7 @@ export function Quotes() {
           className="quiet-button"
           aria-label="Previous quote"
           onClick={() => {
-            setPlaying(false);
+            pauseQuotes();
             changeQuote(-1);
           }}
         >
@@ -106,7 +115,7 @@ export function Quotes() {
           className="quiet-button"
           aria-label="Next quote"
           onClick={() => {
-            setPlaying(false);
+            pauseQuotes();
             changeQuote(1);
           }}
         >
@@ -118,7 +127,10 @@ export function Quotes() {
             playing && !reducedMotion ? 'Pause quotes' : 'Play quotes'
           }
           disabled={reducedMotion}
-          onClick={() => setPlaying((value) => !value)}
+          onClick={() => {
+            if (playing) pauseQuotes();
+            else setPlaying(true);
+          }}
         >
           {playing && !reducedMotion ? 'Pause' : 'Play'}
         </button>

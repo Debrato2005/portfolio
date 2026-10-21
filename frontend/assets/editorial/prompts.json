@@ -1,0 +1,22 @@
+{
+  "method": "Built-in image_gen.imagegen",
+  "transparentBackground": false,
+  "prompts": [
+    {
+      "key": "night-sky",
+      "prompt": "Use case: illustration-story. Asset type: an original editorial cover for Debrato Ghosh's developer portfolio, used as a small image in a compact paper filmstrip or article/event card. Generate ONE standalone landscape illustration, 3:2 composition, edge to edge with no framing or typography. Scene: A quiet alpine ridge and dark pine silhouettes beneath an expansive midnight-blue sky, a fine Milky Way arc and a restrained scattering of stars, with a small copper-orange glow near the horizon. Style: finely drawn graphite and delicate watercolor editorial illustration on subtly textured cream paper, thoughtful composition, precise natural forms, low visual noise, muted indigo, moss, warm ochre and a restrained burnt-orange accent. Rich enough to reward a close look but immediately readable at thumbnail size. Avoid 3D rendering, generic vector stock art, fake UI text, watermarks, borders, badges and legible words. The image is illustrative, not documentary photography."
+    },
+    {
+      "key": "landscapes",
+      "prompt": "Use case: illustration-story. Asset type: an original editorial cover for Debrato Ghosh's developer portfolio, used as a small image in a compact paper filmstrip or article/event card. Generate ONE standalone landscape illustration, 3:2 composition, edge to edge with no framing or typography. Scene: Layered Himalayan mountain ridges around a turquoise lake at golden hour, with graphite rock contours, warm ochre sunlight and a tiny distant cabin. No people. Style: finely drawn graphite and delicate watercolor editorial illustration on subtly textured cream paper, thoughtful composition, precise natural forms, low visual noise, muted indigo, moss, warm ochre and a restrained burnt-orange accent. Rich enough to reward a close look but immediately readable at thumbnail size. Avoid 3D rendering, generic vector stock art, fake UI text, watermarks, borders, badges and legible words. The image is illustrative, not documentary photography."
+    },
+    {
+      "key": "everyday-light",
+      "prompt": "Use case: illustration-story. Asset type: an original editorial cover for Debrato Ghosh's developer portfolio, used as a small image in a compact paper filmstrip or article/event card. Generate ONE standalone landscape illustration, 3:2 composition, edge to edge with no framing or typography. Scene: A peaceful desk beside an open window, a camera, an open notebook with unreadable marks and a ceramic cup, with leafy shadows and warm late-afternoon light across the wood. Style: finely drawn graphite and delicate watercolor editorial illustration on subtly textured cream paper, thoughtful composition, precise natural forms, low visual noise, muted indigo, moss, warm ochre and a restrained burnt-orange accent. Rich enough to reward a close look but immediately readable at thumbnail size. Avoid 3D rendering, generic vector stock art, fake UI text, watermarks, borders, badges and legible words. The image is illustrative, not documentary photography."
+    },
+    {
+      "key": "hackathon",
+      "prompt": "Use case: illustration-story. Asset type: an original editorial cover for Debrato Ghosh's developer portfolio, used as a small image in a compact paper filmstrip or article/event card. Generate ONE standalone landscape illustration, 3:2 composition, edge to edge with no framing or typography. Scene: A close view of a collaborative coding workbench, two open laptops showing abstract colored interface blocks, a small microcontroller, notebooks and coffee under warm night-time desk lighting. Show only objects and a few anonymous hands entering the edges; no identifiable people, trophies, logos or event signage. Style: finely drawn graphite and delicate watercolor editorial illustration on subtly textured cream paper, thoughtful composition, precise natural forms, low visual noise, muted indigo, moss, warm ochre and a restrained burnt-orange accent. Rich enough to reward a close look but immediately readable at thumbnail size. Avoid 3D rendering, generic vector stock art, fake UI text, watermarks, borders, badges and legible words. The image is illustrative, not documentary photography."
+    }
+  ]
+}

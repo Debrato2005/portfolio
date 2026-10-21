@@ -6,6 +6,7 @@ html {
   color: var(--color-ink);
   background: var(--color-paper);
   line-height: 1.6;
+  overflow-x: clip;
 }
 body {
   margin: 0;
@@ -23,8 +24,8 @@ a {
   text-underline-offset: 0.2em;
 }
 :focus-visible {
-  outline: 3px solid var(--color-focus);
-  outline-offset: 5px;
+  outline: 2px solid var(--color-focus);
+  outline-offset: 3px;
 }
 h1,
 h2 {
@@ -34,7 +35,7 @@ h2 {
 }
 h1 {
   font-size: clamp(2.25rem, 7vw, 5.5rem);
-  letter-spacing: -0.045em;
+  letter-spacing: -0.025em;
   max-width: 15ch;
   margin: var(--space-2) 0 var(--space-3);
 }

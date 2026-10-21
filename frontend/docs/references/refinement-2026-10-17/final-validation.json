@@ -1,0 +1,54 @@
+{
+  "capturedAt": "2026-10-17T18:44:43.336Z",
+  "sources": {
+    "src/features/portfolio/Projects.tsx": "0e19643100f963e528a0c87e76a4a0276676a5fb450486874f19d45b85416744",
+    "src/styles/reference-refinement.css": "ec84d1de6b29252a11609c638dcbd4219482b72bcc261e0ad5badd745cdc1cc5",
+    "src/styles/tokens.css": "f1f7c49a1ea40a5e8be2e59eada6abc4b6a74a75b2d19f5e7cc888057fb7883d",
+    "src/features/portfolio/SectionIndex.tsx": "8acf8cf8a52717262111228fa28e2e270747088c8667b57857367e9dfa2235e6"
+  },
+  "providerBoundary": "Counter, public profile and contribution relay aborted. No live-service or added-view claim.",
+  "cases": [
+    {
+      "theme": "light",
+      "width": 1440,
+      "height": 900,
+      "sectionHeight": 726.5625,
+      "projects": [
+        "OncoSyn",
+        "Cryptalis",
+        "Smolink",
+        "UniSpace",
+        "OrbitOps",
+        "StaySync"
+      ],
+      "overflow": false
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "height": 900,
+      "sectionHeight": 726.5625,
+      "projects": [
+        "OncoSyn",
+        "Cryptalis",
+        "Smolink",
+        "UniSpace",
+        "OrbitOps",
+        "StaySync"
+      ],
+      "overflow": false
+    }
+  ],
+  "checks": {
+    "layoutAndContent": "99 passed across Chromium, Firefox and WebKit before navigation-only filter and decorative ARIA corrections",
+    "filterNavigation": "6 passed after filter correction across all three engines",
+    "production": "6 passed after all application changes across all three engines",
+    "interaction": "27 passed across all three engines",
+    "calendar": "24 passed across all three engines",
+    "developmentFull": "206 of207 passed in the final aggregate run. The remaining Chromium dialog-close check passed in its subsequent isolated three-engine run (3 of3).",
+    "event": "3 of3 passed after removing single-record controls and repeated pending-media copy.",
+    "quality": "npm run check passed on final application source: typecheck, lint, formatting,23 unit/contract checks,build,docs and19 skill bundles."
+  },
+  "limits": "No single full development invocation was green. One dialog-close timeout occurred under high machine load; the exact journey subsequently passed in all three engines without a source or assertion change. Automated Axe and local browser results do not establish complete accessibility conformance or field performance. Provider calls were blocked in captures.",
+  "validatedAt": "2026-10-17T19:00:28.008331+00:00"
+}

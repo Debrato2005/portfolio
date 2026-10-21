@@ -1,0 +1,122 @@
+{
+  "owner": "Frontend visual review",
+  "source": {
+    "path": "/mnt/c/Users/Debrato/Videos/Captures/Anurag Jha \u2014 Full Stack Developer - Brave 2026-10-14 12-56-53.mp4",
+    "sha256": "1a4c39063a3d5cd5c18af8af621b6bf93e4b3a0ea55bbcfc066a0852d8c3e2c9",
+    "dimensions": [2320, 1440],
+    "duration_seconds": 49.052167,
+    "nominal_fps": 55,
+    "average_fps": 27.41118408967519,
+    "decoded_frames": 1343
+  },
+  "review": {
+    "contact_sheets": 21,
+    "sheet_grid": [8, 8],
+    "thumbnail_dimensions": [232, 144],
+    "decoded_thumbnails_reviewed": 1343,
+    "source_frame_numbers": "zero-based",
+    "duplicate_frames_skipped": 0,
+    "limit": "All decoded frames were reviewed as thumbnails. Selected key frames were inspected at full resolution. This does not mean every frame was inspected at full resolution."
+  },
+  "analysis": {
+    "frames_hashed": 1343,
+    "distinct_full_frame_hashes": 1343,
+    "consecutive_identical_full_frames": 0,
+    "frame_pairs_measured": 1342,
+    "difference_resolution": [464, 288],
+    "luma_range": [0, 255],
+    "difference_median": 0.06987475,
+    "difference_p95": 9.01714,
+    "difference_max": 161.429,
+    "pairs_difference_under_0_1": 764,
+    "pairs_difference_over_1": 225,
+    "top_changes": [
+      {
+        "frame": 485,
+        "seconds": 17.6638,
+        "luma_mean_absolute_difference": 161.429
+      },
+      {
+        "frame": 829,
+        "seconds": 30.2582,
+        "luma_mean_absolute_difference": 107.082
+      },
+      {
+        "frame": 852,
+        "seconds": 31.1188,
+        "luma_mean_absolute_difference": 54.1318
+      },
+      {
+        "frame": 931,
+        "seconds": 33.9916,
+        "luma_mean_absolute_difference": 50.9489
+      },
+      {
+        "frame": 930,
+        "seconds": 33.9552,
+        "luma_mean_absolute_difference": 50.5225
+      },
+      {
+        "frame": 963,
+        "seconds": 35.1552,
+        "luma_mean_absolute_difference": 49.745
+      },
+      {
+        "frame": 932,
+        "seconds": 34.0279,
+        "luma_mean_absolute_difference": 48.9532
+      },
+      {
+        "frame": 1013,
+        "seconds": 36.9916,
+        "luma_mean_absolute_difference": 48.5583
+      },
+      {
+        "frame": 1093,
+        "seconds": 39.937,
+        "luma_mean_absolute_difference": 48.4595
+      },
+      {
+        "frame": 1063,
+        "seconds": 38.8401,
+        "luma_mean_absolute_difference": 46.873
+      },
+      {
+        "frame": 1014,
+        "seconds": 37.0279,
+        "luma_mean_absolute_difference": 44.6566
+      },
+      {
+        "frame": 901,
+        "seconds": 32.9006,
+        "luma_mean_absolute_difference": 44.2232
+      }
+    ]
+  },
+  "keyframes": [
+    {
+      "frame": 245,
+      "seconds": 8.8819,
+      "path": "video-anurag-projects-frame-245.png",
+      "observation": "Two complete project cards and two partial cards. The fifth project requires further scrolling."
+    },
+    {
+      "frame": 963,
+      "seconds": 35.1552,
+      "path": "video-parth-projects-frame-963.png",
+      "observation": "All six complete cards fit together in three columns and two rows. Later frames crop the first row media after the scroll continues.",
+      "approximate_visual_bounds_source_pixels": {
+        "left": 395,
+        "right": 1904,
+        "top": 296,
+        "bottom": 1318
+      }
+    }
+  ],
+  "full_evidence_workspace_path": "output/playwright/refinement-2026-10-17/video-all-frames/",
+  "limits": [
+    "Frame differences include cursor motion, video compression, tab changes, scrolling, and component animation.",
+    "Metrics describe this recording and do not establish website FPS, input latency, or field performance.",
+    "No exact full-frame duplicates existed, so no duplicate compression was applied."
+  ]
+}

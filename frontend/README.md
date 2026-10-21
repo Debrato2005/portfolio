@@ -4,20 +4,21 @@
 
 ## Current status
 
-CURRENT: visual acceptance reopened after the owner reported layout defects. The latest [reference-composition review](docs/reference-composition-review.md) supersedes the earlier narrow layout correction.
+CURRENT: the [width and cover refinement](docs/width-covers-2026-10-18.md) corrects the inward desktop offset by preserving the supplied reference proportions. JetBrains Mono leads the interface, Inter serves longer paragraphs, and original generated covers supply the collection, writing and event previews. Overall owner visual acceptance remains open.
 Implemented cream/charcoal portfolio, name scramble, command search, project filters, sourced quotes and public resume download.
-The approved reading scale remains. Four existing projects use a two-column grid, responsive concept covers, native engineering disclosures and supplied repository links.
-Shared section spacing, grouped skills, the hanging record and photography footer follow the supplied reference roles.
+Compact labels and shared gutters organize the divided rows. The reference width retains the desktop index, three experience columns, five skill groups and one row of contact actions. All six projects share three desktop columns and two rows, with portrait covers, complete summaries and visible technologies. Full briefs open inline. Smaller tablets use two columns and phones stack the cards.
+Compact typography and smaller desktop controls retain readable copy and complete labels, while the broader homepage follows the reference margins. Archives retain their narrower reading columns. Phone controls keep larger touch targets. One paper event record and the photography filmstrip follow the supplied structure. Calendar and profile panels sit side by side on desktop.
 The calendar keeps hatched daily cells and keyboard access in failure states. Profile errors report availability accurately.
 Photography rotation works for populated collections with pause and reduced-motion controls. The current personal collections remain empty.
 Name and quote animations preserve layout geometry.
 [Recording analysis](docs/video-component-analysis.md) and [public GitHub research](docs/github-source-review.md) record the reference study.
-Projects, hackathons, writing and photography have archive/detail routes. Shared content and links are typed and centralized.
+The portfolio is one continuous homepage. Only `/blogs` and `/photography` leave it; projects, experience, hackathons, achievements, skills and GitHub activity use homepage sections and inline disclosure.
+Shared content and links are typed and centralized. Photography collections share one gallery route and open images in a lightbox.
 GitHub profile statistics use the public REST API. The daily calendar reads validated public contribution data and labels its hourly relay.
 Page views use a persistent public counter. The running cat follows fine mouse pointers and has a saved visibility control.
 Original photographs and official event evidence remain missing. The galleries use labeled empty collections.
-DEFERRED: final background artwork and its reveal. The scene boundary works without those assets.
-The development toolkit is absent from production. [Handoff](docs/HANDOFF.md) records current evidence and limits.
+CURRENT: the hero uses the four supplied landscapes with a theme-aware WebGL sketch-to-color trail. Reduced motion and WebGL failure retain the static sketch. See the [background review](docs/sketch-to-color-background.md) for image registration, settings and acceptance limits.
+Legacy content and development-toolkit paths are not application routes. [Handoff](docs/HANDOFF.md) records current evidence and limits.
 
 ## Commands
 

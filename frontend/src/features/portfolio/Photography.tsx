@@ -7,7 +7,13 @@ import { photoCollections } from './content';
 import type { PortfolioPhoto } from './content';
 import type { ReactNode } from 'react';
 
-export function PhotographyStrip({ action }: { action?: ReactNode }) {
+export function PhotographyStrip({
+  action,
+  note,
+}: {
+  action?: ReactNode;
+  note?: ReactNode;
+}) {
   const [index, setIndex] = useState(0);
   const track = useRef<HTMLDivElement>(null);
   const programmaticScroll = useRef(false);
@@ -135,8 +141,11 @@ export function PhotographyStrip({ action }: { action?: ReactNode }) {
           <Link
             className="collection-card"
             data-populated={collection.photos.length > 0}
+            data-illustrated={
+              Boolean(collection.illustratedCover) && !collection.photos.length
+            }
             key={collection.slug}
-            to={`/photography/${collection.slug}`}
+            to={`/photography#collection-${collection.slug}`}
             onFocus={() => {
               setPlaying(false);
               programmaticScroll.current = true;
@@ -152,23 +161,46 @@ export function PhotographyStrip({ action }: { action?: ReactNode }) {
                   alt=""
                   loading="lazy"
                 />
+              ) : collection.illustratedCover ? (
+                <img
+                  src={collection.illustratedCover}
+                  width={768}
+                  height={512}
+                  alt=""
+                  loading="lazy"
+                />
               ) : (
                 <Icon name="camera" />
               )}
             </span>
             <span>
               <strong>{collection.title}</strong>
-              <small>
+              <small
+                className={
+                  collection.illustratedCover && !collection.photos.length
+                    ? 'sr-only'
+                    : undefined
+                }
+              >
                 {collection.photos.length
                   ? `${collection.photos.length} ${collection.photos.length === 1 ? 'photograph' : 'photographs'}`
-                  : `${collection.status} · Photos coming`}
+                  : 'Photos coming'}
               </small>
             </span>
             <Icon name="arrow-up-right" />
           </Link>
         ))}
       </div>
+      {photoCollections.some(
+        (collection) =>
+          collection.illustratedCover && !collection.photos.length,
+      ) && (
+        <p className="photo-strip-cover-note">
+          Illustrated covers · Original photographs coming
+        </p>
+      )}
       <div className="photo-strip-footer">
+        {note}
         <div className="photo-strip-controls">
           <p role={playing && !reducedMotion ? undefined : 'status'}>
             {index + 1} / {photoCollections.length} · {current?.title}
@@ -220,8 +252,10 @@ export function PhotographyStrip({ action }: { action?: ReactNode }) {
 
 export function PhotoGallery({
   photos,
+  illustratedCover,
 }: {
   photos: readonly PortfolioPhoto[];
+  illustratedCover?: string | undefined;
 }) {
   const [selected, setSelected] = useState<number | null>(null);
   const [playing, setPlaying] = useState(false);
@@ -246,13 +280,30 @@ export function PhotoGallery({
   }, [playing, reducedMotion, selected, photos.length]);
   if (!photos.length)
     return (
-      <div className="empty-collection">
-        <Icon name="camera" />
-        <h2>No photographs published yet.</h2>
-        <p>
-          This collection will contain original photographs, with captions and a
-          full-size viewer.
-        </p>
+      <div
+        className="empty-collection"
+        data-illustrated={Boolean(illustratedCover)}
+      >
+        {illustratedCover ? (
+          <img
+            className="empty-collection-cover"
+            src={illustratedCover}
+            width={768}
+            height={512}
+            alt="Illustrated collection cover"
+            loading="lazy"
+          />
+        ) : (
+          <Icon name="camera" />
+        )}
+        <div>
+          <h3>No photographs published yet.</h3>
+          <p>
+            {illustratedCover && 'The cover is an illustration. '}
+            This collection will contain original photographs, with captions and
+            a full-size viewer.
+          </p>
+        </div>
       </div>
     );
   return (

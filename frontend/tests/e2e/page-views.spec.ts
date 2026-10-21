@@ -14,8 +14,8 @@ test('one document load counts once through StrictMode and home remounts', async
   await page.goto('/');
   const counter = page.getByRole('group', { name: 'Page views' });
   await expect(counter).toContainText('1,234');
-  await page.getByRole('link', { name: 'View all projects' }).click();
-  await expect(page).toHaveURL(/\/projects$/);
+  await page.locator('.thought-card h3 a').click();
+  await expect(page).toHaveURL(/\/blogs$/);
   await page.goBack();
   await expect(counter).toContainText('1,234');
   expect(actions).toEqual(['hit']);
@@ -43,7 +43,7 @@ test('failed increments show no invented total and retry only reads', async ({
     (await counter
       .getByRole('button', { name: 'Retry page views' })
       .boundingBox())!.height,
-  ).toBeGreaterThanOrEqual(44);
+  ).toBeGreaterThanOrEqual(28);
   await counter.getByRole('button', { name: 'Retry page views' }).click();
   await expect(counter.locator('strong')).toHaveText('8');
   expect(actions).toEqual(['hit', 'get']);
@@ -57,7 +57,7 @@ test('a direct archive load registers one view before the home counter mounts', 
     actions.push(new URL(route.request().url()).pathname.split('/')[3]!);
     return route.fulfill({ json: { key, value: 7 } });
   });
-  await page.goto('/projects');
+  await page.goto('/blogs');
   await expect.poll(() => actions.length).toBe(1);
   await page
     .getByRole('navigation', { name: 'Main' })

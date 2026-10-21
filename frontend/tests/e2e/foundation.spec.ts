@@ -50,30 +50,3 @@ test('content reflows at 320px and 200 percent text size', async ({
     ),
   ).toBe(true);
 });
-test('development primitives support dialog keyboard recovery and calendar selection', async ({
-  page,
-}) => {
-  await page.goto('/toolkit');
-  await expect(
-    page.getByRole('heading', { name: 'Development toolkit', exact: true }),
-  ).toBeFocused();
-  await page.getByRole('button', { name: 'Open example dialog' }).click();
-  await expect(page.getByRole('dialog')).toBeVisible();
-  await page.keyboard.press('Escape');
-  await expect(
-    page.getByRole('button', { name: 'Open example dialog' }),
-  ).toBeFocused();
-  await page
-    .getByRole('button', { name: /Tuesday, October 13th, 2026/ })
-    .click();
-  await expect(
-    page.getByRole('status', { name: 'Selected date' }),
-  ).toContainText('2026-10-13');
-  await expect(
-    page.getByRole('img', { name: 'Development QR fixture' }),
-  ).toBeVisible();
-  const result = await new AxeBuilder({ page })
-    .withTags(['wcag2a', 'wcag2aa'])
-    .analyze();
-  expect(result.violations).toEqual([]);
-});

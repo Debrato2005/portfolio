@@ -1,0 +1,51 @@
+{
+  "captureSourceMatches": {
+    "public/fonts/jetbrains-mono-latin-variable.woff2": true,
+    "public/fonts/inter-latin-regular.woff2": true,
+    "src/styles/fonts.css": true,
+    "src/styles/primitives.css": true,
+    "src/styles/global.css": true,
+    "src/styles/photography.css": true,
+    "src/routes/PhotographyPage.tsx": true,
+    "index.html": true,
+    "src/main.tsx": true,
+    "src/styles/portfolio.css": true,
+    "src/styles/content-pages.css": true,
+    "src/app/App.tsx": true,
+    "src/routes/HomePage.tsx": true,
+    "src/features/portfolio/Name.tsx": true,
+    "src/features/portfolio/Projects.tsx": true,
+    "src/features/portfolio/Photography.tsx": true,
+    "src/features/portfolio/SectionIndex.tsx": true,
+    "src/features/portfolio/ContributionSection.tsx": true,
+    "src/styles/reference-refinement.css": true,
+    "src/styles/project-cards.css": true,
+    "src/styles/tokens.css": true,
+    "src/styles/contributions.css": true,
+    "src/styles/achievements.css": true
+  },
+  "backgroundSourceMatchesBaseline": {
+    "src/features/portfolio/BackgroundScene.tsx": true,
+    "src/features/portfolio/sceneRenderer.ts": true,
+    "src/features/portfolio/sceneArtwork.ts": true,
+    "src/features/portfolio/sceneShaders.ts": true,
+    "src/styles/background-scene.css": true
+  },
+  "changedExistingSourceFiles": [
+    "src/features/portfolio/Projects.tsx",
+    "src/features/portfolio/SectionIndex.tsx",
+    "src/main.tsx",
+    "src/routes/HomePage.tsx",
+    "src/routes/PhotographyPage.tsx",
+    "src/styles/achievements.css",
+    "src/styles/content-pages.css",
+    "src/styles/contributions.css",
+    "src/styles/global.css",
+    "src/styles/photography.css",
+    "src/styles/portfolio.css",
+    "src/styles/project-cards.css",
+    "src/styles/reference-refinement.css",
+    "src/styles/tokens.css"
+  ],
+  "newSourceFiles": ["src/styles/fonts.css", "src/styles/primitives.css"]
+}

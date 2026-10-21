@@ -1,4 +1,5 @@
 import { links } from '../../lib/links';
+import { editorialCovers } from './illustrations';
 export const sections = [
   ['about', 'About'],
   ['projects', 'Projects'],
@@ -225,6 +226,7 @@ export const projects: readonly PortfolioProject[] = [
 export const articles = [
   {
     slug: 'the-next-breakthrough-is-in-another-field',
+    illustratedCover: editorialCovers.everydayLight,
     title: 'The next breakthrough is in another field',
     href: links.article,
     date: null,
@@ -253,20 +255,44 @@ export const education = {
   institution: 'Manipal Institute of Technology',
   summary: 'Engineering foundations, software systems and research.',
 } as const;
-export const achievements = [
+export interface Achievement {
+  slug: string;
+  name: string;
+  result: string;
+  qualifier: string | null;
+}
+export const achievements: readonly Achievement[] = [
   {
     slug: 'svasth',
     name: 'SVASTH Hackathon',
-    result: '1st place — resume-reported',
-    status: 'Official evidence pending',
-    date: null,
-    photo: null,
-    project: null,
-    team: null,
-    evidence: null,
-    source: null,
+    result: 'Winner — 1st place',
+    qualifier: 'Resume-reported',
   },
-] as const;
+  {
+    slug: 'nasa-space-apps',
+    name: 'NASA Space Apps Challenge',
+    result: 'Global Nominee',
+    qualifier: null,
+  },
+  {
+    slug: 'hackcbs',
+    name: 'HackCBS',
+    result: 'Finalist',
+    qualifier: null,
+  },
+  {
+    slug: 'sih-2023',
+    name: 'Smart India Hackathon 2023',
+    result: 'Top 50',
+    qualifier: null,
+  },
+  {
+    slug: 'build-with-genai',
+    name: 'Build with GenAI',
+    result: 'Winner',
+    qualifier: null,
+  },
+];
 export interface PortfolioPhoto {
   slug: string;
   src: string;
@@ -281,10 +307,12 @@ export interface PhotoCollection {
   description: string;
   status: 'Planned collection';
   photos: readonly PortfolioPhoto[];
+  illustratedCover?: string;
 }
 export const photoCollections: readonly PhotoCollection[] = [
   {
     slug: 'night-sky',
+    illustratedCover: editorialCovers.nightSky,
     title: 'Night sky',
     description: 'Astronomy and computational astrophotography.',
     status: 'Planned collection',
@@ -292,6 +320,7 @@ export const photoCollections: readonly PhotoCollection[] = [
   },
   {
     slug: 'landscapes',
+    illustratedCover: editorialCovers.landscapes,
     title: 'Landscapes',
     description: 'A collection for light and open spaces.',
     status: 'Planned collection',
@@ -299,6 +328,7 @@ export const photoCollections: readonly PhotoCollection[] = [
   },
   {
     slug: 'everyday-light',
+    illustratedCover: editorialCovers.everydayLight,
     title: 'Everyday light',
     description: 'A collection for the small details.',
     status: 'Planned collection',

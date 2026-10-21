@@ -1,0 +1,94 @@
+{
+  "recordedAtUtc": "2026-10-17T20:18:48.823280+00:00",
+  "source": {
+    "path": "src/features/portfolio/Name.tsx",
+    "sha256": "a75b3fc99adccf85b367b003bfbe4fed45b120bd2f61669314c8b28894852f86"
+  },
+  "test": {
+    "path": "tests/e2e/interaction-motion.spec.ts",
+    "sha256": "8681bfdd4d02f62355b52bfb6d1afaff5eaa16bf665242b5fb29bd0cb05d38c7",
+    "assertionsUnchanged": true,
+    "startAssertion": "After 120ms of virtual time, the name must differ from DEBRATO GHOSH.",
+    "endAssertion": "After enabling reduced motion and advancing exactly 20ms, the name must equal DEBRATO GHOSH.",
+    "naturalCompletionMs": 1000,
+    "assertionTimeoutRelaxed": false
+  },
+  "diagnostic": {
+    "engine": "WebKit",
+    "url": "http://127.0.0.1:5187/",
+    "method": "Native cached/fresh media query values, queued change events and instrumented animation frames under a paused Playwright clock.",
+    "beforeFix": {
+      "frameRead": "Cached MediaQueryList.matches",
+      "beforeEmulation": {
+        "virtualTimeMs": 125,
+        "cachedMatches": false,
+        "freshMatches": false,
+        "changeEvents": 0,
+        "text": "CNYJUFQ CNYJU"
+      },
+      "afterEmulation": {
+        "virtualTimeMs": 125,
+        "cachedMatches": false,
+        "freshMatches": true,
+        "changeEvents": 0,
+        "text": "CNYJUFQ CNYJU"
+      },
+      "after20VirtualMs": {
+        "virtualTimeMs": 145,
+        "cachedMatches": false,
+        "freshMatches": true,
+        "changeEvents": 0,
+        "newAnimationFramesMs": [128, 144],
+        "text": "CNYJUFQ CNYJU"
+      },
+      "after80RealMsWithoutClockAdvance": {
+        "virtualTimeMs": 145,
+        "cachedMatches": true,
+        "freshMatches": true,
+        "changeEvents": 1,
+        "text": "CNYJUFQ CNYJU"
+      }
+    },
+    "afterFix": {
+      "frameRead": "Fresh window.matchMedia(query).matches",
+      "beforeEmulation": {
+        "virtualTimeMs": 125,
+        "cachedMatches": false,
+        "freshMatches": false,
+        "changeEvents": 0,
+        "text": "CNYJUFQ CNYJU"
+      },
+      "afterEmulation": {
+        "virtualTimeMs": 125,
+        "cachedMatches": false,
+        "freshMatches": true,
+        "changeEvents": 0,
+        "text": "CNYJUFQ CNYJU"
+      },
+      "after20VirtualMs": {
+        "virtualTimeMs": 145,
+        "cachedMatches": false,
+        "freshMatches": true,
+        "changeEvents": 0,
+        "newAnimationFramesMs": [128, 144],
+        "text": "DEBRATO GHOSH"
+      }
+    },
+    "finding": "The cached query remained stale across two animation frames. The fresh query reported the current preference before queued change events arrived."
+  },
+  "verification": {
+    "command": "PATH=/home/debrato/.nvm/versions/node/v22.23.2/bin:$PATH PORTFOLIO_E2E_PORT=5207 npx playwright test tests/e2e/interaction-motion.spec.ts --grep 'enabling reduced motion' --repeat-each=3 --workers=1 --output=/tmp/portfolio-motion-fresh-query-final --reporter=line",
+    "exitCode": 0,
+    "plannedCases": 9,
+    "passed": 9,
+    "failed": 0,
+    "engines": ["chromium", "firefox", "webkit"],
+    "repetitionsPerEngine": 3,
+    "workers": 1,
+    "durationSeconds": 16.6,
+    "automaticRetriesUsed": 0,
+    "resultDirectory": "/tmp/portfolio-motion-fresh-query-final"
+  },
+  "providerBoundary": "Diagnostics aborted the page counter, GitHub profile and contribution relay. Browser tests used the existing isolated provider fixture.",
+  "scope": "Only Name.tsx changed during this fix. No source or tests changed while this receipt was written."
+}

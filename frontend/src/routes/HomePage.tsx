@@ -9,6 +9,7 @@ import { ContributionSection } from '../features/portfolio/ContributionSection';
 import { VisitorCounter } from '../features/portfolio/VisitorCounter';
 import { Quotes } from '../features/portfolio/Quotes';
 import {
+  articles,
   experience,
   education,
   skillGroups,
@@ -25,16 +26,20 @@ function Section({
   title,
   children,
   aside,
+  note,
+  row = false,
 }: {
   id: string;
   number: string;
   title: string;
   children: ReactNode;
   aside?: ReactNode;
+  note?: ReactNode;
+  row?: boolean;
 }) {
   return (
     <section
-      className="portfolio-section"
+      className={`portfolio-section${row ? ' section-row' : ''}${note && !row ? ' section-noted' : ''}`}
       id={id}
       aria-labelledby={`${id}-title`}
     >
@@ -45,7 +50,10 @@ function Section({
         <span className="section-line" />
         {aside}
       </div>
-      {children}
+      <div className="section-body">
+        {note && <div className="section-annotation">{note}</div>}
+        {children}
+      </div>
     </section>
   );
 }
@@ -53,9 +61,15 @@ export function HomePage() {
   const { hash } = useLocation();
   useEffect(() => {
     if (hash) {
-      const section = document.getElementById(hash.slice(1));
-      section?.scrollIntoView();
-      section?.querySelector<HTMLElement>('h2')?.focus({ preventScroll: true });
+      const target = document.getElementById(hash.slice(1));
+      if (target?.classList.contains('project-card')) {
+        const details = target.querySelector<HTMLDetailsElement>('details');
+        if (details) details.open = true;
+      }
+      target?.scrollIntoView();
+      target
+        ?.querySelector<HTMLElement>('h2, h3')
+        ?.focus({ preventScroll: true });
     } else {
       window.scrollTo({ top: 0, behavior: 'instant' });
       document
@@ -65,13 +79,13 @@ export function HomePage() {
   }, [hash]);
   return (
     <main id="main" className="portfolio-home">
-      <BackgroundScene />
       <div className="portfolio-content">
         <section className="hero" aria-label="Introduction">
+          <BackgroundScene />
           <div className="hero-copy">
             <p className="eyebrow">Software engineer · Researcher · Builder</p>
             <Name />
-            <p className="hero-description">
+            <p className="prose hero-description">
               I build at the intersection of software, research and real-world
               problems. Exploring AI, backend systems and the sky beyond.
             </p>
@@ -98,28 +112,28 @@ export function HomePage() {
               </a>
             </div>
           </div>
-          <p className="margin-note hero-note">
-            Better products.
-            <br />
-            Brighter
-            <br />
-            tomorrows.
-          </p>
           <SectionIndex />
         </section>
-        <Section id="about" number="01" title="About">
+        <Section
+          id="about"
+          number="01"
+          title="About"
+          row
+          note={
+            <>
+              <p className="margin-note">
+                A curious builder and lifelong learner.
+              </p>
+            </>
+          }
+        >
           <div className="about-layout">
-            <p className="margin-note">
-              Curious builder.
-              <br />
-              Lifelong learner.
-            </p>
             <div>
-              <p>
+              <p className="prose">
                 Hey, I'm Debrato Ghosh — a developer, researcher and builder who
                 enjoys turning questions into useful software.
               </p>
-              <p>
+              <p className="prose">
                 I study Information Technology at Manipal Institute of
                 Technology. My interests move between machine learning, backend
                 engineering, photography and astronomy.
@@ -137,29 +151,24 @@ export function HomePage() {
             </aside>
           </div>
         </Section>
-        <Section
-          id="projects"
-          number="02"
-          title="Projects"
-          aside={<Link to="/projects">View all projects</Link>}
-        >
+        <Section id="projects" number="02" title="Projects">
           <Projects />
         </Section>
-        <Section id="experience" number="03" title="Experience">
+        <Section id="experience" number="03" title="Experience" row>
           <div className="experience-grid">
             {experience.map((item) => (
               <article key={item.company}>
                 <time>{item.period}</time>
                 <h3>{item.role}</h3>
                 <p>{item.company}</p>
-                <p>{item.summary}</p>
+                <p className="prose">{item.summary}</p>
               </article>
             ))}
             <article>
               <time>{education.period}</time>
               <h3>{education.degree}</h3>
               <p>{education.institution}</p>
-              <p>{education.summary}</p>
+              <p className="prose">{education.summary}</p>
             </article>
           </div>
         </Section>
@@ -167,7 +176,11 @@ export function HomePage() {
           id="hackathons"
           number="04"
           title="Hackathons"
-          aside={<Link to="/hackathons">View all events</Link>}
+          note={
+            <p className="margin-note">
+              Progress through ideas, people and late nights.
+            </p>
+          }
         >
           <Achievements />
         </Section>
@@ -198,23 +211,41 @@ export function HomePage() {
           id="thoughts"
           number="07"
           title="Train of Thought"
-          aside={<Link to="/thoughts">View all posts</Link>}
+          aside={
+            <Link to="/blogs">
+              View writing <Icon name="arrow-right" />
+            </Link>
+          }
+          note={
+            <p className="margin-note">
+              Notes on the ideas that connect my work.
+            </p>
+          }
         >
           <div className="thought-layout">
-            <p className="margin-note">
-              Thoughts.
-              <br />
-              Notes. Ideas.
-            </p>
             <article className="thought-card">
-              <p className="eyebrow">Across disciplines</p>
+              <Link
+                className="thought-cover"
+                to="/blogs"
+                aria-label="Open writing archive"
+              >
+                <img
+                  src={articles[0].illustratedCover}
+                  width={768}
+                  height={512}
+                  alt=""
+                  loading="lazy"
+                />
+              </Link>
               <h3>
-                <Link to="/thoughts/the-next-breakthrough-is-in-another-field">
-                  The next breakthrough is in another field
-                  <Icon name="arrow-up-right" />
+                <Link to="/blogs">
+                  {articles[0].title}
+                  <Icon name="arrow-right" />
                 </Link>
               </h3>
-              <p>Writing about the questions that connect my interests.</p>
+              <p className="prose">
+                Writing about the questions that connect my interests.
+              </p>
               <a href={links.article}>Read on Bear Blog</a>
             </article>
           </div>
@@ -223,29 +254,34 @@ export function HomePage() {
           id="photography"
           number="08"
           title="Photography"
-          aside={<Link to="/photography">View gallery</Link>}
+          aside={
+            <Link to="/photography" aria-label="Explore photography">
+              View gallery <Icon name="arrow-right" />
+            </Link>
+          }
         >
           <div className="photography-layout">
-            <p className="margin-note">
-              Capturing
-              <br />
-              little moments.
-            </p>
             <div className="photography-preview">
               <PhotographyStrip
-                action={
-                  <Link className="outline-link" to="/photography">
-                    <Icon name="camera" />
-                    <span>Explore photography</span>
-                  </Link>
+                note={
+                  <p className="margin-note">
+                    Capturing the moments between projects.
+                  </p>
                 }
               />
             </div>
           </div>
         </Section>
-        <Section id="contact" number="09" title="Contact">
+        <Section
+          id="contact"
+          number="09"
+          title="Contact"
+          row
+          note={
+            <p className="contact-intro">Let's build something thoughtful.</p>
+          }
+        >
           <div className="contact-layout">
-            <p>Let's build something thoughtful.</p>
             <div className="contact-links">
               <a href={links.github}>
                 <Icon name="github-logo" />
@@ -272,9 +308,7 @@ export function HomePage() {
           <Quotes />
           <VisitorCounter />
           <p className="margin-note">
-            Same curiosity.
-            <br />
-            Different skies.
+            The same curiosity under different skies.
           </p>
         </div>
       </div>

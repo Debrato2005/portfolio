@@ -12,6 +12,12 @@ const dateFormat = new Intl.DateTimeFormat('en-US', {
   year: 'numeric',
   timeZone: 'UTC',
 });
+const shortDateFormat = new Intl.DateTimeFormat('en-US', {
+  month: 'short',
+  day: 'numeric',
+  year: 'numeric',
+  timeZone: 'UTC',
+});
 function dayLabel(day: ContributionDay) {
   return `${day.count} ${day.count === 1 ? 'contribution' : 'contributions'} on ${dateFormat.format(new Date(`${day.date}T00:00:00Z`))}`;
 }
@@ -25,6 +31,7 @@ export function ContributionSection() {
   const [selectedDate, setSelectedDate] = useState('');
   const [hoveredDate, setHoveredDate] = useState('');
   const [expanded, setExpanded] = useState(false);
+  const exploreButton = useRef<HTMLButtonElement>(null);
   const buttons = useRef<(HTMLButtonElement | null)[]>([]);
   const dates = contributionDates(year);
   const offset = new Date(Date.UTC(year, 0, 1)).getUTCDay();
@@ -42,36 +49,49 @@ export function ContributionSection() {
         <div className="contribution-total">
           <strong>{contributions.data?.total.toLocaleString() ?? '—'}</strong>
           <span>contributions</span>
-          <span>in {year}</span>
+          <select
+            aria-label="Contribution year"
+            value={year}
+            onChange={(event) => setYear(Number(event.target.value))}
+          >
+            {Array.from(
+              { length: currentYear - 2007 },
+              (_, index) => currentYear - index,
+            ).map((value) => (
+              <option key={value}>{value}</option>
+            ))}
+          </select>
         </div>
         <div className="calendar-detail">
           <div className="calendar-top">
-            <span>Daily contributions</span>
-            <select
-              aria-label="Contribution year"
-              value={year}
-              onChange={(event) => setYear(Number(event.target.value))}
-            >
-              {Array.from(
-                { length: currentYear - 2007 },
-                (_, index) => currentYear - index,
-              ).map((value) => (
-                <option key={value}>{value}</option>
-              ))}
-            </select>
+            <span>
+              {!expanded && hoveredDate && detailed
+                ? `${detailed.count} · ${shortDateFormat.format(new Date(`${detailed.date}T00:00:00Z`))}`
+                : 'Daily contributions'}
+            </span>
           </div>
           <div
             className={`calendar-scroll${expanded && days ? ' calendar-expanded' : ''}`}
             role="region"
             tabIndex={0}
             aria-label="Scrollable contribution calendar"
+            aria-describedby={days ? 'contribution-instructions' : undefined}
             onPointerLeave={() => setHoveredDate('')}
+            onKeyDown={(event) => {
+              if (expanded && event.key === 'Escape') {
+                event.preventDefault();
+                event.stopPropagation();
+                setExpanded(false);
+                exploreButton.current?.focus();
+              }
+            }}
           >
             <div
               className="calendar-month-labels"
               aria-hidden="true"
               style={{
                 gridTemplateColumns: `repeat(${weeks}, minmax(0, 1fr))`,
+                maxWidth: expanded ? undefined : weeks * 14 - 2,
               }}
             >
               {dates
@@ -100,6 +120,7 @@ export function ContributionSection() {
               aria-label={`Contribution calendar for ${year}: ${days ? 'daily counts from GitHub' : 'daily counts unavailable'}`}
               style={{
                 gridTemplateColumns: `repeat(${weeks}, minmax(0, 1fr))`,
+                maxWidth: expanded ? undefined : weeks * 14 - 2,
               }}
             >
               {dates.map((date, index) => {
@@ -118,6 +139,8 @@ export function ContributionSection() {
                     }}
                     style={style}
                     data-level={day.level}
+                    data-selected={day === selected ? 'true' : undefined}
+                    data-hovered={date === hoveredDate ? 'true' : undefined}
                     aria-label={dayLabel(day)}
                     title={dayLabel(day)}
                     tabIndex={index === selectedIndex ? 0 : -1}
@@ -125,8 +148,13 @@ export function ContributionSection() {
                       setSelectedDate(date);
                       setHoveredDate('');
                     }}
-                    onPointerEnter={() => setHoveredDate(date)}
-                    onPointerDown={() => setSelectedDate(date)}
+                    onPointerMove={(event) => {
+                      if (event.pointerType !== 'touch') setHoveredDate(date);
+                    }}
+                    onPointerDown={() => {
+                      setHoveredDate('');
+                      setSelectedDate(date);
+                    }}
                     onClick={() => setSelectedDate(date)}
                     onKeyDown={(event) => {
                       const moves: Record<string, number> = {
@@ -142,6 +170,7 @@ export function ContributionSection() {
                         event.key === 'End'
                       ) {
                         event.preventDefault();
+                        setHoveredDate('');
                         const next =
                           event.key === 'Home'
                             ? 0
@@ -163,11 +192,14 @@ export function ContributionSection() {
                     className="calendar-day"
                     data-unavailable={day ? undefined : 'true'}
                     data-level={day?.level}
+                    data-hovered={date === hoveredDate ? 'true' : undefined}
                     aria-hidden="true"
                     key={date}
                     style={style}
                     title={day ? dayLabel(day) : `${date}: unavailable`}
-                    onPointerEnter={() => setHoveredDate(date)}
+                    onPointerMove={(event) => {
+                      if (event.pointerType !== 'touch') setHoveredDate(date);
+                    }}
                   />
                 );
               })}
@@ -175,53 +207,82 @@ export function ContributionSection() {
           </div>
           {days ? (
             <>
+              {expanded && (
+                <p
+                  className="calendar-note calendar-day-detail"
+                  role="status"
+                  aria-label="Selected contribution day"
+                >
+                  {detailed ? dayLabel(detailed) : ''}
+                </p>
+              )}
+              <div className="calendar-footer">
+                <div
+                  className="calendar-legend"
+                  aria-label="Contribution intensity from less to more"
+                >
+                  <span>Less</span>
+                  {[0, 1, 2, 3, 4].map((level) => (
+                    <span
+                      key={level}
+                      className="calendar-day"
+                      data-level={level}
+                      aria-hidden="true"
+                    />
+                  ))}
+                  <span>More</span>
+                </div>
+                <button
+                  className="calendar-explore"
+                  type="button"
+                  ref={exploreButton}
+                  aria-expanded={expanded}
+                  aria-controls="contribution-days"
+                  aria-label={
+                    expanded
+                      ? 'Show compact overview'
+                      : 'Explore daily contributions'
+                  }
+                  onClick={() => {
+                    setExpanded((value) => !value);
+                    if (!expanded)
+                      requestAnimationFrame(() =>
+                        buttons.current[selectedIndex]?.focus(),
+                      );
+                  }}
+                >
+                  {expanded ? 'Compact view' : 'Explore days'}
+                </button>
+                {contributions.data?.source === 'public-calendar' ? (
+                  <a
+                    className="calendar-source"
+                    href="https://github.com/grubersjoe/github-contributions-api"
+                    aria-label="Contribution source: public GitHub calendar via jogruber; updates hourly"
+                  >
+                    via jogruber
+                  </a>
+                ) : (
+                  <a className="calendar-source" href={links.github}>
+                    GitHub API
+                  </a>
+                )}
+              </div>
               <p
-                className="calendar-note calendar-day-detail"
-                role="status"
-                aria-label="Selected contribution day"
-              >
-                {detailed ? dayLabel(detailed) : ''}
-              </p>
-              <button
-                className="calendar-explore"
-                type="button"
-                aria-expanded={expanded}
-                aria-controls="contribution-days"
-                onClick={() => setExpanded((value) => !value)}
+                className={
+                  expanded ? 'calendar-note calendar-instructions' : 'sr-only'
+                }
+                id="contribution-instructions"
               >
                 {expanded
-                  ? 'Show compact overview'
-                  : 'Explore daily contributions'}
-              </button>
-              <div
-                className="calendar-legend"
-                aria-label="Contribution intensity from less to more"
-              >
-                <span>Less</span>
-                {[0, 1, 2, 3, 4].map((level) => (
-                  <span
-                    key={level}
-                    className="calendar-day"
-                    data-level={level}
-                    aria-hidden="true"
-                  />
-                ))}
-                <span>More</span>
-              </div>
-              <p className="calendar-note">
-                {contributions.data?.source === 'public-calendar' ? (
-                  <>
-                    Public GitHub calendar via{' '}
-                    <a href="https://github.com/grubersjoe/github-contributions-api">
-                      jogruber
-                    </a>{' '}
-                    · Updates hourly
-                  </>
-                ) : (
-                  'GitHub contribution counts'
-                )}{' '}
-                · <a href={links.github}>View on GitHub</a>
+                  ? 'Arrow keys move between days. Esc returns to the overview.'
+                  : 'Scroll across the year, or explore each day.'}
               </p>
+              {expanded && contributions.data?.source === 'public-calendar' && (
+                <p className="calendar-note">
+                  Public GitHub calendar via jogruber · Updates hourly ·{' '}
+                  <a href={links.github}>View on GitHub</a>
+                </p>
+              )}
             </>
           ) : (
             <p className="calendar-note" role="status">
@@ -247,7 +308,7 @@ export function ContributionSection() {
       <div className="github-side">
         <div className="github-profile-heading">
           <span>
-            <Icon name="github-logo" /> Contributions
+            <Icon name="github-logo" /> GitHub profile
           </span>
           <a href={links.github}>
             @Debrato2005 <Icon name="arrow-up-right" />

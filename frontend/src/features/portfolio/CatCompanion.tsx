@@ -7,8 +7,21 @@ function subscribePointer(callback: () => void) {
   media.addEventListener('change', callback);
   return () => media.removeEventListener('change', callback);
 }
-// Sprite coordinates from MIT-licensed oneko.js by adryd. See public/licenses/oneko-LICENSE.txt.
-const directions: Record<string, readonly [number, number][]> = {
+// Sprite coordinates from MIT-licensed oneko.js by adryd325. See public/licenses/oneko-LICENSE.txt.
+const idleFrame: readonly [number, number] = [-3, -3];
+const spriteSets: Record<string, readonly (readonly [number, number])[]> = {
+  idle: [idleFrame],
+  alert: [[-7, -3]],
+  scratchSelf: [
+    [-5, 0],
+    [-6, 0],
+    [-7, 0],
+  ],
+  tired: [[-3, -2]],
+  sleeping: [
+    [-2, 0],
+    [-2, -1],
+  ],
   N: [
     [-1, -2],
     [-1, -3],
@@ -42,6 +55,11 @@ const directions: Record<string, readonly [number, number][]> = {
     [-1, -1],
   ],
 };
+const STEP_MS = 100; // oneko's classic tick, kept deliberately chunky
+const STEP_PX = 10; // pixels per tick while chasing the pointer
+const POKE_WINDOW_MS = 10_000;
+const POKE_GRACE_MS = 3_000;
+
 export function CatCompanion() {
   const [enabled, setEnabled] = useState(() => {
     try {
@@ -60,93 +78,109 @@ export function CatCompanion() {
   useEffect(() => {
     const element = sprite.current;
     if (!visible || !element) return;
-    let x = 48,
-      y = Math.max(24, innerHeight - 80);
-    let targetX = x,
-      targetY = y,
-      frame = 0,
-      last = 0;
-    let nap: ReturnType<typeof setTimeout> | undefined;
-    let sleep: ReturnType<typeof setInterval> | undefined;
-    const position = () => {
+    let x = Math.min(72, innerWidth - 32);
+    let y = Math.max(48, innerHeight - 96);
+    let targetX = x;
+    let targetY = y;
+    let tick = 0;
+    let phase = 0;
+    let awakeUntil = 0;
+    let state: 'sleeping' | 'poked' | 'chasing' = 'sleeping';
+    let raf = 0;
+    let lastTs = 0;
+    const paint = (name: string, frame = 0) => {
+      const set = spriteSets[name] ?? [idleFrame];
+      const tile = set[frame % set.length] ?? idleFrame;
+      element.style.backgroundPosition = `${tile[0] * 32}px ${tile[1] * 32}px`;
+    };
+    const place = () => {
       x = Math.min(Math.max(16, x), innerWidth - 16);
       y = Math.min(Math.max(16, y), innerHeight - 16);
       element.style.transform = `translate3d(${x - 16}px, ${y - 16}px, 0)`;
     };
-    const paint = (column: number, row: number) => {
-      element.style.backgroundPosition = `${column * 32}px ${row * 32}px`;
+    const fallAsleep = () => {
+      state = 'sleeping';
+      phase = 0;
+      tick = 0;
+      element.dataset.catState = 'sleeping';
+      paint('tired');
     };
-    const stop = () => {
-      cancelAnimationFrame(frame);
-      frame = 0;
-      clearTimeout(nap);
-      clearInterval(sleep);
-      last = 0;
-    };
-    const idle = () => {
-      element.dataset.catState = 'idle';
-      paint(-3, -3);
-      nap = setTimeout(() => {
-        element.dataset.catState = 'sleeping';
-        let phase = 0;
-        paint(-2, 0);
-        sleep = setInterval(() => {
-          phase = 1 - phase;
-          paint(-2, -phase);
-        }, 600);
-      }, 5000);
-    };
-    const run = (time: number) => {
-      frame = 0;
-      const dx = targetX - x,
-        dy = targetY - y;
-      const distance = Math.hypot(dx, dy);
-      if (distance <= 44) {
-        idle();
+    const step = () => {
+      tick += 1;
+      if (state === 'sleeping') {
+        // Tired first, then the slow sleeping loop: two frames, four ticks each.
+        if (tick < 8) paint('tired');
+        else paint('sleeping', Math.floor(tick / 4) % 2);
         return;
       }
-      const delta = last ? Math.min(time - last, 50) : 16;
-      last = time;
-      const step = Math.min(distance - 40, delta * 0.26);
-      x += (dx / distance) * step;
-      y += (dy / distance) * step;
+      if (state === 'poked') {
+        paint('scratchSelf', phase);
+        phase += 1;
+        if (phase > 9) {
+          phase = 0;
+          state = 'chasing';
+          awakeUntil = Date.now() + POKE_WINDOW_MS;
+          element.dataset.catState = 'running';
+        }
+        return;
+      }
+      const dx = targetX - x;
+      const dy = targetY - y;
+      const distance = Math.hypot(dx, dy);
+      if (distance < 48) {
+        paint('alert');
+        if (Date.now() > awakeUntil) fallAsleep();
+        return;
+      }
+      if (Date.now() > awakeUntil + POKE_GRACE_MS) {
+        fallAsleep();
+        return;
+      }
       const direction =
-        (dy / distance < -0.4 ? 'N' : dy / distance > 0.4 ? 'S' : '') +
-        (dx / distance < -0.4 ? 'W' : dx / distance > 0.4 ? 'E' : '');
-      const tile = directions[direction]?.[Math.floor(time / 120) % 2];
-      if (tile) paint(tile[0], tile[1]);
-      element.dataset.catState = 'running';
-      position();
-      frame = requestAnimationFrame(run);
+        (dy / distance < -0.5 ? 'N' : dy / distance > 0.5 ? 'S' : '') +
+        (dx / distance < -0.5 ? 'W' : dx / distance > 0.5 ? 'E' : '');
+      const tile = spriteSets[direction]?.[tick % 2];
+      if (tile) paint(direction, tick);
+      // Whole 10px hops per tick keep the retro, slightly jittery gait.
+      x += (dx / distance) * STEP_PX;
+      y += (dy / distance) * STEP_PX;
+      place();
     };
-    const move = (event: PointerEvent) => {
-      if (event.pointerType !== 'mouse' || document.hidden) return;
-      targetX = Math.min(Math.max(16, event.clientX), innerWidth - 16);
-      targetY = Math.min(Math.max(16, event.clientY), innerHeight - 16);
-      clearTimeout(nap);
-      clearInterval(sleep);
-      if (!frame) {
-        last = 0;
-        frame = requestAnimationFrame(run);
+    const frame = (timestamp: number) => {
+      raf = requestAnimationFrame(frame);
+      if (!lastTs) lastTs = timestamp;
+      if (timestamp - lastTs < STEP_MS) return;
+      lastTs = timestamp;
+      if (!document.hidden) step();
+    };
+    const poke = (event: PointerEvent) => {
+      if (event.pointerType !== 'mouse') return;
+      if (state === 'sleeping') {
+        state = 'poked';
+        phase = 0;
+      } else if (state === 'chasing') {
+        awakeUntil = Date.now() + POKE_WINDOW_MS;
       }
     };
-    const visibility = () => {
-      stop();
-      if (!document.hidden) idle();
+    const track = (event: PointerEvent) => {
+      if (event.pointerType !== 'mouse' || state !== 'chasing') return;
+      targetX = Math.min(Math.max(16, event.clientX), innerWidth - 16);
+      targetY = Math.min(Math.max(16, event.clientY), innerHeight - 16);
     };
     const resize = () => {
-      position();
+      place();
     };
-    position();
-    idle();
-    window.addEventListener('pointermove', move, { passive: true });
+    place();
+    fallAsleep();
+    element.addEventListener('pointerdown', poke);
+    window.addEventListener('pointermove', track, { passive: true });
     window.addEventListener('resize', resize);
-    document.addEventListener('visibilitychange', visibility);
+    raf = requestAnimationFrame(frame);
     return () => {
-      stop();
-      window.removeEventListener('pointermove', move);
+      cancelAnimationFrame(raf);
+      element.removeEventListener('pointerdown', poke);
+      window.removeEventListener('pointermove', track);
       window.removeEventListener('resize', resize);
-      document.removeEventListener('visibilitychange', visibility);
     };
   }, [visible]);
   if (!finePointer) return null;
@@ -156,8 +190,9 @@ export function CatCompanion() {
         <span
           ref={sprite}
           className="cat-sprite"
-          data-cat-state="idle"
-          aria-hidden="true"
+          data-cat-state="sleeping"
+          role="presentation"
+          title="Poke the cat"
         />
       )}
       <button

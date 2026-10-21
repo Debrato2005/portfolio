@@ -1,0 +1,77 @@
+{
+  "capturedAt": "2026-10-18T08:15:58.357Z",
+  "cases": [
+    {
+      "route": "blogs",
+      "width": 1440,
+      "theme": "dark",
+      "text": 100,
+      "errors": [],
+      "documentWidth": 1440,
+      "titleFont": "\"JetBrains Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, \"Liberation Mono\", monospace",
+      "bodyFont": "Inter, system-ui, sans-serif",
+      "titleSize": "40px",
+      "bodySize": "18px"
+    },
+    {
+      "route": "blogs",
+      "width": 390,
+      "theme": "light",
+      "text": 100,
+      "errors": [],
+      "documentWidth": 390,
+      "titleFont": "\"JetBrains Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, \"Liberation Mono\", monospace",
+      "bodyFont": "Inter, system-ui, sans-serif",
+      "titleSize": "28px",
+      "bodySize": "18px"
+    },
+    {
+      "route": "blogs",
+      "width": 320,
+      "theme": "dark",
+      "text": 200,
+      "errors": [],
+      "documentWidth": 320,
+      "titleFont": "\"JetBrains Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, \"Liberation Mono\", monospace",
+      "bodyFont": "Inter, system-ui, sans-serif",
+      "titleSize": "56px",
+      "bodySize": "36px"
+    },
+    {
+      "route": "photography",
+      "width": 1440,
+      "theme": "dark",
+      "text": 100,
+      "errors": [],
+      "documentWidth": 1440,
+      "titleFont": "\"JetBrains Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, \"Liberation Mono\", monospace",
+      "bodyFont": "Inter, system-ui, sans-serif",
+      "titleSize": "40px",
+      "bodySize": "20px"
+    },
+    {
+      "route": "photography",
+      "width": 390,
+      "theme": "light",
+      "text": 100,
+      "errors": [],
+      "documentWidth": 390,
+      "titleFont": "\"JetBrains Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, \"Liberation Mono\", monospace",
+      "bodyFont": "Inter, system-ui, sans-serif",
+      "titleSize": "28px",
+      "bodySize": "20px"
+    },
+    {
+      "route": "photography",
+      "width": 320,
+      "theme": "dark",
+      "text": 200,
+      "errors": [],
+      "documentWidth": 320,
+      "titleFont": "\"JetBrains Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, \"Liberation Mono\", monospace",
+      "bodyFont": "Inter, system-ui, sans-serif",
+      "titleSize": "56px",
+      "bodySize": "40px"
+    }
+  ]
+}

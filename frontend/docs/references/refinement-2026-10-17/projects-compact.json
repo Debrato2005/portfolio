@@ -1,0 +1,184 @@
+{
+  "capturedAt": "2026-10-17T18:39:15.691Z",
+  "url": "http://127.0.0.1:5187/",
+  "browser": "Chromium",
+  "browserVersion": "153.0.8010.12",
+  "reducedMotion": true,
+  "providerBoundary": "Contribution relay, GitHub profile and page-view counter calls were aborted. These captures verify rendered unavailable states; they do not verify live providers or add page views.",
+  "sources": {
+    "src/features/portfolio/Projects.tsx": "dc2d719da505acc3b8ad5fc3d6c5f74adb73b063dbd8b505810e59356d055888",
+    "src/styles/reference-refinement.css": "ec84d1de6b29252a11609c638dcbd4219482b72bcc261e0ad5badd745cdc1cc5",
+    "src/styles/tokens.css": "f1f7c49a1ea40a5e8be2e59eada6abc4b6a74a75b2d19f5e7cc888057fb7883d",
+    "src/styles/content-pages.css": "a63df3907470a1cd7e41e20f8908f66477f055f9c36628d7bbe39f677196a417",
+    "src/features/portfolio/ContributionSection.tsx": "88987aece78478272279e20b8a83f3bbe0ccc0b5b4211cca722ea558b0645c7c",
+    "src/routes/HomePage.tsx": "585cebf35f74c80d186f21c936f5811a06c6b1bb431d31493e094f1c2361ff19"
+  },
+  "captures": [
+    {
+      "width": 1440,
+      "height": 900,
+      "theme": "light",
+      "filename": "projects-compact-desktop.png",
+      "sectionHeight": 726.5625,
+      "scrollWidth": 1440,
+      "columns": "330.656px 330.672px 330.656px",
+      "cards": [
+        {
+          "name": "OncoSyn",
+          "height": 275.1875,
+          "titleInkInsideCard": true,
+          "nameVisible": true,
+          "actionsVisible": true,
+          "actionHeight": 52,
+          "summaryFont": "20px",
+          "summaryMinHeight": "116px",
+          "summaryClamped": false,
+          "conceptCoverInsideMedia": null
+        },
+        {
+          "name": "Cryptalis",
+          "height": 275.1875,
+          "titleInkInsideCard": true,
+          "nameVisible": true,
+          "actionsVisible": true,
+          "actionHeight": 52,
+          "summaryFont": "20px",
+          "summaryMinHeight": "116px",
+          "summaryClamped": false,
+          "conceptCoverInsideMedia": null
+        },
+        {
+          "name": "Smolink",
+          "height": 275.1875,
+          "titleInkInsideCard": true,
+          "nameVisible": true,
+          "actionsVisible": true,
+          "actionHeight": 52,
+          "summaryFont": "20px",
+          "summaryMinHeight": "116px",
+          "summaryClamped": false,
+          "conceptCoverInsideMedia": null
+        },
+        {
+          "name": "UniSpace",
+          "height": 275.1875,
+          "titleInkInsideCard": true,
+          "nameVisible": true,
+          "actionsVisible": true,
+          "actionHeight": 52,
+          "summaryFont": "20px",
+          "summaryMinHeight": "116px",
+          "summaryClamped": false,
+          "conceptCoverInsideMedia": null
+        },
+        {
+          "name": "OrbitOps",
+          "height": 275.1875,
+          "titleInkInsideCard": true,
+          "nameVisible": true,
+          "actionsVisible": true,
+          "actionHeight": 52,
+          "summaryFont": "20px",
+          "summaryMinHeight": "116px",
+          "summaryClamped": false,
+          "conceptCoverInsideMedia": true
+        },
+        {
+          "name": "StaySync",
+          "height": 275.1875,
+          "titleInkInsideCard": true,
+          "nameVisible": true,
+          "actionsVisible": true,
+          "actionHeight": 52,
+          "summaryFont": "20px",
+          "summaryMinHeight": "116px",
+          "summaryClamped": false,
+          "conceptCoverInsideMedia": true
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "theme": "dark",
+      "filename": "projects-compact-dark.png",
+      "sectionHeight": 726.5625,
+      "scrollWidth": 1440,
+      "columns": "330.656px 330.672px 330.656px",
+      "cards": [
+        {
+          "name": "OncoSyn",
+          "height": 275.1875,
+          "titleInkInsideCard": true,
+          "nameVisible": true,
+          "actionsVisible": true,
+          "actionHeight": 52,
+          "summaryFont": "20px",
+          "summaryMinHeight": "116px",
+          "summaryClamped": false,
+          "conceptCoverInsideMedia": null
+        },
+        {
+          "name": "Cryptalis",
+          "height": 275.1875,
+          "titleInkInsideCard": true,
+          "nameVisible": true,
+          "actionsVisible": true,
+          "actionHeight": 52,
+          "summaryFont": "20px",
+          "summaryMinHeight": "116px",
+          "summaryClamped": false,
+          "conceptCoverInsideMedia": null
+        },
+        {
+          "name": "Smolink",
+          "height": 275.1875,
+          "titleInkInsideCard": true,
+          "nameVisible": true,
+          "actionsVisible": true,
+          "actionHeight": 52,
+          "summaryFont": "20px",
+          "summaryMinHeight": "116px",
+          "summaryClamped": false,
+          "conceptCoverInsideMedia": null
+        },
+        {
+          "name": "UniSpace",
+          "height": 275.1875,
+          "titleInkInsideCard": true,
+          "nameVisible": true,
+          "actionsVisible": true,
+          "actionHeight": 52,
+          "summaryFont": "20px",
+          "summaryMinHeight": "116px",
+          "summaryClamped": false,
+          "conceptCoverInsideMedia": null
+        },
+        {
+          "name": "OrbitOps",
+          "height": 275.1875,
+          "titleInkInsideCard": true,
+          "nameVisible": true,
+          "actionsVisible": true,
+          "actionHeight": 52,
+          "summaryFont": "20px",
+          "summaryMinHeight": "116px",
+          "summaryClamped": false,
+          "conceptCoverInsideMedia": true
+        },
+        {
+          "name": "StaySync",
+          "height": 275.1875,
+          "titleInkInsideCard": true,
+          "nameVisible": true,
+          "actionsVisible": true,
+          "actionHeight": 52,
+          "summaryFont": "20px",
+          "summaryMinHeight": "116px",
+          "summaryClamped": false,
+          "conceptCoverInsideMedia": true
+        }
+      ]
+    }
+  ]
+}

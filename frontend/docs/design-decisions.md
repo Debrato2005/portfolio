@@ -53,7 +53,7 @@ See [heatmap research](heatmap-research.md) for the recommended calendar rendere
 Homepage sequence: original scene/introduction, About, early contact links, Selected Projects, Experience, Hackathons, Skills, Train of Thought, Photography, In Code, Contact.
 Anurag guides information organization and section navigation. Debrato's composition, scene and visual treatments remain original.
 Debrato's additional sections use that same structure rather than introducing a separate visual layout.
-Routes remain `/`, `/projects`, `/projects/:slug`, `/hackathons`, `/thoughts`, `/photography`, `/photography/:slug`, and recovery states.
+Routes are limited to `/`, `/blogs`, `/photography`, and unmatched-path recovery. Projects, experience, hackathons, achievements, skills, and GitHub activity remain in the homepage flow.
 Mobile retains a compact reading column and uses a section menu instead of the side index.
 See [page architecture](page-architecture.md) for route states, case-study chapters and content models.
 
@@ -63,8 +63,8 @@ The required name scramble runs once for approximately one second and never hide
 Themes support Light, Dark and System, with saved explicit choice and a coordinated scene fade.
 Hover reveals background color/detail through a localized soft mask. Theme changes transform the environment. Rendering pauses while hidden or offscreen.
 The command palette supplies searchable navigation, projects, writing, contact and theme commands with focus recovery.
-Projects use compact filtered visual previews and separate case-study links. Hackathons use hanging real photographs with exact results.
-Contributions use a real seven-row calendar with custom themes and date tooltips. Photography uses a rotating, controllable filmstrip linked to detail pages.
+Projects use compact filtered visual previews with native inline project briefs. Hackathons use an inline Polaroid carousel with exact results and honest missing-media states.
+Contributions use a real seven-row calendar with custom themes and date tooltips. Photography uses a rotating, controllable homepage filmstrip linked to collection anchors in the single gallery route.
 Quotes have sourced text and optional playback. The counter shows actual page views or unavailable.
 See [interaction specification](interaction-spec.md) for exact keyboard, timing, error, cache and reduced-motion behavior.
 

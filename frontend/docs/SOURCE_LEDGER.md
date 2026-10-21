@@ -23,6 +23,20 @@ Project covers are original generated concept illustrations. They are not applic
 The latest UniSpace cover uses the built-in image generator; its [exact prompt and source receipt](references/unispace-art-receipt.json) identify the new asset.
 The earlier original PNGs also supply larger responsive WebP exports. No reference-site event photographs or portraits were reused.
 
+## Current font assets
+
+[JetBrains Mono](https://www.jetbrains.com/lp/mono/) supplies the owner-selected technical typography. The self-hosted variable Latin file comes from [Fontsource variable JetBrains Mono 5.3.0](https://cdn.jsdelivr.net/npm/@fontsource-variable/jetbrains-mono@5.3.0/files/jetbrains-mono-latin-wght-normal.woff2), retrieved October 18. Its SHA-256 is `18be452724bfdc236c074ca94a249a7f41a86752c7d04ab258ce9ed5651f6a7e` and size is 40,404 bytes. The [upstream OFL](https://github.com/JetBrains/JetBrainsMono/blob/master/OFL.txt) is retained at `public/licenses/JetBrainsMono-OFL.txt`.
+
+Inter regular is copied from the existing pinned `@fontsource/inter` 5.3.0 Latin asset and retains the existing license. Its SHA-256 is `8909904ab6c872eb994093482a88a28eca2cd95912d7b6fecd72103b0dc07edc`. No package dependency or lockfile changed. Both fonts are served locally; the unused earlier font imports were removed while their installed packages and notices remain.
+
+A new Firecrawl branding read of [Anurag's portfolio](https://anuragdotdev.vercel.app/) identified mixed Mono/interface and serif/display roles. These extracted values are estimates, not pixel measurements. The supplied screenshots control composition; the owner's explicit Mono requirement controls our new heading family. A later Firecrawl read of [Garvit's portfolio](https://www.garvitsingla.in/) confirmed a compact text treatment with grouped work and achievement content, alongside handwritten decoration. The owner-selected Mono direction remains authoritative here; extracted font labels are estimates rather than a new identity choice. No external component source, personal photographs or additional event records were copied in this pass.
+
+## Generated editorial covers, October 18
+
+The owner explicitly requested generated images alongside the layout correction. Four standalone graphite/watercolor illustrations were created with the built-in `image_gen.imagegen` tool: night sky, mountain lake, sunlit camera/notebook desk and a coding workbench. The desk cover is intentionally shared by the writing card and Everyday light collection.
+
+[Exact prompts](../assets/editorial/prompts.json), [asset identities](../assets/editorial/assets.json) and four full-size PNG originals live in `assets/editorial/`. FFmpeg exports four 768×512 WebP files under `public/images/editorial/`, totaling 430,558 bytes. These are original illustrative covers, not event photographs, personal photographs, project screenshots or evidence of results. Existing factual article/event records and empty personal photo arrays remain unchanged. The gallery labels the illustrated covers and still reports that original photographs are forthcoming.
+
 ## Stack sources
 
 [Vite setup](https://vite.dev/guide/), [TypeScript 6](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-6-0.html), and [Playwright setup](https://playwright.dev/docs/intro) are primary references.
@@ -152,3 +166,7 @@ The full licenses are retained in `public/licenses/`. [Asset receipt](references
 Project WebP covers are generated illustrations. They are never used as personal photographs, product screenshots or research results. No reference-site assets or component source were copied.
 The selected mockups and four live sites guide foreground composition. [Reference analysis](reference-analysis.md) separates observed behavior from adaptation.
 The GitHub gateway follows the [official GraphQL schema](https://docs.github.com/en/graphql/reference/users). It requests calendar counts, levels and dates, with no private repository detail.
+
+## Supplied landscape reveal
+
+CURRENT: the owner supplied four original-path PNGs under `bg/` and authorized their use for the hero reveal. [Background review](sketch-to-color-background.md) records source mapping and local registration differences. The public Sakthi component at revision `f65dfaa95b24c88345626bd189fefd257e4f7741` and its live site informed the interaction principle. No reference artwork, package, page component or layout was imported. The local WebGL renderer replaces the need for Three.js/R3F in this app; runtime dependencies remain unchanged.
