@@ -119,7 +119,10 @@ test('compact activity keeps the calendar and profile together at the reference 
   await page.evaluate(() => document.fonts.ready);
   const calendar = await page.locator('.calendar-panel').boundingBox();
   const profile = await page.locator('.github-side').boundingBox();
-  expect(profile!.x).toBeGreaterThanOrEqual(calendar!.x + calendar!.width);
+  expect(profile!.y).toBeGreaterThanOrEqual(
+    calendar!.y + calendar!.height - 0.5,
+  );
+  expect(Math.abs(profile!.width - calendar!.width)).toBeLessThanOrEqual(1);
   expect(Math.max(calendar!.height, profile!.height)).toBeLessThanOrEqual(230);
   for (const label of ['Repositories', 'Followers', 'Following']) {
     expect(

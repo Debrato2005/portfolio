@@ -22,7 +22,7 @@
   --space-5: 3rem;
   --border-width: 2px;
   --shadow-hard: 5px 5px 0 var(--color-ink);
-  --content-width: 1480px;
+  --content-width: 760px;
   --reading-width: min(72rem, 1120px);
   --hero-inset: clamp(1.25rem, 4.5vw, 4.75rem);
   --section-index-width: 13rem;
@@ -33,7 +33,7 @@
   --type-title: 1.125rem;
   --type-section: 0.875rem;
   --type-control: 0.8125rem;
-  --type-name: clamp(3rem, 5.2vw, 5.5rem);
+  --type-name: clamp(3rem, 4.5vw, 3.75rem);
   --surface-panel: transparent;
   --radius-panel: 12px;
   --radius-control: 8px;

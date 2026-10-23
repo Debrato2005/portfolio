@@ -14,6 +14,20 @@ import './styles/primitives.css';
 import './styles/reference-refinement.css';
 import './styles/project-cards.css';
 readConfig(import.meta.env, import.meta.env.PROD);
+window.history.scrollRestoration = 'manual';
+const resetHomeOnLoad = () => {
+  if (window.location.pathname !== '/') return;
+  window.history.replaceState(
+    window.history.state,
+    '',
+    `${window.location.pathname}${window.location.search}`,
+  );
+  window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+};
+resetHomeOnLoad();
+window.addEventListener('pageshow', () => {
+  window.requestAnimationFrame(resetHomeOnLoad);
+});
 const root = document.getElementById('root');
 if (!root) throw new Error('The page root is missing.');
 createRoot(root).render(

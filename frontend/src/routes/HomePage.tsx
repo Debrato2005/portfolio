@@ -82,37 +82,41 @@ export function HomePage() {
       <div className="portfolio-content">
         <section className="hero" aria-label="Introduction">
           <BackgroundScene />
-          <div className="hero-copy">
-            <p className="eyebrow">Software engineer · Researcher · Builder</p>
-            <Name />
-            <p className="prose hero-description">
-              I build at the intersection of software, research and real-world
-              problems. Exploring AI, backend systems and the sky beyond.
-            </p>
-            <ul className="hero-meta">
-              <li>
-                <Icon name="map-pin" />
-                Based in India
-              </li>
-              <li>
-                <Icon name="graduation-cap" />
-                IT student at MIT, Manipal
-              </li>
-              <li>
-                <Icon name="coffee" />
-                Curious by default
-              </li>
-            </ul>
-            <div className="hero-actions">
-              <a className="primary-link" href={links.email}>
-                Let's talk <Icon name="arrow-up-right" />
-              </a>
-              <a className="outline-link" href="#projects">
-                View projects <Icon name="arrow-right" />
-              </a>
+          <div className="hero-layout">
+            <div className="hero-copy">
+              <p className="eyebrow">
+                Software engineer · Researcher · Builder
+              </p>
+              <Name />
+              <p className="prose hero-description">
+                I build at the intersection of software, research and real-world
+                problems. Exploring AI, backend systems and the sky beyond.
+              </p>
+              <ul className="hero-meta">
+                <li>
+                  <Icon name="map-pin" />
+                  Based in India
+                </li>
+                <li>
+                  <Icon name="graduation-cap" />
+                  IT student at MIT, Manipal
+                </li>
+                <li>
+                  <Icon name="coffee" />
+                  Curious by default
+                </li>
+              </ul>
+              <div className="hero-actions">
+                <a className="primary-link" href={links.email}>
+                  Let's talk <Icon name="arrow-up-right" />
+                </a>
+                <a className="outline-link" href="#projects">
+                  View projects <Icon name="arrow-right" />
+                </a>
+              </div>
             </div>
+            <SectionIndex />
           </div>
-          <SectionIndex />
         </section>
         <Section
           id="about"

@@ -3,7 +3,9 @@ import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { sections } from './content';
 export function SectionIndex() {
   const [active, setActive] = useState('about');
-  const [placement, setPlacement] = useState<'selector' | 'hero'>('selector');
+  const [placement, setPlacement] = useState<'selector' | 'hero' | 'fixed'>(
+    'selector',
+  );
   const index = useRef<HTMLElement>(null);
   const navigate = useNavigate();
   useLayoutEffect(() => {
@@ -13,7 +15,12 @@ export function SectionIndex() {
       const rootSize = parseFloat(
         getComputedStyle(document.documentElement).fontSize,
       );
-      setPlacement(innerWidth >= 960 && rootSize <= 18 ? 'hero' : 'selector');
+      const contentWidth = Math.min(innerWidth - 32, 760);
+      const outerGutter = (innerWidth - contentWidth) / 2;
+      const fixedIndexWidth = rootSize * 13;
+      if (outerGutter >= fixedIndexWidth + 32) setPlacement('fixed');
+      else if (innerWidth >= 880 && rootSize <= 18) setPlacement('hero');
+      else setPlacement('selector');
     };
     measure();
     const observer = new ResizeObserver(measure);

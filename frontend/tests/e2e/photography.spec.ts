@@ -334,6 +334,15 @@ test('home link restores the hero after a section jump and shortcut close restor
   await expect(invoker).toBeFocused();
 });
 
+test('a homepage document load always starts at the hero', async ({ page }) => {
+  await page.goto('/#contact');
+  await expect(
+    page.getByRole('heading', { name: 'DEBRATO GHOSH', exact: true }),
+  ).toBeInViewport();
+  await expect.poll(() => page.evaluate(() => scrollY)).toBeLessThan(80);
+  await expect(page).toHaveURL(/\/$/);
+});
+
 test('collection swipe and arrow navigation share the visible selection', async ({
   page,
 }) => {

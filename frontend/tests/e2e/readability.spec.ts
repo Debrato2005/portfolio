@@ -57,7 +57,7 @@ test('the interface loads one local JetBrains Mono face and keeps prose readable
   expect((await font.body()).subarray(0, 4).toString()).toBe('wOF2');
 });
 
-test('each section uses one hatched title band and the desktop index labels fit', async ({
+test('each section uses one quiet title rule and the desktop index labels fit', async ({
   page,
 }) => {
   await page.setViewportSize({ width: 1760, height: 800 });
@@ -71,14 +71,13 @@ test('each section uses one hatched title band and the desktop index labels fit'
         const rule = section
           .querySelector('.section-line')!
           .getBoundingClientRect();
-        const band = section.querySelector('.section-heading')!;
-        const pseudo = getComputedStyle(band, '::before');
-        const bandBox = band.getBoundingClientRect();
+        const headingRow = section.querySelector('.section-heading')!;
+        const sectionStyle = getComputedStyle(section);
+        const headingBox = headingRow.getBoundingClientRect();
         return {
-          borderTop: parseFloat(pseudo.borderTopWidth),
-          borderBottom: parseFloat(pseudo.borderBottomWidth),
-          bandWidth: bandBox.width,
-          hatched: pseudo.backgroundImage.includes('repeating-linear-gradient'),
+          borderTop: parseFloat(sectionStyle.borderTopWidth),
+          headingWidth: headingBox.width,
+          unpatterned: getComputedStyle(headingRow).backgroundImage === 'none',
           gap: rule.left - heading.right,
           width: rule.width,
           verticalOffset:
@@ -87,9 +86,8 @@ test('each section uses one hatched title band and the desktop index labels fit'
       }),
     );
   expect(rules.every((rule) => rule.borderTop === 1)).toBe(true);
-  expect(rules.every((rule) => rule.borderBottom === 1)).toBe(true);
-  expect(rules.every((rule) => rule.bandWidth >= 740)).toBe(true);
-  expect(rules.every((rule) => rule.hatched)).toBe(true);
+  expect(rules.every((rule) => rule.headingWidth >= 740)).toBe(true);
+  expect(rules.every((rule) => rule.unpatterned)).toBe(true);
   expect(rules.every((rule) => rule.gap >= 7 && rule.width >= 24)).toBe(true);
   expect(rules.every((rule) => Math.abs(rule.verticalOffset) < 3)).toBe(true);
   const index = page.getByRole('navigation', { name: 'Section index' });
@@ -275,7 +273,7 @@ for (const width of [941, 1440]) {
     ]);
     await expect(cards.locator('details[open]')).toHaveCount(0);
     const bounds = await section.boundingBox();
-    expect(bounds!.height).toBeLessThanOrEqual(500);
+    expect(bounds!.height).toBeLessThanOrEqual(600);
     await section.evaluate((element) =>
       window.scrollTo({
         top: element.getBoundingClientRect().top + scrollY,
@@ -382,7 +380,7 @@ test('the reference width retains shared gutters, desktop rows and a clear hero 
   expect(geometry.indexTextLines.every((lines) => lines === 1)).toBe(true);
   expect(Math.abs(geometry.experienceX - geometry.aboutX)).toBeLessThan(3);
   expect(Math.abs(geometry.skillsX - geometry.contentX)).toBeLessThan(3);
-  expect(Math.abs(geometry.eventX - geometry.aboutX)).toBeLessThan(8);
+  expect(Math.abs(geometry.eventX - geometry.aboutX)).toBeLessThan(9);
   expect(
     Math.abs(geometry.eventHeadingX - geometry.contentX),
   ).toBeLessThanOrEqual(1);
@@ -412,24 +410,24 @@ test('homepage uses a restrained scale at normal desktop and phone widths', asyn
     {
       width: 1440,
       content: { min: 758, max: 762 },
-      hero: { min: 48, max: 51 },
-      section: { min: 10, max: 12 },
-      project: { min: 14, max: 16 },
-      header: { min: 52, max: 60 },
+      hero: { min: 58, max: 62 },
+      section: { min: 12, max: 14 },
+      project: { min: 16, max: 18 },
+      header: { min: 62, max: 68 },
     },
     {
       width: 941,
       content: { min: 758, max: 762 },
-      hero: { min: 40, max: 43 },
-      section: { min: 10, max: 12 },
-      project: { min: 14, max: 16 },
-      header: { min: 52, max: 60 },
+      hero: { min: 47, max: 50 },
+      section: { min: 12, max: 14 },
+      project: { min: 16, max: 18 },
+      header: { min: 62, max: 68 },
     },
     {
       width: 390,
       content: { min: 342, max: 362 },
-      hero: { min: 28, max: 32 },
-      section: { min: 10, max: 12 },
+      hero: { min: 45, max: 49 },
+      section: { min: 12, max: 14 },
       project: { min: 18, max: 20 },
       header: { min: 96, max: 136 },
     },

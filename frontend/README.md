@@ -4,15 +4,15 @@
 
 ## Current status
 
-CURRENT: the [width and cover refinement](docs/width-covers-2026-10-18.md) corrects the inward desktop offset by preserving the supplied reference proportions. JetBrains Mono leads the interface, Inter serves longer paragraphs, and original generated covers supply the collection, writing and event previews. Overall owner visual acceptance remains open.
+CURRENT: the homepage uses a 760px centered editorial column inspired by the supplied Anurag structure, while the interactive hero artwork spans the full viewport. JetBrains Mono leads the interface, Inter serves longer paragraphs, and original generated covers supply the collection, writing and event previews. Overall owner visual acceptance remains open.
 Implemented cream/charcoal portfolio, name scramble, command search, project filters, sourced quotes and public resume download.
-Compact labels and shared gutters organize the divided rows. The reference width retains the desktop index, three experience columns, five skill groups and one row of contact actions. All six projects share three desktop columns and two rows, with portrait covers, complete summaries and visible technologies. Full briefs open inline. Smaller tablets use two columns and phones stack the cards.
-Compact typography and smaller desktop controls retain readable copy and complete labels, while the broader homepage follows the reference margins. Archives retain their narrower reading columns. Phone controls keep larger touch targets. One paper event record and the photography filmstrip follow the supplied structure. Calendar and profile panels sit side by side on desktop.
+Compact labels and shared gutters organize the divided rows without hatched title bands or a page-wide grid scaffold. The desktop index occupies the right gutter only when it fits, while the reference width retains three experience columns, five skill groups and one row of contact actions. All six projects use two centered columns and three rows with readable portrait covers, summaries and technologies. Full briefs open inline; phones stack the cards.
+Compact typography and a larger hero hierarchy retain readable copy and complete labels inside the narrow homepage. Archives retain their reading columns and phone controls keep larger touch targets. One paper event record and the photography filmstrip follow the supplied structure. The contribution heatmap now leads one full-width activity composition with the profile metrics in a readable strip below it.
 The calendar keeps hatched daily cells and keyboard access in failure states. Profile errors report availability accurately.
 Photography rotation works for populated collections with pause and reduced-motion controls. The current personal collections remain empty.
 Name and quote animations preserve layout geometry.
 [Recording analysis](docs/video-component-analysis.md) and [public GitHub research](docs/github-source-review.md) record the reference study.
-The portfolio is one continuous homepage. Only `/blogs` and `/photography` leave it; projects, experience, hackathons, achievements, skills and GitHub activity use homepage sections and inline disclosure.
+The portfolio is one continuous homepage. A document load always opens at its hero and clears a stale section fragment; section links continue to navigate normally after startup. Only `/blogs` and `/photography` leave it; projects, experience, hackathons, achievements, skills and GitHub activity use homepage sections and inline disclosure.
 Shared content and links are typed and centralized. Photography collections share one gallery route and open images in a lightbox.
 GitHub profile statistics use the public REST API. The daily calendar reads validated public contribution data and labels its hourly relay.
 Page views use a persistent public counter. The running cat follows fine mouse pointers and has a saved visibility control.

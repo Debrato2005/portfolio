@@ -1,6 +1,6 @@
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: stretch;
   gap: 1rem;
 }
@@ -10,13 +10,13 @@
 .project-card {
   position: relative;
   display: grid;
-  grid-template-columns: 112px minmax(0, 1fr);
+  grid-template-columns: 86px minmax(0, 1fr);
   grid-template-rows: auto auto auto;
   align-content: start;
   align-items: start;
   min-width: 0;
-  padding: 0.75rem;
-  gap: 0.5rem 0.75rem;
+  padding: 0.625rem;
+  gap: 0.4rem 0.625rem;
   border: 1px solid var(--portfolio-border);
   border-radius: var(--radius-panel);
   background: var(--surface-panel);
@@ -32,10 +32,10 @@
   grid-column: 1;
   grid-row: 1 / 3;
   display: block;
-  width: 112px;
-  height: 128px;
+  width: 86px;
+  height: 96px;
   min-height: 0;
-  max-height: 128px;
+  max-height: 96px;
   overflow: hidden;
   border-radius: 5px;
   background: var(--portfolio-tint);
@@ -341,5 +341,7 @@
   }
   .project-card-heading h3 {
     padding-right: 0;
+    font-size: 1rem;
+    white-space: nowrap;
   }
 }
