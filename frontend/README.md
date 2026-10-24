@@ -89,5 +89,7 @@ The relay can lag GitHub by up to one hour. A provider failure stays unavailable
 The optional official path needs `GITHUB_TOKEN` in the server process. Never use a `VITE_` token.
 `GET /api/github-contributions?year=2026` accepts only a supported year and a fixed public profile. Without a server token it returns a safe 503 response.
 The handler in `api/github-contributions.ts` is compatible with a Node serverless function. A static Vite preview alone does not execute it.
+The gateway shares pending requests and caches every supported year for five minutes. Each Node process permits twelve upstream attempts per minute window.
+Before exposing the optional gateway, configure shared host rate limits across instances. Deployment also needs tested security headers for the HTML document.
 The page-view counter records one page load per browser document through Miles Hilliard CountAPI. It includes repeat visits and is not a unique-visitor measure.
 No deployment has been made.

@@ -52,6 +52,10 @@ Use [source rules](SOURCE_LEDGER.md) for consumers, licenses, and replacement ch
 ## GitHub deployment boundary
 
 The fixed-profile gateway accepts a validated GET year, keeps `GITHUB_TOKEN` server-side, limits provider time and cache size, and returns safe errors.
+Concurrent callers share one pending request per year. The cache retains all supported years for five minutes, which prevents eviction through year rotation.
+A process-wide budget allows twelve upstream attempts per sixty-second window, including failed attempts. Cache hits and shared requests do not consume more attempts.
+An exhausted budget returns 429 with `Retry-After`. Failed pending requests clear so later calls can retry.
+These controls apply to one Node process. Public hosting still needs a shared traffic limit across instances and tested security response headers.
 The shared calendar parser checks ordered UTC dates, daily counts, levels and the exact total. It rejects incomplete data.
 The public relay returns public profile calendar data and caches responses for up to one hour. The adapter rejects malformed, incomplete, reordered or inconsistent values.
 `VITE_GITHUB_CONTRIBUTIONS_SOURCE=github-graphql` selects the optional official path. Missing credentials block only that path.

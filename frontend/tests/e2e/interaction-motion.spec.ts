@@ -38,7 +38,7 @@ test('changing motion preferences keeps quotes paused until explicit play', asyn
   const before = await page.locator('.quote-text').textContent();
   await page.clock.runFor(8500);
   await expect(page.locator('.quote-text')).toHaveText(before ?? '');
-  await page.getByRole('button', { name: 'Play quotes' }).click();
+  await page.getByRole('button', { name: 'Play quotes' }).press('Enter');
   await page.clock.runFor(8500);
   await expect(page.locator('.quote-text')).not.toHaveText(before ?? '');
 });
@@ -50,9 +50,11 @@ test('focusing a quote source cancels its pending automatic change', async ({
   await page.goto('/');
   await page.locator('.quotes').scrollIntoViewIfNeeded();
   await page.clock.runFor(50);
+  await page.getByRole('button', { name: 'Pause quotes' }).focus();
+  await page.getByRole('button', { name: 'Play quotes' }).press('Enter');
   const quote = page.locator('.quote-text');
   const before = await quote.textContent();
-  await page.clock.runFor(8000);
+  await page.clock.runFor(8050);
   await expect(quote).toHaveAttribute('data-fading', 'true');
   const source = quote.getByRole('link');
   await source.focus();
@@ -72,12 +74,12 @@ test('pausing a quote during its fade keeps the current quote visible', async ({
   await page.clock.runFor(50);
   await page.getByRole('button', { name: 'Pause quotes' }).focus();
   const play = page.getByRole('button', { name: 'Play quotes' });
-  await play.click();
+  await play.press('Enter');
   const quote = page.locator('.quote-text');
   const before = await quote.textContent();
   await page.clock.runFor(8050);
   await expect(quote).toHaveAttribute('data-fading', 'true');
-  await page.getByRole('button', { name: 'Pause quotes' }).click();
+  await page.getByRole('button', { name: 'Pause quotes' }).press('Enter');
   await page.clock.runFor(300);
   await expect(quote).toHaveText(before ?? '');
   await expect(quote).toHaveAttribute('data-fading', 'false');

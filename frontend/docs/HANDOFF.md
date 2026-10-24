@@ -2,6 +2,54 @@
 
 **Owner:** Continuation checkpoint
 
+## Security fixes and source push review, October 24
+
+CURRENT: the reviewed frontend changes are ready for a manual source commit and normal push.
+The [remediation report](push-security-review-2026-10-24.md) supersedes the October 23 push decision.
+Deployment remains DEFERRED until the selected host applies shared traffic limits and tested security headers.
+
+Zod now uses 4.6.7 after a live audit identified a high advisory in the transitive lint dependency.
+The update disabled package lifecycle scripts and changed only the Zod lock entry.
+The optional GitHub handler shares pending year requests, retains every supported year for five minutes, and limits upstream attempts per process.
+Twelve attempts are permitted per sixty-second window, including failures. Exhaustion returns 429 with `Retry-After`.
+Cached and shared results do not consume more attempts. Failed shared requests clear for recovery.
+The new behavioral checks failed before the handler change and pass after it.
+
+The quote-focus test now starts a fresh playback cycle before it advances the controlled clock.
+Keyboard activation avoids pointer stability waits with a paused clock. The original fade, cancellation, text, and focus assertions remain.
+The quote component itself did not change.
+
+The [guidance license record](licenses/README.md) lists declared upstream terms for all nineteen imported bundles.
+Missing license texts, attribution notices, and their source receipt live outside the bundles.
+Graphify's original import revision remains unrecorded. Its upstream license snapshot is recorded separately.
+All imported bundle files and `skills-lock.json` remain unchanged.
+
+| Check                            | Observed result                                                                                                                                                                     |
+| -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| History and current files        | Four commits, 962 reachable blobs, 862 tracked files. Eleven credential-pattern rules found only the deliberate invalid-credential test URL. The scan found no apparent credential. |
+| Live dependency audit            | Zero known vulnerabilities across 256 dependencies.                                                                                                                                 |
+| `npm run check`                  | Exit 0 with Node 22.23.4: TypeScript, ESLint, Prettier, 26 unit and contract tests, production build, docs, and nineteen skill bundles.                                             |
+| Development browsers, one worker | 275 of 276 passed. A WebKit document load at a legacy address timed out. That unchanged case passed three isolated repetitions. All twelve motion checks passed.                    |
+| Production browsers, one worker  | Final isolated run: 36 of 36 passed across Chromium, Firefox, and WebKit.                                                                                                           |
+| Guidance notices                 | Eighteen license and attribution text files match their source receipt hashes. Local record links and new-file whitespace checks pass.                                              |
+
+Playwright 1.63.0 used the existing pinned Chromium 153.0.8010.12, Firefox 155.0, and WebKit 26.6 installations.
+The development suite did not pass as one clean run. Every development case has a passing observation, including three passes for the isolated timeout.
+The initial production run passed 35 of 36 cases. The failing WebKit mobile case received a renderer-chunk 404 during an overlapping check build.
+The final production run used a stable build and passed all 36 cases without renderer changes.
+The initial failure trace is retained beside the navigation trace.
+The navigation timeout trace remains in ignored `output/playwright/push-security-2026-10-24/development-navigation-timeout/`.
+Controlled browser responses do not prove live-service availability. No real GitHub token or live quota test was used.
+
+The initial sandbox blocked registry DNS and the browser server. The required network and loopback checks then ran with approved access.
+The worktree was clean at entry on `main`, at `e63f98f57a292705ff6ba61fe766e113553b78a3`.
+A live remote check returned that same commit for `origin/main`.
+Changes stay in the reviewed frontend scope. The Git index, history, root protected directories, and imported bundles remain unchanged.
+The bounded diff and `git diff --check` passed. New license files also passed whitespace and receipt-hash checks.
+No stage, commit, push, or deployment occurred. Manual Git commands appear in the remediation report.
+
+The prose drafts scored 1.35 findings per 100 words for the report and 1.77 for this handoff entry.
+
 ## Push and security review, October 23
 
 PARTIAL: the [push and security review](push-security-review-2026-10-23.md) covers all three referenced commits, 961 reachable blobs, and 861 tracked files. Eleven secret-pattern rules found no apparent credential. Fourteen distinct matched locations were illustrative documentation, dynamic local-tool token references, or a deliberate invalid-credential test URL. Both committed dependency trees received live npm audits. Current Vite 8.3.5 reports zero known vulnerabilities across 256 dependencies. The older Vite 8.3.2 tree has one vulnerable package, already corrected at current `HEAD`. The live `origin/main` check matched `2a5813cbbc91f80f927885516977fa0076e164f7`.

@@ -1,10 +1,11 @@
 import type { IncomingMessage, ServerResponse } from 'node:http';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import handler from '../../api/github-contributions';
 import {
   getContributions,
   parseContributions,
 } from '../../src/lib/api/contributions';
+
+let handler: typeof import('../../api/github-contributions').default;
 
 function days(year: number, fullYear = false) {
   const now = new Date();
@@ -86,7 +87,9 @@ async function request(
     headers,
   };
 }
-beforeEach(() => {
+beforeEach(async () => {
+  vi.resetModules();
+  handler = (await import('../../api/github-contributions')).default;
   vi.useFakeTimers();
   vi.setSystemTime(new Date('2026-10-15T00:00:00Z'));
   vi.stubEnv('GITHUB_TOKEN', 'unit-test-token');
@@ -267,6 +270,58 @@ describe('contribution transport boundaries', () => {
     await request();
     expect(fetcher).toHaveBeenCalledTimes(2);
   });
+  it('shares a pending year across concurrent callers', async () => {
+    let release!: (response: Response) => void;
+    const fetcher = vi.fn(
+      () =>
+        new Promise<Response>((resolve) => {
+          release = resolve;
+        }),
+    );
+    vi.stubGlobal('fetch', fetcher);
+    const requests = Array.from({ length: 12 }, () => request());
+    expect(fetcher).toHaveBeenCalledTimes(1);
+    release(Response.json(provider(2024)));
+    const responses = await Promise.all(requests);
+    expect(responses.every((response) => response.status === 200)).toBe(true);
+    expect(
+      responses.every(
+        (response) =>
+          JSON.stringify(response.body) === JSON.stringify(responses[0]?.body),
+      ),
+    ).toBe(true);
+  });
+  it('limits upstream attempts across years and failures, then permits recovery', async () => {
+    const fetcher = vi.fn(async () => Response.json(provider(2025)));
+    vi.stubGlobal('fetch', fetcher);
+    expect((await request('/?year=2025')).status).toBe(200);
+    fetcher.mockImplementation(async () => Response.json({}, { status: 500 }));
+    for (let i = 0; i < 11; i++)
+      expect((await request(`/?year=${2008 + i}`)).status).toBe(502);
+    const blocked = await request('/?year=2024');
+    expect(blocked.status).toBe(429);
+    expect(blocked.headers['Retry-After']).toBe('60');
+    expect((await request('/?year=2025')).status).toBe(200);
+    expect(fetcher).toHaveBeenCalledTimes(12);
+    vi.advanceTimersByTime(60000);
+    fetcher.mockImplementation(async () => Response.json(provider(2024)));
+    expect((await request()).status).toBe(200);
+    expect(fetcher).toHaveBeenCalledTimes(13);
+  });
+  it('clears a failed shared request so the next caller can retry', async () => {
+    const fetcher = vi.fn(async (): Promise<Response> => {
+      throw new Error('private provider details');
+    });
+    vi.stubGlobal('fetch', fetcher);
+    const responses = await Promise.all(
+      Array.from({ length: 12 }, () => request()),
+    );
+    expect(responses.every((response) => response.status === 502)).toBe(true);
+    expect(fetcher).toHaveBeenCalledTimes(1);
+    fetcher.mockImplementation(async () => Response.json(provider(2024)));
+    expect((await request()).status).toBe(200);
+    expect(fetcher).toHaveBeenCalledTimes(2);
+  });
   it('does not expose provider errors or turn failed responses into zero counts', async () => {
     vi.stubGlobal(
       'fetch',
@@ -298,7 +353,7 @@ describe('contribution transport boundaries', () => {
     await vi.advanceTimersByTimeAsync(8001);
     expect((await pending).status).toBe(504);
   });
-  it('bounds retained years and validates the current year only through today', async () => {
+  it('retains all supported years and validates the current year only through today', async () => {
     const fetcher = vi.fn(async (_url: string, options: RequestInit) => {
       const year = Number(
         JSON.parse(options.body as string).variables.from.slice(0, 4),
@@ -309,7 +364,7 @@ describe('contribution transport boundaries', () => {
     for (const year of [2010, 2011, 2012, 2013, 2014, 2015])
       expect((await request(`/?year=${year}`)).status).toBe(200);
     await request('/?year=2010');
-    expect(fetcher).toHaveBeenCalledTimes(7);
+    expect(fetcher).toHaveBeenCalledTimes(6);
     const current = await request('/?year=2026');
     expect(parseContributions(current.body, 2026).days.at(-1)?.date).toBe(
       '2026-10-15',

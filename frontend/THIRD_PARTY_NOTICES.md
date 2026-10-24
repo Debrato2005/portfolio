@@ -22,8 +22,9 @@ The lock records exact upstream repositories and revisions, when available, in `
 Retained LICENSE and NOTICE files remain with their bundles.
 Some local source bundles contain no standalone license file.
 
-The lock records their origin, but full redistribution clearance is UNKNOWN.
-Review upstream terms before redistributing the complete agent bundle as a separate package.
+The [guidance license record](docs/licenses/README.md) lists upstream terms for all nineteen bundles.
+Missing license texts and required notices now live in `docs/licenses/`, outside the preserved bundles.
+The record distinguishes locked revisions, matched historical source, and Graphify's unrecorded original import revision.
 ASD-STE100's implementation license does not grant rights to the ASD-STE100 specification itself.
 
 ## Icons and project illustrations

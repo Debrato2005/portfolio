@@ -3,6 +3,14 @@ import { parseContributions } from '../src/lib/api/contributions.ts';
 import type { Contributions } from '../src/lib/api/contributions.ts';
 
 const cache = new Map<number, { expires: number; data: Contributions }>();
+const pending = new Map<number, Promise<Contributions>>();
+// ponytail: this budget is per process. Public hosts also need a shared traffic limit.
+let budget = { resets: 0, attempts: 0 };
+class ProviderError extends Error {
+  constructor(readonly status: number) {
+    super('Contribution data is unavailable.');
+  }
+}
 const query = `query Calendar($from: DateTime!, $to: DateTime!) {
   user(login: "Debrato2005") {
     login
@@ -101,6 +109,29 @@ export default async function githubContributions(
     return;
   }
   cache.delete(year);
+  let result = pending.get(year);
+  if (!result) {
+    const now = Date.now();
+    if (now >= budget.resets) budget = { resets: now + 60000, attempts: 0 };
+    if (budget.attempts >= 12) {
+      response.setHeader(
+        'Retry-After',
+        String(Math.ceil((budget.resets - now) / 1000)),
+      );
+      return fail(429);
+    }
+    budget.attempts++;
+    result = loadYear(year, token).finally(() => pending.delete(year));
+    pending.set(year, result);
+  }
+  try {
+    response.end(JSON.stringify(await result));
+  } catch (error) {
+    fail(error instanceof ProviderError ? error.status : 502);
+  }
+}
+
+async function loadYear(year: number, token: string): Promise<Contributions> {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 8000);
   try {
@@ -124,14 +155,15 @@ export default async function githubContributions(
         },
       }),
     });
-    if (!upstream.ok) return fail(upstream.status === 429 ? 503 : 502);
+    if (!upstream.ok)
+      throw new ProviderError(upstream.status === 429 ? 503 : 502);
     const raw: unknown = await upstream.json();
     const data = normalize(raw, year);
-    if (cache.size >= 5) cache.delete(cache.keys().next().value!);
     cache.set(year, { expires: Date.now() + 300000, data });
-    response.end(JSON.stringify(data));
-  } catch {
-    fail(controller.signal.aborted ? 504 : 502);
+    return data;
+  } catch (error) {
+    if (error instanceof ProviderError) throw error;
+    throw new ProviderError(controller.signal.aborted ? 504 : 502);
   } finally {
     clearTimeout(timeout);
   }

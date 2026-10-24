@@ -71,7 +71,7 @@ Smolink application code, API models, personal data, product documentation, and 
 | `prettier`                    | 3.9.9          | MIT              | Development |
 | `typescript`                  | 6.0.3          | Apache-2.0       | Development |
 | `typescript-eslint`           | 8.71.0         | MIT              | Development |
-| `vite`                        | 8.3.2          | MIT              | Development |
+| `vite`                        | 8.3.5          | MIT              | Development |
 | `vitest`                      | 5.0.3          | MIT              | Development |
 | `qrcode`                      | 1.5.4          | MIT              | Development |
 

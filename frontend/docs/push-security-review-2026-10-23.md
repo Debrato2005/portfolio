@@ -2,6 +2,8 @@
 
 **Owner:** Bounded push review
 
+Historical review. The [October 24 remediation record](push-security-review-2026-10-24.md) and current handoff supersede this push decision.
+
 ## Decision
 
 PARTIAL: no apparent committed credential or current dependency advisory was found. Repository-wide publication clearance remains UNKNOWN for imported skill bundles. The optional authenticated GitHub gateway needs abuse controls before public deployment. The quote-focus test still fails in all three browser engines. Do not treat this audit as unconditional push clearance.
