@@ -2,9 +2,9 @@
   position: fixed;
   left: 0;
   top: 0;
+  z-index: 30;
   width: 32px;
   height: 32px;
-  z-index: 30;
   pointer-events: auto;
   cursor: pointer;
   background-image: url('/images/oneko.gif');
@@ -13,22 +13,22 @@
   contain: layout paint;
 }
 .cat-toggle {
-  color: var(--color-muted);
-  background: transparent;
+  min-height: 2.75rem;
+  padding: 0 0.9rem;
   border: 0;
-  padding: 0.4rem 0.25rem;
-  min-height: 44px;
-  font: inherit;
-  text-decoration: underline;
-  text-underline-offset: 0.2em;
+  border-radius: var(--shape-full);
+  color: var(--md-on-surface-variant);
+  background: var(--md-surface-container);
+  font-size: var(--type-label-m);
+  font-weight: 600;
   cursor: pointer;
 }
 .cat-toggle:hover {
-  color: var(--color-accent);
+  color: var(--md-on-secondary-container);
+  background: var(--md-secondary-container);
 }
 .cat-toggle:disabled {
   cursor: default;
-  text-decoration: none;
 }
 @media (prefers-reduced-motion: reduce), (hover: none), (pointer: coarse) {
   .cat-sprite {

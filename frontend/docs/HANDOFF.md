@@ -2,6 +2,21 @@
 
 **Owner:** Continuation checkpoint
 
+## Design skill imports, October 26
+
+CURRENT: five bundles were downloaded at pinned commits and recorded in `skills-lock.json`:
+`design-taste-frontend` was replaced by Taste Skill v2 (Leonxlnx/taste-skill@12af471), `frontend-design` (anthropics/skills@dbd4588), `baseline-ui` (ibelick/ui-skills@59193a7), `bencium-innovative-ux-designer` (bencium/bencium-marketplace@5de46a3) and `neobrutalism` from Awesome Design Skills (bergside/awesome-design-skills@f631a09).
+The new bundles match their lock hashes. A scan found network calls only to open image archives in the Taste Skill scripts, and no exec calls or secrets.
+BLOCKED: no upstream skill named "Pro Design Taste" was found; the owner must name its source.
+Limits: on this Windows checkout `npm run skills:check` fails for every bundle, including pre-existing ones, because `core.autocrlf=true` rewrites LF to CRLF and the verifier records Windows path separators. The lock keeps the LF scheme. The frontend revamp was cancelled by the owner before any source change.
+
+## Graphify setup on Windows, October 26
+
+CURRENT: Graphify 0.9.95 is installed at `~/.local/bin/graphify` and resolves through PATH; the wrapper's Linux uv path is absent on this machine.
+`npm run graph:build` wrote a code-only graph of `src/` to ignored `.local/graph/graphify-out/graph.json`: 44 code files, 190 nodes, 449 edges, no clustering.
+`npm run graph:query -- "what renders the main page"` returned 76 nodes from `main.tsx`, `App.tsx`, and `PageMetadata.tsx`.
+Limits: 12 CSS files are unclassified and skipped. `tokens.css` was skipped as potentially sensitive by name. `lib/config/runtime.test.ts` yielded no symbols. No semantic document extraction, report, HTML view, hook, or CLAUDE.md integration was added.
+
 ## Security fixes and source push review, October 24
 
 CURRENT: the reviewed frontend changes are ready for a manual source commit and normal push.

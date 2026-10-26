@@ -7,15 +7,19 @@ import { RouteFocus } from './RouteFocus';
 import { PageMetadata } from './PageMetadata';
 import { PhotographyPage } from '../routes/PhotographyPage';
 import { BlogsPage } from '../routes/BlogsPage';
-import '../styles/content-pages.css';
 import { CommandPalette } from '../features/portfolio/CommandPalette';
 import { usePageViews } from '../features/portfolio/usePageViews';
 import { useTheme } from '../features/portfolio/Theme';
 import { CatCompanion } from '../features/portfolio/CatCompanion';
+import { ScrollProgress, SkyMenu } from '../features/portfolio/Expressive';
+import { shape } from '../features/portfolio/shapes';
 import { Icon } from '../components/ui/Icon';
+import { useRipple } from '../components/ui/useRipple';
+import type { CSSProperties } from 'react';
 export function App() {
   usePageViews();
-  const { theme, chooseTheme } = useTheme();
+  useRipple();
+  const { theme, chooseTheme, sky, chooseSky } = useTheme();
   const resetHome = (event: React.MouseEvent<HTMLAnchorElement>) => {
     if (
       event.button ||
@@ -45,9 +49,19 @@ export function App() {
             onClick={resetHome}
             aria-label="Portfolio home"
           >
+            <span
+              className="wordmark-shape"
+              aria-hidden="true"
+              style={
+                {
+                  '--shape-rest': shape('cookie9'),
+                  '--shape-active': shape('clover4'),
+                } as CSSProperties
+              }
+            />
             Debrato
           </Link>
-          <nav aria-label="Main">
+          <nav className="app-nav" aria-label="Main">
             <NavLink to="/" end onClick={resetHome}>
               Home
             </NavLink>
@@ -56,10 +70,13 @@ export function App() {
             <Link to="/#contact">Contact</Link>
           </nav>
           <div className="header-controls">
-            <CommandPalette chooseTheme={chooseTheme} />
+            <CommandPalette chooseTheme={chooseTheme} chooseSky={chooseSky} />
+            <SkyMenu sky={sky} chooseSky={chooseSky} />
             <button
-              className="theme-control"
+              className="icon-button ripple theme-control"
+              data-mode={theme}
               aria-label={`Theme: ${theme[0]?.toUpperCase()}${theme.slice(1)}`}
+              title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`}
               onClick={(event) => {
                 const bounds = event.currentTarget.getBoundingClientRect();
                 chooseTheme(theme === 'dark' ? 'light' : 'dark', {
@@ -69,9 +86,9 @@ export function App() {
               }}
             >
               <Icon name={theme === 'light' ? 'sun' : 'moon'} />
-              <span>{theme}</span>
             </button>
           </div>
+          <ScrollProgress />
         </header>
         <RouteFocus />
         <PageMetadata />
@@ -82,7 +99,7 @@ export function App() {
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
         <footer className="site-footer">
-          <span>Debrato Ghosh · Built with curiosity.</span>
+          <span>Debrato Ghosh · Built with curiosity under many skies.</span>
           <div>
             <a href={links.github}>GitHub</a>
             <a href={links.email}>Mail</a>

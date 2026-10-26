@@ -1,11 +1,7 @@
 import { projects } from './content';
 export function EngineeringTimeline() {
   return (
-    <details className="engineering-notes">
-      <summary>
-        Engineering notes{' '}
-        <span>Projects in progress and documented decisions</span>
-      </summary>
+    <div className="engineering-notes">
       <ol>
         {projects
           .filter((project) => project.period)
@@ -24,6 +20,6 @@ export function EngineeringTimeline() {
         Dates from the supplied resume. These are project periods, not a GitHub
         activity feed.
       </p>
-    </details>
+    </div>
   );
 }

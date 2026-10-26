@@ -7,38 +7,39 @@
       name="description"
       content="Debrato Ghosh — software systems, computer vision research, photography and astronomy."
     />
-    <meta name="theme-color" content="#f5f1e8" />
+    <meta name="theme-color" content="#fbf8ff" />
     <link
       rel="preload"
-      href="/fonts/jetbrains-mono-latin-variable.woff2"
+      href="/fonts/roboto-flex-latin-wdth.woff2"
       as="font"
       type="font/woff2"
       crossorigin
     />
     <title>Debrato Ghosh — Developer & Researcher</title>
-    <link
-      rel="preload"
-      href="/fonts/inter-latin-regular.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
     <script>
-      try {
-        const saved = localStorage.getItem('portfolio-theme');
-        document.documentElement.dataset.theme =
-          saved === 'light' || saved === 'dark'
-            ? saved
-            : matchMedia('(prefers-color-scheme: dark)').matches
-              ? 'dark'
-              : 'light';
-      } catch {
-        document.documentElement.dataset.theme = matchMedia(
-          '(prefers-color-scheme: dark)',
-        ).matches
-          ? 'dark'
-          : 'light';
-      }
+      (function () {
+        var root = document.documentElement;
+        var dark = matchMedia('(prefers-color-scheme: dark)').matches;
+        try {
+          var saved = localStorage.getItem('portfolio-theme');
+          root.dataset.theme =
+            saved === 'light' || saved === 'dark'
+              ? saved
+              : dark
+                ? 'dark'
+                : 'light';
+          var sky = localStorage.getItem('portfolio-sky');
+          root.dataset.seed =
+            sky && /^(twilight|aurora|nebula|golden-hour)$/.test(sky)
+              ? sky
+              : sky && /^#[0-9a-f]{6}$/i.test(sky)
+                ? 'custom'
+                : 'twilight';
+        } catch {
+          root.dataset.theme = dark ? 'dark' : 'light';
+          root.dataset.seed = 'twilight';
+        }
+      })();
     </script>
   </head>
   <body>

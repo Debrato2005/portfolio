@@ -208,7 +208,7 @@ export function PhotographyStrip({
           <div>
             {canPlay && (
               <button
-                className="quiet-button collection-playback"
+                className="quiet-button ripple collection-playback"
                 aria-label={
                   playing && !reducedMotion
                     ? 'Pause collection rotation'
@@ -221,7 +221,7 @@ export function PhotographyStrip({
               </button>
             )}
             <button
-              className="quiet-button"
+              className="quiet-button ripple"
               aria-label="Previous collection"
               onFocus={() => setPlaying(false)}
               onClick={() => {
@@ -232,7 +232,7 @@ export function PhotographyStrip({
               <Icon name="caret-left" />
             </button>
             <button
-              className="quiet-button"
+              className="quiet-button ripple"
               aria-label="Next collection"
               onFocus={() => setPlaying(false)}
               onClick={() => {

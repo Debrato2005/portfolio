@@ -1,8 +1,18 @@
+import { useState } from 'react';
 import type { CSSProperties, ReactNode } from 'react';
 import { achievements } from './content';
+import { morph } from './shapes';
+import type { ShapeName } from './shapes';
 
-const tilts = ['-2.4deg', '-1.1deg', '0.2deg', '1.3deg', '2.5deg'];
-const drops = ['0.1rem', '0.35rem', '0.55rem', '0.35rem', '0.1rem'];
+const badges: ShapeName[] = [
+  'sunny',
+  'cookie12',
+  'clover4',
+  'flower',
+  'pentagon',
+];
+const tones = ['tertiary', 'primary', 'secondary'] as const;
+const tilts = [-3, 2, -1.5, 3, -2.5];
 
 const doodles: Record<string, ReactNode> = {
   svasth: (
@@ -38,31 +48,41 @@ const doodles: Record<string, ReactNode> = {
   ),
 };
 
+/**
+ * Hackathon records hang from a sagging line. Each card swings on a damped
+ * spring when pointed at, focused or tapped, and the row scrolls sideways.
+ */
 export function Achievements() {
+  const [swinging, setSwinging] = useState<string | null>(null);
+  const count = achievements.length;
   return (
     <div className="achievement-wall">
-      <svg
-        className="achievement-rope"
-        viewBox="0 0 1000 40"
-        preserveAspectRatio="none"
-        aria-hidden="true"
-      >
-        <path d="M0 7C230 20 770 22 1000 5" />
-      </svg>
       <ul className="achievement-line" aria-label="Hackathon records">
         {achievements.map((achievement, index) => (
           <li
             className="achievement-pin"
             key={achievement.slug}
+            data-tone={tones[index % tones.length]}
+            data-swing={swinging === achievement.slug || undefined}
+            onPointerEnter={() => setSwinging(achievement.slug)}
+            onClick={() => {
+              setSwinging(null);
+              requestAnimationFrame(() => setSwinging(achievement.slug));
+            }}
+            onFocus={() => setSwinging(achievement.slug)}
+            onAnimationEnd={(event) => {
+              if (event.animationName === 'card-swing') setSwinging(null);
+            }}
             style={
               {
-                '--pin-tilt': tilts[index % tilts.length],
-                '--pin-drop': drops[index % drops.length],
+                ...morph(badges[index % badges.length] ?? 'sunny', 'squircle'),
+                '--tilt': `${tilts[index % tilts.length]}deg`,
+                '--drop': `${(Math.sin((Math.PI * (index + 0.5)) / count) * 1.6).toFixed(2)}rem`,
               } as CSSProperties
             }
           >
+            <span className="achievement-clip" aria-hidden="true" />
             <article className="achievement-paper">
-              <span className="achievement-clip" aria-hidden="true" />
               <span className="achievement-doodle" aria-hidden="true">
                 {doodles[achievement.slug]}
               </span>

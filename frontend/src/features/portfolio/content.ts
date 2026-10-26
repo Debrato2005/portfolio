@@ -363,3 +363,22 @@ export const skillGroups = [
   ['AI / ML', 'Computer vision', 'PyTorch', 'TensorFlow'],
   ['Research / Tools', 'pVACtools', 'MHCflurry', 'Docker', 'Linux'],
 ] as const;
+
+/** Facts from the public GitHub profile README at github.com/Debrato2005 (read October 2026). */
+export const profile = {
+  status: 'Open to research and SDE internships',
+  location: 'Manipal, India',
+  focus: ['Backend', 'AI / ML', 'Security', 'Research'],
+  tools: [
+    'FastAPI',
+    'PostgreSQL',
+    'Redis',
+    'Docker',
+    'Git',
+    'Linux',
+    'PyTorch',
+  ],
+  spokenLanguages: ['English', 'Hindi', 'Bengali', 'Marathi', 'Gujarati'],
+  offScreen: ['Photography', 'Astrophotography', 'Gym', 'Swimming'],
+  systems: ['Windows', 'Ubuntu', 'CachyOS', 'Pop!_OS'],
+} as const;

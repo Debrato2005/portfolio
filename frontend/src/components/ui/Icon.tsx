@@ -18,7 +18,12 @@ type IconName =
   | 'arrow-up'
   | 'git-branch'
   | 'users'
-  | 'user-plus';
+  | 'user-plus'
+  | 'palette'
+  | 'check'
+  | 'x'
+  | 'sparkle'
+  | 'caret-down';
 export function Icon({ name }: { name: IconName }) {
   return (
     <span

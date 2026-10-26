@@ -4,27 +4,31 @@
 
 ## Installed project guidance
 
-| Skill                         | Location                                | State                   |
-| ----------------------------- | --------------------------------------- | ----------------------- |
-| `caveman`                     | `.agents/skills/caveman`                | Local guidance imported |
-| `design-taste-frontend`       | `.agents/skills/design-taste-frontend`  | Local guidance imported |
-| `impeccable`                  | `.agents/skills/impeccable`             | Local guidance imported |
-| `investigate-first`           | `.agents/skills/investigate-first`      | Local guidance imported |
-| `lean-build`                  | `.agents/skills/lean-build`             | Local guidance imported |
-| `playwright`                  | `.agents/skills/playwright`             | Local guidance imported |
-| `playwright-interactive`      | `.agents/skills/playwright-interactive` | Local guidance imported |
-| `ponytail`                    | `.agents/skills/ponytail`               | Local guidance imported |
-| `vercel-react-best-practices` | `.agents/skills/react-best-practices`   | Local guidance imported |
-| `safe-refactor`               | `.agents/skills/safe-refactor`          | Local guidance imported |
-| `screenshot`                  | `.agents/skills/screenshot`             | Local guidance imported |
-| `surgical-patch`              | `.agents/skills/surgical-patch`         | Local guidance imported |
-| `ui-ux-pro-max`               | `.agents/skills/ui-ux-pro-max`          | Local guidance imported |
-| `verify-and-stop`             | `.agents/skills/verify-and-stop`        | Local guidance imported |
-| `web-design-guidelines`       | `.agents/skills/web-design-guidelines`  | Local guidance imported |
-| `graphify`                    | `.agents/skills/graphify`               | Local guidance imported |
-| `fastapi`                     | `.agents/skills/fastapi`                | Local guidance imported |
-| `python-testing`              | `.agents/skills/python-testing`         | Local guidance imported |
-| `asd-ste100`                  | `.agents/skills/asd-ste100`             | Local guidance imported |
+| Skill                            | Location                                        | State                   |
+| -------------------------------- | ----------------------------------------------- | ----------------------- |
+| `caveman`                        | `.agents/skills/caveman`                        | Local guidance imported |
+| `design-taste-frontend`          | `.agents/skills/design-taste-frontend`          | Taste Skill v2 imported |
+| `frontend-design`                | `.agents/skills/frontend-design`                | Local guidance imported |
+| `baseline-ui`                    | `.agents/skills/baseline-ui`                    | Local guidance imported |
+| `bencium-innovative-ux-designer` | `.agents/skills/bencium-innovative-ux-designer` | Local guidance imported |
+| `neobrutalism`                   | `.agents/skills/neobrutalism`                   | Local guidance imported |
+| `impeccable`                     | `.agents/skills/impeccable`                     | Local guidance imported |
+| `investigate-first`              | `.agents/skills/investigate-first`              | Local guidance imported |
+| `lean-build`                     | `.agents/skills/lean-build`                     | Local guidance imported |
+| `playwright`                     | `.agents/skills/playwright`                     | Local guidance imported |
+| `playwright-interactive`         | `.agents/skills/playwright-interactive`         | Local guidance imported |
+| `ponytail`                       | `.agents/skills/ponytail`                       | Local guidance imported |
+| `vercel-react-best-practices`    | `.agents/skills/react-best-practices`           | Local guidance imported |
+| `safe-refactor`                  | `.agents/skills/safe-refactor`                  | Local guidance imported |
+| `screenshot`                     | `.agents/skills/screenshot`                     | Local guidance imported |
+| `surgical-patch`                 | `.agents/skills/surgical-patch`                 | Local guidance imported |
+| `ui-ux-pro-max`                  | `.agents/skills/ui-ux-pro-max`                  | Local guidance imported |
+| `verify-and-stop`                | `.agents/skills/verify-and-stop`                | Local guidance imported |
+| `web-design-guidelines`          | `.agents/skills/web-design-guidelines`          | Local guidance imported |
+| `graphify`                       | `.agents/skills/graphify`                       | Local guidance imported |
+| `fastapi`                        | `.agents/skills/fastapi`                        | Local guidance imported |
+| `python-testing`                 | `.agents/skills/python-testing`                 | Local guidance imported |
+| `asd-ste100`                     | `.agents/skills/asd-ste100`                     | Local guidance imported |
 
 The React bundle uses the folder `react-best-practices` and declared name `vercel-react-best-practices`.
 Frontend instructions route later tasks to these local bundles.

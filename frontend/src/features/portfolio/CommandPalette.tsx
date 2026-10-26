@@ -4,6 +4,8 @@ import { useEffect, useId, useLayoutEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router';
 import { sections, projects, articles } from './content';
 import { Icon } from '../../components/ui/Icon';
+import { skies } from './Theme';
+import type { Sky } from './Theme';
 import type { ComponentProps } from 'react';
 
 const groups = [
@@ -26,8 +28,10 @@ type Command = {
 
 export function CommandPalette({
   chooseTheme,
+  chooseSky,
 }: {
   chooseTheme: (theme: 'light' | 'dark') => void;
+  chooseSky: (sky: Sky) => void;
 }) {
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState('');
@@ -137,6 +141,13 @@ export function CommandPalette({
       keywords: 'mode color scheme',
       action: () => chooseTheme(theme),
     })),
+    ...skies.map((sky) => ({
+      title: `Sky: ${sky.label}`,
+      group: 'Appearance' as const,
+      icon: 'palette' as const,
+      keywords: 'color colour palette seed dynamic',
+      action: () => chooseSky(sky.id),
+    })),
   ];
   const terms = query.toLowerCase().trim().split(/\s+/);
   const results = commands.filter((command) => {
@@ -218,7 +229,7 @@ export function CommandPalette({
         onClick={() => {
           invoker.current = trigger.current;
         }}
-        className="search-trigger"
+        className="search-trigger ripple"
         aria-label="Search portfolio"
       >
         <Icon name="magnifying-glass" />
@@ -235,7 +246,7 @@ export function CommandPalette({
             <Dialog.Title className="command-title">
               Find your way.
             </Dialog.Title>
-            <Dialog.Close className="quiet-button command-close">
+            <Dialog.Close className="quiet-button ripple command-close">
               Close <kbd>Esc</kbd>
             </Dialog.Close>
           </div>
@@ -351,7 +362,9 @@ export function CommandPalette({
           {!results.length && (
             <div className="command-empty">
               <p>No matching commands.</p>
-              <span>Try a project name, “photography”, or “dark mode”.</span>
+              <span>
+                Try a project name, “photography”, “aurora” or “dark mode”.
+              </span>
             </div>
           )}
           <div className="command-footer">

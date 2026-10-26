@@ -99,7 +99,7 @@ export function Quotes() {
       </div>
       <div className="quote-controls">
         <button
-          className="quiet-button"
+          className="quiet-button ripple"
           aria-label="Previous quote"
           onClick={() => {
             pauseQuotes();
@@ -112,7 +112,7 @@ export function Quotes() {
           {index + 1} / {quotes.length}
         </span>
         <button
-          className="quiet-button"
+          className="quiet-button ripple"
           aria-label="Next quote"
           onClick={() => {
             pauseQuotes();
@@ -122,7 +122,7 @@ export function Quotes() {
           Next
         </button>
         <button
-          className="quiet-button"
+          className="quiet-button ripple"
           aria-label={
             playing && !reducedMotion ? 'Pause quotes' : 'Play quotes'
           }

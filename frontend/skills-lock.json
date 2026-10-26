@@ -19,21 +19,58 @@
       "computedHash": "f62f4561351554e90a0711a14065a7f5b41c614615cd0248137f8a97bdee82f8"
     },
     "design-taste-frontend": {
-      "bundleHash": "f8b0b5a819c7a71c569e8f27d2dcc66de617940489c6bb36d1c81b0db7d9ed4d",
+      "bundleHash": "56c49a144a518038ff642844fc03c44789f187a0f8d796f36be7a5ddf8273560",
       "declaredName": "design-taste-frontend",
-      "fileCount": 1,
+      "fileCount": 39,
       "installedPath": ".agents/skills/design-taste-frontend",
       "skillPath": "skills/taste-skill/SKILL.md",
       "source": "Leonxlnx/taste-skill",
-      "sourceRef": "ce26fc25c0e5e8cab638f883de62d9a86ee5e45b",
+      "sourceRef": "12af471f627f866411b4bd785b19646d3672784c",
       "sourceType": "github",
-      "importedFrom": "/home/debrato/Projects/smolink/frontend/.agents/skills/design-taste-frontend",
-      "upstreamComputedHash": "aa194351b246b8b4799099d4ed7b033d29eab6e6e3d58d8d2172978be7b3ec89",
-      "installationMethod": "local-bundle-import",
+      "upstreamComputedHash": "3435ed963b15a1b6447746ec8844ab2cd38d8d2e8ead3451937f42df01e408c4",
+      "installationMethod": "github-pinned-download",
       "files": {
-        "SKILL.md": "aa194351b246b8b4799099d4ed7b033d29eab6e6e3d58d8d2172978be7b3ec89"
+        "assets/app.css": "16518c3a999fb81b2698137f1f743128c189272e8b1d411c4b02598c6755b67f",
+        "assets/base.css": "aa6ea21613c79e06e06dea3d33200c78590c89b0346bb976ec07947bb45ceafa",
+        "assets/base.js": "8d50416125596b84c0083d5d5ffba09add57db4b06cbf0eedac2d4999b7653bc",
+        "assets/charts.js": "a7e916594729576b7c7e37048a68508a3243fe8fbc9654775cd245232e9f8100",
+        "assets/scenes/stage.css": "b5c587dac45ac6fcc34ae7cb4aa2b3e43797b2ef5d71fd32b48483bda3fca3e0",
+        "assets/scenes/stage.js": "9ce782a94406e6a230c49ca5f87e56aff9d436da3f56416b1659421f8976bc2b",
+        "evals/evals.json": "df0ee2a248cd5445c0e1600eb095dc0d43dd312f5b4bb4316a78471ae0d22a74",
+        "library/app.json": "3678ccbe1e8d05feff6d4f07fa16a0d610aefeea5e697e842a876713ba763cf5",
+        "library/directions.json": "d71e3824af33a92d9e1ca543e17f80baa5b7a30c815df5125cfe3300a14892c1",
+        "library/heroes.json": "98d5e01104412a5fb27936f9c686f3bc0a5f76ce0793186d3de46b982c65b172",
+        "library/motions.json": "51815dd09a823c829897f99ed9ea7dc5c35bd305ac989b8a0632ea6d42a3f08b",
+        "library/palettes.json": "a14be9f45baba848c53436f4aa44eb4f1925ad3e232c5d1dcddf4f565661a525",
+        "library/photos.json": "8fc3b76bca90f44675bd99d99bb4ce95b0756c6c5d4141b7e917d11d90e61520",
+        "library/sections.json": "7c2c8a470a22501176948661f803434db8c542a511281752c717252de80c1ad8",
+        "library/sites.json": "a2bc4d0cff8ebff481f0dfd4879c106d5e1e16cb3122f9ab3702184a5e1f3502",
+        "library/type.json": "dbabf41a468775cf6cc5ea5f3c898b0663293822e167b72b02feba1ef03ebf37",
+        "README.md": "5e33fd716b3e1ffaca9340f645d44c193f9b446107fa67f0cce498d33025672c",
+        "references/app-screens.md": "55e937ec30de605b53a11310b446f328a3ce7403de24fff008920a00be1a5ed4",
+        "references/colour.md": "6556bcc7eed48b7bc2d0d281c28bf57c1b75e94d7ca0bde49f5d9df8c6a09351",
+        "references/copy.md": "676edbe75d5f3cfd8a793010ea9f730525ae074b231a674c2426264d3398262e",
+        "references/critique.md": "9c2f4392674530b3f02ac529fba53d82ab37b85f401c4c1989fbe98d6217f0b4",
+        "references/imagery.md": "518def6b2c643b295e13e66b09b66f2e3fc1421d3cf6c7dbb1dc749097ad2ad9",
+        "references/layout.md": "40080640719b07737afb94a8868afef87767a1ab4892814d9b6882e2d283453b",
+        "references/motion.md": "79f94d8469898d2bf6186c198ad86ddf691a67c6536eaec36a4ec101285d9a37",
+        "references/research.md": "83433646a352cae588591e05bc0a75fe1deadff55ede8851bc8dd5dd483adfc5",
+        "references/scenes.md": "733ac7258a1a28f2f6ae8205bc36ba66c563594ad0a2e2f829c5eaaba3199a61",
+        "references/tells.md": "8e6de4411c43d3108f832b3f33bb1a2a838148a72b92a176df893b67d99a0da9",
+        "references/type.md": "6353ff1d0ce2f9913628c88fbcb7dad3cc3877e61196848bce99e33a17d20611",
+        "scripts/assets.mjs": "b4b4b99b5634735f5a0b4213169cda5240ee6bbed8ed8042ad1bcf2b6607c1fa",
+        "scripts/draw.mjs": "6c2047d207d2400d3b099956dfe2ac306203b614246e66bc8760212a7f797dbf",
+        "scripts/inspect.mjs": "c0d7366f789b3f594787b37a525d1d7096104a499aac8a97ae04b405046cf02c",
+        "scripts/lib/app-draw.mjs": "aa0802d341d19b53ec14ec21746e428be49a8ec3ed7b30253194105fc18a8df6",
+        "scripts/lib/cdp.mjs": "320fb75c6454a97b88458e5c33559a1188042aa0041bd5eff53455900236c88a",
+        "scripts/lib/inspection-files.mjs": "5635c0d5fbe0f5bd012e58534bcd554ff7440a4e5c724a61a61c476c7f42e918",
+        "scripts/lib/probe.mjs": "a5a17df891e438f55f196d8233601c3c79c873755f442c1ac5c3568de4e6bb48",
+        "scripts/lib/rules.mjs": "8244aa9f53e77a59a562410310414e6b1a0f0cf002ce8f5aa792740b7f0149bf",
+        "scripts/lint.mjs": "05f2fae2f56fc051b539cdbacb43a6f78fbbfb9644bb74aa11be472ff12dcaf5",
+        "scripts/scenes.mjs": "234ec582e2b841457c33033feeeba8535f9ac285495a74d08dc533a1566c90d5",
+        "SKILL.md": "3435ed963b15a1b6447746ec8844ab2cd38d8d2e8ead3451937f42df01e408c4"
       },
-      "computedHash": "f8b0b5a819c7a71c569e8f27d2dcc66de617940489c6bb36d1c81b0db7d9ed4d"
+      "computedHash": "56c49a144a518038ff642844fc03c44789f187a0f8d796f36be7a5ddf8273560"
     },
     "impeccable": {
       "bundleHash": "97daec6b3a761c66a555248fa65f1342b811f5b5c426c4f534d98f3d4b82a9f2",
@@ -579,6 +616,76 @@
       "fileCount": 18,
       "computedHash": "806a8ff25b0923bcb173edbc9af4dafeee51ef55e816ff311c649209829c9fbe",
       "qualification": "guidance imported; runtime not implied"
+    },
+    "frontend-design": {
+      "bundleHash": "ff72963e3ba75a5f778feaad16dc3b8813a53c8d278caa86d83e325c1718b936",
+      "declaredName": "frontend-design",
+      "fileCount": 2,
+      "installedPath": ".agents/skills/frontend-design",
+      "skillPath": "skills/frontend-design/SKILL.md",
+      "source": "anthropics/skills",
+      "sourceRef": "dbd4588f9e1033efb41dad4bef2f7947c8993d44",
+      "sourceType": "github",
+      "upstreamComputedHash": "d91970639e9f5c37682ac7ab60094d35f1c7c1f38d731bd56396563aee10c1d3",
+      "installationMethod": "github-pinned-download",
+      "files": {
+        "LICENSE.txt": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+        "SKILL.md": "d91970639e9f5c37682ac7ab60094d35f1c7c1f38d731bd56396563aee10c1d3"
+      },
+      "computedHash": "ff72963e3ba75a5f778feaad16dc3b8813a53c8d278caa86d83e325c1718b936"
+    },
+    "baseline-ui": {
+      "bundleHash": "070c45872766b6f9e9ceb74c0551acad94eed2db6d1fc6d211738492a89a7034",
+      "declaredName": "baseline-ui",
+      "fileCount": 1,
+      "installedPath": ".agents/skills/baseline-ui",
+      "skillPath": "skills/baseline-ui/SKILL.md",
+      "source": "ibelick/ui-skills",
+      "sourceRef": "59193a75432e5f41c6980f53b9e6a7bd56919947",
+      "sourceType": "github",
+      "upstreamComputedHash": "fea3322f36d58fdafafce2aef56e4556dd2ac7b20876b7dff7d8be7f25fa597f",
+      "installationMethod": "github-pinned-download",
+      "files": {
+        "SKILL.md": "fea3322f36d58fdafafce2aef56e4556dd2ac7b20876b7dff7d8be7f25fa597f"
+      },
+      "computedHash": "070c45872766b6f9e9ceb74c0551acad94eed2db6d1fc6d211738492a89a7034"
+    },
+    "bencium-innovative-ux-designer": {
+      "bundleHash": "e6b776d5b47f426173c20af1efa050166652ced4faa2fb8b680b9a75812eec10",
+      "declaredName": "bencium-innovative-ux-designer",
+      "fileCount": 5,
+      "installedPath": ".agents/skills/bencium-innovative-ux-designer",
+      "skillPath": "bencium-innovative-ux-designer/skills/bencium-innovative-ux-designer/SKILL.md",
+      "source": "bencium/bencium-marketplace",
+      "sourceRef": "5de46a39b4640fa419560cd0b67e4c4b50dac802",
+      "sourceType": "github",
+      "upstreamComputedHash": "5b08bc5017bbdcaa36f4cc7ad5b1698f552a8c43222ebddb5ef52c5a2cf8c50a",
+      "installationMethod": "github-pinned-download",
+      "files": {
+        "references/CONCEPT-ROUNDS.md": "686b1d0a65faa635e54376040bab75926899e0db9f8df13b9aa95e74a5c009d0",
+        "references/ISOLATION-PROTOCOL.md": "3f1dace07793da680a7832236a6e4ada34e7694bd12cab0fd881925331d13596",
+        "references/PRODUCTION-SYSTEM.md": "b58a05d17c63f08dc49905b9890e02a24eec8512fd50f40b350aecfaa6695a6a",
+        "references/VERIFICATION.md": "c747e534dcd8a92d68ad5edc6d40b1f90f8c9222d411e707b0b2ffd111db1b1d",
+        "SKILL.md": "5b08bc5017bbdcaa36f4cc7ad5b1698f552a8c43222ebddb5ef52c5a2cf8c50a"
+      },
+      "computedHash": "e6b776d5b47f426173c20af1efa050166652ced4faa2fb8b680b9a75812eec10"
+    },
+    "neobrutalism": {
+      "bundleHash": "8e6e1f5168cc417a4ca29f458163aff11bc51ebe6135e638e599e376333b680f",
+      "declaredName": "neobrutalism",
+      "fileCount": 2,
+      "installedPath": ".agents/skills/neobrutalism",
+      "skillPath": "skills/neobrutalism/SKILL.md",
+      "source": "bergside/awesome-design-skills",
+      "sourceRef": "f631a09b4fcc0166f2e2c1a8c81906ef680c57e8",
+      "sourceType": "github",
+      "upstreamComputedHash": "a192e7b45613a95bb8e21931ad86552b0531b111d631d89e5c6a0b1f294f2c4f",
+      "installationMethod": "github-pinned-download",
+      "files": {
+        "DESIGN.md": "ea1d894156d31c284564bd4708e5283daac514ba97c24f8553a7ceca6a0f5e1c",
+        "SKILL.md": "a192e7b45613a95bb8e21931ad86552b0531b111d631d89e5c6a0b1f294f2c4f"
+      },
+      "computedHash": "8e6e1f5168cc417a4ca29f458163aff11bc51ebe6135e638e599e376333b680f"
     }
   },
   "version": 1,

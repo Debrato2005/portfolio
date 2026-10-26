@@ -1,6 +1,7 @@
 import { links } from '../../lib/links';
 import { useRef, useState } from 'react';
 import { Icon } from '../../components/ui/Icon';
+import { ShapeLoader } from './Expressive';
 import { useGitHubProfile } from './useGitHubProfile';
 import { useGitHubContributions } from './useGitHubContributions';
 import { contributionDates } from '../../lib/api/contributions';
@@ -233,7 +234,7 @@ export function ContributionSection() {
                   <span>More</span>
                 </div>
                 <button
-                  className="calendar-explore"
+                  className="calendar-explore ripple"
                   type="button"
                   ref={exploreButton}
                   aria-expanded={expanded}
@@ -287,7 +288,10 @@ export function ContributionSection() {
           ) : (
             <p className="calendar-note" role="status">
               {contributions.status === 'loading' ? (
-                'Loading contribution data.'
+                <>
+                  <ShapeLoader label="Loading contribution data" />
+                  Loading contribution data.
+                </>
               ) : (
                 <>
                   Contribution data is unavailable.{' '}
@@ -362,6 +366,9 @@ export function ContributionSection() {
             role="status"
             aria-label="GitHub profile status"
           >
+            {profile.status === 'loading' && (
+              <ShapeLoader label="Loading public profile" />
+            )}
             <p>
               {profile.status === 'loading'
                 ? 'Loading public profile…'
