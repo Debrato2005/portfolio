@@ -2,7 +2,6 @@ import { links } from '../lib/links';
 import { useEffect } from 'react';
 import { Link, useLocation } from 'react-router';
 import { Achievements } from '../features/portfolio/Achievements';
-import { Name } from '../features/portfolio/Name';
 import { Projects } from '../features/portfolio/Projects';
 import { GitHubTabs } from '../features/portfolio/GitHubTabs';
 import { VisitorCounter } from '../features/portfolio/VisitorCounter';
@@ -15,9 +14,9 @@ import {
   skillGroups,
 } from '../features/portfolio/content';
 import { SectionIndex } from '../features/portfolio/SectionIndex';
-import { BackgroundScene } from '../features/portfolio/BackgroundScene';
+import { ProfileHero } from '../features/portfolio/ProfileHero';
+import { EdgeSprig } from '../features/portfolio/Botanicals';
 import { PhotographyStrip } from '../features/portfolio/Photography';
-import { HeroShapes, ShapePortrait } from '../features/portfolio/Expressive';
 import { morph } from '../features/portfolio/shapes';
 import type { ShapeName } from '../features/portfolio/shapes';
 import type { ReactNode } from 'react';
@@ -25,6 +24,7 @@ import { Icon } from '../components/ui/Icon';
 
 function Section({
   id,
+  number,
   title,
   glyph,
   children,
@@ -33,6 +33,7 @@ function Section({
   className = '',
 }: {
   id: string;
+  number: string;
   title: string;
   glyph: ShapeName;
   children: ReactNode;
@@ -53,6 +54,7 @@ function Section({
           style={morph(glyph, 'circle')}
         />
         <h2 id={`${id}-title`} tabIndex={-1}>
+          <span className="section-number">{number}</span>
           {title}
         </h2>
         {aside && <div className="section-aside">{aside}</div>}
@@ -85,56 +87,18 @@ export function HomePage() {
   return (
     <main id="main" className="portfolio-home">
       <SectionIndex />
+      <div className="botanic-edges" aria-hidden="true">
+        <EdgeSprig seed={3} side="right" top="14%" />
+        <EdgeSprig seed={11} side="left" top="31%" />
+        <EdgeSprig seed={7} side="right" top="44%" />
+        <EdgeSprig seed={19} side="left" top="63%" />
+        <EdgeSprig seed={5} side="right" top="78%" />
+      </div>
       <div className="portfolio-content">
-        <section className="hero" aria-label="Introduction">
-          <BackgroundScene />
-          <HeroShapes />
-          <div className="hero-layout">
-            <div className="hero-copy">
-              <p className="hero-status">
-                <span className="status-dot" aria-hidden="true" />
-                {profile.status}
-              </p>
-              <Name />
-              <ul className="hero-roles" aria-label="Roles">
-                <li>Software engineer</li>
-                <li>Researcher</li>
-                <li>Builder</li>
-              </ul>
-              <p className="prose hero-description">
-                I build at the intersection of software, research and real-world
-                problems. Exploring AI, backend systems and the sky beyond.
-              </p>
-              <div className="hero-actions">
-                <a className="primary-link ripple" href={links.email}>
-                  Let's talk <Icon name="arrow-up-right" />
-                </a>
-                <a className="outline-link ripple" href="#projects">
-                  View projects <Icon name="arrow-right" />
-                </a>
-              </div>
-            </div>
-            <div className="hero-visual">
-              <ShapePortrait />
-              <ul className="hero-meta">
-                <li>
-                  <Icon name="map-pin" />
-                  {profile.location}
-                </li>
-                <li>
-                  <Icon name="graduation-cap" />
-                  IT student at MIT, Manipal
-                </li>
-                <li>
-                  <Icon name="coffee" />
-                  Curious by default
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
+        <ProfileHero />
         <Section
           id="about"
+          number="01"
           title="About"
           glyph="cookie9"
           note={
@@ -184,10 +148,26 @@ export function HomePage() {
             </div>
           </div>
         </Section>
-        <Section id="projects" title="Projects" glyph="flower">
+        <Section
+          id="projects"
+          number="02"
+          title="Projects"
+          glyph="flower"
+          note={
+            <p className="margin-note">
+              Things I’ve built, and what I learned breaking them.
+            </p>
+          }
+        >
           <Projects />
         </Section>
-        <Section id="experience" title="Experience" glyph="pentagon">
+        <Section
+          id="experience"
+          number="03"
+          title="Experience"
+          glyph="pentagon"
+          note={<p className="margin-note">Where I learned the most.</p>}
+        >
           <ol className="experience-grid">
             {experience.map((item) => (
               <li key={item.company}>
@@ -221,6 +201,7 @@ export function HomePage() {
         </Section>
         <Section
           id="hackathons"
+          number="04"
           title="Hackathons"
           glyph="sunny"
           note={
@@ -233,8 +214,10 @@ export function HomePage() {
         </Section>
         <Section
           id="github"
+          number="05"
           title="In Code / GitHub"
           glyph="clover8"
+          note={<p className="margin-note">Commits, one square at a time.</p>}
           aside={
             <a className="text-button ripple" href={links.github}>
               View GitHub <Icon name="arrow-up-right" />
@@ -243,7 +226,13 @@ export function HomePage() {
         >
           <GitHubTabs />
         </Section>
-        <Section id="skills" title="Skills" glyph="clover4">
+        <Section
+          id="skills"
+          number="06"
+          title="Skills"
+          glyph="clover4"
+          note={<p className="margin-note">Always learning more →</p>}
+        >
           <div className="skills-grid">
             {skillGroups.map(([title, ...items]) => (
               <div key={title}>
@@ -257,79 +246,80 @@ export function HomePage() {
             ))}
           </div>
         </Section>
-        <div className="section-pair">
-          <Section
-            id="thoughts"
-            title="Train of Thought"
-            glyph="triangle"
-            aside={
-              <Link className="text-button ripple" to="/blogs">
-                View writing <Icon name="arrow-right" />
+        <Section
+          id="thoughts"
+          number="07"
+          title="Train of Thought"
+          glyph="triangle"
+          aside={
+            <Link className="text-button ripple" to="/blogs">
+              View writing <Icon name="arrow-right" />
+            </Link>
+          }
+          note={
+            <p className="margin-note">
+              Notes on the ideas that connect my work.
+            </p>
+          }
+        >
+          <article className="thought-card">
+            <Link
+              className="thought-cover"
+              to="/blogs"
+              aria-label="Open writing archive"
+            >
+              <img
+                src={articles[0].illustratedCover}
+                width={768}
+                height={512}
+                alt=""
+                loading="lazy"
+              />
+            </Link>
+            <h3>
+              <Link to="/blogs">
+                {articles[0].title}
+                <Icon name="arrow-right" />
               </Link>
-            }
-            note={
-              <p className="margin-note">
-                Notes on the ideas that connect my work.
-              </p>
-            }
-          >
-            <article className="thought-card">
-              <Link
-                className="thought-cover"
-                to="/blogs"
-                aria-label="Open writing archive"
-              >
-                <img
-                  src={articles[0].illustratedCover}
-                  width={768}
-                  height={512}
-                  alt=""
-                  loading="lazy"
-                />
-              </Link>
-              <h3>
-                <Link to="/blogs">
-                  {articles[0].title}
-                  <Icon name="arrow-right" />
-                </Link>
-              </h3>
-              <p className="prose">
-                Writing about the questions that connect my interests.
-              </p>
-              <a className="text-button ripple" href={links.article}>
-                Read on Bear Blog <Icon name="arrow-up-right" />
-              </a>
-            </article>
-          </Section>
-          <Section
-            id="photography"
-            title="Photography"
-            glyph="cookie12"
-            aside={
-              <Link
-                className="text-button ripple"
-                to="/photography"
-                aria-label="Explore photography"
-              >
-                View gallery <Icon name="arrow-right" />
-              </Link>
-            }
-          >
-            <div className="photography-layout">
-              <div className="photography-preview">
-                <PhotographyStrip
-                  note={
-                    <p className="margin-note">
-                      Capturing the moments between projects.
-                    </p>
-                  }
-                />
-              </div>
+            </h3>
+            <p className="prose">
+              Writing about the questions that connect my interests.
+            </p>
+            <a className="text-button ripple" href={links.article}>
+              Read on Bear Blog <Icon name="arrow-up-right" />
+            </a>
+          </article>
+        </Section>
+        <Section
+          id="photography"
+          number="08"
+          title="Photography"
+          glyph="cookie12"
+          aside={
+            <Link
+              className="text-button ripple"
+              to="/photography"
+              aria-label="Explore photography"
+            >
+              View gallery <Icon name="arrow-right" />
+            </Link>
+          }
+        >
+          <div className="photography-layout">
+            <div className="photography-preview">
+              <PhotographyStrip
+                note={
+                  <p className="margin-note">
+                    Capturing the moments between projects.
+                  </p>
+                }
+              />
             </div>
-          </Section>
-        </div>
+          </div>
+        </Section>
         <Section
           id="contact"
+          number="09"
           title="Contact"
           glyph="cookie6"
           className="contact-section"

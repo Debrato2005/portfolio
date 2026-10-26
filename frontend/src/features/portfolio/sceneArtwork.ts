@@ -11,11 +11,11 @@ export const sceneArtwork = {
 export type SceneTheme = keyof typeof sceneArtwork;
 
 export const sceneDefaults = {
-  revealRadius: 56, // CSS pixels, independent of resolution and device pixel ratio
-  edgeSoftness: 0.38, // fraction of radius
-  noiseIntensity: 0.65, // domain warp and pigment breakup
-  trailPersistence: 0.45, // seconds at full strength after the last movement
-  fadeDuration: 1.8, // seconds to settle completely after persistence
+  revealRadius: 110, // CSS pixels, independent of resolution and device pixel ratio
+  edgeSoftness: 0.5, // fraction of radius
+  noiseIntensity: 1, // domain warp and pigment breakup
+  trailPersistence: 0.7, // seconds at full strength after the last movement
+  fadeDuration: 1.4, // seconds to settle completely after persistence
   maxPixelRatio: 1.5,
   maxPixels: 1_500_000,
   maskResolution: 640,

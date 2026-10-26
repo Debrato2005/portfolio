@@ -7,3 +7,12 @@
   font-stretch: 25% 151%;
   font-display: swap;
 }
+
+/* Caveat (SIL OFL 1.1) for the hand-written margin notes. */
+@font-face {
+  font-family: 'Caveat';
+  src: url('/fonts/caveat-latin-variable.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+}

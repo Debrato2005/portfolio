@@ -374,8 +374,10 @@ button:disabled {
   text-decoration: none;
 }
 .wordmark-shape {
-  width: 2.25rem;
-  height: 2.25rem;
+  display: block;
+  overflow: hidden;
+  width: 2.6rem;
+  height: 2.6rem;
   background: var(--md-primary);
   clip-path: var(--shape-rest);
   transition:
@@ -383,11 +385,23 @@ button:disabled {
     rotate var(--motion-spatial-slow) var(--ease-spatial-fast),
     background-color var(--motion-effects) var(--ease-effects);
 }
+.wordmark-shape img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  scale: 1.12;
+  transition: rotate var(--motion-spatial-slow) var(--ease-spatial-fast);
+}
 .wordmark:hover .wordmark-shape,
 .wordmark:focus-visible .wordmark-shape {
   clip-path: var(--shape-active);
   rotate: 45deg;
   background: var(--md-tertiary);
+}
+.wordmark:hover .wordmark-shape img,
+.wordmark:focus-visible .wordmark-shape img {
+  rotate: -45deg;
 }
 .app-nav {
   display: flex;
@@ -1012,4 +1026,34 @@ button:disabled {
   .progress-active svg {
     animation: none;
   }
+}
+
+/* ---- Celebration burst and live clock ---- */
+.burst-piece {
+  position: fixed;
+  z-index: 90;
+  pointer-events: none;
+  will-change: transform, clip-path;
+}
+.clock-dot {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: var(--md-tertiary);
+  animation: status-pulse 2.4s var(--ease-effects-slow) infinite;
+}
+.hero-clock {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---- Hand-written notes ---- */
+.section-annotation .margin-note,
+.photo-strip-footer .margin-note,
+.closing > .margin-note {
+  color: var(--md-tertiary);
+  font-family: 'Caveat', 'Segoe Script', cursive;
+  font-size: 1.45rem;
+  font-weight: 600;
+  line-height: 1.1;
+  rotate: -2deg;
 }

@@ -1,8 +1,50 @@
 /* Photography strip, gallery, lightbox and the two archive pages. */
+/* The homepage strip is a length of film: sprocket holes run along both edges. */
 .photography-preview {
-  padding: 0.75rem;
-  border-radius: var(--shape-xl);
-  background: var(--md-surface-container);
+  --film: #16161b;
+  --hole: color-mix(in srgb, var(--md-surface) 88%, #fff);
+  position: relative;
+  padding: 1.6rem 0.6rem;
+  border-radius: var(--shape-l);
+  background: var(--film);
+  color: #ecebf2;
+  box-shadow: var(--elevation-2);
+}
+.photography-preview::before,
+.photography-preview::after {
+  content: '';
+  position: absolute;
+  left: 0.6rem;
+  right: 0.6rem;
+  height: 0.55rem;
+  background: radial-gradient(closest-side, var(--hole) 0 70%, transparent 75%)
+    0 0 / 1.35rem 0.55rem repeat-x;
+}
+.photography-preview::before {
+  top: 0.5rem;
+}
+.photography-preview::after {
+  bottom: 0.5rem;
+}
+.photography-preview .collection-card {
+  color: #ecebf2;
+  background: #222229;
+  border-radius: 6px;
+}
+.photography-preview .collection-card:hover {
+  background: #2c2c35;
+  border-radius: 10px;
+}
+.photography-preview .collection-slot {
+  border-radius: 3px;
+}
+.photography-preview .collection-card small,
+.photography-preview .photo-strip-cover-note,
+.photography-preview .photo-strip-controls p {
+  color: #b8b6c4;
+}
+.photography-preview .photo-strip-footer .margin-note {
+  color: color-mix(in srgb, var(--md-tertiary-container) 85%, #fff);
 }
 .photo-strip {
   min-width: 0;

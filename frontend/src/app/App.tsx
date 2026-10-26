@@ -12,13 +12,16 @@ import { usePageViews } from '../features/portfolio/usePageViews';
 import { useTheme } from '../features/portfolio/Theme';
 import { CatCompanion } from '../features/portfolio/CatCompanion';
 import { ScrollProgress, SkyMenu } from '../features/portfolio/Expressive';
+import { useKonamiCelebration } from '../features/portfolio/celebrate';
 import { shape } from '../features/portfolio/shapes';
 import { Icon } from '../components/ui/Icon';
+import { Meadow } from '../features/portfolio/Botanicals';
 import { useRipple } from '../components/ui/useRipple';
 import type { CSSProperties } from 'react';
 export function App() {
   usePageViews();
   useRipple();
+  useKonamiCelebration();
   const { theme, chooseTheme, sky, chooseSky } = useTheme();
   const resetHome = (event: React.MouseEvent<HTMLAnchorElement>) => {
     if (
@@ -58,7 +61,15 @@ export function App() {
                   '--shape-active': shape('clover4'),
                 } as CSSProperties
               }
-            />
+            >
+              <img
+                src="/images/debrato-avatar.jpg"
+                width={64}
+                height={64}
+                alt=""
+                decoding="async"
+              />
+            </span>
             Debrato
           </Link>
           <nav className="app-nav" aria-label="Main">
@@ -98,6 +109,9 @@ export function App() {
           <Route path="/photography" element={<PhotographyPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
+        <div className="meadow-band" aria-hidden="true">
+          <Meadow />
+        </div>
         <footer className="site-footer">
           <span>Debrato Ghosh · Built with curiosity under many skies.</span>
           <div>

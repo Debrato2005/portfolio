@@ -2,6 +2,8 @@
 
 **Owner:** Design direction record
 
+SUPERSEDED (October 26, 2026): the owner requested a Material 3 Expressive redesign. The [M3 Expressive record](docs/m3-expressive-redesign.md) is now the controlling direction. The text below is historical.
+
 The owner selected a minimal, technically precise portfolio led by JetBrains Mono. This document records that choice; [the design system](docs/DESIGN_SYSTEM.md) owns reusable implementation rules and CSS owns token values.
 
 ## Reference roles

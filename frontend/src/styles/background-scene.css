@@ -1,4 +1,5 @@
-/* The supplied sketch-to-color landscape lives inside the rounded hero container. */
+/* The sketch fills the rounded profile banner. The ink trail is the only
+   reveal of the painted version. */
 .hero > .hero-scene {
   --scene-x: 62%;
   --scene-y: 50%;
@@ -9,7 +10,7 @@
   overflow: hidden;
   border-radius: inherit;
   pointer-events: none;
-  background: var(--md-surface-container-low);
+  background: var(--md-surface);
 }
 .hero-scene img,
 .hero-scene canvas {
@@ -36,37 +37,21 @@ html[data-theme='dark'] .hero-scene img[data-theme='dark'] {
 .hero-scene canvas {
   opacity: 0;
 }
-/* A tonal veil keeps the copy legible and tints the art with the current sky. */
 .hero-scene::after {
   content: '';
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(
-      100deg,
-      color-mix(in srgb, var(--md-surface-container-low) 94%, transparent) 0%,
-      color-mix(in srgb, var(--md-surface-container-low) 80%, transparent) 34%,
-      color-mix(in srgb, var(--md-surface-container-low) 30%, transparent) 62%,
-      transparent 85%
-    ),
-    linear-gradient(
-      0deg,
-      color-mix(in srgb, var(--md-primary-container) 30%, transparent),
-      transparent 55%
-    );
+  /* A soft floor where the portrait overlaps the banner. */
+  background: linear-gradient(
+    0deg,
+    color-mix(in srgb, var(--md-surface) 55%, transparent) 0%,
+    transparent 30%
+  );
 }
 @media (max-width: 47.99rem) {
   .hero > .hero-scene {
-    --scene-x: 70%;
-    --scene-y: 48%;
-  }
-  .hero-scene::after {
-    background: linear-gradient(
-      180deg,
-      color-mix(in srgb, var(--md-surface-container-low) 55%, transparent) 0%,
-      color-mix(in srgb, var(--md-surface-container-low) 86%, transparent) 42%,
-      color-mix(in srgb, var(--md-surface-container-low) 96%, transparent)
-    );
+    --scene-x: 72%;
+    --scene-y: 45%;
   }
 }
 @media (prefers-reduced-motion: reduce) {

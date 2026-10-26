@@ -342,7 +342,7 @@
   text-decoration: none;
   cursor: pointer;
 }
-@media (max-width: 54.99rem) {
+@media (max-width: 96rem) {
   .contribution-layout {
     grid-template-columns: minmax(0, 1fr);
   }

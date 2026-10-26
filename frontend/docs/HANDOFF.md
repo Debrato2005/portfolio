@@ -2,6 +2,14 @@
 
 **Owner:** Continuation checkpoint
 
+## Material 3 Expressive redesign, October 26
+
+CURRENT: the frontend follows the [M3 Expressive record](m3-expressive-redesign.md). It uses Roboto Flex, four pregenerated "sky" color schemes plus a custom seed, morphing clip-path shapes, spring `linear()` motion, ripples, a wavy scroll indicator, a section rail and floating toolbar, an Anurag-style banner-and-profile hero (`ProfileHero.tsx`) with a Garvit-style taped collage and a Sakthi-style ink-smoke reveal, ruled section rows with numbered gutter labels and hand-written notes, seeded SVG botanicals on the page edges and above the footer, a film-strip photography preview, (the shader and `sceneDefaults` were retuned), the photo inside the wordmark and About shapes, hand-written notes, swinging hanging hackathon cards, GitHub tabs, an IST live clock and a Konami/portrait shape celebration adapted from the reference repositories (no code copied). Profile facts and the avatar come from the public GitHub profile.
+The owner committed the first pass as `0f60987`. The awestruck CSS layer in `src/styles/home.css` and these docs are uncommitted.
+Observed: `npm run typecheck`, `npm run lint`, `npm test` (26 passed) and `npm run build` pass. Desktop (1440px) light and dark and phone (390px) light and dark were reviewed through system-Chrome screenshots against the dev server.
+Running Vite dev servers can cache an empty transform when a stylesheet is rewritten through a shell redirect; re-save the file if styles vanish.
+Limits: `background-scene` e2e pixel expectations predate the retuned reveal. `format:check` reports 169 files on this Windows checkout because of CRLF working copies. The new files are LF. Playwright browsers are not installed, so e2e was not run. Many e2e specs (`readability`, parts of `portfolio`, `single-page`, `interaction-motion`) assert the superseded Mono geometry, scramble and clothesline structure, and need rewriting for the new design. `docs:check` and `skills:check` need `python3`, which is absent here. Owner visual acceptance is open.
+
 ## Design skill imports, October 26
 
 CURRENT: five bundles were downloaded at pinned commits and recorded in `skills-lock.json`:

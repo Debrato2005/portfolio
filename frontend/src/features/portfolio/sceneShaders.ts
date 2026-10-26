@@ -50,15 +50,20 @@ void main() {
   vec2 ratio = uSize / uImageSize;
   vec2 visible = uSize / (uImageSize * max(ratio.x, ratio.y));
   vec2 uv = vUv * visible + (1.0 - visible) * uPosition;
-  vec2 p = vUv * uSize / 115.0;
-  vec2 flow = vec2(fbm(p + vec2(uTime * 0.25, 0)),
-                   fbm(p + vec2(19.7, -uTime * 0.21))) - 0.47;
-  vec2 warped = vUv + flow * uRadius * uNoise * 2.6 / uSize;
+  // Ink smoke: two drifting noise octaves bend the trail lookup, so the reveal
+  // curls and billows instead of following the pointer as a clean circle.
+  vec2 p = vUv * uSize / 180.0;
+  float drift = mix(fbm(p + vec2(uTime * 0.12, -uTime * 0.08)),
+                    fbm(p * 1.8 + vec2(-uTime * 0.08, uTime * 0.1)), 0.45);
+  vec2 flow = vec2(drift, fbm(p + vec2(19.7, -uTime * 0.16))) - 0.5;
+  vec2 warped = vUv + flow * uRadius * uNoise * 4.2 / uSize;
   float trail = texture2D(uTrail, clamp(warped, 0.001, 0.999)).r;
-  float pigment = fbm(p * 2.6 + flow * 1.8 + uTime * 0.13);
-  float field = trail - (pigment - 0.35) * uNoise * 0.9;
-  float mask = smoothstep(0.12, 0.38 + uSoftness * 0.5, field);
+  float field = trail * smoothstep(0.1, 0.72, drift);
+  // Thin wisps trail off the body of the smoke.
+  float wisps = fbm(p * 2.2 + vec2(uTime * 0.18, -uTime * 0.12));
+  field += trail * smoothstep(0.45, 0.85, wisps) * 0.35;
+  float mask = smoothstep(0.05, 0.42 + uSoftness * 0.3, clamp(field, 0.0, 1.0));
   // Multiplication guarantees the untouched sketch is exact, including after fading.
-  mask *= smoothstep(0.0, 0.16, trail) * uStrength;
+  mask *= smoothstep(0.0, 0.12, trail) * uStrength;
   gl_FragColor = mix(texture2D(uSketch, uv), texture2D(uColor, uv), mask);
 }`;

@@ -5,6 +5,7 @@ import { Icon } from '../../components/ui/Icon';
 import { morph, shape } from './shapes';
 import type { ShapeName } from './shapes';
 import { skies } from './Theme';
+import { celebrate } from './celebrate';
 import type { Sky } from './Theme';
 
 const portraitShapes: ShapeName[] = [
@@ -32,7 +33,17 @@ export function ShapePortrait() {
           '--portrait-turn': `${step * 40}deg`,
         } as CSSProperties
       }
-      onClick={() => setStep((value) => value + 1)}
+      onClick={(event) => {
+        setStep((value) => value + 1);
+        // Every sixth press is a small celebration.
+        if ((step + 1) % 6 === 0) {
+          const bounds = event.currentTarget.getBoundingClientRect();
+          celebrate({
+            x: bounds.left + bounds.width / 2,
+            y: bounds.top + bounds.height / 2,
+          });
+        }
+      }}
     >
       <span className="portrait-halo" aria-hidden="true" />
       <span className="portrait-frame">
@@ -48,83 +59,27 @@ export function ShapePortrait() {
   );
 }
 
-const constellation: {
-  name: ShapeName;
-  tone: 'primary' | 'secondary' | 'tertiary';
-  size: number;
-  x: number;
-  y: number;
-  depth: number;
-}[] = [
-  { name: 'sunny', tone: 'tertiary', size: 76, x: 54, y: 10, depth: 1.4 },
-  { name: 'clover4', tone: 'primary', size: 44, x: 92, y: 18, depth: -0.9 },
-  { name: 'cookie6', tone: 'secondary', size: 30, x: 46, y: 82, depth: 1.8 },
-  { name: 'flower', tone: 'primary', size: 58, x: 88, y: 84, depth: -1.3 },
-  { name: 'pentagon', tone: 'tertiary', size: 26, x: 70, y: 92, depth: 2.2 },
-  { name: 'triangle', tone: 'secondary', size: 34, x: 96, y: 52, depth: 1.1 },
-  { name: 'cookie12', tone: 'tertiary', size: 22, x: 38, y: 6, depth: -2 },
-];
-/**
- * Floating M3 shapes that drift on their own and lean away from a fine
- * pointer, plus an occasional shooting star across the hero sky.
- */
-export function HeroShapes() {
-  const host = useRef<HTMLDivElement>(null);
+/** Debrato's local time in Manipal, refreshed each minute. */
+export function LiveClock() {
+  const format = () =>
+    new Intl.DateTimeFormat('en-IN', {
+      hour: 'numeric',
+      minute: '2-digit',
+      timeZone: 'Asia/Kolkata',
+    }).format(new Date());
+  const [time, setTime] = useState(format);
   useEffect(() => {
-    const element = host.current;
-    const hero = element?.parentElement;
-    if (!element || !hero) return;
-    const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
-    let frame = 0;
-    let target = { x: 0, y: 0 };
-    const apply = () => {
-      frame = 0;
-      element.style.setProperty('--px', target.x.toFixed(3));
-      element.style.setProperty('--py', target.y.toFixed(3));
-    };
-    const move = (event: PointerEvent) => {
-      if (motion.matches || event.pointerType !== 'mouse') return;
-      const bounds = hero.getBoundingClientRect();
-      target = {
-        x: ((event.clientX - bounds.left) / bounds.width - 0.5) * 2,
-        y: ((event.clientY - bounds.top) / bounds.height - 0.5) * 2,
-      };
-      if (!frame) frame = requestAnimationFrame(apply);
-    };
-    const leave = () => {
-      target = { x: 0, y: 0 };
-      if (!frame) frame = requestAnimationFrame(apply);
-    };
-    hero.addEventListener('pointermove', move, { passive: true });
-    hero.addEventListener('pointerleave', leave);
-    return () => {
-      cancelAnimationFrame(frame);
-      hero.removeEventListener('pointermove', move);
-      hero.removeEventListener('pointerleave', leave);
-    };
+    const timer = window.setInterval(() => setTime(format()), 20_000);
+    return () => clearInterval(timer);
   }, []);
   return (
-    <div className="hero-shapes" ref={host} aria-hidden="true">
-      {constellation.map((item, index) => (
-        <span
-          key={item.name}
-          className="hero-shape"
-          data-tone={item.tone}
-          style={
-            {
-              '--shape-rest': shape(item.name),
-              '--size': `${item.size}px`,
-              '--x': `${item.x}%`,
-              '--y': `${item.y}%`,
-              '--depth': item.depth,
-              '--float-delay': `${index * -1.7}s`,
-            } as CSSProperties
-          }
-        />
-      ))}
-      <span className="shooting-star" />
-      <span className="shooting-star" />
-    </div>
+    <>
+      <span className="clock-dot" aria-hidden="true" />
+      <span>
+        <span className="sr-only">Local time in Manipal: </span>
+        {time} IST
+      </span>
+    </>
   );
 }
 
