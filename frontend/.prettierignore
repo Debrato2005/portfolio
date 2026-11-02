@@ -1,9 +1,0 @@
-node_modules/
-dist/
-.agents/
-.local/
-playwright-report/
-test-results/
-public/licenses/
-package-lock.json
-output/playwright/
