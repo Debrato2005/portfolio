@@ -12,7 +12,7 @@ The setup copied no shadcn, React Bits, or neobrutalist component source.
 ## Fonts
 
 Roboto Flex, JetBrains Mono, Inter, Space Grotesk, Space Mono, Instrument Serif and Caveat use the SIL Open Font License 1.1.
-The current runtime loads only Roboto Flex Latin (weight and width axes) from Fontsource 5.3.0; its license is `public/licenses/RobotoFlex-OFL.txt`.
+The current runtime loads Fraunces, Instrument Sans and Space Mono from Fontsource 5.3.0 npm packages, and Caveat from `public/fonts/`. All four use the SIL Open Font License 1.1; each Fontsource package ships its license in `node_modules/@fontsource*/<family>/LICENSE`.
 Material color roles are generated with @material/material-color-utilities 0.4.0 (Apache-2.0). Earlier font assets and notices remain preserved but are not imported by the application.
 Full font license texts live in `public/licenses/`. Vite serves the fonts locally; Latin WOFF2 exports keep the display-font download small.
 

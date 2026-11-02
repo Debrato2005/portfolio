@@ -4,21 +4,9 @@
 
 ## Current status
 
-CURRENT: the homepage uses a 760px centered editorial column inspired by the supplied Anurag structure, while the interactive hero artwork spans the full viewport. JetBrains Mono leads the interface, Inter serves longer paragraphs, and original generated covers supply the collection, writing and event previews. Overall owner visual acceptance remains open.
-Implemented cream/charcoal portfolio, name scramble, command search, project filters, sourced quotes and public resume download.
-Compact labels and shared gutters organize the divided rows without hatched title bands or a page-wide grid scaffold. The desktop index occupies the right gutter only when it fits, while the reference width retains three experience columns, five skill groups and one row of contact actions. All six projects use two centered columns and three rows with readable portrait covers, summaries and technologies. Full briefs open inline; phones stack the cards.
-Compact typography and a larger hero hierarchy retain readable copy and complete labels inside the narrow homepage. Archives retain their reading columns and phone controls keep larger touch targets. One paper event record and the photography filmstrip follow the supplied structure. The contribution heatmap now leads one full-width activity composition with the profile metrics in a readable strip below it.
-The calendar keeps hatched daily cells and keyboard access in failure states. Profile errors report availability accurately.
-Photography rotation works for populated collections with pause and reduced-motion controls. The current personal collections remain empty.
-Name and quote animations preserve layout geometry.
-[Recording analysis](docs/video-component-analysis.md) and [public GitHub research](docs/github-source-review.md) record the reference study.
-The portfolio is one continuous homepage. A document load always opens at its hero and clears a stale section fragment; section links continue to navigate normally after startup. Only `/blogs` and `/photography` leave it; projects, experience, hackathons, achievements, skills and GitHub activity use homepage sections and inline disclosure.
-Shared content and links are typed and centralized. Photography collections share one gallery route and open images in a lightbox.
-GitHub profile statistics use the public REST API. The daily calendar reads validated public contribution data and labels its hourly relay.
-Page views use a persistent public counter. The running cat follows fine mouse pointers and has a saved visibility control.
-Original photographs and official event evidence remain missing. The galleries use labeled empty collections.
-CURRENT: the hero uses the four supplied landscapes with a theme-aware WebGL sketch-to-color trail. Reduced motion and WebGL failure retain the static sketch. See the [background review](docs/sketch-to-color-background.md) for image registration, settings and acceptance limits.
-Legacy content and development-toolkit paths are not application routes. [Handoff](docs/HANDOFF.md) records current evidence and limits.
+CURRENT (October 29, 2026): the homepage is a paper **case file**: a manila folder cover, then divider-tabbed sheets for Work, Experience, Skills, Beyond code, GitHub and Contact, and a kraft back cover. See [the design record](DESIGN.md) and [the handoff](docs/HANDOFF.md).
+All content is taken from the owner's resume (`public/Debrato-Ghosh-Resume.pdf`) and the public GitHub profile. The former hackathon records, blog links and photography placeholders were removed because neither source supports them; the Bear Blog address returns 404.
+Only `/` is a portfolio route; every other address shows the 404 page. GitHub counts and the contribution calendar load live and show honest unavailable states. The back cover shows the persistent page-view counter. No deployment has been made.
 
 ## Commands
 

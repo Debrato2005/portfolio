@@ -12,6 +12,16 @@ export const test = base.extend({
       'https://github-contributions-api.jogruber.de/v4/Debrato2005**',
       (route) => route.abort(),
     );
+    await page.route('https://api.github.com/users/Debrato2005', (route) =>
+      route.fulfill({
+        json: {
+          login: 'Debrato2005',
+          public_repos: 18,
+          followers: 21,
+          following: 4,
+        },
+      }),
+    );
     await use(page);
   },
 });

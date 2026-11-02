@@ -1,6 +1,5 @@
 import { Component } from 'react';
 import type { ReactNode } from 'react';
-import { Button } from '../components/ui/Button';
 export class ErrorBoundary extends Component<
   { children: ReactNode },
   { failed: boolean }
@@ -13,9 +12,16 @@ export class ErrorBoundary extends Component<
     if (this.state.failed)
       return (
         <main className="page">
+          <p className="kicker">Misprint</p>
           <h1>Page unavailable</h1>
           <p>Reload the page to try again.</p>
-          <Button onClick={() => window.location.reload()}>Reload page</Button>
+          <button
+            type="button"
+            className="tape-button"
+            onClick={() => window.location.reload()}
+          >
+            Reload page
+          </button>
         </main>
       );
     return this.props.children;

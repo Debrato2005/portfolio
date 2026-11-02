@@ -1,384 +1,258 @@
 import { links } from '../../lib/links';
-import { editorialCovers } from './illustrations';
-export const sections = [
-  ['about', 'About'],
-  ['projects', 'Projects'],
-  ['experience', 'Experience'],
-  ['hackathons', 'Hackathons'],
-  ['github', 'In Code / GitHub'],
-  ['skills', 'Skills'],
-  ['thoughts', 'Train of Thought'],
-  ['photography', 'Photography'],
-  ['contact', 'Contact'],
-] as const;
-export interface PortfolioProject {
+
+/*
+ * Every fact here comes from the owner's resume (public/Debrato-Ghosh-Resume.pdf)
+ * or the public GitHub profile and repositories at github.com/Debrato2005,
+ * both read on October 29, 2026. Nothing is inferred beyond them.
+ */
+
+export const profile = {
+  name: 'Debrato Ghosh',
+  role: 'IT student at MIT Manipal',
+  location: 'Manipal, India',
+  status: 'Open to research and SDE internships',
+  focus: ['Backend', 'AI / ML', 'Security', 'Research'],
+  spokenLanguages: ['English', 'Hindi', 'Bengali', 'Marathi', 'Gujarati'],
+  hobbies: ['Photography', 'Astrophotography', 'Gym', 'Swimming'],
+  systems: ['Windows', 'Ubuntu', 'CachyOS', 'Pop!_OS'],
+} as const;
+
+export interface Project {
   slug: string;
   name: string;
-  category: 'Research' | 'Systems' | 'Applications';
-  status: string;
-  summary: string;
-  tags: readonly string[];
-  href: string | null;
-  image: string | null;
-  imageSrcSet?: string;
-  imageWidth?: number;
-  imageHeight?: number;
+  tagline: string;
+  role: string | null;
   period: string | null;
-  overview: string;
-  details: readonly { title: string; body: string }[];
-  limitations: readonly string[];
-  sources: readonly { label: string; href: string }[];
+  status: string | null;
+  stack: readonly string[];
+  points: readonly string[];
+  href: string | null;
+  /** Where the description comes from. */
+  source: 'Resume' | 'Resume and GitHub';
 }
-export const projects: readonly PortfolioProject[] = [
+
+export const projects: readonly Project[] = [
   {
     slug: 'oncosyn',
     name: 'OncoSyn',
-    category: 'Research',
-    status: 'In development',
-    summary:
-      'Computational oncology and precision immunotherapy research infrastructure.',
-    tags: ['Python', 'Machine learning', 'Bioinformatics'],
-    href: null,
-    image: '/images/project-oncosyn.webp',
-    imageSrcSet:
-      '/images/project-oncosyn.webp 320w, /images/project-oncosyn-large.webp 1122w',
+    tagline: 'Computational oncology & immunotherapy R&D platform',
+    role: 'Founder',
     period: 'Aug 2026 – Present',
-    overview:
-      'An ongoing computational oncology research project exploring how tumour heterogeneity, evolution and spatial evidence can inform precision immunotherapy research.',
-    details: [
-      {
-        title: 'Research direction',
-        body: 'My resume describes multimodal tumour-state modelling, neoantigen portfolio optimization and TCR-T/CAR-T co-design as research and architecture work.',
-      },
-      {
-        title: 'Tools and evidence',
-        body: 'The planned workflows draw on pVACtools, MHCflurry and PyClone-VI, with attention to reproducible provenance and uncertainty.',
-      },
+    status: 'In development',
+    stack: [
+      'pVACtools',
+      'MHCflurry',
+      'PyClone-VI',
+      'CP-SAT',
+      'TRACERx / TESLA',
     ],
-    limitations: [
-      'This is work in development. No clinical validation, treatment recommendation or production deployment is claimed.',
-      'No public repository or demo is currently linked.',
+    points: [
+      'Building an evolution-aware, heterogeneity-aware and spatially informed computational oncology platform for multimodal tumour-state modelling and precision immunotherapy R&D.',
+      'Architecting neoantigen portfolio optimization, TCR-T/CAR-T co-design, spatial and single-cell evidence integration, uncertainty modelling and adaptive experiment prioritization.',
+      'Designing pipelines around pVACtools, MHCflurry, PyClone-VI, TRACERx/TESLA datasets and CP-SAT optimization, with reproducible provenance, sensitivity benchmarking and evidence-gated research decisions.',
     ],
-    sources: [{ label: 'Owner-supplied resume', href: links.resume }],
-  },
-  {
-    slug: 'cryptalis',
-    name: 'Cryptalis',
-    category: 'Research',
-    status: 'Research prototype',
-    summary: 'Application-side protection of selected PostgreSQL text fields.',
-    tags: ['Python', 'SQLAlchemy', 'PostgreSQL'],
-    href: links.repositories.cryptalis,
-    image: '/images/project-cryptalis.webp',
-    imageSrcSet:
-      '/images/project-cryptalis.webp 320w, /images/project-cryptalis-large.webp 1122w',
-    period: null,
-    overview:
-      'A research prototype studying application-layer protection of selected PostgreSQL text fields, with explicit contracts for storage, search and maintenance transitions.',
-    details: [
-      {
-        title: 'Architecture',
-        body: 'The public README describes a manifest compiler, CF1 primitives, a local key provider and bounded SQLAlchemy storage and search operations.',
-      },
-      {
-        title: 'Engineering boundary',
-        body: 'The described stack uses Python, SQLAlchemy, psycopg and PostgreSQL. The repository distinguishes bounded implementation from full qualification.',
-      },
-    ],
-    limitations: [
-      'The README reports all seven full qualification gates as UNKNOWN.',
-      'Production key management, runtime compatibility and independent review remain unqualified. This is not a general security guarantee.',
-    ],
-    sources: [
-      { label: 'Public repository README', href: links.repositories.cryptalis },
-    ],
+    href: null,
+    source: 'Resume',
   },
   {
     slug: 'smolink',
     name: 'Smolink',
-    category: 'Systems',
-    status: 'In progress',
-    summary: 'A backend-first URL shortener built as a modular monolith.',
-    tags: ['FastAPI', 'PostgreSQL', 'Redis'],
-    href: links.repositories.smolink,
-    image: '/images/project-smolink.webp',
-    imageSrcSet:
-      '/images/project-smolink.webp 320w, /images/project-smolink-large.webp 1122w',
+    tagline: 'Production-grade URL shortening platform',
+    role: null,
     period: 'Jun 2026 – Present',
-    overview:
-      'A backend-first URL-shortening project that explores ownership, ID generation, authentication and reliable data boundaries without splitting services prematurely.',
-    details: [
-      {
-        title: 'Implemented scope',
-        body: 'The public README marks short-code generation and URL creation as implemented. It also describes implemented local authentication flows.',
-      },
-      {
-        title: 'Architecture decisions',
-        body: 'PostgreSQL owns durable records. Redis supports ephemeral state. The project uses a layered modular monolith and Snowflake IDs encoded in Base62.',
-      },
+    status: 'In progress',
+    stack: ['FastAPI', 'Async SQLAlchemy', 'PostgreSQL', 'Redis'],
+    points: [
+      'A production-oriented URL shortener using a layered architecture, strict TDD and a horizontally scalable design.',
+      'Snowflake/Base62 short codes, custom aliases, authenticated ownership and atomic Redis sliding-window rate limiting with guest and user quotas.',
+      'Secure authentication with Argon2id, email verification, JWT access/refresh tokens, refresh-token rotation and replay detection, password reset and Google OAuth/OIDC.',
     ],
-    limitations: [
-      'The README still marks redirects, analytics capture and reports as planned; the analytics table alone is implemented.',
-      'Google OIDC remains pending in the inspected README. Latency targets are not measured guarantees.',
-    ],
-    sources: [
-      { label: 'Public engineering context', href: links.repositories.smolink },
-      { label: 'Owner-supplied resume', href: links.resume },
-    ],
+    href: links.repositories.smolink,
+    source: 'Resume and GitHub',
   },
   {
     slug: 'unispace',
     name: 'UniSpace',
-    category: 'Applications',
-    status: 'Academic project',
-    summary:
-      'Classroom booking and recurring reservations with database-level conflict checks.',
-    tags: ['Java', 'JSP', 'PostgreSQL'],
-    href: links.repositories.unispace,
-    image: '/images/project-unispace.webp',
-    imageSrcSet:
-      '/images/project-unispace-small.webp 640w, /images/project-unispace.webp 1672w',
-    imageWidth: 1672,
-    imageHeight: 941,
+    tagline: 'Web-based classroom booking & scheduling system',
+    role: null,
     period: 'Apr 2026',
-    overview:
-      'A classroom scheduling project focused on preventing overlapping reservations while supporting recurring lectures and individual session cancellations.',
-    details: [
-      {
-        title: 'Three-tier structure',
-        body: 'The README describes JSP presentation, Java Servlets and JDBC, backed by PostgreSQL.',
-      },
-      {
-        title: 'Data integrity',
-        body: 'The documented design uses constraints, stored procedures and triggers for reservation validation, with role-based booking workflows.',
-      },
+    status: null,
+    stack: ['Java', 'JDBC', 'Servlets', 'JSP', 'PostgreSQL'],
+    points: [
+      'A normalized PostgreSQL schema with triggers, stored procedures and optimistic concurrency control.',
+      'A three-tier Java application with JDBC, Servlets and JSP, with role-based authentication and session management.',
+      'Optimized PostgreSQL queries for sub-100 ms responses while supporting 50+ concurrent reservation requests.',
     ],
-    limitations: [
-      'Performance figures from the resume do not have a supplied benchmark workload, so they are not presented as guarantees.',
-      'The case study describes repository documentation, not an independent deployment acceptance test.',
+    href: links.repositories.unispace,
+    source: 'Resume and GitHub',
+  },
+  {
+    slug: 'cryptalis',
+    name: 'Cryptalis',
+    tagline: 'Application-layer encrypted data protection',
+    role: null,
+    period: null,
+    status: null,
+    stack: ['Python', 'SQLAlchemy'],
+    points: [
+      'A Python/SQLAlchemy application-layer encrypted data-protection platform.',
     ],
-    sources: [
-      { label: 'Public project README', href: links.repositories.unispace },
-      { label: 'Owner-supplied resume', href: links.resume },
-    ],
+    href: links.repositories.cryptalis,
+    source: 'Resume and GitHub',
   },
   {
     slug: 'orbitops',
     name: 'OrbitOps',
-    category: 'Research',
-    status: 'Prototype',
-    summary: 'Satellite tracking and space-situational-awareness exploration.',
-    tags: ['3D visualization', 'Orbital analysis', 'OOTK'],
-    href: links.repositories.orbitops,
-    image: null,
+    tagline: 'Real-time 3D satellite tracking',
+    role: null,
     period: null,
-    overview:
-      'An astronomy project exploring a 3D satellite interface, asset information and collision-risk analysis.',
-    details: [
-      {
-        title: 'Documented design',
-        body: 'The README describes user-facing services alongside a dedicated analysis engine built around the Orbit Observation Toolkit.',
-      },
-      {
-        title: 'Exploration areas',
-        body: 'Documented features include TLE/NORAD-based assets, orbital information and conjunction-analysis workflows.',
-      },
+    status: 'Astronomy hackathon',
+    stack: ['JavaScript', '3D visualization'],
+    points: [
+      'Real-time 3D satellite tracking and collision-risk analysis, built for an astronomy hackathon.',
     ],
-    limitations: [
-      'The README describes the project’s intended capabilities. Operational accuracy and collision-avoidance reliability have not been independently verified.',
-      'No live mission-control or safety-critical use is claimed.',
-    ],
-    sources: [
-      { label: 'Public project README', href: links.repositories.orbitops },
-    ],
+    href: links.repositories.orbitops,
+    source: 'Resume and GitHub',
   },
   {
     slug: 'staysync',
     name: 'StaySync',
-    category: 'Applications',
-    status: 'Course project',
-    summary:
-      'A JavaFX desktop application for hotel rooms, bookings and checkout.',
-    tags: ['Java', 'JavaFX', 'Maven'],
-    href: links.repositories.staysync,
-    image: null,
+    tagline: 'JavaFX hotel-management system',
+    role: null,
     period: null,
-    overview:
-      'A desktop hotel-management project that brings object-oriented design, persistence and concurrent work together in a small application.',
-    details: [
-      {
-        title: 'Application structure',
-        body: 'The public README describes a Model-View-Controller design, tabbed JavaFX interface and Java object serialization for persistence.',
-      },
-      {
-        title: 'Workflows',
-        body: 'The documented modules cover rooms, guests, bookings, checkout and background billing calculations.',
-      },
+    status: null,
+    stack: ['Java', 'JavaFX'],
+    points: [
+      'A JavaFX MVC hotel-management system with persistence and multithreading.',
     ],
-    limitations: [
-      'The repository identifies this as a course capstone. No hosted service or production deployment is claimed.',
-    ],
-    sources: [
-      { label: 'Public project README', href: links.repositories.staysync },
-    ],
-  },
-];
-export const articles = [
-  {
-    slug: 'the-next-breakthrough-is-in-another-field',
-    illustratedCover: editorialCovers.everydayLight,
-    title: 'The next breakthrough is in another field',
-    href: links.article,
-    date: null,
-    category: null,
-  },
-] as const;
-export const experience = [
-  {
-    period: 'Jul 2026 – Present',
-    role: 'Research Intern',
-    company: 'aiRender Technology Pvt. Ltd.',
-    summary:
-      '2D/3D computer vision, human reconstruction and inference workflows.',
-  },
-  {
-    period: 'Jul – Aug 2025',
-    role: 'Machine Learning & Backend Intern',
-    company: 'Madtales.ai',
-    summary:
-      'Document understanding, inference APIs and asynchronous text-to-speech.',
-  },
-] as const;
-export const education = {
-  period: 'Aug 2024 – May 2028 expected',
-  degree: 'B.Tech, Information Technology',
-  institution: 'Manipal Institute of Technology',
-  summary: 'Engineering foundations, software systems and research.',
-} as const;
-export interface Achievement {
-  slug: string;
-  name: string;
-  result: string;
-  qualifier: string | null;
-}
-export const achievements: readonly Achievement[] = [
-  {
-    slug: 'svasth',
-    name: 'SVASTH Hackathon',
-    result: 'Winner — 1st place',
-    qualifier: 'Resume-reported',
-  },
-  {
-    slug: 'nasa-space-apps',
-    name: 'NASA Space Apps Challenge',
-    result: 'Global Nominee',
-    qualifier: null,
-  },
-  {
-    slug: 'hackcbs',
-    name: 'HackCBS',
-    result: 'Finalist',
-    qualifier: null,
-  },
-  {
-    slug: 'sih-2023',
-    name: 'Smart India Hackathon 2023',
-    result: 'Top 50',
-    qualifier: null,
-  },
-  {
-    slug: 'build-with-genai',
-    name: 'Build with GenAI',
-    result: 'Winner',
-    qualifier: null,
-  },
-];
-export interface PortfolioPhoto {
-  slug: string;
-  src: string;
-  width: number;
-  height: number;
-  alt: string;
-  caption: string | null;
-}
-export interface PhotoCollection {
-  slug: string;
-  title: string;
-  description: string;
-  status: 'Planned collection';
-  photos: readonly PortfolioPhoto[];
-  illustratedCover?: string;
-}
-export const photoCollections: readonly PhotoCollection[] = [
-  {
-    slug: 'night-sky',
-    illustratedCover: editorialCovers.nightSky,
-    title: 'Night sky',
-    description: 'Astronomy and computational astrophotography.',
-    status: 'Planned collection',
-    photos: [],
-  },
-  {
-    slug: 'landscapes',
-    illustratedCover: editorialCovers.landscapes,
-    title: 'Landscapes',
-    description: 'A collection for light and open spaces.',
-    status: 'Planned collection',
-    photos: [],
-  },
-  {
-    slug: 'everyday-light',
-    illustratedCover: editorialCovers.everydayLight,
-    title: 'Everyday light',
-    description: 'A collection for the small details.',
-    status: 'Planned collection',
-    photos: [],
+    href: links.repositories.staysync,
+    source: 'Resume and GitHub',
   },
 ];
 
-export const quotes = [
+export const experience = [
   {
-    text: 'What I cannot create, I do not understand.',
-    author: 'Richard Feynman',
-    source:
-      'https://magazine.caltech.edu/post/biology-through-the-eyes-of-a-physicist',
+    period: 'Jul 2026 – Present',
+    role: 'Research Intern — 2D/3D Computer Vision',
+    company: 'aiRender Technology Pvt. Ltd.',
+    points: [
+      'Researching deep-learning-based 2D-to-3D human reconstruction for a real-time 3D video conferencing platform.',
+      'Investigating model, inference and latency optimizations for real-time streaming of reconstructed 3D video.',
+    ],
   },
   {
-    text: 'There is grandeur in this view of life',
-    author: 'Charles Darwin · excerpt',
-    source:
-      'https://darwin-online.org.uk/EditorialIntroductions/Chancellor_vanWyhe_Origin1st.html',
+    period: 'Jul 2025 – Aug 2025',
+    role: 'Machine Learning & Backend Development Intern',
+    company: 'Madtales.ai',
+    points: [
+      'Built CNN–GRU and BERT-based document-understanding pipelines, reaching 85%+ line-classification accuracy and cutting structured data-extraction errors by 30%.',
+      'Designed a Flask REST API with TensorFlow Lite integration that cut mobile inference latency by 40%, and architected an async TTS system with cloud storage processing 10k+ requests.',
+    ],
+  },
+] as const;
+
+export const education = [
+  {
+    period: 'Aug 2024 – May 2028',
+    title: 'B.Tech, Information Technology',
+    place: 'Manipal Institute of Technology, Manipal',
+    grade: 'CGPA 8.66 / 10',
+    note: 'Coursework: Data Structures & Algorithms, Database Management Systems, Machine Learning, Computer Networks, Operating Systems, Object-Oriented Programming.',
   },
   {
-    text: 'The Analytical Engine weaves algebraical patterns just as the Jacquard-loom weaves flowers and leaves.',
-    author: 'Ada Lovelace · excerpt',
-    source: 'https://www.gutenberg.org/files/75107/75107-h/75107-h.htm',
+    period: '2023',
+    title: 'Class XII (HSC)',
+    place: 'Sardar Vallabhbhai Patel Vidyalaya and Jr. College, Mumbai',
+    grade: '86.83%',
+    note: null,
+  },
+  {
+    period: '2021',
+    title: 'Class X (ICSE)',
+    place: 'Kapol Vidyanidhi International School, Mumbai',
+    grade: '96.83%',
+    note: null,
   },
 ] as const;
 
 export const skillGroups = [
-  ['Languages', 'Python', 'Java', 'TypeScript', 'SQL'],
-  ['Frontend', 'React', 'JavaScript', 'HTML / CSS'],
-  ['Backend', 'FastAPI', 'SQLAlchemy', 'PostgreSQL', 'Redis'],
-  ['AI / ML', 'Computer vision', 'PyTorch', 'TensorFlow'],
-  ['Research / Tools', 'pVACtools', 'MHCflurry', 'Docker', 'Linux'],
-] as const;
-
-/** Facts from the public GitHub profile README at github.com/Debrato2005 (read October 2026). */
-export const profile = {
-  status: 'Open to research and SDE internships',
-  location: 'Manipal, India',
-  focus: ['Backend', 'AI / ML', 'Security', 'Research'],
-  tools: [
+  ['Languages', 'C', 'C++', 'Java', 'Python', 'JavaScript', 'SQL'],
+  [
+    'Backend & APIs',
     'FastAPI',
-    'PostgreSQL',
-    'Redis',
-    'Docker',
-    'Git',
-    'Linux',
+    'Flask',
+    'REST APIs',
+    'Node.js',
+    'SQLAlchemy',
+    'Pydantic',
+    'JWT / OAuth',
+  ],
+  ['Frontend', 'React', 'HTML5', 'CSS3', 'JavaFX'],
+  ['Databases & caching', 'PostgreSQL', 'MySQL', 'Redis'],
+  ['DevOps & systems', 'Docker', 'Git', 'Linux / Unix', 'Nginx'],
+  [
+    'Machine learning',
+    'NumPy',
+    'Pandas',
+    'Matplotlib',
+    'Seaborn',
+    'Scikit-learn',
+    'TensorFlow',
     'PyTorch',
   ],
-  spokenLanguages: ['English', 'Hindi', 'Bengali', 'Marathi', 'Gujarati'],
-  offScreen: ['Photography', 'Astrophotography', 'Gym', 'Swimming'],
-  systems: ['Windows', 'Ubuntu', 'CachyOS', 'Pop!_OS'],
+  [
+    'Computational biology',
+    'pVACtools / pVACseq',
+    'MHCflurry',
+    'PyClone-VI',
+    'Cancer genomics',
+  ],
+  ['Tools', 'VS Code', 'Eclipse', 'GitHub', 'Postman', 'pgAdmin'],
+] as const;
+
+export interface Activity {
+  title: string;
+  body: string;
+  detail: string | null;
+  href: string | null;
+}
+
+export const activities: readonly Activity[] = [
+  {
+    title: 'Computational astrophotography',
+    body: 'Processed 300+ astronomical frames across 15+ deep-sky objects using calibration, registration and stacking workflows.',
+    detail: 'Siril · DSS · Sequator',
+    href: null,
+  },
+  {
+    title: 'PAV Head — PRISM',
+    body: 'Manipal Institute of Technology.',
+    detail: null,
+    href: null,
+  },
+  {
+    title: 'Photography & Astronomy Clubs',
+    body: 'Member of the Photography Club and The Astronomy Club, Manipal. Organized and hosted image-processing workshops.',
+    detail: null,
+    href: null,
+  },
+  {
+    title: 'Volunteer Services Organization',
+    body: 'Member.',
+    detail: null,
+    href: null,
+  },
+  {
+    title: 'Cryptonite taskphase',
+    body: 'Senior taskphase 2025, working through pwn.college.',
+    detail: 'Public repository',
+    href: `${links.github}/pwn.college_debrato`,
+  },
+];
+
+export const quote = {
+  text: 'What I cannot create, I do not understand.',
+  author: 'Richard Feynman',
+  source:
+    'https://magazine.caltech.edu/post/biology-through-the-eyes-of-a-physicist',
 } as const;

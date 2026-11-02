@@ -4,9 +4,7 @@ export const links = {
   githubProfileApi: `https://api.github.com/users/${githubUsername}`,
   email: 'mailto:debrato2005@gmail.com',
   linkedin: 'https://www.linkedin.com/in/debrato-ghosh',
-  blog: 'https://debrato.bearblog.dev/',
-  article:
-    'https://debrato.bearblog.dev/the-next-breakthrough-is-in-another-field/',
+  x: 'https://x.com/DebratoG',
   resume: '/Debrato-Ghosh-Resume.pdf',
   repositories: {
     cryptalis: `https://github.com/${githubUsername}/cryptalis`,

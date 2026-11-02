@@ -2,7 +2,19 @@
 
 **Owner:** Design direction record
 
-SUPERSEDED (October 26, 2026): the owner requested a Material 3 Expressive redesign. The [M3 Expressive record](docs/m3-expressive-redesign.md) is now the controlling direction. The text below is historical.
+CURRENT (October 29, 2026, second pass): the owner rejected the risograph "Field notes" pass as loud and incoherent, and asked for a paper aesthetic that is intuitive, beautiful and coherent (bold is fine). The controlling direction is **the case file**: everything is stationery on a desk.
+
+- One metaphor: a manila folder cover with a paper-clipped photo and a typed contents card, coloured divider tabs (top-left of each sheet and a fixed rail on the right edge at 1260px and up), index cards for projects, label-maker tape for statuses and buttons, swing tags for skills, sticky notes for activities, graph paper for GitHub and an opened envelope for contact. The back cover closes the page.
+- Colour: off-white paper on a warm grey desk (dark walnut at night; the paper stays paper). Each section owns one tab colour (cobalt, tomato, mustard, sage, lilac, rose) and uses it only for its tab, band and small accents.
+- Type: Fraunces for headings and numbers, Instrument Sans for reading text, Space Mono for labels and tape, Caveat only for handwriting (photo caption, sticky-note titles, the letter).
+- Motion: sheets land on the desk as they scroll in, cover layers drift with the pointer, cards lift and straighten on hover, tags swing, the letter slides out of the envelope, and the day/night switch wipes like a lamp. Reduced motion removes all of it.
+- Content comes only from the owner's resume and the public GitHub profile; see `src/features/portfolio/content.ts`.
+
+Source lives in `src/features/paper/`, `src/routes/HomePage.tsx` and `src/styles/paper.css`.
+
+SUPERSEDED (October 29, 2026, second pass): the risograph "Field notes" pass from earlier the same day.
+
+SUPERSEDED (October 29, 2026): the Material 3 Expressive redesign of October 26 ([record](docs/m3-expressive-redesign.md)) is replaced by Field notes.
 
 The owner selected a minimal, technically precise portfolio led by JetBrains Mono. This document records that choice; [the design system](docs/DESIGN_SYSTEM.md) owns reusable implementation rules and CSS owns token values.
 
